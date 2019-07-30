@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    --radius: 47vh;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url("bg.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+#clock {
+    position: relative;
+    line-height: 0;
+}
+
+/* a mask area to create a opaque background for the clock*/
+#clock-bg {
+    position: fixed;
+    bottom: calc(50vh - var(--radius));
+    width: calc(2 * var(--radius));
+    height: calc(2 * var(--radius));
+    border-radius: 50vh;
+    background-color: rgba(255, 255, 255, .4);
+    filter: blur(.3em)
+}
+
+/* rotate a turn */
+@keyframes spin {
+    to {transform: rotate(-1turn)}
+}
+
+.time-wrap {
+    width: var(--distance);
+    transform-origin: left center;
+    position: absolute;
+}
+
+.time {
+    float: right;
+    width: inherit;
+    text-align: right;
+    transform-origin: left center;
+    cursor: default;
+}
+
+.seconds {
+    --distance: calc(var(--radius) - 1em);
+}
+
+.seconds span {
+    animation: spin 60s infinite linear;
+}
+
+.minutes {
+    --distance: calc(var(--radius) - 6em);
+}
+
+.minutes span {
+    animation: spin 3600s infinite linear;
+}
+
+.hours {
+    --distance: calc(var(--radius) - 11em);
+}
+
+.hours span {
+    animation: spin 86400s infinite linear;
+}
+
+#sep-line {
+    position: absolute;
+    width: calc(var(--radius) - .5em);
+    border: lightslategray solid 1px;
+}
