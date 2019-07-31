@@ -6,6 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
+    font-size: 16px;
     --radius: 47vh;
     display: flex;
     height: 100vh;
