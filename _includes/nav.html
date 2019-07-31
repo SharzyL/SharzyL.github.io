@@ -1,0 +1,15 @@
+<div class="header">
+    <nav>
+        <a href="/" style="float: left">Sharzy's random blog</a>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </nav>
+    <div class="banner">
+        <h1>
+            {{ page.title }}
+        </h1>
+        <p style="font-size: .8em">
+            {{ page.subtitle }} {{ page.date | date_to_string: "ordinal", "US" }}
+        </p>
+    </div>
+</div>

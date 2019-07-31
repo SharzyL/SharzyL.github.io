@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    font-family: Segoe UI, serif;
+    box-sizing: border-box;
+}
+
+a {
+    color: #2a7ae2;
+    text-decoration: none;
+}
+
+article {
+    margin: 2em 0;
+}
+
+article > h1, h2 {
+    border-bottom: 1px solid #cccccc;
+    margin: .3em 0;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size:30px;
+}
+
+h3 {
+    font-size:24px
+}
+
+h4 {
+    font-size:18px
+}
+
+h5 {
+    font-size:14px
+}
+
+h6 {
+    font-size:12px
+}
+
+p {
+    margin:0 0 10px
+}
+
+code {
+    font-family: Consolas, Monospaced, sans-serif;
+    color: #eb7979;
+    background-color: #ededed;
+    padding: 1px .3em;
+    border-radius: 4px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    top: 2px;
+}
+
+nav > a {
+    float: right;
+    padding: 1em;
+    font-size: large;
+    font-weight: bold;
+}
+
+body {
+    line-height: 1.6;
+    display: flex;
+    min-height: 100vh;
+    flex-flow: column;
+}
+
+.header {
+    background-color: #f7f7f7;
+    padding: 3em 0;
+}
+
+.banner {
+    font-size: 1.5em;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    /* to ensure footer in the bottom*/
+    flex: 1;
+}
+
+article {
+    width: 60%;
+}
+
+@media (max-width: 50em) {
+    .main {
+
+    }
+}
+
+.posts-index {
+    /*flex: 1;*/
+    margin: 10px;
+    width: 60vw;
+}
+
+.post-card {
+    color: black;
+    padding: 2ex;
+    margin: .5em;
+    transition: .2s;
+    overflow: visible;
+    box-shadow: 4px 2px #b3b3b3 inset, -2px -2px #b3b3b3 inset;
+}
+
+.post-card:hover {
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 4px 2px #1B76C4 inset, -2px -2px #1B76C4 inset;
+    text-indent: .3em;
+}
+
+.post-preview {
+    padding: .5em;
+    color: #808080;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding : 3em 20vw;
+    color: #808080;
+}
