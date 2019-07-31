@@ -1,0 +1,30 @@
+---
+layout: default
+title: Sharzy's random blog
+subtitle: Randomly record my random things.
+---
+<div class="posts-index">
+    <h1>
+        Posts
+    </h1>
+    {% for post in site.posts %}
+    <div class="post-card" url={{post.url}}>
+        <h3 class="post-header">
+            {{ post.title }}
+        </h3>
+        <div class="post-preview">
+            {{ post.excerpt }}
+        </div>
+        <i>{{ post.date | date_to_string: "ordinal", "US"}}</i>
+    </div>
+    {% endfor %}
+</div>
+
+<script>
+    postcards = document.getElementsByClassName('post-card');
+    for (let card of postcards) {
+        card.onclick = () => {
+            location.href = card.getAttribute('url');
+        }
+    }
+</script>
