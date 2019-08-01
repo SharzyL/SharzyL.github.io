@@ -2,6 +2,7 @@
     margin: 0;
     font-family: Segoe UI, serif;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 a {
@@ -58,17 +59,21 @@ a:hover {
     text-decoration: underline;
 }
 
-nav {
-    position: absolute;
-    width: 100%;
-    top: 2px;
-}
-
-nav > a {
-    float: right;
+.nav a {
     padding: 1em;
     font-size: large;
     font-weight: bold;
+}
+
+.nav > div {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.main-nav {
+    font-size: 1.2em;
+    line-height: 100%;
 }
 
 body {
@@ -78,13 +83,20 @@ body {
     flex-flow: column;
 }
 
+.nav {
+    display: flex;
+}
+
 .header {
     background-color: #f7f7f7;
-    padding: 3em 0;
+    padding-bottom: 2em;
+}
+
+.main-title {
+    font-size: 48px;
 }
 
 .banner {
-    font-size: 1.5em;
     background-color: #f7f7f7;
     text-align: center;
 }
@@ -100,15 +112,8 @@ article {
     width: 60%;
 }
 
-@media (max-width: 50em) {
-    .main {
-
-    }
-}
-
-.posts-index {
-    /*flex: 1;*/
-    margin: 10px;
+.main-text {
+    padding: 10px;
     width: 60vw;
 }
 
@@ -138,4 +143,31 @@ footer {
     text-align: center;
     padding : 3em 20vw;
     color: #808080;
+}
+
+
+@media (max-width: 600px) {
+    * {
+        font-size: 14px;
+    }
+
+    .main-text {
+        width: 100vw;
+    }
+
+    .main-title {
+        font-size: 32px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    footer {
+        padding: 1em 2em;
+    }
+
+    .main-nav {
+        visibility: hidden;
+    }
 }

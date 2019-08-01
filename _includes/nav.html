@@ -1,15 +1,17 @@
 <div class="header">
-    <nav>
-        <a href="/" style="float: left">Sharzy's random blog</a>
+    <div role="navigation" class="nav">
+        <div style="flex: 1;">
+            <a href="/"  class="main-nav">Sharzy's blog</a>
+        </div>
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/clock/clock.html">Clock</a>
-    </nav>
+    </div>
     <div class="banner">
-        <h1>
+        <h1 class = "main-title">
             {{ page.title }}
         </h1>
-        <p style="font-size: .8em">
+        <p>
             {{ page.subtitle }} {{ page.date | date_to_string: "ordinal", "US" }}
         </p>
     </div>
