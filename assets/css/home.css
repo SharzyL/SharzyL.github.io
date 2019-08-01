@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    font-family: Segoe UI, sans-serif;
+    font-family: "Microsoft YaHei UI Light", Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     font-size: 16px;
 }
@@ -98,9 +98,6 @@ body {
     flex: 1;
 }
 
-article {
-}
-
 .main-text {
     padding: 10px;
     width: 50vw;
@@ -108,7 +105,7 @@ article {
 
 .post-card {
     color: black;
-    padding: 2ex;
+    padding: 1em;
     margin: .5em;
     transition: .2s;
     overflow: visible;
@@ -119,7 +116,7 @@ article {
     text-decoration: none;
     cursor: pointer;
     box-shadow: 4px 2px #1B76C4 inset, -2px -2px #1B76C4 inset;
-    text-indent: .3em;
+    padding-left: 1.5em;
 }
 
 .post-preview {
@@ -249,9 +246,5 @@ footer * {
         margin: .2em;
         box-shadow: none;
         border-top: #eee solid 1px;
-    }
-
-    .section-head {
-        display: none;
     }
 }
