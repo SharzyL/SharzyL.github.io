@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <title>{{ page.title }}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <link href="/assets/css/home.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/nav/responsive-nav.css">
+    <script src="/assets/nav/responsive-nav.js"></script>
 </head>
 <body>
     {% include nav.html %}
@@ -13,5 +16,17 @@
         {{ content }}
     </div>
     {% include footer.html %}
+
+    <script>
+        let navigation = responsiveNav("#nav", { // Selector: The ID of the wrapper
+            animate: true, // Boolean: 是否启动CSS过渡效果（transitions）， true 或 false
+            transition: 400, // Integer: 过渡效果的执行速度，以毫秒（millisecond）为单位
+            label: '',
+            init: function () {
+                document.getElementsByClassName('nav-toggle')[0].classList.add('fa', 'fa-navicon');
+            },
+        });
+
+    </script>
 </body>
 </html>

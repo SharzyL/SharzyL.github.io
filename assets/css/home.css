@@ -59,13 +59,13 @@ a:hover {
     text-decoration: underline;
 }
 
-.nav a {
+.navigation a {
     padding: 1em;
     font-size: large;
     font-weight: bold;
 }
 
-.nav > div {
+.navigation > div {
     display: flex;
     align-items: center;
     justify-content: left;
@@ -83,7 +83,7 @@ body {
     flex-flow: column;
 }
 
-.nav {
+.navigation {
     display: flex;
 }
 
@@ -141,12 +141,78 @@ article {
 footer {
     width: 100%;
     text-align: center;
-    padding : 3em 20vw;
+    padding : 0 20vw;
     color: #808080;
 }
 
+footer > .container {
+    padding: 1.5em 0;
+    border-top: 1px solid #cccccc;
+}
 
-@media (max-width: 600px) {
+/* for mobile devices */
+@media screen and (max-width:700px) {
+    #nav {
+        color: black;
+        margin-left: .5em;
+    }
+
+    #nav,
+    #nav ul {
+        list-style:none;
+        width:100%;
+        float:left
+    }
+
+    #nav li {
+        float:left;
+        width:100%;
+        display:block;
+        font-weight: bold;
+        height: 2.5em;
+    }
+
+    #nav a {
+        line-height: 100%;
+        font-size: 1.2em;
+    }
+
+    #home-icon {
+        display: none !important;
+    }
+}
+
+/* for desktop devices */
+@media screen and (min-width: 700px) {
+    #nav > ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    #home-icon {
+        flex: 1;
+    }
+
+    #nav  a {
+        font-weight: bold;
+    }
+
+    #nav li {
+        display:inline-block;
+        width:auto;
+        margin: .5em 1em;
+    }
+}
+
+.nav-toggle {
+    margin: .5em;
+}
+
+.nav-toggle:before {
+    font-size: 2em;
+}
+
+@media (max-width: 800px) {
     * {
         font-size: 14px;
     }
@@ -164,7 +230,7 @@ footer {
     }
 
     footer {
-        padding: 1em 2em;
+        padding: 0 1em;
     }
 
     .main-nav {
