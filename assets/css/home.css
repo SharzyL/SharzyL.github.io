@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    font-family: Segoe UI, serif;
+    font-family: Segoe UI, sans-serif;
     box-sizing: border-box;
     font-size: 16px;
 }
@@ -15,7 +15,7 @@ article {
 }
 
 article > h1, h2 {
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid #eee;
     margin: .3em 0;
 }
 
@@ -59,18 +59,6 @@ a:hover {
     text-decoration: underline;
 }
 
-.navigation a {
-    padding: 1em;
-    font-size: large;
-    font-weight: bold;
-}
-
-.navigation > div {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-}
-
 .main-nav {
     font-size: 1.2em;
     line-height: 100%;
@@ -88,8 +76,8 @@ body {
 }
 
 .header {
-    background-color: #f7f7f7;
-    padding-bottom: 2em;
+    background: url(https://i.loli.net/2019/08/01/5d429efb33a9642629.jpg) center;
+    background-size: cover;
 }
 
 .main-title {
@@ -97,8 +85,10 @@ body {
 }
 
 .banner {
-    background-color: #f7f7f7;
     text-align: center;
+    color: white;
+    margin-top: 4em;
+    margin-bottom: 6em;
 }
 
 .main {
@@ -147,11 +137,16 @@ footer {
 
 footer > .container {
     padding: 1.5em 0;
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid #eee;
+}
+
+.header a,
+.header a:before {
+    color: white;
 }
 
 /* for mobile devices */
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     #nav {
         color: black;
         margin-left: .5em;
@@ -177,24 +172,30 @@ footer > .container {
         font-size: 1.2em;
     }
 
-    #home-icon {
+    .hidden-on-mobile {
         display: none !important;
     }
 }
 
 /* for desktop devices */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
+    #nav {
+        margin-top: .5em;
+    }
+
     #nav > ul {
         display: flex;
         justify-content: center;
     }
 
-    #home-icon {
+    #nav .hidden-on-mobile {
         flex: 1;
     }
 
-    #nav  a {
-        font-weight: bold;
+    #nav a,
+    #nav a:before{
+        font-weight: bolder;
+        line-height: 100%;
     }
 
     #nav li {
@@ -229,11 +230,25 @@ footer > .container {
         font-size: 32px;
     }
 
+    h2 {
+        font-size: 24px;
+    }
+
     footer {
         padding: 0 1em;
     }
 
     .main-nav {
         visibility: hidden;
+    }
+
+    .post-card {
+        margin: .2em;
+        box-shadow: none;
+        border-top: #eee solid 1px;
+    }
+
+    .section-head {
+        display: none;
     }
 }

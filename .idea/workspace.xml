@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7823968-0793-46f2-84a7-c6131547506f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_includes/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/default.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/about.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -42,8 +39,8 @@
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="323">
-                <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+              <first_editor relative-caret-position="119">
+                <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
               </first_editor>
               <second_editor />
             </state>
@@ -74,52 +71,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/home.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="155" column="21" selection-start-line="155" selection-start-column="21" selection-end-line="155" selection-end-column="21" />
+            <state relative-caret-position="804">
+              <caret line="251" column="21" selection-start-line="251" selection-start-column="21" selection-end-line="251" selection-end-column="21" />
               <folding>
                 <element signature="e#2#84#0" />
                 <element signature="e#88#138#0" />
                 <element signature="e#148#156#0" />
-                <element signature="e#143#166#0" />
-                <element signature="e#273#281#0" />
-                <element signature="e#175#197#0" />
-                <element signature="e#206#228#0" />
-                <element signature="e#237#259#0" />
-                <element signature="e#268#290#0" />
-                <element signature="e#299#321#0" />
-                <element signature="e#324#347#0" />
-                <element signature="e#435#443#0" />
-                <element signature="e#172#207#0" />
-                <element signature="e#281#365#0" />
-                <element signature="e#753#761#0" />
-                <element signature="e#733#741#0" />
-                <element signature="e#372#440#0" />
-                <element signature="e#906#914#0" />
-                <element signature="e#450#504#0" />
-                <element signature="e#930#938#0" />
-                <element signature="e#514#594#0" />
-                <element signature="e#602#666#0" />
-                <element signature="e#716#724#0" />
-                <element signature="e#1140#1183#0" />
-                <element signature="e#818#931#0" />
-                <element signature="e#950#1032#0" />
-                <element signature="e#1048#1090#0" />
-                <element signature="e#1099#1187#0" />
-                <element signature="e#1926#1934#0" />
-                <element signature="e#2097#2191#0" />
-                <element signature="e#2360#2390#0" />
-                <element signature="e#2367#2418#0" />
-                <element signature="e#2431#2447#0" />
-                <element signature="e#2457#2561#0" />
-                <element signature="e#2718#2726#0" />
-                <element signature="e#2482#2490#0" />
-                <element signature="e#1757#2052#0" />
-                <element signature="e#1791#1812#0" />
-                <element signature="e#1751#1780#0" />
-                <element signature="e#1798#1830#0" />
-                <element signature="e#1839#1871#0" />
-                <element signature="e#1884#1917#0" />
-                <element signature="e#1940#1956#0" />
               </folding>
             </state>
           </provider>
@@ -149,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/nav.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+            <state relative-caret-position="102">
+              <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -164,6 +121,16 @@
         <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>font-family</find>
+      <find>#eeeccc</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>#ccc</replace>
+      <replace>#eee</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -186,11 +153,11 @@
         <option value="$PROJECT_DIR$/_posts/2019-7-31-test.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/_layouts/post.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/404.html" />
         <option value="$PROJECT_DIR$/about.md" />
-        <option value="$PROJECT_DIR$/_includes/nav.html" />
         <option value="$PROJECT_DIR$/_layouts/default.html" />
+        <option value="$PROJECT_DIR$/_includes/nav.html" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assets/css/home.css" />
       </list>
     </option>
@@ -220,6 +187,11 @@
             <path>
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name=".sass-cache" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
@@ -298,7 +270,7 @@
       <option name="presentableId" value="Default" />
       <updated>1564478493027</updated>
       <workItem from="1564478495053" duration="6076000" />
-      <workItem from="1564537884048" duration="39738000" />
+      <workItem from="1564537884048" duration="44566000" />
     </task>
     <task id="LOCAL-00001" summary="Complete basic functionality">
       <created>1564566905714</created>
@@ -318,7 +290,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45814000" />
+    <option name="totallyTimeSpent" value="50642000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -509,6 +481,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/404.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -516,37 +495,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="51">
-            <caret line="3" selection-start-line="3" selection-end-line="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/nav.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="323">
-            <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-          </first_editor>
-          <second_editor />
+        <state relative-caret-position="102">
+          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -560,61 +512,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/default.html">
+    <entry file="file://$PROJECT_DIR$/_layouts/post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="119">
+            <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="51">
+            <caret line="3" selection-start-line="3" selection-end-line="3" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/home.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="155" column="21" selection-start-line="155" selection-start-column="21" selection-end-line="155" selection-end-column="21" />
+        <state relative-caret-position="804">
+          <caret line="251" column="21" selection-start-line="251" selection-start-column="21" selection-end-line="251" selection-end-column="21" />
           <folding>
             <element signature="e#2#84#0" />
             <element signature="e#88#138#0" />
             <element signature="e#148#156#0" />
-            <element signature="e#143#166#0" />
-            <element signature="e#273#281#0" />
-            <element signature="e#175#197#0" />
-            <element signature="e#206#228#0" />
-            <element signature="e#237#259#0" />
-            <element signature="e#268#290#0" />
-            <element signature="e#299#321#0" />
-            <element signature="e#324#347#0" />
-            <element signature="e#435#443#0" />
-            <element signature="e#172#207#0" />
-            <element signature="e#281#365#0" />
-            <element signature="e#753#761#0" />
-            <element signature="e#733#741#0" />
-            <element signature="e#372#440#0" />
-            <element signature="e#906#914#0" />
-            <element signature="e#450#504#0" />
-            <element signature="e#930#938#0" />
-            <element signature="e#514#594#0" />
-            <element signature="e#602#666#0" />
-            <element signature="e#716#724#0" />
-            <element signature="e#1140#1183#0" />
-            <element signature="e#818#931#0" />
-            <element signature="e#950#1032#0" />
-            <element signature="e#1048#1090#0" />
-            <element signature="e#1099#1187#0" />
-            <element signature="e#1926#1934#0" />
-            <element signature="e#2097#2191#0" />
-            <element signature="e#2360#2390#0" />
-            <element signature="e#2367#2418#0" />
-            <element signature="e#2431#2447#0" />
-            <element signature="e#2457#2561#0" />
-            <element signature="e#2718#2726#0" />
-            <element signature="e#2482#2490#0" />
-            <element signature="e#1757#2052#0" />
-            <element signature="e#1791#1812#0" />
-            <element signature="e#1751#1780#0" />
-            <element signature="e#1798#1830#0" />
-            <element signature="e#1839#1871#0" />
-            <element signature="e#1884#1917#0" />
-            <element signature="e#1940#1956#0" />
           </folding>
         </state>
       </provider>
