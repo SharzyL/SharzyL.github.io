@@ -99,12 +99,11 @@ body {
 }
 
 article {
-    width: 60%;
 }
 
 .main-text {
     padding: 10px;
-    width: 60vw;
+    width: 50vw;
 }
 
 .post-card {
@@ -113,7 +112,7 @@ article {
     margin: .5em;
     transition: .2s;
     overflow: visible;
-    box-shadow: 4px 2px #b3b3b3 inset, -2px -2px #b3b3b3 inset;
+    box-shadow: 4px 2px #eee inset, -2px -2px #eee inset;
 }
 
 .post-card:hover {
@@ -138,6 +137,10 @@ footer {
 footer > .container {
     padding: 1.5em 0;
     border-top: 1px solid #eee;
+}
+
+footer * {
+    font-size: 13px;
 }
 
 .header a,
