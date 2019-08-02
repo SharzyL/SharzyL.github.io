@@ -10,13 +10,10 @@ a {
     text-decoration: none;
 }
 
-article {
-    margin: 2em 0;
-}
-
 article > h1, h2 {
     border-bottom: 1px solid #eee;
-    margin: .3em 0;
+    font-family: "Microsoft YaHei UI", Segoe, Arial, sans-serif;
+    margin: .5em 0;
 }
 
 h1 {
@@ -55,6 +52,14 @@ code {
     border-radius: 4px;
 }
 
+.hidden {
+    display: none !important;
+}
+
+.bold {
+    font-family: "Microsoft YaHei UI", Segoe, Arial, sans-serif;
+}
+
 .fixed {
     position: fixed;
     top: 0;
@@ -62,7 +67,8 @@ code {
 
 .highlight {
     background-color: #eee;
-    padding: .3em;
+    padding: .7em;
+    border-radius: .3em;
 }
 
 .highlight code {
@@ -78,10 +84,11 @@ blockquote {
 }
 
 blockquote > p {
-    padding: 2px 1em;
+    padding: .5em 1em;
 }
 
 a:hover {
+    cursor: pointer;
     text-decoration: underline;
 }
 
@@ -121,9 +128,10 @@ body {
 }
 
 .main-text {
-    padding: 10px;
     width: 50vw;
     border-bottom: 1px solid #eee;
+    margin-top: 3em;
+    padding-bottom: 2em;
 }
 
 .post-card {
@@ -136,16 +144,55 @@ body {
 }
 
 .post-card:hover {
-    text-decoration: none;
     cursor: pointer;
     box-shadow: 4px 2px #1B76C4 inset, -2px -2px #1B76C4 inset;
     padding-left: 1.5em;
     padding-right: .5em;
 }
 
+.post-subtitle {
+    padding-left: 2px;
+    font-weight: lighter;
+}
+
 .post-preview {
     padding: .5em;
     color: #808080;
+}
+
+.post-meta {
+    display: flex;
+}
+
+.post-date {
+    flex: 1;
+}
+
+.tag {
+    font-size: small;
+    padding: 0 .5em;
+    margin: .2em .2em;
+    display: inline-block;
+    border-radius: .75em;
+    color: black;
+    border: 1px solid #ddd;
+    transition: .3s;
+}
+
+.tag-selected {
+    background-color: #eee;
+}
+
+.tag:hover {
+    text-decoration: none;
+    color: #1B76C4;
+    cursor: pointer;
+    border-color: #1B76C4;
+}
+
+#show-tags-a {
+    display: block;
+    margin: 1em 3px;
 }
 
 footer {
@@ -164,13 +211,13 @@ footer * {
     font-size: 13px;
 }
 
-.header a,
-.header a:before {
+#nav a,
+#nav a:before {
     color: white;
 }
 
 /* for mobile devices */
-@media screen and (max-width:800px) {
+@media screen and (max-width: 40em) {
     #nav {
         color: black;
         margin-left: .5em;
@@ -199,50 +246,13 @@ footer * {
     .hidden-on-mobile {
         display: none !important;
     }
-}
 
-/* for desktop devices */
-@media screen and (min-width: 800px) {
-    #nav {
-        margin-top: .5em;
-    }
-
-    #nav > ul {
-        display: flex;
-        justify-content: center;
-    }
-
-    #nav .hidden-on-mobile {
-        flex: 1;
-    }
-
-    #nav a,
-    #nav a:before{
-        font-weight: bolder;
-        line-height: 100%;
-    }
-
-    #nav li {
-        display:inline-block;
-        width:auto;
-        margin: .5em 1em;
-    }
-}
-
-.nav-toggle {
-    margin: .5em;
-}
-
-.nav-toggle:before {
-    font-size: 2em;
-}
-
-@media (max-width: 800px) {
     * {
         font-size: 14px;
     }
 
     .main-text {
+        margin: 2em 1em;
         width: 100vw;
     }
 
@@ -269,12 +279,73 @@ footer * {
     }
 }
 
+/* for desktop devices */
+@media screen and (min-width: 40em) {
+    #nav {
+        margin-top: .5em;
+    }
+
+    #nav > ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    #nav .hidden-on-mobile {
+        flex: 1;
+    }
+
+    #nav a,
+    #nav a:before{
+        font-weight: bolder;
+        line-height: 100%;
+    }
+
+    #nav li {
+        display:inline-block;
+        width:auto;
+        margin: .5em 1em;
+    }
+
+    .main-text {
+        margin-left: 15em;
+    }
+}
+
+@media screen and (min-width: 40em) and (max-width: 80em) {
+    .main-text {
+        margin-left: 2em;
+        flex: 1;
+    }
+}
+
+.nav-toggle {
+    margin: .5em;
+}
+
+.nav-toggle:hover {
+    text-decoration: none;
+}
+
+.nav-toggle:before {
+    font-size: 2em;
+}
+
 .sidebar {
-    width: 200px;
-    padding-top: 1em;
-    margin-left: 1em;
+    width: 15em;
+    padding-top: 3em;
+    margin-left: 2em;
+    margin-right: 1em;
 }
 
 #toc {
     padding-left: 1em;
+}
+
+.toc-list-item {
+    padding: 2px 3px;
+}
+
+.toc-link:hover {
+    text-decoration: none;
+    color: #2a7ae2;
 }

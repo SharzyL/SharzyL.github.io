@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 一个猜想的证明
+subtitle: 立方体图子图的最大度
+tags: [math]
 ---
 
 最近看到一篇[文章](https://www.quantamagazine.org/mathematician-solves-computer-science-conjecture-in-two-pages-20190725/)，讲述了一个几十余年历史的猜想近日被证明的事情。令人惊讶的是[论文](https://arxiv.org/abs/1907.00847)中的这个证明主题居然只有不到两页，并且只用到了基本的线性代数，遂记录之。
@@ -32,7 +34,7 @@ $$ \lambda_i \geq \mu_i \geq \lambda_{i + n - m} $$
 
 待补充
 
-{% highlight ruby %}
+{% highlight ruby linenos %}
 def foo
   puts 'foo'
 end

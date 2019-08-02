@@ -10,7 +10,9 @@ requirements:
 
 <article class="main-text">
     {{ content }}
+    {% if page.comment != "disable" %}
     <div id="gitalk-container"></div>
+    {% endif %}
 </article>
 
 <div class="sidebar hidden-on-mobile">

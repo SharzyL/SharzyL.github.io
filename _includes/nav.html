@@ -2,15 +2,15 @@
     <div id="nav">
         <ul>
             <li class="hidden-on-mobile"><a href="/" class="fa fa-home fa-2x"></a> </li>
-            <li><a href="/">HOME</a></li>
-            <li><a href="/about">ABOUT</a></li>
-            <li><a href="/clock/clock.html">CLOCK</a></li>
+            <li><a class="bold" href="/">HOME</a></li>
+            <li><a class="bold" href="/about">ABOUT</a></li>
+            <li><a class="bold" href="/clock/clock.html">CLOCK</a></li>
         </ul>
     </div>
     <div class="banner">
-        <h1 class = "main-title">
+        <p class="main-title bold">
             {{ page.title }}
-        </h1>
+        </p>
         <p>
             {{ page.subtitle }} {{ page.date | date_to_string: "ordinal", "US" }}
         </p>

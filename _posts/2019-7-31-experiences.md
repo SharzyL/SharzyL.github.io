@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Experiences
+tags: [CS, 杂谈]
 ---
 
 
