@@ -13,5 +13,6 @@
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="MathJax" level="application" />
     <orderEntry type="library" name="tocbot" level="application" />
+    <orderEntry type="library" name="gitalk" level="application" />
   </component>
 </module>
