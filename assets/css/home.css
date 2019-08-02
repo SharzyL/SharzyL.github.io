@@ -57,7 +57,8 @@ code {
 }
 
 .bold {
-    font-family: "Microsoft YaHei UI", Segoe, Arial, sans-serif;
+    font-weight: bold;
+    font-family: "Microsoft YaHei", Segoe, Arial, sans-serif;
 }
 
 .fixed {
@@ -103,13 +104,21 @@ body {
     display: flex;
 }
 
+.home-icon {
+    flex: 1;
+    color: white;
+    margin: .5em;
+    font-weight: bolder;
+    line-height: 100%;
+}
+
 .header {
-    background: url(https://i.loli.net/2019/08/01/5d429efb33a9642629.jpg) center;
+    background: #bbb url(https://i.loli.net/2019/08/01/5d429efb33a9642629.jpg) center;
     background-size: cover;
 }
 
 .main-title {
-    font-size: 48px;
+    font-size: 4em;
     font-weight: bolder;
 }
 
@@ -195,6 +204,10 @@ body {
     margin: 1em 3px;
 }
 
+.header-tag {
+    color: white;
+}
+
 footer {
     width: 100%;
     text-align: center;
@@ -216,7 +229,7 @@ footer * {
     color: white;
 }
 
-/* for mobile devices */
+/* for mobile devices that responsive nav is enabled */
 @media screen and (max-width: 40em) {
     #nav {
         color: black;
@@ -225,6 +238,8 @@ footer * {
 
     #nav,
     #nav ul {
+        text-align: right;
+        padding-right: .5em;
         list-style:none;
         width:100%;
         float:left
@@ -277,9 +292,13 @@ footer * {
         box-shadow: none;
         border-top: #eee solid 1px;
     }
+
+    .article-banner {
+        padding-left: 1em;
+    }
 }
 
-/* for desktop devices */
+/* for desktop devices on which responsive nav is enabled*/
 @media screen and (min-width: 40em) {
     #nav {
         margin-top: .5em;
@@ -309,17 +328,34 @@ footer * {
     .main-text {
         margin-left: 15em;
     }
+
+    .show-on-mobile {
+        display: none !important;
+    }
 }
 
+/* for tablet on which margin left is canceled */
 @media screen and (min-width: 40em) and (max-width: 80em) {
+    .article-banner {
+        padding-left: 2em;
+    }
+
     .main-text {
         margin-left: 2em;
         flex: 1;
     }
 }
 
+/* for wide screen devices*/
+@media screen and (min-width: 80em) {
+    .article-banner {
+        padding-left: 25vw;
+    }
+}
+
 .nav-toggle {
     margin: .5em;
+    float: right;
 }
 
 .nav-toggle:hover {
@@ -327,14 +363,15 @@ footer * {
 }
 
 .nav-toggle:before {
+    color: white;
     font-size: 2em;
 }
 
 .sidebar {
     width: 15em;
     padding-top: 3em;
-    margin-left: 2em;
-    margin-right: 1em;
+    padding-left: 2em;
+    padding-right: 1em;
 }
 
 #toc {

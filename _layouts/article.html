@@ -1,0 +1,82 @@
+---
+layout: empty
+requirements:
+-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+-
+<link rel="stylesheet" href="/assets/css/highlight.css">
+-
+<link rel="stylesheet" href="/assets/css/article.css">
+-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+-
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+---
+
+{% include article_header.html %}
+
+<div class="main">
+    <article class="main-text">
+        {{ content }}
+        {% if page.comment != "disable" %}
+        <div id="gitalk-container"></div>
+        {% endif %}
+    </article>
+
+    <div class="sidebar hidden-on-mobile">
+        <div class="sidebar__inner">
+            <div id="toc"></div>
+        </div>
+    </div>
+</div>
+
+{% include footer.html %}
+
+
+<!-- use mathjax to handle formulas -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [[' $','$ ']]}
+        });
+
+</script>
+
+<!-- use toc to generate table of contents -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '#toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: 'article',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+    });
+</script>
+
+<!-- use sticky-sidebar to wrap table of contents to a sidebar-->
+<script type="text/javascript" src="/assets/nav/sticky-sidebar.js"></script>
+<script type="text/javascript">
+    var sidebar = new StickySidebar('.sidebar', {
+        topSpacing: 20,
+        bottomSpacing: 20,
+        containerSelector: '.main',
+        innerWrapperSelector: '.sidebar__inner'
+    });
+</script>
+
+<!-- use gitalk to enable comment -->
+<script>
+    const gitalk = new Gitalk({
+        clientID: '56fd0766110ee8f26064',
+        clientSecret: 'd66f055f103df68307f958fd5c62d05e66fe6792',
+        repo: 'SharzyL.github.io',
+        owner: 'SharzyL',
+        admin: ['SharzyL'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container')
+</script>
