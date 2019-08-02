@@ -10,6 +10,9 @@
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/nav/responsive-nav.css">
     <script src="/assets/nav/responsive-nav.js"></script>
+    {% for requirement in layout.requirements %}
+    {{ requirement }}
+    {% endfor %}
 </head>
 <body>
     {% include nav.html %}

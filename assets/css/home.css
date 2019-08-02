@@ -50,18 +50,39 @@ p {
 code {
     font-family: Consolas, Monospaced, sans-serif;
     color: #eb7979;
-    background-color: #ededed;
+    background-color: #eee;
     padding: 1px .3em;
     border-radius: 4px;
 }
 
-a:hover {
-    text-decoration: underline;
+.fixed {
+    position: fixed;
+    top: 0;
 }
 
-.main-nav {
-    font-size: 1.2em;
-    line-height: 100%;
+.highlight {
+    background-color: #eee;
+    padding: .3em;
+}
+
+.highlight code {
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+}
+
+blockquote {
+    background-color: #eee;
+    border-left: .5em #999 solid;
+    font-style: italic;
+}
+
+blockquote > p {
+    padding: 2px 1em;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 body {
@@ -82,6 +103,7 @@ body {
 
 .main-title {
     font-size: 48px;
+    font-weight: bolder;
 }
 
 .banner {
@@ -101,6 +123,7 @@ body {
 .main-text {
     padding: 10px;
     width: 50vw;
+    border-bottom: 1px solid #eee;
 }
 
 .post-card {
@@ -117,6 +140,7 @@ body {
     cursor: pointer;
     box-shadow: 4px 2px #1B76C4 inset, -2px -2px #1B76C4 inset;
     padding-left: 1.5em;
+    padding-right: .5em;
 }
 
 .post-preview {
@@ -133,7 +157,7 @@ footer {
 
 footer > .container {
     padding: 1.5em 0;
-    border-top: 1px solid #eee;
+    /*border-top: 1px solid #eee;*/
 }
 
 footer * {
@@ -238,13 +262,19 @@ footer * {
         padding: 0 1em;
     }
 
-    .main-nav {
-        visibility: hidden;
-    }
-
     .post-card {
         margin: .2em;
         box-shadow: none;
         border-top: #eee solid 1px;
     }
+}
+
+.sidebar {
+    width: 200px;
+    padding-top: 1em;
+    margin-left: 1em;
+}
+
+#toc {
+    padding-left: 1em;
 }

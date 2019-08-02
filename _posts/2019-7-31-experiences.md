@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Experieces
+title: Experiences
 ---
 
 
