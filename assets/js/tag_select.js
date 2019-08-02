@@ -33,6 +33,19 @@
         })
     }
 
+    let i = location.href.indexOf('?tags=');
+    if (i !== -1) {
+        let selected_tags_text = new Set(location.href.slice(i + 6).split('&'));
+        console.log(selected_tags);
+        show_tags.forEach((tag) => {
+            if (selected_tags_text.has(tag.innerText)) {
+                tag.classList.add('tag-selected');
+                selected_tags.add(tag.innerText);
+            }
+            filter()
+        })
+    }
+
     function show_all_tags() {
         for (let card of cards) {
             card.classList.remove('hidden');
@@ -66,3 +79,5 @@
         }
     }
 })();
+
+//TODO: improve tags system on mobile systems

@@ -1,0 +1,19 @@
+<div class="header">
+    {% include nav_bar.html %}
+    <div class="article-banner banner">
+        <div class="article-tags">
+            {% for tag in page.tags %}
+            <a class="tag header-tag" href="/?tags={{tag}}">{{ tag }}</a>
+            {% endfor %}
+        </div>
+        <p class="article-title bold">
+            {{ page.title }}
+        </p>
+        <p class="article-subtitle">
+            {{ page.subtitle }}
+        </p>
+        <i class="article-date">
+            {{ page.date | date_to_string: "ordinal", "US" }}
+        </i>
+    </div>
+</div>

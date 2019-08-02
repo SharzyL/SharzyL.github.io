@@ -1,0 +1,12 @@
+<div class="header">
+    {% include nav_bar.html %}
+    <div class="banner">
+        <p class="main-title bold">
+            {{ page.title }}
+        </p>
+        <p>
+            {{ page.subtitle }} {{ page.date | date_to_string: "ordinal", "US" }}
+        </p>
+    </div>
+</div>
+
