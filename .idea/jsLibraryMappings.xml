@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{MathJax, bootstrap, gitalk, jquery, tocbot, vue}" />
+    <file url="PROJECT" libraries="{MathJax, auto-render, bootstrap, gitalk, jquery, katex, tocbot, vue}" />
   </component>
 </project>

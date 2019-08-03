@@ -14,5 +14,7 @@
     <orderEntry type="library" name="MathJax" level="application" />
     <orderEntry type="library" name="tocbot" level="application" />
     <orderEntry type="library" name="gitalk" level="application" />
+    <orderEntry type="library" name="katex" level="application" />
+    <orderEntry type="library" name="auto-render" level="application" />
   </component>
 </module>
