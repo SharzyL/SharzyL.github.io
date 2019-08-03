@@ -1,5 +1,13 @@
+/*
+ * Copyright (c) 2019.  @sharzy
+ * https://github.com/SharzyL
+ * javascript file loaded for index.html
+ */
+
 'use strict';
 
+
+// tag system
 (function f() {
     let cards = document.getElementsByClassName('post-card');
     let all_tags_str = new Set();  // a set including all tags(str)

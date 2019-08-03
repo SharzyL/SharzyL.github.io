@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2019.  @sharzy
+ * https://github.com/SharzyL
+ * javascript file loaded for every normal blog pages
+ */
+
+
 window.addEventListener('load', () => {
     let navbar = document.getElementById('nav-wrap');
     let ticking = false; // record if browser is painting, to avoid frequent repainting

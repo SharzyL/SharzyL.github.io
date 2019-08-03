@@ -244,11 +244,25 @@ footer * {
 #nav a,
 #nav a:before {
     color: inherit;
+    text-transform: uppercase;
 }
 
-#nav, #nav ul {
-    width: 100%;
+#nav ul {
     color: white;
+}
+
+.nav-toggle {
+    margin: .5em;
+    float: right;
+}
+
+.nav-toggle:hover {
+    text-decoration: none;
+}
+
+.nav-toggle:before {
+    color: white;
+    font-size: 2em;
 }
 
 #nav-wrap {
@@ -259,7 +273,7 @@ footer * {
 }
 
 .nav-detach {
-    background-color: rgba(255, 255, 255, .5);
+    background-color: rgba(255, 255, 255, .8);
     position: fixed!important;
     top: -58px;
 }
@@ -274,27 +288,30 @@ footer * {
 
 /* for mobile devices that responsive nav is enabled */
 @media screen and (max-width: 40em) {
-    #nav {
-        margin-left: .5em;
+    #nav ul {
+        list-style:none;
+        float:left;
+        /* don't touch above line of code, dangerous */
     }
 
-    #nav ul {
-        text-align: right;
-        padding-right: .5em;
-        list-style:none;
-        float:left
+    .nav-collapse {
+        border-radius: .3em;
+        margin-left: calc(100% - 10em);
+        color: black;
+        background: white;
     }
 
     #nav li {
-        float:left;
+        color: #666;
         width:100%;
         display:block;
         font-weight: bold;
-        height: 2.5em;
+        margin: .5em 0;
+        text-align: center;
     }
 
     #nav a {
-        line-height: 100%;
+        display: block;
         font-size: 1.2em;
     }
 
@@ -341,6 +358,7 @@ footer * {
 /* for desktop devices on which responsive nav is disabled*/
 @media screen and (min-width: 40em) {
     #nav > ul {
+        width: 100%;
         display: flex;
         justify-content: center;
     }
@@ -388,20 +406,6 @@ footer * {
     .article-banner {
         padding-left: 25vw;
     }
-}
-
-.nav-toggle {
-    margin: .5em;
-    float: right;
-}
-
-.nav-toggle:hover {
-    text-decoration: none;
-}
-
-.nav-toggle:before {
-    color: white;
-    font-size: 2em;
 }
 
 .sidebar {
