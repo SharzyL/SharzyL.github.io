@@ -115,7 +115,7 @@ body {
 .home-icon {
     flex: 1;
     color: white;
-    margin: .5em;
+    margin: .25em;
     font-weight: bolder;
     line-height: 100%;
 }
@@ -241,8 +241,8 @@ footer * {
     font-size: 13px;
 }
 
-#nav a,
-#nav a:before {
+#nav-wrap a,
+#nav-wrap a:before {
     color: inherit;
     text-transform: uppercase;
 }
@@ -266,8 +266,9 @@ footer * {
 }
 
 #nav-wrap {
+    color: white;
     width: 100%;
-    padding-top: .5em;
+    height: 3em;
     position: absolute;
     transition: .5s;
 }
@@ -278,7 +279,8 @@ footer * {
     top: -58px;
 }
 
-.nav-detach a {
+.nav-detach a,
+.nav-detach a:before {
     color: black!important;
 }
 
@@ -420,6 +422,7 @@ footer * {
 
 .toc-list-item {
     padding: 2px 3px;
+    width: 13em;
 }
 
 .toc-link:hover {
