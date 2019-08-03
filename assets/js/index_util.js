@@ -67,7 +67,7 @@
         }
         show_all_tags_obj.classList.add('hidden');
         selected_tags_str.clear();
-        hint_obj.innerText = 'All posts';
+        hint_obj.innerText = 'ALL POSTS';
     }
 
     function filter_tags() {
@@ -94,7 +94,7 @@
                 card.classList.add('hidden')
             }
         }
-        let hint_text = 'Posts involving ';
+        let hint_text = 'ALL POSTS INVOLVING ';
         for (let tag_str of selected_tags_str) {
             let tag_text = tag_str;
             hint_text += `<a href="/?tags=${tag_text}" class="tag tag-selected">${tag_text}</a>`;

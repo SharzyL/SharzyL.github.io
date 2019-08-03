@@ -15,28 +15,26 @@ tags: [math]
 
 证明概述如下
 
-(1) 称一个实矩阵 $M$ 是某个图 $G$ 的伪邻接矩阵，如果 $\lvert a_{ij}\rvert = 1$ 当且仅当 $G$ 中的第 $i$ 个顶点和第 $j$ 个相邻，且矩阵除此以外的项均为零. 归纳构造矩阵 $A_n$ ，使得
+### Step 1
+称一个实矩阵 $M$ 是某个图 $G$ 的伪邻接矩阵，如果 $\lvert a_{ij}\rvert = 1$ 当且仅当 $G$ 中的第 $i$ 个顶点和第 $j$ 个相邻，且矩阵除此以外的项均为零. 归纳构造矩阵 $A_n$ ，使得
 
 $$A_{1}=\left[\begin{array}{ll}{0} & {1} \\ {1} & {0}\end{array}\right] \quad A_{n}=\left[\begin{array}{cc}{A_{n-1}} & {I} \\ {I} & {-A_{n-1}}\end{array}\right]$$
 
 归纳易证 $A_n$ 是 $Q_n$ 的伪邻接矩阵，且 $A_n$ 的特征向量中恰有 $2^{n - 1}$ 个为  $\sqrt{n}$ ， $2^{n - 1}$ 个是  $\sqrt{n}$ . 
 
-(2) 证明一个图的最大度数不小于它的伪邻接矩阵的任何一个特征根. 
+### Step 2
+证明一个图的最大度数不小于它的伪邻接矩阵的任何一个特征根. 
 
-(3) Cauchy interlace lemma：若 $A$ 是一个 $n$ 阶实对称矩阵， $B$ 是它的一个主子阵，
+### Step 3
+Cauchy interlace lemma：若 $A$ 是一个 $n$ 阶实对称矩阵， $B$ 是它的一个主子阵，
 设 $\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_n$ ， $\mu_1 \geq \mu_2 \geq \cdots \mu_m$ 分别是它们的全部特征根，则对于每个 $i\ (1 \leq i \leq m)$ ，均有
 
 $$ \lambda_i \geq \mu_i \geq \lambda_{i + n - m} $$
 
-(4) 考虑 $Q_n$ 的某个 $2^{n - 1} + 1$ 阶子图，它对应于 $A_n$ 的一个主子阵，由于 $A_n$ 的前 $2^{n - 1}$ 个特征根均为 $\sqrt{n}$ ，根据 (3) ，它的最大特征根是 $\sqrt{n}$ ，带入 (2) 即可得到待证结论. 
+### Step 4
+考虑 $Q_n$ 的某个 $2^{n - 1} + 1$ 阶子图，它对应于 $A_n$ 的一个主子阵，由于 $A_n$ 的前 $2^{n - 1}$ 个特征根均为 $\sqrt{n}$ ，根据 (3) ，它的最大特征根是 $\sqrt{n}$ ，带入 (2) 即可得到待证结论. 
 
 ## Details
 
 待补充
-
-{% highlight ruby linenos %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}
 
