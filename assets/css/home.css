@@ -21,7 +21,6 @@ article > h3 {
     margin: .5em 0;
 }
 
-
 h1, .h1 {
     font-size: 36px;
 }
@@ -84,6 +83,8 @@ code {
     background-color: #eee;
     padding: .7em;
     border-radius: .3em;
+    overflow-x: auto;
+    margin: 1em 3em;
 }
 
 .highlight code {
@@ -99,7 +100,7 @@ blockquote {
 }
 
 blockquote > p {
-    padding: .5em 1em;
+    padding: .5em 2em;
 }
 
 a:hover {
@@ -163,7 +164,7 @@ body {
     margin: .5em;
     transition: .2s;
     overflow: visible;
-    box-shadow: 4px 2px #eee inset, -2px -2px #eee inset;
+    border-top: #eee solid 1px;
 }
 
 .post-card:hover {
@@ -332,7 +333,7 @@ footer * {
     }
 
     .main-text {
-        margin: 2em 1em;
+        padding: 0 1em;
         width: 100vw;
     }
 
@@ -350,12 +351,6 @@ footer * {
 
     footer {
         padding: 0 1em;
-    }
-
-    .post-card {
-        margin: .2em;
-        box-shadow: none;
-        border-top: #eee solid 1px;
     }
 
     .article-banner {

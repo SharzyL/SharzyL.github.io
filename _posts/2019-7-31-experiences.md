@@ -40,9 +40,10 @@ tags: [CS, 杂谈]
     - 环境：可以直接安装 Haskell Platform
     - 资料：[WikiBooks](https://en.wikibooks.org/wiki/Haskell)，虽然后面有一部分还没写完，但前面的内容已经很多了
     - 纯函数式可以写出非常优雅的代码（下文是一个用筛法产生所有素数的代码）
-
+    {% highlight haskell linenos %}
         primes = filterPrime [2..]
           where filterPrime (p:xs) = p : filterPrime [x | x <- xs, x `mod` p /= 0]
+    {% endhighlight %}
 
 - Java
     - 语法严谨~~啰嗦~~，性能较好，适用于开发大型项目，也用于开发服务器程序，同时也是Android开发的标准语言
