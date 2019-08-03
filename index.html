@@ -4,8 +4,8 @@ title: Sharzy's random blog
 subtitle: Randomly record random things.
 ---
 <div class="main-text">
-    <h3>
-        POSTS
+    <h3 id="content-hint">
+        All posts
     </h3>
 
     {% for post in site.posts %}
@@ -20,14 +20,14 @@ subtitle: Randomly record random things.
         </h4>
         {% endif %}
         <div class="post-preview">
-            {{ post.excerpt }}
+            {{ post.excerpt | strip_html }}
         </div>
         <div class="post-meta">
             <i class="post-date">
                 {{ post.date | date_to_string: "ordinal", "US"}}
             </i>
             {% for tag in post.tags %}
-            <a class="tag" href="/404.html"> {{ tag }} </a>
+            <a class="tag" href="/?tags={{tag}}"> {{ tag }} </a>
             {% endfor %}
         </div>
     </div>
@@ -45,17 +45,20 @@ subtitle: Randomly record random things.
 
 <div class="sidebar hidden-on-mobile">
     <div class="sidebar__inner">
-        <div id="tags-showcase">
-            <h3>TAGS</h3>
+        <div id="tags-showcase-wrap">
+            <div id="tags-showcase">
+                 <h3><i class="fa fa-tags"></i> TAGS</h3>
+            </div>
+            <a id="show-tags-a" class="hidden">Show all articles</a>
         </div>
-        <a id="show-tags-a" class="hidden">Show all articles</a>
+
     </div>
 </div>
 
 <!-- use sticky-sidebar to wrap table of contents to a sidebar-->
 <script type="text/javascript" src="/assets/nav/sticky-sidebar.js"></script>
 <script type="text/javascript">
-    var sidebar = new StickySidebar('.sidebar', {
+    let sidebar = new StickySidebar('.sidebar', {
         topSpacing: 20,
         bottomSpacing: 20,
         containerSelector: '.main',
@@ -63,4 +66,4 @@ subtitle: Randomly record random things.
     });
 </script>
 
-<script src="assets/js/tag_select.js"></script>
+<script src="assets/js/index_util.js"></script>

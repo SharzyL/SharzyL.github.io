@@ -16,27 +16,27 @@ article > h1, h2 {
     margin: .5em 0;
 }
 
-h1 {
+h1, .h1 {
     font-size: 36px;
 }
 
-h2 {
+h2, .h2 {
     font-size:30px;
 }
 
-h3 {
+h3, .h3 {
     font-size:24px
 }
 
-h4 {
+h4, .h4 {
     font-size:18px
 }
 
-h5 {
+h5, .h5 {
     font-size:14px
 }
 
-h6 {
+h6, .h6 {
     font-size:12px
 }
 
@@ -56,6 +56,10 @@ code {
     display: none !important;
 }
 
+.paged {
+    display: none!important;
+}
+
 .bold {
     font-weight: bold;
     font-family: "Microsoft YaHei", Segoe, Arial, sans-serif;
@@ -64,6 +68,10 @@ code {
 .fixed {
     position: fixed;
     top: 0;
+}
+
+.underlined {
+    border-bottom: 1px solid #eee;
 }
 
 .highlight {
@@ -165,8 +173,12 @@ body {
 }
 
 .post-preview {
-    padding: .5em;
+    padding: .5em 0;
     color: #808080;
+}
+
+.post-preview {
+    font-size: .9em;
 }
 
 .post-meta {
@@ -178,6 +190,7 @@ body {
 }
 
 .tag {
+    font-weight: lighter;
     font-size: small;
     padding: 0 .5em;
     margin: .2em .2em;
@@ -197,6 +210,10 @@ body {
     color: #1B76C4;
     cursor: pointer;
     border-color: #1B76C4;
+}
+
+#tags-showcase {
+    padding-top: 3em;
 }
 
 #show-tags-a {
@@ -227,6 +244,14 @@ footer * {
 #nav a,
 #nav a:before {
     color: white;
+}
+
+#nav {
+    padding-top: .5em;
+}
+
+.nav-active {
+    background-color: #bbbbbb;
 }
 
 /* for mobile devices that responsive nav is enabled */
@@ -298,12 +323,8 @@ footer * {
     }
 }
 
-/* for desktop devices on which responsive nav is enabled*/
+/* for desktop devices on which responsive nav is disabled*/
 @media screen and (min-width: 40em) {
-    #nav {
-        margin-top: .5em;
-    }
-
     #nav > ul {
         display: flex;
         justify-content: center;
@@ -327,6 +348,7 @@ footer * {
 
     .main-text {
         margin-left: 15em;
+        margin-right: 2em;
     }
 
     .show-on-mobile {
@@ -368,14 +390,13 @@ footer * {
 }
 
 .sidebar {
-    width: 15em;
-    padding-top: 3em;
-    padding-left: 2em;
+    width: 13em;
     padding-right: 1em;
 }
 
 #toc {
     padding-left: 1em;
+    padding-top: 3em;
 }
 
 .toc-list-item {

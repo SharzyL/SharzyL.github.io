@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Your awesome title
 email: sharzyluo@outlook.com
-description: A simple blog to record something
+description: Sharzy's personal blog, used to record something interesting
 baseurl: /blog
 url: sharzyl.github.io
 
