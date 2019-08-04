@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c7823968-0793-46f2-84a7-c6131547506f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-8-4-uniform.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-8-4-uniform.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/home.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,41 +21,36 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+            <state relative-caret-position="646">
+              <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
               <folding>
+                <element signature="n#style#0;n#h3#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#script#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_site/index.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2019-8-4-uniform.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/_site/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,14 +76,113 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2019-8-4-uniform.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="398">
+                <caret line="41" column="12" lean-forward="true" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/home.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3366">
-              <caret line="206" column="18" selection-start-line="206" selection-start-column="18" selection-end-line="206" selection-end-column="18" />
+            <state relative-caret-position="119">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#2#144#0" />
                 <element signature="e#148#198#0" />
+                <element signature="e#312#400#0" />
+                <element signature="e#410#434#0" />
+                <element signature="e#444#467#0" />
+                <element signature="e#477#499#0" />
+                <element signature="e#509#531#0" />
+                <element signature="e#541#563#0" />
+                <element signature="e#573#595#0" />
+                <element signature="e#599#623#0" />
+                <element signature="e#630#779#0" />
+                <element signature="e#789#822#0" />
+                <element signature="e#831#863#0" />
+                <element signature="e#871#959#0" />
+                <element signature="e#968#1004#0" />
+                <element signature="e#1018#1056#0" />
+                <element signature="e#1069#1187#0" />
+                <element signature="e#1205#1279#0" />
+                <element signature="e#1292#1424#0" />
+                <element signature="e#1441#1444#0" />
+                <element signature="e#1533#1583#0" />
+                <element signature="e#1593#1649#0" />
+                <element signature="e#1656#1746#0" />
+                <element signature="e#1760#1782#0" />
+                <element signature="e#1795#1896#0" />
+                <element signature="e#1906#2024#0" />
+                <element signature="e#2038#2086#0" />
+                <element signature="e#2096#2186#0" />
+                <element signature="e#2194#2298#0" />
+                <element signature="e#2311#2412#0" />
+                <element signature="e#2425#2558#0" />
+                <element signature="e#2577#2715#0" />
+                <element signature="e#2732#2784#0" />
+                <element signature="e#2800#2844#0" />
+                <element signature="e#2860#2884#0" />
+                <element signature="e#2897#2919#0" />
+                <element signature="e#2932#2948#0" />
+                <element signature="e#2963#3041#0" />
+                <element signature="e#3062#3081#0" />
+                <element signature="e#3098#3236#0" />
+                <element signature="e#3259#3336#0" />
+                <element signature="e#3343#3558#0" />
+                <element signature="e#3574#3605#0" />
+                <element signature="e#3618#3716#0" />
+                <element signature="e#3733#3758#0" />
+                <element signature="e#3773#3817#0" />
+                <element signature="e#3831#3852#0" />
+                <element signature="e#3861#3947#0" />
+                <element signature="e#3969#4030#0" />
+                <element signature="e#4041#4065#0" />
+                <element signature="e#4099#4153#0" />
+                <element signature="e#4163#4184#0" />
+                <element signature="e#4198#4237#0" />
+                <element signature="e#4257#4287#0" />
+                <element signature="e#4308#4349#0" />
+                <element signature="e#4361#4461#0" />
+                <element signature="e#4475#4572#0" />
+                <element signature="e#4610#4641#0" />
+                <element signature="e#4655#4670#0" />
+                <element signature="e#4728#5674#0" />
+                <element signature="e#4778#4886#0" />
+                <element signature="e#4906#5031#0" />
+                <element signature="e#5045#5195#0" />
+                <element signature="e#5208#5265#0" />
+                <element signature="e#5289#5330#0" />
+                <element signature="e#5338#5370#0" />
+                <element signature="e#5387#5440#0" />
+                <element signature="e#5458#5490#0" />
+                <element signature="e#5499#5531#0" />
+                <element signature="e#5540#5572#0" />
+                <element signature="e#5585#5616#0" />
+                <element signature="e#5638#5672#0" />
+                <element signature="e#5737#6260#0" />
+                <element signature="e#5789#5873#0" />
+                <element signature="e#5902#5926#0" />
+                <element signature="e#5957#6020#0" />
+                <element signature="e#6034#6117#0" />
+                <element signature="e#6134#6195#0" />
+                <element signature="e#6217#6258#0" />
+                <element signature="e#6312#6495#0" />
+                <element signature="e#6392#6426#0" />
+                <element signature="e#6443#6493#0" />
+                <element signature="e#6526#6621#0" />
+                <element signature="e#6584#6619#0" />
+                <element signature="e#6632#6676#0" />
+                <element signature="e#6683#6731#0" />
+                <element signature="e#6748#6790#0" />
+                <element signature="e#6808#6858#0" />
+                <element signature="e#6876#6896#0" />
               </folding>
             </state>
           </provider>
@@ -95,7 +191,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/page_util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
+            <state relative-caret-position="583">
               <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -107,8 +203,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_layouts/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -116,8 +212,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_layouts/article.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-79">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="85">
+              <caret line="5" column="57" lean-forward="true" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
               <folding>
                 <element signature="n#script#4;n#!!top" />
               </folding>
@@ -163,11 +259,18 @@
       <find>overf</find>
       <find>mathjax</find>
       <find>endif</find>
+      <find>sw.js</find>
+      <find>|</find>
+      <find>mid</find>
+      <find>\}</find>
+      <find>\\</find>
     </findStrings>
     <replaceStrings>
       <replace>#ccc</replace>
       <replace>#eee</replace>
       <replace>40em</replace>
+      <replace>\mid</replace>
+      <replace>\\}</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -213,15 +316,16 @@
         <option value="$PROJECT_DIR$/assets/js/index_util.js" />
         <option value="$PROJECT_DIR$/CNAME" />
         <option value="$PROJECT_DIR$/_includes/head.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/clock/clock.html" />
         <option value="$PROJECT_DIR$/_site/2019/08/01/sensitivity.html" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/about.md" />
-        <option value="$PROJECT_DIR$/assets/css/home.css" />
+        <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_layouts/default.html" />
         <option value="$PROJECT_DIR$/_layouts/article.html" />
-        <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/assets/css/home.css" />
+        <option value="$PROJECT_DIR$/_posts/2019-8-4-uniform.md" />
       </list>
     </option>
   </component>
@@ -242,13 +346,13 @@
         <subPane>
           <expand>
             <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="sharzyl.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharzyl.github.io" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="_site" type="462c0819:PsiDirectoryNode" />
+              <item name="sharzyl.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharzyl.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_posts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -302,6 +406,8 @@
       <workItem from="1564478495053" duration="6076000" />
       <workItem from="1564537884048" duration="125136000" />
       <workItem from="1564908231692" duration="964000" />
+      <workItem from="1564911929287" duration="933000" />
+      <workItem from="1564913883536" duration="1666000" />
     </task>
     <task id="LOCAL-00001" summary="Complete basic functionality">
       <created>1564566905714</created>
@@ -422,11 +528,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564888158030</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="get hilarious bug in jekyll server">
+      <created>1564912408971</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1564912408971</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132176000" />
+    <option name="totallyTimeSpent" value="134775000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -442,10 +555,10 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16385669" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.16385669" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.3340564" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.3329718" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.329718" />
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
@@ -455,7 +568,7 @@
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="11" weight="0.329718" />
+      <window_info anchor="bottom" id="TODO" order="11" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -521,7 +634,8 @@
     <MESSAGE value="minor improvements" />
     <MESSAGE value="completed 'sensitivity' post" />
     <MESSAGE value="style adjustment, add next/previous article button" />
-    <option name="LAST_COMMIT_MESSAGE" value="style adjustment, add next/previous article button" />
+    <MESSAGE value="get hilarious bug in jekyll server" />
+    <option name="LAST_COMMIT_MESSAGE" value="get hilarious bug in jekyll server" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_cdn.jsdelivr.net_npm_vue_dist_vue.js">
@@ -786,10 +900,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/_site/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="272">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -803,6 +921,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="57" lean-forward="true" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+          <folding>
+            <element signature="n#script#4;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="442">
+            <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+            <folding>
+              <element signature="n#style#0;n#h3#0;n#div#0;n#!!top" expanded="true" />
+              <element signature="n#script#0;n#!!top" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#script#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/header_simple.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -812,26 +984,105 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/home.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3366">
-          <caret line="206" column="18" selection-start-line="206" selection-start-column="18" selection-end-line="206" selection-end-column="18" />
+        <state relative-caret-position="119">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#2#144#0" />
             <element signature="e#148#198#0" />
+            <element signature="e#312#400#0" />
+            <element signature="e#410#434#0" />
+            <element signature="e#444#467#0" />
+            <element signature="e#477#499#0" />
+            <element signature="e#509#531#0" />
+            <element signature="e#541#563#0" />
+            <element signature="e#573#595#0" />
+            <element signature="e#599#623#0" />
+            <element signature="e#630#779#0" />
+            <element signature="e#789#822#0" />
+            <element signature="e#831#863#0" />
+            <element signature="e#871#959#0" />
+            <element signature="e#968#1004#0" />
+            <element signature="e#1018#1056#0" />
+            <element signature="e#1069#1187#0" />
+            <element signature="e#1205#1279#0" />
+            <element signature="e#1292#1424#0" />
+            <element signature="e#1441#1444#0" />
+            <element signature="e#1533#1583#0" />
+            <element signature="e#1593#1649#0" />
+            <element signature="e#1656#1746#0" />
+            <element signature="e#1760#1782#0" />
+            <element signature="e#1795#1896#0" />
+            <element signature="e#1906#2024#0" />
+            <element signature="e#2038#2086#0" />
+            <element signature="e#2096#2186#0" />
+            <element signature="e#2194#2298#0" />
+            <element signature="e#2311#2412#0" />
+            <element signature="e#2425#2558#0" />
+            <element signature="e#2577#2715#0" />
+            <element signature="e#2732#2784#0" />
+            <element signature="e#2800#2844#0" />
+            <element signature="e#2860#2884#0" />
+            <element signature="e#2897#2919#0" />
+            <element signature="e#2932#2948#0" />
+            <element signature="e#2963#3041#0" />
+            <element signature="e#3062#3081#0" />
+            <element signature="e#3098#3236#0" />
+            <element signature="e#3259#3336#0" />
+            <element signature="e#3343#3558#0" />
+            <element signature="e#3574#3605#0" />
+            <element signature="e#3618#3716#0" />
+            <element signature="e#3733#3758#0" />
+            <element signature="e#3773#3817#0" />
+            <element signature="e#3831#3852#0" />
+            <element signature="e#3861#3947#0" />
+            <element signature="e#3969#4030#0" />
+            <element signature="e#4041#4065#0" />
+            <element signature="e#4099#4153#0" />
+            <element signature="e#4163#4184#0" />
+            <element signature="e#4198#4237#0" />
+            <element signature="e#4257#4287#0" />
+            <element signature="e#4308#4349#0" />
+            <element signature="e#4361#4461#0" />
+            <element signature="e#4475#4572#0" />
+            <element signature="e#4610#4641#0" />
+            <element signature="e#4655#4670#0" />
+            <element signature="e#4728#5674#0" />
+            <element signature="e#4778#4886#0" />
+            <element signature="e#4906#5031#0" />
+            <element signature="e#5045#5195#0" />
+            <element signature="e#5208#5265#0" />
+            <element signature="e#5289#5330#0" />
+            <element signature="e#5338#5370#0" />
+            <element signature="e#5387#5440#0" />
+            <element signature="e#5458#5490#0" />
+            <element signature="e#5499#5531#0" />
+            <element signature="e#5540#5572#0" />
+            <element signature="e#5585#5616#0" />
+            <element signature="e#5638#5672#0" />
+            <element signature="e#5737#6260#0" />
+            <element signature="e#5789#5873#0" />
+            <element signature="e#5902#5926#0" />
+            <element signature="e#5957#6020#0" />
+            <element signature="e#6034#6117#0" />
+            <element signature="e#6134#6195#0" />
+            <element signature="e#6217#6258#0" />
+            <element signature="e#6312#6495#0" />
+            <element signature="e#6392#6426#0" />
+            <element signature="e#6443#6493#0" />
+            <element signature="e#6526#6621#0" />
+            <element signature="e#6584#6619#0" />
+            <element signature="e#6632#6676#0" />
+            <element signature="e#6683#6731#0" />
+            <element signature="e#6748#6790#0" />
+            <element signature="e#6808#6858#0" />
+            <element signature="e#6876#6896#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2019-8-4-uniform.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/page_util.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
+        <state relative-caret-position="583">
           <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -839,55 +1090,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/default.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-79">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="n#script#4;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
-          <folding>
-            <element signature="n#script#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="442">
-            <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-            <folding>
-              <element signature="n#script#0;n#!!top" />
-            </folding>
+    <entry file="file://$PROJECT_DIR$/_posts/2019-8-4-uniform.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="398">
+            <caret line="41" column="12" lean-forward="true" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_site/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
