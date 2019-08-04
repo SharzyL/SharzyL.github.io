@@ -46,7 +46,7 @@ h6, .h6 {
 }
 
 p {
-    margin:0 0 10px
+    padding: .2em 0;
 }
 
 code {
@@ -94,13 +94,20 @@ code {
 }
 
 blockquote {
+    margin: .5em 0;
+    padding: .5em 2em;
     background-color: #eee;
     border-left: .5em #999 solid;
     font-style: italic;
 }
 
 blockquote > p {
-    padding: .5em 2em;
+}
+
+/* handle positioning exception with formulas in blockquote*/
+blockquote .MJXc-display {
+    padding-bottom: 1em;
+    margin-bottom: 0;
 }
 
 a:hover {
@@ -194,6 +201,31 @@ body {
 
 .post-date {
     flex: 1;
+}
+
+#post-switch {
+    padding: 2em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#post-switch > div {
+    width: 40%;
+}
+
+#post-switch a {
+    text-align: center;
+    display: block;
+    color: black;
+    border: 1px black solid;
+    border-radius: .3em;
+    padding: .5em;
+}
+
+#post-switch a:hover {
+    text-decoration: none;
+    color: #1B76C4;
+    border-color: #1B76C4;
 }
 
 .tag {
