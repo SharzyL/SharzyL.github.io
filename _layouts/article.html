@@ -6,6 +6,7 @@ requirements:
  - <link rel="stylesheet" href="/assets/css/article.css">
  - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
  - <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+ - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
 ---
 
 {% include header_article.html %}
@@ -13,9 +14,31 @@ requirements:
 <div class="main">
     <article class="main-text">
         {{ content }}
-        {% if page.comment != "disable" %}
+        <div id="post-switch">
+            <div>
+                {% if page.previous %}
+                <a href="{{ page.previous.url }}" id="post-previous">
+                     <h5>
+                         <i class="fa fa-angle-left"></i> PREVIOUS
+                     </h5>
+                    {{ page.previous.title }}
+                </a>
+                {% endif %}
+            </div>
+
+            <div>
+                {% if page.next %}
+                <a href="{{ page.next.url}}" id="post-next">
+                    <h5>
+                         NEXT <i class="fa fa-angle-right"></i>
+                    </h5>
+                    {{ page.next.title }}
+                </a>
+                {% endif %}
+            </div>
+        </div>
+
         <div id="gitalk-container"></div>
-        {% endif %}
     </article>
 
     <div class="sidebar hidden-on-mobile">
@@ -28,14 +51,15 @@ requirements:
 {% include footer.html %}
 
 
-<!-- use mathjax to handle formulas -->
+<!-- use mathjax to handle formulas-->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
-          tex2jax: {inlineMath: [[' $','$ ']]}
+          tex2jax: {inlineMath: [['$','$']]}
         });
-
 </script>
+
+
 
 <!-- use toc to generate table of contents -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>

@@ -40,7 +40,7 @@ $$ \lambda_i \geq \mu_i \geq \lambda_{i + n - m} $$
 事实上，归纳易证 $A_n^2 = nI_n$ ，故 $A_n$ 的特征根必为 $\pm \sqrt{n}$ ，再注意到 $A_n$ 的迹为 0，故 $A_m$ 必有一半的特征根为 $\sqrt{n}$ ，另一半为 $-\sqrt{n}$ .
 
 ### Step 2
-设 $\lambda_1$ 是 $G$ 的伪邻接矩阵 $A$ ， $\vec{v}_1$ 是它对应的特征向量，则
+设 $\lambda_1$ 是 $G$ 的伪邻接矩阵 $A$ 的一个特征值， $\vec{v}_1$ 是它对应的特征向量，则
 
 $$
 \left|\lambda_{1} v_{1}\right|=\left|(A \vec{v})_{1}\right|=\left|\sum_{j=1}^{m} A_{1, j} v_{j}\right|=\left|\sum_{j \sim 1} A_{1, j} v_{j}\right| \leqslant \sum_{j \sim 1}\left|A_{1, j}\right|\left|v_{1}\right| \leqslant \Delta(H)\left|v_{1}\right|
