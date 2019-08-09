@@ -4,13 +4,13 @@ layout: article
 tags: [math]
 ---
 
-$\\{n\alpha\\}$的均匀分布性是一个非常方便好用的命题，之前我一直只知道使用Wyle判据的证明方法，但是这一证明方法需要用到稍深入的分析学，包括Weierstrass定理。今天我正在思考另外一个和小数部分有关的命题，突然想到了一个均匀分布性的证明，于是用markdown记录下来了. 
+$\\{n\alpha\\}$的均匀分布性是一个非常方便好用的命题，之前我一直只知道使用Wyle判据的证明方法，但是这一证明方法需要用到稍深入的分析学，包括Weierstrass的三角多项式逼近定理。今天我正在思考另外一个和小数部分有关的命题，突然想到了一个有趣的方法，可以用于证明这个问题，于是便将它记录下来了. 
 
 
 
-# Theorem
+# Problem
 
-$\alpha \in [0, 1] \cap \mathbb{R} \backslash \mathbb{Q}$，求证对于任何一个区间$I \in [0, 1]$，均有
+$\alpha \in \mathbb{R} \backslash \mathbb{Q}$，求证对于任何一个区间$I \in [0, 1]$，均有
 
 $$
 \lim_{n \to \infty }\frac{\#\{i \in \mathbb{Z} \mid 1 \leq i \leq n, \{i\alpha\} \in I\}}{n} = \mid I\mid
@@ -18,7 +18,7 @@ $$
 
 # Proof
 
-对任何一个实数$a$，记 $a^* = \\{a + n \mid n \in \mathbb{Z}\\}$ 
+不妨设$\alpha \in [0, 1]$，对任何一个实数$a$，记 $a^* = \\{a + n \mid n \in \mathbb{Z}\\}$ 
 
 对任意一个$\mathbb{R}$上的区间$I$和正整数$n$，记$f(I, n) = \sum_{i = 0}^n \mid (n\alpha)^*\cap I\mid$ ，称$I$是好的，如果
 
@@ -73,3 +73,11 @@ $$\limsup_{n \to \infty}\frac{f(I, n)}{n} \leq \mid I\mid$$
 
 故$\lim\limits_{n \to \infty} \frac{f(I, n)}{n} = \mid I\mid$，即$I$是好的. 证毕. 
 
+# Postscript
+
+顺带一提，我最开始思考的问题是
+> $\forall \alpha \in \mathbb{R} \backslash \mathbb{Q}$，
+> 
+> $$ \lim_{n \to \infty} \frac{\sum_{i = 1}^{n}\{i\alpha\}}{n} = \frac{1}{2}$$
+
+不知有无简单的解法
