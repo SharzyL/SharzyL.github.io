@@ -9,6 +9,7 @@ requirements:
  - <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
  - <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
  - <script type="text/javascript" src="/assets/nav/sticky-sidebar.js"></script>
+ - <script type="text/javascript" src="/assets/nav/zooming.js"></script>
 ---
 
 {% include header_article.html %}
@@ -96,5 +97,12 @@ requirements:
         distractionFreeMode: true  // Facebook-like distraction free mode
     });
 
-    gitalk.render('gitalk-container')
+    gitalk.render('gitalk-container');
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const zooming = new Zooming({
+
+        });
+        zooming.listen('article img');
+    })
 </script>
