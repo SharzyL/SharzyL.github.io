@@ -10,18 +10,23 @@ a {
     text-decoration: none;
 }
 
-article > h1, h2 {
-    border-bottom: 1px solid #eee;
+article > h1 {
+    border-bottom: 1px solid #ddd;
     margin: .5em 0;
 }
 
-article > h3 {
-    font-family: "Microsoft YaHei UI", Segoe, Arial, sans-serif;
+article > h2, h3 {
+    font-family: Georgia, "SimSun", serif;
     margin: .5em 0;
+    font-weight: normal;
+}
+
+article p, strong {
+    margin: 1em 0;
 }
 
 h1, .h1 {
-    font-size: 36px;
+    font-size: 40px;
 }
 
 h2, .h2 {
@@ -56,6 +61,24 @@ code {
     border-radius: 4px;
 }
 
+strong {
+    font-family: "Microsoft YaHei UI", Segoe, Arial, sans-serif;
+
+}
+
+table {
+    border-collapse: collapse;
+
+}
+
+thead tr {
+    border-bottom: 2px solid black;
+}
+
+th, td {
+    padding: 2px 1em;
+}
+
 .hidden {
     display: none !important;
 }
@@ -78,12 +101,11 @@ code {
     border-bottom: 1px solid #eee;
 }
 
-.highlight {
+div.highlight {
     background-color: #eee;
     padding: .7em;
     border-radius: .3em;
     overflow-x: auto;
-    margin: 1em 3em;
 }
 
 .highlight code {
@@ -456,7 +478,7 @@ footer * {
 
 .toc-list-item {
     padding: 2px 3px;
-    width: 13em;
+    /*width: 13em;*/
 }
 
 .toc-link:hover {
@@ -466,4 +488,11 @@ footer * {
 
 #toc a.toc-link {
     height: 2em;
+}
+
+img {
+}
+
+article img:hover {
+    /*cursor: zoom-in;*/
 }

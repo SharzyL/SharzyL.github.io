@@ -43,5 +43,8 @@ window.addEventListener('load', () => {
             }
         }
         ticking = true;
-    })
+    });
+
+
+
 });
