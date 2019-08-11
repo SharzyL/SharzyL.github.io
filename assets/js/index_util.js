@@ -7,8 +7,7 @@
 'use strict';
 
 
-// tag system
-(function f() {
+window.addEventListener('DOMContentLoaded', () => {
     let cards = document.getElementsByClassName('post-card');
     let all_tags_str = new Set();  // a set including all tags(str)
     let selected_tags_str = new Set();  // a set including all selected tags(str)
@@ -23,11 +22,11 @@
         });
     }
 
-    let showcase = document.getElementById('tags-showcase');
+    let showcase = document.getElementById('tags-list');
     for (let tag_str of all_tags_str) {
         // create show_tag_obj for all tags occurred
         let show_tag_obj = document.createElement('a');
-        show_tag_obj.classList.add('tag');
+        show_tag_obj.className = 'tag';
         show_tag_obj.innerText = tag_str;
         showcase.appendChild(show_tag_obj);
         show_tags_obj.add(show_tag_obj);
@@ -101,7 +100,6 @@
         }
         hint_obj.innerHTML = hint_text;
     }
-
-})();
+});
 
 //TODO: improve tags system on mobile systems

@@ -1,9 +1,7 @@
 ---
 layout: default
 requirements:
- - <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 ---
-
 
 <article class="main-text">
     {{ content }}
@@ -12,33 +10,8 @@ requirements:
     {% endif %}
 </article>
 
-<div class="sidebar hidden-on-mobile">
+<div class="sidebar hidden-on-mobile" id="sidebar">
     <div class="sidebar__inner">
         <div id="toc"></div>
     </div>
 </div>
-
-
-<!-- use toc to generate table of contents -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
-<script>
-    tocbot.init({
-    // Where to render the table of contents.
-    tocSelector: '#toc',
-    // Where to grab the headings to build the table of contents.
-    contentSelector: 'article',
-    // Which headings to grab inside of the contentSelector element.
-    headingSelector: 'h1, h2, h3',
-    });
-</script>
-
-<!-- use sticky-sidebar to wrap table of contents to a sidebar-->
-<script type="text/javascript" src="/assets/nav/sticky-sidebar.js"></script>
-<script type="text/javascript">
-    var sidebar = new StickySidebar('.sidebar', {
-        topSpacing: 20,
-        bottomSpacing: 20,
-        containerSelector: '.main',
-        innerWrapperSelector: '.sidebar__inner'
-    });
-</script>

@@ -23,11 +23,11 @@ The pages are hosted on [Github pages](https://pages.github.com).
 You can view the source code on
  this [Github repo](https://github.com/SharzyL/SharzyL.github.io). 
  
-Thank for the developers of these utilities, which makes it much easier to construct such a site: 
+Thanks for the developers of these utilities, which makes it much easier to construct such a site: 
 - [Responsive navigation](https://github.com/viljamis/responsive-nav.js)
-- [sticky sidebar](https://github.com/abouolia/sticky-sidebar)
-- [tocbot](https://github.com/tscanlin/tocbot)
 - [gitalk](https://github.com/gitalk/gitalk)
+- [mathjax](https://www.mathjax.org/)
+- [zooming.js](https://desmonding.me/zooming/)
 
 ## Friends' link
 
