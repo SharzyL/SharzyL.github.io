@@ -31,11 +31,11 @@ $$
 任取$u\in \mathbb{R}$，注意到
 
 $$
-\begin{align*}
+\begin{aligned}
 [-1, 1]\ni &\{n\alpha\ - u\} - \{-u\} = \sum_{i = 1}^n(\{i\alpha - u\} - \{(i - 1)\alpha - u\})\\
 = &n\alpha - \#\{i = 1, 2, \ldots, n\mid \{i\alpha - u\}<\alpha\}\\
 = &n\alpha - f([u, u+\alpha], n)
-\end{align*}
+\end{aligned}
 $$
 
 取$n\to \infty$，得

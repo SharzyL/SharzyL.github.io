@@ -371,6 +371,11 @@ footer * {
     padding-top: 3em;
 }
 
+.sidebar-detached {
+    position: fixed;
+    top: 0;
+}
+
 #toc > li {
     list-style: none;
 }
@@ -509,6 +514,7 @@ img {
 
     .main-text {
         width: 100vw;
+        padding: 1em;
     }
 
     .main-title {
@@ -578,6 +584,9 @@ img {
 
 /* for tablet users*/
 @media screen and (min-width: 40em) and (max-width: 80em) {
+    .main {
+        justify-content: flex-start;
+    }
     .article-banner {
         padding-left: 3em;
     }
@@ -588,6 +597,7 @@ img {
 
     #sidebar {
         width: 25%;
+        left: calc(75% - 1.5em);
     }
 
     .main {
@@ -607,8 +617,6 @@ img {
     }
 
     .sidebar-detached {
-        position: fixed;
-        top: 0;
         left: 75%;
     }
 }
