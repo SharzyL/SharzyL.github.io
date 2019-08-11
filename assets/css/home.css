@@ -54,11 +54,15 @@ p {
 }
 
 code {
-    font-family: Consolas, Monospaced, sans-serif;
     color: #eb7979;
     background-color: #eee;
     padding: 1px .3em;
     border-radius: 4px;
+}
+
+code,
+code span {
+    font-family: Consolas, Monospaced, sans-serif;
 }
 
 strong {
@@ -68,9 +72,12 @@ strong {
 
 table {
     border-collapse: collapse;
-
+    margin:0 auto;
 }
 
+code table {
+    margin:0;
+}
 thead tr {
     border-bottom: 2px solid black;
 }
