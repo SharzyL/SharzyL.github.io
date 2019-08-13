@@ -5,11 +5,6 @@
     font-size: 16px;
 }
 
-a {
-    color: #2a7ae2;
-    text-decoration: none;
-}
-
 article > h1 {
     font-weight: normal;
     border-bottom: 1px solid #ddd;
@@ -22,6 +17,27 @@ article > h3 {
     margin: .5em 0;
     font-weight: normal;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+article a,
+.footer a {
+    color: #2a7ae2;
+    text-decoration: none;
+}
+
+article a:hover,
+.footer a:hover {
+    text-decoration: underline;
+}
+
 
 article p, strong {
     margin: 1em 0;
@@ -142,11 +158,6 @@ blockquote > p {
 blockquote .MJXc-display {
     padding-bottom: 1em;
     margin-bottom: 0;
-}
-
-a:hover {
-    cursor: pointer;
-    text-decoration: underline;
 }
 
 body {

@@ -12,7 +12,7 @@ requirements:
 
     {% for post in site.posts %}
     <div class="post-card" url={{post.url}} tags="{% for tag in post.tags %}{{tag}} {% endfor %}">
-
+        <a href="{{post.url}}">
         <h3 class="post-header bold">
             {{ post.title }}
         </h3>
@@ -32,18 +32,10 @@ requirements:
             <a class="tag" href="/?tags={{tag}}"> {{ tag }} </a>
             {% endfor %}
         </div>
+        </a>
     </div>
     {% endfor %}
 </div>
-
-<script>
-    postcards = document.getElementsByClassName('post-card');
-    for (let card of postcards) {
-        card.onclick = () => {
-            location.href = card.getAttribute('url');
-        }
-    }
-</script>
 
 <div class="sidebar hidden-on-mobile" id="sidebar">
     <div id="tags-showcase">
