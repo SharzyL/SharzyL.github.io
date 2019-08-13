@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7823968-0793-46f2-84a7-c6131547506f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-8-4-uniform.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-8-4-uniform.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -62,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/common.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="599" column="30" selection-start-line="599" selection-start-column="30" selection-end-line="599" selection-end-column="30" />
+            <state relative-caret-position="429">
+              <caret line="621" column="1" lean-forward="true" selection-start-line="621" selection-start-column="1" selection-end-line="621" selection-end-column="1" />
               <folding>
                 <element signature="e#148#198#0" />
                 <element signature="e#400#408#0" />
@@ -139,7 +141,6 @@
                 <element signature="e#5390#5504#0" />
                 <element signature="e#5527#5552#0" />
                 <element signature="e#5566#5747#0" />
-                <element signature="e#4722#5668#0" />
                 <element signature="e#4772#4880#0" />
                 <element signature="e#4900#5025#0" />
                 <element signature="e#5039#5189#0" />
@@ -164,8 +165,34 @@
                 <element signature="e#6831#6847#0" />
                 <element signature="e#6965#6987#0" />
                 <element signature="e#6578#6613#0" />
-                <element signature="e#6629#6657#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sitemap.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -191,32 +218,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_site/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="70" lean-forward="true" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
-              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
-              <folding>
-                <element signature="n#style#0;n#h3#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#script#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -230,7 +231,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>border-bottom</find>
       <find>font-awe</find>
       <find>banner</find>
       <find>.banner</find>
@@ -260,6 +260,7 @@
       <find>tocbot</find>
       <find>scroll</find>
       <find>detached</find>
+      <find>_config</find>
     </findStrings>
     <replaceStrings>
       <replace>#ccc</replace>
@@ -268,6 +269,9 @@
       <replace>\mid</replace>
       <replace>\\}</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>C:\_dev\web\sharzyl.github.io</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -275,7 +279,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/clock/clock.css" />
         <option value="$PROJECT_DIR$/css/blog.css" />
         <option value="$PROJECT_DIR$/_posts/test.md" />
@@ -304,9 +307,7 @@
         <option value="$PROJECT_DIR$/CNAME" />
         <option value="$PROJECT_DIR$/clock/clock.html" />
         <option value="$PROJECT_DIR$/_site/2019/08/01/sensitivity.html" />
-        <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_layouts/default.html" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/_posts/2019-8-6-bx.md" />
         <option value="$PROJECT_DIR$/assets/css/404.css" />
         <option value="$PROJECT_DIR$/_layouts/404.html" />
@@ -326,6 +327,9 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/about.md" />
         <option value="$PROJECT_DIR$/assets/css/common.css" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/sitemap.xml" />
       </list>
     </option>
   </component>
@@ -351,40 +355,12 @@
             <path>
               <item name="sharzyl.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="sharzyl.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="_includes" type="462c0819:PsiDirectoryNode" />
+              <item name="_site" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sharzyl.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="sharzyl.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="_layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sharzyl.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sharzyl.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="_posts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sharzyl.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sharzyl.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sharzyl.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sharzyl.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sharzyl.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sharzyl.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sharzyl.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sharzyl.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="nav" type="462c0819:PsiDirectoryNode" />
+              <item name="clock" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -448,7 +424,7 @@
       <workItem from="1564965340976" duration="643000" />
       <workItem from="1565075657019" duration="2224000" />
       <workItem from="1565245353492" duration="1760000" />
-      <workItem from="1565321449353" duration="47933000" />
+      <workItem from="1565321449353" duration="54667000" />
     </task>
     <task id="LOCAL-00001" summary="Complete basic functionality">
       <created>1564566905714</created>
@@ -653,11 +629,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565526362237</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="fix layout bug on mobile devices">
+      <created>1565528272837</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1565528272837</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192112000" />
+    <option name="totallyTimeSpent" value="198846000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -676,7 +659,7 @@
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16385669" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.3329718" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.70498914" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.329718" />
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
@@ -761,11 +744,10 @@
     <MESSAGE value="update post, css improvement" />
     <MESSAGE value="self-writing toc and sidebar, minor layout optimization, updated credit info" />
     <MESSAGE value="fix list style bug in toc" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix list style bug in toc" />
+    <MESSAGE value="fix layout bug on mobile devices" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix layout bug on mobile devices" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_posts/2019-7-31-test.md" />
-    <entry file="file://$PROJECT_DIR$/_data/navigation.yaml" />
     <entry file="file://$PROJECT_DIR$/_posts/2019-7-31-exp.md" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -798,13 +780,6 @@
             <element signature="n#style#0;n#p#1;n#div#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#1695#1701#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_site/feed.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -860,9 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/_site/2019/08/01/sensitivity.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3502">
@@ -871,14 +843,6 @@
             <element signature="n#style#0;n#p#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml" />
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -923,16 +887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2019-8-4-uniform.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="806">
-            <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1131,10 +1085,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2019-8-4-uniform.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="697">
+            <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/sitemap.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-403" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/feed.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-741">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/common.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="599" column="30" selection-start-line="599" selection-start-column="30" selection-end-line="599" selection-end-column="30" />
+        <state relative-caret-position="429">
+          <caret line="621" column="1" lean-forward="true" selection-start-line="621" selection-start-column="1" selection-end-line="621" selection-end-column="1" />
           <folding>
             <element signature="e#148#198#0" />
             <element signature="e#400#408#0" />
@@ -1207,7 +1186,6 @@
             <element signature="e#5390#5504#0" />
             <element signature="e#5527#5552#0" />
             <element signature="e#5566#5747#0" />
-            <element signature="e#4722#5668#0" />
             <element signature="e#4772#4880#0" />
             <element signature="e#4900#5025#0" />
             <element signature="e#5039#5189#0" />
@@ -1232,8 +1210,28 @@
             <element signature="e#6831#6847#0" />
             <element signature="e#6965#6987#0" />
             <element signature="e#6578#6613#0" />
-            <element signature="e#6629#6657#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sitemap.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
         </state>
       </provider>
     </entry>

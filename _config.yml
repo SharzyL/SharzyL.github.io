@@ -1,0 +1,4 @@
+plugins:
+  - jekyll-feed
+
+url: "https://sharzy.in"
