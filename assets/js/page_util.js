@@ -23,13 +23,12 @@ const init_toc = (article, toc_obj) => {
     let toc_items = [];
     let head_cnt = head_objs.length;
     for (let node of head_objs) {
-        toc_items.push(
-            createEle(toc_obj, 'li',
-                `<a href="#${node.innerText.toLowerCase()}" class="toc-link">${node.innerText}</a>`,
-                {'class': `toc-${node.tagName.toLowerCase()}`}
-
-            )
+        let toc_item = createEle(toc_obj, 'li',
+            `<a class="toc-link">${node.innerText}</a>`,
+            {'class': `toc-${node.tagName.toLowerCase()}`}
         );
+        toc_item.addEventListener('click', () => scroll_to(node.innerText))
+        toc_items.push(toc_item);
     }
 
     // we call a head active, if button of its content is under the top of viewport
@@ -116,6 +115,14 @@ const init_nav = () => {
     });
 };
 
+const scroll_to = (title) => {
+    let length = document.getElementById(title.toLowerCase()).getBoundingClientRect().top;
+    window.scrollBy({
+        top: length,
+        left: 0,
+        behavior: 'smooth'
+    })
+};
 
 window.addEventListener('DOMContentLoaded', () => {
     init_nav();

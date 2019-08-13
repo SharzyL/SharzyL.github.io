@@ -1,4 +1,5 @@
+url: "https://sharzy.in"
+
 plugins:
   - jekyll-feed
-
-url: "https://sharzy.in"
+  - jekyll-sitemap

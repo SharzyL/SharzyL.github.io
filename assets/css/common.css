@@ -156,10 +156,6 @@ body {
     flex-flow: column;
 }
 
-html, body {
-    scroll-behavior: smooth;
-}
-
 .navigation {
     display: flex;
 }
