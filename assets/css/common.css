@@ -24,17 +24,21 @@ a {
 }
 
 a:hover {
+    cursor: pointer;
     text-decoration: none;
 }
 
 article a,
+.link,
 .footer a {
     color: #2a7ae2;
     text-decoration: none;
 }
 
 article a:hover,
+.link:hover,
 .footer a:hover {
+    cursor: pointer;
     text-decoration: underline;
 }
 
@@ -248,7 +252,7 @@ body {
     display: flex;
 }
 
-.post-date {
+.post-meta > a:first-child {
     flex: 1;
 }
 
