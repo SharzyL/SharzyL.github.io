@@ -3,3 +3,31 @@ url: "https://sharzy.in"
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: clock/clock.html
+    values:
+      sitemap: false
+  - scope:
+      path: _posts/*
+    values:
+      layout: article
+
+meta:
+  -
+    name: description
+    value: Sharzy's personal blog, used to record something worth recording
+  -
+    name: keywords
+    value:
+      - math
+      - web
+      - CS
+      - MO
+  -
+    name: author
+    value: Sharzy
+  -
+    name: generator
+    value: jekyll

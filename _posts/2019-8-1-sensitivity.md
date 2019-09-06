@@ -1,5 +1,4 @@
 ---
-layout: article
 title: 一个猜想的证明
 subtitle: 立方体图子图的最大度
 tags: [math]

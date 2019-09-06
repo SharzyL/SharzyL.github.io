@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    // handle url jumping
+    // handle url jumping including tags info
     let i = location.href.indexOf('?tags=');
     if (i !== -1) {
         let selected_tags_text = new Set(location.href.slice(i + 6).split('&'));

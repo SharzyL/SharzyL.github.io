@@ -594,7 +594,7 @@ img {
 }
 
 /* for tablet users*/
-@media screen and (min-width: 40em) and (max-width: 80em) {
+@media screen and (min-width: 40em) and (max-width: 79.999999999em) {
     .main {
         justify-content: flex-start;
     }

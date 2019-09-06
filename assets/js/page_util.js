@@ -27,7 +27,7 @@ const init_toc = (article, toc_obj) => {
             `<a class="toc-link">${node.innerText}</a>`,
             {'class': `toc-${node.tagName.toLowerCase()}`}
         );
-        toc_item.addEventListener('click', () => scroll_to(node.innerText))
+        toc_item.addEventListener('click', () => scroll_to(node.innerText));
         toc_items.push(toc_item);
     }
 
@@ -105,9 +105,12 @@ const init_nav = () => {
                 }
                 window.requestAnimationFrame(hide);
             } else { // it is scrolling up
-                if (last_scroll_y === 0) {
-                    window.requestAnimationFrame(undetach)
-                }
+                window.requestAnimationFrame(display);
+            }
+
+            // handle strange performance on Safari
+            if (last_scroll_y === 0) {
+                window.requestAnimationFrame(undetach);
                 window.requestAnimationFrame(display);
             }
         }

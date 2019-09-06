@@ -1,5 +1,4 @@
 ---
-layout: article
 title: Experiences
 tags: [CS, 杂谈]
 ---

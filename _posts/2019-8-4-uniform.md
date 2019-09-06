@@ -1,6 +1,5 @@
 ---
 title: 小数部分均匀分布的初等（大概）证明
-layout: article
 tags: [math]
 ---
 
