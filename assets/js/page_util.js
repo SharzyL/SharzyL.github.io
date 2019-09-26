@@ -105,12 +105,9 @@ const init_nav = () => {
                 }
                 window.requestAnimationFrame(hide);
             } else { // it is scrolling up
-                window.requestAnimationFrame(display);
-            }
-
-            // handle strange performance on Safari
-            if (last_scroll_y === 0) {
-                window.requestAnimationFrame(undetach);
+                if (last_scroll_y <= 0) {
+                    window.requestAnimationFrame(undetach)
+                }
                 window.requestAnimationFrame(display);
             }
         }

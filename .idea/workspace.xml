@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7823968-0793-46f2-84a7-c6131547506f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/_posts/2019-9-25-triangle-bib.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-7-31-experiences.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-7-31-experiences.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-8-1-sensitivity.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-8-1-sensitivity.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-8-4-uniform.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-8-4-uniform.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-8-6-bx.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-8-6-bx.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-8-8-pitfall.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-8-8-pitfall.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/index_util.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/index_util.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/page_util.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/page_util.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -31,7 +21,7 @@
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="952">
-              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
               <folding>
                 <element signature="n#style#0;n#h3#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -52,10 +42,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/index_util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="-323">
               <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -64,11 +54,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/js/page_util.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="634">
-              <caret line="111" column="54" selection-start-line="111" selection-start-column="54" selection-end-line="111" selection-end-column="54" />
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2019-8-4-uniform.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="34">
+                <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2019-8-1-sensitivity.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="17">
+                <caret line="1" selection-start-line="1" selection-end-line="1" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2019-9-25-triangle-bib.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="344">
+                <caret line="48" column="2" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -76,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/common.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="609" column="19" lean-forward="true" selection-start-line="609" selection-start-column="19" selection-end-line="609" selection-end-column="19" />
+            <state relative-caret-position="126">
+              <caret line="164" column="1" lean-forward="true" selection-start-line="164" selection-start-column="1" selection-end-line="164" selection-end-column="1" />
               <folding>
                 <element signature="e#2#144#0" />
                 <element signature="e#159#242#0" />
@@ -115,7 +132,6 @@
                 <element signature="e#2217#2307#0" />
                 <element signature="e#2321#2343#0" />
                 <element signature="e#2356#2457#0" />
-                <element signature="e#2467#2585#0" />
                 <element signature="e#2599#2647#0" />
                 <element signature="e#2657#2747#0" />
                 <element signature="e#2755#2859#0" />
@@ -126,6 +142,69 @@
                 <element signature="e#3327#3405#0" />
                 <element signature="e#3421#3465#0" />
                 <element signature="e#3481#3505#0" />
+                <element signature="e#3518#3540#0" />
+                <element signature="e#3569#3585#0" />
+                <element signature="e#3600#3678#0" />
+                <element signature="e#3699#3718#0" />
+                <element signature="e#3735#3873#0" />
+                <element signature="e#3896#3973#0" />
+                <element signature="e#3980#4195#0" />
+                <element signature="e#4211#4242#0" />
+                <element signature="e#4255#4353#0" />
+                <element signature="e#4368#4412#0" />
+                <element signature="e#4426#4447#0" />
+                <element signature="e#4456#4542#0" />
+                <element signature="e#4564#4625#0" />
+                <element signature="e#4636#4660#0" />
+                <element signature="e#4694#4748#0" />
+                <element signature="e#4758#4779#0" />
+                <element signature="e#4793#4832#0" />
+                <element signature="e#4852#4882#0" />
+                <element signature="e#4903#4944#0" />
+                <element signature="e#5221#5252#0" />
+                <element signature="e#5292#5331#0" />
+                <element signature="e#5351#5387#0" />
+                <element signature="e#5399#5424#0" />
+                <element signature="e#5436#5545#0" />
+                <element signature="e#5558#5682#0" />
+                <element signature="e#5700#5794#0" />
+                <element signature="e#5806#5862#0" />
+                <element signature="e#5872#5921#0" />
+                <element signature="e#5931#5959#0" />
+                <element signature="e#5969#6016#0" />
+                <element signature="e#6022#6025#0" />
+                <element signature="e#6042#6065#0" />
+                <element signature="e#6085#6110#0" />
+                <element signature="e#6126#6129#0" />
+                <element signature="e#6147#6172#0" />
+                <element signature="e#6191#6284#0" />
+                <element signature="e#6303#6343#0" />
+                <element signature="e#6363#6489#0" />
+                <element signature="e#6512#6539#0" />
+                <element signature="e#6553#6746#0" />
+                <element signature="e#6804#7748#0" />
+                <element signature="e#6854#6962#0" />
+                <element signature="e#6982#7107#0" />
+                <element signature="e#7121#7271#0" />
+                <element signature="e#7284#7341#0" />
+                <element signature="e#7365#7406#0" />
+                <element signature="e#7414#7446#0" />
+                <element signature="e#7463#7514#0" />
+                <element signature="e#7532#7564#0" />
+                <element signature="e#7573#7605#0" />
+                <element signature="e#7614#7646#0" />
+                <element signature="e#7659#7690#0" />
+                <element signature="e#7712#7746#0" />
+                <element signature="e#7811#8517#0" />
+                <element signature="e#7863#7947#0" />
+                <element signature="e#7976#8000#0" />
+                <element signature="e#8031#8094#0" />
+                <element signature="e#8108#8191#0" />
+                <element signature="e#8213#8254#0" />
+                <element signature="e#8278#8313#0" />
+                <element signature="e#8343#8376#0" />
+                <element signature="e#8393#8433#0" />
+                <element signature="e#8460#8515#0" />
               </folding>
             </state>
           </provider>
@@ -144,7 +223,7 @@
         <entry file="file://$PROJECT_DIR$/_includes/head.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -153,7 +232,7 @@
         <entry file="file://$PROJECT_DIR$/404.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -220,7 +299,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/clock/clock.css" />
         <option value="$PROJECT_DIR$/css/blog.css" />
         <option value="$PROJECT_DIR$/_posts/test.md" />
         <option value="$PROJECT_DIR$/_posts/exp.md" />
@@ -271,6 +349,7 @@
         <option value="$PROJECT_DIR$/_includes/head.html" />
         <option value="$PROJECT_DIR$/assets/css/common.css" />
         <option value="$PROJECT_DIR$/assets/js/page_util.js" />
+        <option value="$PROJECT_DIR$/_posts/2019-9-25-triangle-bib.md" />
       </list>
     </option>
   </component>
@@ -286,7 +365,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -334,6 +412,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -394,7 +473,8 @@
       <workItem from="1565321449353" duration="63686000" />
       <workItem from="1565761235517" duration="1253000" />
       <workItem from="1565772906387" duration="5398000" />
-      <workItem from="1567764316544" duration="3230000" />
+      <workItem from="1567764316544" duration="5348000" />
+      <workItem from="1569422641871" duration="6144000" />
     </task>
     <task id="LOCAL-00001" summary="Complete basic functionality">
       <created>1564566905714</created>
@@ -627,11 +707,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565879444906</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="ui improvement">
+      <created>1567767784535</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1567767784535</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217746000" />
+    <option name="totallyTimeSpent" value="226008000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -647,7 +734,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.16385669" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16385669" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.27982646" />
@@ -660,7 +747,7 @@
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="11" weight="0.32936078" />
+      <window_info anchor="bottom" id="TODO" order="11" weight="0.3286334" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -740,13 +827,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="ui improvement" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/css/highlight.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="69" lean-forward="true" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/nav/sticky-sidebar.js" />
     <entry file="file://$PROJECT_DIR$/_includes/comment.html" />
     <entry file="file://$PROJECT_DIR$/_site/404.html">
@@ -974,37 +1054,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2019-8-8-pitfall.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="646">
-            <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2019-8-6-bx.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="17">
-            <caret line="1" selection-start-line="1" selection-end-line="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2019-8-4-uniform.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="34">
-            <caret line="2" selection-start-line="2" selection-end-line="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2019-8-1-sensitivity.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="17">
@@ -1031,7 +1081,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="uml://JavaScript-modules-diagram/C:/_dev/web/sharzyl.github.io/assets/js/page_util.js">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/assets/js/page_util.js</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="794.0" y="435.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
       <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="442">
@@ -1041,14 +1117,6 @@
             </folding>
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1063,16 +1131,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/index_util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -1083,38 +1141,68 @@
     <entry file="file://$PROJECT_DIR$/_includes/head.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/404.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="uml://JavaScript-modules-diagram/C:/_dev/web/sharzyl.github.io/assets/js/page_util.js">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JavaScript-modules-diagram</ID>
-          <OriginalElement>$PROJECT_DIR$/assets/js/page_util.js</OriginalElement>
-          <nodes />
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="793.5" y="435.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>All</Category>
-          </Categories>
-          <VISIBILITY>Details</VISIBILITY>
+    <entry file="file://$PROJECT_DIR$/assets/js/page_util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="112" column="9" lean-forward="true" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2019-8-8-pitfall.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="255">
+            <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2019-8-4-uniform.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="34">
+            <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2019-8-1-sensitivity.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="17">
+            <caret line="1" selection-start-line="1" selection-end-line="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2019-9-25-triangle-bib.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="344">
+            <caret line="48" column="2" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/common.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="609" column="19" lean-forward="true" selection-start-line="609" selection-start-column="19" selection-end-line="609" selection-end-column="19" />
+        <state relative-caret-position="126">
+          <caret line="164" column="1" lean-forward="true" selection-start-line="164" selection-start-column="1" selection-end-line="164" selection-end-column="1" />
           <folding>
             <element signature="e#2#144#0" />
             <element signature="e#159#242#0" />
@@ -1152,7 +1240,6 @@
             <element signature="e#2217#2307#0" />
             <element signature="e#2321#2343#0" />
             <element signature="e#2356#2457#0" />
-            <element signature="e#2467#2585#0" />
             <element signature="e#2599#2647#0" />
             <element signature="e#2657#2747#0" />
             <element signature="e#2755#2859#0" />
@@ -1163,14 +1250,80 @@
             <element signature="e#3327#3405#0" />
             <element signature="e#3421#3465#0" />
             <element signature="e#3481#3505#0" />
+            <element signature="e#3518#3540#0" />
+            <element signature="e#3569#3585#0" />
+            <element signature="e#3600#3678#0" />
+            <element signature="e#3699#3718#0" />
+            <element signature="e#3735#3873#0" />
+            <element signature="e#3896#3973#0" />
+            <element signature="e#3980#4195#0" />
+            <element signature="e#4211#4242#0" />
+            <element signature="e#4255#4353#0" />
+            <element signature="e#4368#4412#0" />
+            <element signature="e#4426#4447#0" />
+            <element signature="e#4456#4542#0" />
+            <element signature="e#4564#4625#0" />
+            <element signature="e#4636#4660#0" />
+            <element signature="e#4694#4748#0" />
+            <element signature="e#4758#4779#0" />
+            <element signature="e#4793#4832#0" />
+            <element signature="e#4852#4882#0" />
+            <element signature="e#4903#4944#0" />
+            <element signature="e#5221#5252#0" />
+            <element signature="e#5292#5331#0" />
+            <element signature="e#5351#5387#0" />
+            <element signature="e#5399#5424#0" />
+            <element signature="e#5436#5545#0" />
+            <element signature="e#5558#5682#0" />
+            <element signature="e#5700#5794#0" />
+            <element signature="e#5806#5862#0" />
+            <element signature="e#5872#5921#0" />
+            <element signature="e#5931#5959#0" />
+            <element signature="e#5969#6016#0" />
+            <element signature="e#6022#6025#0" />
+            <element signature="e#6042#6065#0" />
+            <element signature="e#6085#6110#0" />
+            <element signature="e#6126#6129#0" />
+            <element signature="e#6147#6172#0" />
+            <element signature="e#6191#6284#0" />
+            <element signature="e#6303#6343#0" />
+            <element signature="e#6363#6489#0" />
+            <element signature="e#6512#6539#0" />
+            <element signature="e#6553#6746#0" />
+            <element signature="e#6804#7748#0" />
+            <element signature="e#6854#6962#0" />
+            <element signature="e#6982#7107#0" />
+            <element signature="e#7121#7271#0" />
+            <element signature="e#7284#7341#0" />
+            <element signature="e#7365#7406#0" />
+            <element signature="e#7414#7446#0" />
+            <element signature="e#7463#7514#0" />
+            <element signature="e#7532#7564#0" />
+            <element signature="e#7573#7605#0" />
+            <element signature="e#7614#7646#0" />
+            <element signature="e#7659#7690#0" />
+            <element signature="e#7712#7746#0" />
+            <element signature="e#7811#8517#0" />
+            <element signature="e#7863#7947#0" />
+            <element signature="e#7976#8000#0" />
+            <element signature="e#8031#8094#0" />
+            <element signature="e#8108#8191#0" />
+            <element signature="e#8213#8254#0" />
+            <element signature="e#8278#8313#0" />
+            <element signature="e#8343#8376#0" />
+            <element signature="e#8393#8433#0" />
+            <element signature="e#8460#8515#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/page_util.js">
+    <entry file="file://$PROJECT_DIR$/assets/js/index_util.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="111" column="54" selection-start-line="111" selection-start-column="54" selection-end-line="111" selection-end-column="54" />
+        <state relative-caret-position="-323">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
