@@ -18,6 +18,10 @@ article > h3 {
     font-weight: normal;
 }
 
+article > h1, h2, h3 {
+    color: #155e9d;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -155,9 +159,6 @@ blockquote {
     font-style: italic;
 }
 
-blockquote > p {
-}
-
 /* handle positioning exception with formulas in blockquote*/
 blockquote .MJXc-display {
     padding-bottom: 1em;
@@ -184,7 +185,7 @@ body {
 }
 
 .header {
-    background: #bbb url(https://i.loli.net/2019/08/01/5d429efb33a9642629.jpg) center;
+    background: #1B76C4 center;
     background-size: cover;
 }
 
