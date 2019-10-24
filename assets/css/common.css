@@ -18,7 +18,9 @@ article > h3 {
     font-weight: normal;
 }
 
-article > h1, h2, h3 {
+.post-article h1, 
+.post-article h2,
+.post-article h3 {
     color: #155e9d;
 }
 

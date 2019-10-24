@@ -2,6 +2,7 @@
 title: 有关《论三角形》的文献阅读
 tags: [杂谈]
 ---
+
 三角形这一结构，作为最基础的二维结构之一，受到了广泛的研究，同时也被应用于各个学科领域.
 下文介绍了几篇于三角形这个话题有关的文献.
 
@@ -112,3 +113,5 @@ $O(n\ln n)$，另一种在最坏情况下的时间复杂度为$O(n^2)$，但是�
 [4]Ruppert, J., and Seidel, R.On the diﬀiculty of triangulating three-dimensional Nonconvex Polyhedra.*Discrete Comput Geom* 7, 3 (Mar. 1992), 227–253.
 
 [5]Schroeder, W. J., Zarge, J. A., Lorensen, W. E., and others. Decimation of triangle meshes.*InSiggraph*(1992), vol. 92, pp. 65–70.
+
+*注：本文是我的写作与沟通课程作业*

@@ -4,7 +4,7 @@ subtitle: LaTeX 工具链介绍
 tags: [CS, LaTeX]
 ---
 
-TeX作为Kunth为了 TAOCP 所开发的排版工具（typesetting system），它专注于生成高质量的学术排版效果，秉持着高度的 Do not repeat yourself 原则，是我日常作业/文章写作的最佳选择之一。LaTeX 的输出主要是 pdf 文件，这意味着它能够在各种设备上保持相同的显示效果；这和注重自适应式布局的 web 型格式，例如 markdown, html 不同。对于没有较强排版需求的情况下，例如笔记，发言稿等等，我会使用 Typora 来写 Markdown。在本文和后续的一些文章中，我将介绍 LaTeX 的一些内容，以及用它来编写文章，尤其是学术文章的实践。
+TeX作为Kunth为了 TAOCP 所开发的排版工具，它专注于生成高质量的学术排版效果，秉持着高度的 Do not repeat yourself 原则，是我日常作业/文章写作的最佳选择之一。LaTeX 的输出主要是 pdf 文件，这意味着它能够在各种设备上保持相同的显示效果；这和注重自适应式布局的 web 型格式，例如 markdown, html 不同。对于没有较强排版需求的情况下，例如笔记，发言稿等等，我会使用 Typora 来写 Markdown。在本文和后续的一些文章中，我将介绍 LaTeX 的一些内容，以及用它来编写文章，尤其是学术文章的实践。
 
 由于 VSCode 的方便性和高度的可扩展性，我选择使用 VSCode 作为我的 LaTeX 编辑器。LaTeX Workshop 是 VSCode 的一个 LaTeX 插件，能够对 LaTeX 提供良好的支持。LaTeX Workshop 虽然比较自动化，但是编译环境仍然需要自己配置，而且它的配置文件仍然手动编写编写，为了编写这样的配置文件，了解 LaTeX 的工具链是非常重要的，本篇将介绍 LaTeX 的编译工具链中的各个组成部分。
 
