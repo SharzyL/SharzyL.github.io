@@ -86,7 +86,7 @@ XeTeX 作为另一个 TeX 的扩展，它主要可以看作是对于 LaTeX 的�
 # bibTeX
 学术写作的一个很重要的部分就是参考文献，在 LaTeX 中并没有直接的参考文献支持，bibtex 就是为了解决这个问题所用的工具。LaTeX 使用 .bib 文件来保存参考文献信息，下面是一个 .bib 文件的样例：（这里只含有一个条目，一般来说应该会有很多条目的）
 
-```bib
+```
 @article{koji_midsummer_2001,
 	address = {Tokyo},
 	title = {Midsummer night obscenity},
