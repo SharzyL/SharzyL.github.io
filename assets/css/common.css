@@ -1,22 +1,31 @@
 * {
     margin: 0;
-    font-family: Arial, "Microsoft YaHei UI Light", Helvetica, sans-serif;
+    font-family: Arial, "Microsoft YaHei UI Light", "Simsum", Helvetica, sans-serif;
     box-sizing: border-box;
     font-size: 16px;
 }
 
-article > h1 {
+i, b {
+    font-size: inherit;
+}
+
+.post-article h1 {
+    font-family: Arial, "Microsoft YaHei", "Simsum", Helvetica, sans-serif;
     font-weight: normal;
     border-bottom: 1px solid #ddd;
     margin: .5em 0;
 }
 
-article > h2,
-article > h3 {
-    font-family: Georgia, "SimSun", serif;
+.post-article h2 {
+    font-family: Arial, "Microsoft YaHei", "Simsum", Helvetica, sans-serif;
     margin: .5em 0;
+}
+
+.post-article h3 {
+    font-family: Arial, "Microsoft YaHei", "Simsum", Helvetica, sans-serif;
     font-weight: normal;
 }
+
 
 .post-article h1, 
 .post-article h2,
@@ -94,7 +103,7 @@ code {
 
 code,
 code span {
-    font-family: Consolas, Monospaced, sans-serif;
+    font-family: Consolas, Monospace, sans-serif;
 }
 
 strong {
@@ -400,6 +409,7 @@ footer * {
     color: #888;
     font-size: .9em;
     padding: .2em 0;
+    transition: .3s;
 }
 
 .toc-title {
@@ -414,7 +424,6 @@ footer * {
     text-decoration: none;
     color: #2a7ae2;
     margin-left: .2em;
-    transition: .3s;
 }
 
 .h-active {
@@ -432,7 +441,7 @@ footer * {
 }
 
 .toc-h3 {
-    padding-left: 2em;
+    padding-left: 2.3em;
     font-size: .9em;
 }
 

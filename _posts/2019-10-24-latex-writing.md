@@ -1,5 +1,5 @@
 ---
-title: 了解 LaTeX Part.1
+title: Dive into LaTeX, <i> Part 1 </i>
 subtitle: LaTeX 工具链介绍
 tags: [CS, LaTeX]
 ---
@@ -16,7 +16,7 @@ The quadratic formula is $-b \pm \sqrt{b^2 - 4ac} \over 2a$
 \bye % \bye means the end of compilation unit
 ```
 
-将上面的文件保存为 `example.tex` 后用 `tex example.tex` 编译之后就可以得到一个名为 `example.dvi` 的二进制文件。同时生成一个名为用`example.log` 的日志文件。dvi 是一种和 pdf 类似的文件，用来表示用于打印目的格式的文档，但是不像 pdf 一样具有一些便于阅读的特性，但是现在已经不常用了。MikTeX自带的Yap可以打开 dvi 文件。
+将上面的文件保存为 `example.tex` 后用 `tex example.tex` 编译之后就可以得到一个名为 `example.dvi` 的二进制文件。同时生成一个名为 `example.log` 的日志文件。dvi 是一种和 pdf 类似的文件，用来表示用于打印目的格式的文档，但是不像 pdf 一样具有一些便于阅读的特性，现在已经很少看到了。MikTeX自带的Yap可以打开 dvi 文件。
 
 TeX 提供的命令非常底层，例如它没有我们常用的 `\begin{document} \end{document}`或`\documentclass{article}` 的语句。比起写作，它更加主要的目的是提供排版方面的工具。例如它的很重要的工作之一就是提供自动化的断行，连字等操作。这使得它具有很高的使用门槛，为了更加方便我们进行写作，需要对 TeX 进行封装，形成更高级的命令。
 
@@ -145,9 +145,9 @@ LaTeX Warning: There were undefined references.
 # Latexmk
 可以看到，按照上面的步骤，要想编译出来一个合格的输出文件是一件很繁琐的事情，Latexmk 正是为了解决这些问题而诞生的。Latexmk 使用 perl 编写，它的用途就是整合上面的组件，完成一键式编译流程。在[这里](https://mg.readthedocs.io/latexmk.html)可以看到 Latexmk 的文档，这个文档还是相当友好的（相对于上面介绍的组件来说）。
 
-由于上面的文档实在过于友好，这里就不逐一介绍它的用法了。我只会在后面介绍 LaTeX workshop 配置文件的时候简要提及一下各个选项的含义。
+由于上面的文档实在过于友好，这里就不详细介绍它的用法了。后面介绍 LaTeX workshop 配置文件的时候会提及部分选项的含义。
 
 # LaTeX 发行版
 上面的组件如果要逐一下载配置，必然是一件很麻烦的事情，为了能够快速搭建开发环境，有人将这些组件（以及众多的 LaTeX 宏包）整合起来发布，这样的东西就称为 LaTeX 发行版。常见的发行版包括 Windows 平台上的 MikTeX, TeXLive，MacOS 上的 MacTeX，以及 Linux 上的 TeXLive 等等。它们的安装比较简单，这里就不详述了。
 
-下一篇中我们将介绍 LaTeX 在 VSCode 中的具体配置问题。希望不要鸽太久吧。
+下一篇中我们将介绍 LaTeX 在 VSCode 中的具体配置问题。<del>希望不要鸽太久吧</del>。
