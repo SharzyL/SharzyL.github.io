@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>有关《论三角形》的文献阅读 | Sharzy's random blog</title>
+    <meta http-equiv="Content-Language"content="zh-cn"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta name="description" content="Sharzy's personal blog, used to record something worth recording"/>
+    <meta name="keywords" content="mathwebCSMO"/>
+    <meta name="author" content="Sharzy"/>
+    <meta name="generator" content="jekyll"/>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/assets/css/common.css" rel="stylesheet">
+    <script src="/assets/nav/responsive-nav.js"></script>
+    <script src="/assets/js/page_util.js"></script>
+    
+     <link rel="stylesheet" href="/assets/css/highlight.css">  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>  <script type="text/javascript" src="/assets/nav/zooming.js"></script> 
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+    <div id="nav-wrap">
+    <a href="/" class="fa fa-home fa-2x show-on-mobile home-icon"></a>
+    <div id="nav">
+        <ul>
+            <li class="hidden-on-mobile"><a href="/" class="fa fa-home fa-2x"></a></li>
+            <li><a class="bold" href="/">HOME</a></li>
+            <li><a class="bold" href="/about">ABOUT</a></li>
+            <li><a class="bold" href="/clock/clock.html">CLOCK</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    let navigation = responsiveNav("#nav", {
+        animate: true,
+        transition: 400,
+        label: '',
+        init: function () {
+            document.getElementsByClassName('nav-toggle')[0].classList.add('fa', 'fa-navicon');
+        },
+    });
+    document.body.addEventListener('click', () => navigation.close())
+</script>
+    <div class="article-banner banner">
+        <div class="article-tags">
+            <i class="fa fa-tags"></i>
+            
+            <a class="tag header-tag" href="/?tags=杂谈">杂谈</a>
+            
+        </div>
+        <p class="article-title bold">
+            有关《论三角形》的文献阅读
+        </p>
+        <p class="article-subtitle">
+            
+        </p>
+        <i class="article-date">
+            Written on Sep 25th, 2019
+        </i>
+    </div>
+</div>
+
+<div class="main">
+    <article class="main-text post-article">
+        <p>三角形这一结构，作为最基础的二维结构之一，受到了广泛的研究，同时也被应用于各个学科领域.
+下文介绍了几篇于三角形这个话题有关的文献.</p>
+
+<h1 id="文章一">文章一</h1>
+
+<p>三角形剖分是一个广泛应用于拓扑学，组合集合学的重要工具.</p>
+
+<p>一个著名的和三角剖分有关的问题是”美术馆问题” (Art gallary problem)，
+这个问题描述的是一个平面的美术馆（视为一个简单多边形）最少需要多少个
+保安才能确保保安能够监视到美术馆的每个角落.
+[3]是一本关于这个问题的综述性书籍，
+它在第一章中首先给出了这个问题的准确答案：</p>
+
+<blockquote>
+  <p>当美术馆有$n$面墙时，$\left[\frac{n}{3}\right]$个保安是足够的.</p>
+</blockquote>
+
+<p>其证明很简洁也很巧妙，将美术馆剖分成若干个三角形，然后把这个图形看成一个平面图，
+对$n$归纳证明这个图可以3 -
+顶点染色，最后选取某个颜色，将这些颜色的顶点出放上保安.
+由于剖分出的每个三角形的顶点中都有一个这个颜色的顶点，
+故美术馆的每个角落都在保安的监视之下.</p>
+
+<p>在书中接下来的章节中，它继续介绍了找出这些顶点的算法，以及这个问题在含有孔的多边形中的推广.</p>
+
+<h1 id="文章二">文章二</h1>
+
+<p>如果想要把上面的命题推广到三维情形，我们必须证明任何一个多面体能够剖分成若干个四面体，
+然而这个命题是不正确的，[1]给出了反例.
+事实上，它证明了对于每个不小于6的正整数$n$，存在一个$n$面体$\pi_n$，使得$\pi_n$
+的每个面都是三角形，并且它具有两条非常奇异的性质：</p>
+
+<ul>
+  <li>
+    <p>对于任意一个由这个$n$面体的4个顶点构成的四面体，这个四面体必然不可能全部位于$\pi_n$的内部.</p>
+  </li>
+  <li>
+    <p>连接$\pi_n$的任意两个顶点所形成的线段，只要这个线段不是$\pi_n$的边，
+那么这个线段一定完全位于$\pi_n$的外部.</p>
+  </li>
+</ul>
+
+<p>根据上面的第一条性质，这个多面体显然不能被剖分成四面体，因为每个剖出来的四面体都不可能完全位于多面体的内部.
+第二条性质则更加难以想象，它告诉了我们在这样一个”美术馆”中，位于顶点的保安甚至看不到任何一个于自己不相邻的顶点.</p>
+
+<h1 id="文章三">文章三</h1>
+
+<p>如果说上面的结论已经足够让人惊讶了，那么下面这个结论则是更加让人难以相信，
+[4] 指出：</p>
+
+<blockquote>
+  <p>判断一个给定的多面体能否三角剖分是NP-完备(NP-complete)问题.</p>
+</blockquote>
+
+<p>其证明的主要思路是构造一个特殊的多面体，
+使得这个多面体的可剖分性问题可以在多项式时间内转化为一个Bool函数的取值问题，
+而Bool函数的取值问题是一个著名的NP-complete问题，从而完成了证明.</p>
+
+<p>进一步地，这篇文章还证明了一些更强的结论，包括
+判断某种特殊形状(Star-shaped)的多面体能否被三角剖分，
+以及判断一个给定地多面体能否在加入若干个 附加点（称为Steiner
+point）后被三角剖分都是NP-hard的问题.
+证明与前面的结论类似，但是考虑了更多的细节.</p>
+
+<p>这些结论告诉我们，多面体的剖分比起多边形的剖分不仅更加复杂，
+而且要复杂得多，以致于就连判断能否剖分都是一件困难的事情.</p>
+
+<h1 id="文章四">文章四</h1>
+
+<p>将曲面或物体模型剖分成三角形网格(triangle
+meshes)是计算机图形学的基本方法之一，
+为了获得更好的性能，常常需要减少已有的三角形网格中三角形的数量.
+如何在减少数量的同时获得更好的模型质量是相关研究的一个重要课题.</p>
+
+<p>[5]
+中提出了一个直接而有效的算法来解决这一问题， 这个算法被称为decimation
+algorithm，主要思路是按照某种判据不断选取比较”平”的顶点，
+将这个顶点和它所在的所有三角形去掉.
+去掉这些三角形之后原来的网格会出现一个洞，
+用恰当的方式把这个洞剖分成一些三角形，然后更新判据，并继续重复上述过程，
+直到三角形数目达到想要的数目为止.</p>
+
+<p>这个简单的想法通过选取恰当的判据（例如要去掉的顶点到和它邻近的面的距离）和对洞的三角形剖分方法，
+可以得到比较好的效果. 在去掉了90%
+的三角形后，一个复杂的模型仍然能保持大致的形状.</p>
+
+<h1 id="文章五">文章五</h1>
+
+<p>在三角形剖分中，我们不仅关注三角形的数量，同时也关心剖分出的三角形的质量，
+一个通用的衡量质量的标准就是，考虑这些三角形的内角中最小的一个.
+最小的内角越大，
+说明这些三角形越”正”，也就避免了出现了那些”很瘦”的三角形. 为了简化问题，
+我们考虑给定平面上的一些点，然后考虑把这些点做一个三角剖分（也就是构造一些内部不交的三角形，
+使得这些三角形的顶点就是所有给定的这些点）.</p>
+
+<p>Delaunay三角剖分(Delaunay Triangulation)是所有这些剖分方法中特殊的一个，
+它的定义是使得每个剖分出的三角形的外接圆中不包含任何一个其它点的剖分方法.
+可以证明这种剖分方法正好使得这些三角形内角中的最小者取到了所有三角剖分方法中的最大值.
+[2] 给出了两种算法来找到这种特殊的剖分. 一种方法的时间复杂度为
+$O(n\ln n)$，另一种在最坏情况下的时间复杂度为$O(n^2)$，但是平均复杂度于前者相当.</p>
+
+<p>由于其良好的时间复杂度，这些算法在图形学中得到了广泛的应用.</p>
+
+<h1 id="references">References</h1>
+
+<p>[1]Bagemihl, F.On Indecomposable Polyhedra.<em>The American Mathematical Monthly</em> 55, 7 (Aug. 1948),411–413.</p>
+
+<p>[2]Lee, D.-T., and Schachter, B. J.Two algorithms for constructing a Delaunay triangulation.<em>Inter-national Journal of Computer &amp; Information Sciences</em> 9, 3 (1980), 219–242.</p>
+
+<p>[3]O’Rourke, J.<em>Art gallery theorems and algorithms</em>. No. 3 in The International series of monographson computer science. Oxford University Press, New York, 1987.</p>
+
+<p>[4]Ruppert, J., and Seidel, R.On the diﬀiculty of triangulating three-dimensional Nonconvex Polyhedra.<em>Discrete Comput Geom</em> 7, 3 (Mar. 1992), 227–253.</p>
+
+<p>[5]Schroeder, W. J., Zarge, J. A., Lorensen, W. E., and others. Decimation of triangle meshes.<em>InSiggraph</em>(1992), vol. 92, pp. 65–70.</p>
+
+<p><em>注：本文是我的写作与沟通课程作业</em></p>
+
+        <div id="post-switch">
+            <div>
+                
+                <a href="/2019/08/08/pitfall.html" id="post-previous">
+                     <h5>
+                         <i class="fa fa-angle-left"></i> PREVIOUS
+                     </h5>
+                    关于博客搭建过程的一些总结和吐槽
+                </a>
+                
+            </div>
+
+            <div>
+                
+                <a href="/2019/10/24/latex-tool.html" id="post-next">
+                    <h5>
+                         NEXT <i class="fa fa-angle-right"></i>
+                    </h5>
+                    Dive into LaTeX, <i> Part 1 </i>
+                </a>
+                
+            </div>
+        </div>
+
+        <div id="gitalk-container"></div>
+    </article>
+
+    <div class="sidebar hidden-on-mobile" id="sidebar">
+        <div id="toc">
+            <h5 class="toc-title">- Contents</h5>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p style="margin: .5em">
+            Designed by <a href="https://github.com/SharzyL">Sharzy</a>.
+            Hosted on <a href="https://pages.github.com/">Github Pages</a>.
+            Powered by <a href="https://jekyllrb.com/">Jekyll</a>.
+        </p>
+        <p>
+            All text work on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+        </p>
+    </div>
+</footer>
+
+
+<!-- use mathjax to handle formulas-->
+<script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$']]}
+        });
+</script>
+
+<!-- use sticky-sidebar to wrap table of contents to a sidebar-->
+<script type="text/javascript">
+    String.prototype.hashCode = function() {
+        let hash = 0, i, chr;
+        if (this.length === 0) return hash;
+        for (i = 0; i < this.length; i++) {
+            chr   = this.charCodeAt(i);
+            hash  = ((hash << 5) - hash) + chr;
+            hash |= 0; // Convert to 32bit integer
+        }
+        return Math.abs(hash);
+    };
+    const gitalk = new Gitalk({
+        clientID: '56fd0766110ee8f26064',
+        clientSecret: '81aca02e7bc69deccda1d2f5d258eed60b38a859',
+        repo: 'SharzyL.github.io',
+        owner: 'SharzyL',
+        admin: ['SharzyL'],
+        id: location.pathname.hashCode().toString(),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const zooming = new Zooming({
+
+        });
+        zooming.listen('article img');
+    })
+</script>
+
+</body>
+</html>
