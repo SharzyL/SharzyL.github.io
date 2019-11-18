@@ -5,21 +5,37 @@
         <title></title>
         <link>http://localhost:4000</link>
         <description></description>
-        <lastBuildDate>Sat, 16 Nov 2019 22:56:13 +0800</lastBuildDate>
+        <lastBuildDate>Sun, 17 Nov 2019 08:50:51 +0800</lastBuildDate>
         
         <item>
-            <title>LaTeX 学术写作工作流</title>
+            <title>Theoretical Analysis of Multi-layer Neural Network: A Survey</title>
             <link>
-                http://localhost:4000/2019/11/16/latex-writing.html
+                http://localhost:4000/2019/11/15/neural-network-theory.html
             </link>
             <description>
-                <p>学术写作是LaTeX的主要用途之一。由于它的方便性（指写文章的边际成本，不包括折腾的时间成本）和输出的高质量性，LaTeX成为了我写文章的首选工具。
-由于最近写了一篇比较正式的文章，获得了不少关于LaTeX的经验，所以这里记录下来，以供参考。</p>
+                <p>本文是我在人工智能入门课上的期中论文。主要介绍关于多层神经网络的一些理论方面研究，包括可表达性，收敛性等。</p>
+
 
             </description>
-            <pubDate>Sat, 16 Nov 2019 00:00:00 +0800</pubDate>
+            <pubDate>Fri, 15 Nov 2019 00:00:00 +0800</pubDate>
             <guid>
-                http://localhost:4000/2019/11/16/latex-writing.html
+                http://localhost:4000/2019/11/15/neural-network-theory.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>多边形的三角形剖分结构及其应用</title>
+            <link>
+                http://localhost:4000/2019/11/10/triangle-short-art.html
+            </link>
+            <description>
+                <p>本文为我的写作与沟通课程的短文终稿。主要介绍了关于三角形剖分的一些问题和应用。</p>
+
+
+            </description>
+            <pubDate>Sun, 10 Nov 2019 00:00:00 +0800</pubDate>
+            <guid>
+                http://localhost:4000/2019/11/10/triangle-short-art.html
             </guid>
         </item>
         
@@ -36,23 +52,6 @@
             <pubDate>Thu, 24 Oct 2019 00:00:00 +0800</pubDate>
             <guid>
                 http://localhost:4000/2019/10/24/latex-tool.html
-            </guid>
-        </item>
-        
-        <item>
-            <title>有关《论三角形》的文献阅读</title>
-            <link>
-                http://localhost:4000/2019/09/25/triangle-bib.html
-            </link>
-            <description>
-                <p>三角形这一结构，作为最基础的二维结构之一，受到了广泛的研究，同时也被应用于各个学科领域.
-下文介绍了几篇于三角形这个话题有关的文献.</p>
-
-
-            </description>
-            <pubDate>Wed, 25 Sep 2019 00:00:00 +0800</pubDate>
-            <guid>
-                http://localhost:4000/2019/09/25/triangle-bib.html
             </guid>
         </item>
         

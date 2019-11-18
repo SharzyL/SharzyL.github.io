@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多边形的三角形剖分结构及其应用 | Sharzy's random blog</title>
+    <meta http-equiv="Content-Language"content="zh-cn"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta name="description" content="Sharzy's personal blog, used to record something worth recording"/>
+    <meta name="keywords" content="mathwebCSMO"/>
+    <meta name="author" content="Sharzy"/>
+    <meta name="generator" content="jekyll"/>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/assets/css/common.css" rel="stylesheet">
+    <script src="/assets/nav/responsive-nav.js"></script>
+    <script src="/assets/js/page_util.js"></script>
+    
+     <link rel="stylesheet" href="/assets/css/highlight.css">  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>  <script type="text/javascript" src="/assets/nav/zooming.js"></script> 
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+    <div id="nav-wrap">
+    <a href="/" class="fa fa-home fa-2x show-on-mobile home-icon"></a>
+    <div id="nav">
+        <ul>
+            <li class="hidden-on-mobile"><a href="/" class="fa fa-home fa-2x"></a></li>
+            <li><a class="bold" href="/">HOME</a></li>
+            <li><a class="bold" href="/about">ABOUT</a></li>
+            <li><a class="bold" href="/clock/clock.html">CLOCK</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    let navigation = responsiveNav("#nav", {
+        animate: true,
+        transition: 400,
+        label: '',
+        init: function () {
+            document.getElementsByClassName('nav-toggle')[0].classList.add('fa', 'fa-navicon');
+        },
+    });
+    document.body.addEventListener('click', () => navigation.close())
+</script>
+    <div class="article-banner banner">
+        <div class="article-tags">
+            <i class="fa fa-tags"></i>
+            
+            <a class="tag header-tag" href="/?tags=math,">math,</a>
+            
+            <a class="tag header-tag" href="/?tags=论文">论文</a>
+            
+        </div>
+        <p class="article-title bold">
+            多边形的三角形剖分结构及其应用
+        </p>
+        <p class="article-subtitle">
+            
+        </p>
+        <i class="article-date">
+            Written on Nov 10th, 2019
+        </i>
+    </div>
+</div>
+
+<div class="main">
+    <article class="main-text post-article">
+        <p>本文为我的写作与沟通课程的短文终稿。主要介绍了关于三角形剖分的一些问题和应用。</p>
+
+<p><strong>由于版权问题，此文保留一切权利</strong></p>
+
+<h1 id="abstract">Abstract</h1>
+<p>三角剖分问题在理论研究和实际问题中都有大量应用，因此也产生了众多相关的研究。本文介绍了其中的一些重要的问题和结果。</p>
+
+<p>本文主要选取了三方面的内容。第一方面是三角形剖分的应用，包括在理论上的应用，例如组合几何中的美术馆问题，
+以及更加实际的应用，例如 3D 图形建模和渲染，揭示了它们和三角形剖分问题的重要联系。
+第二方面是关于三角形剖分的算法，简要介绍了平面三角形剖分算法从$O(n^2)$算法到$O(n)$算法的发展过程，
+以及一些优化曲面三角形剖分的一些方法。 第三方面是关于三角形剖分在高维情形，特别是三维情形的推广，
+说明了多面体的四面体剖分的不可行性和判定方法的困难性。</p>
+
+<h1 id="table-of-content">Table of Content</h1>
+<ul>
+  <li>引言</li>
+  <li>三角形剖分的应用
+    <ul>
+      <li>美术馆问题</li>
+      <li>图形渲染问题</li>
+    </ul>
+  </li>
+  <li>三角形剖分的算法
+    <ul>
+      <li>平面上的三角形算法</li>
+      <li>三角形剖分的优化</li>
+    </ul>
+  </li>
+  <li>讲三角形推广到四面体的困难性</li>
+  <li>结论</li>
+</ul>
+
+<h1 id="document">Document</h1>
+<p><a href="/assets/doc/art-gallary.pdf">pdf file</a></p>
+
+<h1 id="references">References</h1>
+<p>[1] Peter Giblin. “Computational geometry: algorithms and applications (2nd edn.)” In: The Mathematical Gazette
+85.502 (2001), pp. 175–176.</p>
+
+<p>[2] Steve Fisk. “A short proof of Chvátal’s Watchman Theorem”. en. In: Journal of Combinatorial Theory, Series
+B 24.3 (June 1978), p. 374.</p>
+
+<p>[3] V Chvátal. “A combinatorial theorem in plane geometry”. en. In: Journal of Combinatorial Theory, Series B
+18.1 (Feb. 1975), pp. 39–41.</p>
+
+<p>[4] Joseph O’Rourke. Art gallery theorems and algorithms. en. The International series of monographs on computer
+science 3. New York: Oxford University Press, 1987.</p>
+
+<p>[5] Donald Hearn, M Pauline Baker, et al. Computer graphics with OpenGL. Upper Saddle River, NJ: Pearson
+Prentice Hall, 2004.</p>
+
+<p>[6] Michael R. Garey et al. “Triangulating a simple polygon”. en. In: Information Processing Letters 7.4 (June
+1978), pp. 175–179.</p>
+
+<p>[7] Robert E. Tarjan and Christopher J. Van Wyk. “An O(nloglogn)-Time Algorithm for Triangulating a Simple
+Polygon”. en. In: SIAM J. Comput. 17.1 (Feb. 1988), pp. 143–178.</p>
+
+<p>[8] Kenneth L. Clarkson, Robert E. Tarjan, and Christopher J. Van Wyk. “A fast las vegas algorithm for triangu-
+lating a simple polygon”. en. In: Discrete Comput Geom 4.5 (Oct. 1989), pp. 423–432.</p>
+
+<p>[9] Bernard Chazelle. “Triangulating a simple polygon in linear time”. en. In: Discrete Comput Geom 6.3 (Sept.
+1991), pp. 485–524.</p>
+
+<p>[10] William J Schroeder, Jonathan A Zarge, William E Lorensen, et al. “Decimation of triangle meshes.” In:
+Siggraph. Vol. 92. 1992, pp. 65–70.</p>
+
+<p>[11] Boris Delaunay et al. “Sur la sphere vide”. In: Izv. Akad. Nauk SSSR, Otdelenie Matematicheskii i Estestvennyka
+Nauk 7.793-800 (1934), pp. 1–2.</p>
+
+<p>[12] Der-Tsai Lee and Bruce J Schachter. “Two algorithms for constructing a Delaunay triangulation”. In: Interna-
+tional Journal of Computer &amp; Information Sciences 9.3 (1980), pp. 219–242.</p>
+
+<p>[13] Jim Ruppert and Raimund Seidel. “On the difficulty of triangulating three-dimensional Nonconvex Polyhedra”.
+en. In: Discrete Comput Geom 7.3 (Mar. 1992), pp. 227–253.</p>
+
+<p>[14] F. Bagemihl. “On Indecomposable Polyhedra”. en. In: The American Mathematical Monthly 55.7 (Aug. 1948),
+pp. 411–413.</p>
+
+<p>[15] Cristopher Moore and Stephan Mertens. The nature of computation. OCLC: ocn180753706. Oxford [England]
+; New York: Oxford University Press, 2011.</p>
+
+<h1 id="ps">PS</h1>
+<p>这篇文章本身没有花太多时间（大概一整天吧），但是各种微调花了挺久。比如说折腾 LaTeX 的格式，特别是参考文献，图片 caption，脚注之类的，
+使得它表现上和老师给的 word 模板一样，（实际上要好看不少）。在画图上也花了一些功夫。图中一些矢量图是用 Adobe Illustrator 画的
+（后来发现可以用 tikz 画出更符合我想法的图，不过这都是写完文章之后的事情了，日后可以写一下关于 tikz 的一些笔记）。关于推广到四面体那一个
+section，我画了两张三维图，一张立方体美术馆的图是用一个很简单方便的 3D 工具 MagicalVoxel 做的。另外一张是 Schönhardt polyhedron
+的三维渲染图（见下）是用一个全能的 3D 建模/动画软件 Blender 做的，本来是想放到文章里面去的，但是由于图片的背景怎么也调不成纯白的，遂作罢。</p>
+
+<p><img src="https://i.loli.net/2019/11/17/XWqSrvPaziMeGuc.jpg" alt="3d_schon" /></p>
+
+        <div id="post-switch">
+            <div>
+                
+                <a href="/2019/10/24/latex-tool.html" id="post-previous">
+                     <h5>
+                         PREVIOUS ARTICLE
+                     </h5>
+                    Dive into LaTeX, <i> Part 1 </i>
+                </a>
+                
+            </div>
+
+            <div>
+                
+                <a href="/2019/11/15/neural-network-theory.html" id="post-next">
+                    <h5>
+                         NEXT POST
+                    </h5>
+                    Theoretical Analysis of Multi-layer Neural Network: A Survey
+                </a>
+                
+            </div>
+        </div>
+
+        <div id="gitalk-container"></div>
+    </article>
+
+    <div class="sidebar hidden-on-mobile" id="sidebar">
+        <div id="toc">
+            <h5 class="toc-title">- Contents</h5>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p style="margin: .5em">
+            Designed by <a href="https://github.com/SharzyL">Sharzy</a>.
+            Hosted on <a href="https://pages.github.com/">Github Pages</a>.
+            Powered by <a href="https://jekyllrb.com/">Jekyll</a>.
+        </p>
+        <p>
+            All text work on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+        </p>
+    </div>
+</footer>
+
+
+<!-- use mathjax to handle formulas-->
+<script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$']]}
+        });
+</script>
+
+<!-- use sticky-sidebar to wrap table of contents to a sidebar-->
+<script type="text/javascript">
+    String.prototype.hashCode = function() {
+        let hash = 0, i, chr;
+        if (this.length === 0) return hash;
+        for (i = 0; i < this.length; i++) {
+            chr   = this.charCodeAt(i);
+            hash  = ((hash << 5) - hash) + chr;
+            hash |= 0; // Convert to 32bit integer
+        }
+        return Math.abs(hash);
+    };
+    const gitalk = new Gitalk({
+        clientID: '56fd0766110ee8f26064',
+        clientSecret: '81aca02e7bc69deccda1d2f5d258eed60b38a859',
+        repo: 'SharzyL.github.io',
+        owner: 'SharzyL',
+        admin: ['SharzyL'],
+        id: location.pathname.hashCode().toString(),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const zooming = new Zooming({
+
+        });
+        zooming.listen('article img');
+    })
+</script>
+
+</body>
+</html>

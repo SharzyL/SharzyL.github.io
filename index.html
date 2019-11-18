@@ -26,8 +26,10 @@ requirements:
         </div>
         <div class="post-meta">
             <span class="post-date">
-                Posted on <i>{{ post.date | date_to_string: "ordinal", "US"}}</i>
+                Posted on <i>{{ post.date | date_to_string: "ordinal", "US"}}</i> ;
+                Last edited on <i>{{ post.last_modified_at | date_to_string: "ordinal", "US"}}</i>
             </span>
+
             <span class="post_tags">
                 {% for tag in post.tags %}
                 <a class="tag" href="/?tags={{tag}}"> {{ tag }} </a>

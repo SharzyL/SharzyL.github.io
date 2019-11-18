@@ -3,6 +3,7 @@ url: "https://sharzy.in"
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-last-modified-at
 
 defaults:
   - scope:
@@ -13,7 +14,10 @@ defaults:
       path: _posts/*
     values:
       layout: article
-
+  - scope:
+      path: draft/*
+    values:
+      layout: article
 
 meta:
   -
