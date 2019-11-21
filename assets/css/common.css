@@ -121,6 +121,7 @@ code table {
 }
 thead tr {
     border-bottom: 2px solid black;
+    text-align: left;
 }
 
 tbody tr {
@@ -644,7 +645,7 @@ img {
     }
 
     .main-text {
-        width: 50vw;
+        width: 50%;
     }
 
     .sidebar-detached {

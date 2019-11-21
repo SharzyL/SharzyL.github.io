@@ -65,7 +65,8 @@ const init_sidebar = (sidebar) => {
         return;
     }
     window.addEventListener('scroll', () => {
-        if (sidebar.getBoundingClientRect().y < 0) { // when toc is down
+        if (sidebar.getBoundingClientRect().y < 0) { // when top of toc is down
+            console.log(sidebar.getBoundingClientRect().y)
             sidebar.classList.add('sidebar-detached');
         }
         if (document.querySelector('.header').getBoundingClientRect().bottom > 0) {
