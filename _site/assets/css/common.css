@@ -123,6 +123,10 @@ thead tr {
     border-bottom: 2px solid black;
 }
 
+tbody tr {
+    border-bottom: 1px solid #bbb;
+}
+
 th, td {
     padding: 2px 1em;
 }
@@ -640,11 +644,15 @@ img {
     }
 
     .main-text {
-        width: 50%;
+        width: 50vw;
     }
 
     .sidebar-detached {
         left: 75%;
+    }
+
+    .article-title {
+        width: 50%;
     }
 }
 
