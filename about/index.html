@@ -15,7 +15,7 @@
     <script src="/assets/nav/responsive-nav.js"></script>
     <script src="/assets/js/page_util.js"></script>
     
-     <link rel="stylesheet" href="/assets/css/highlight.css">  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>  <script type="text/javascript" src="/assets/nav/zooming.js"></script> 
+    
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
@@ -43,26 +43,20 @@
     });
     document.body.addEventListener('click', () => navigation.close())
 </script>
-    <div class="article-banner banner">
-        <div class="article-tags">
-            <i class="fa fa-tags"></i>
-            
-        </div>
-        <p class="article-title bold">
+    <div class="banner">
+        <p class="main-title bold">
             About
         </p>
-        <p class="article-subtitle">
-            
+        <p>
+             
         </p>
-        <i class="article-date">
-            Written on 
-        </i>
     </div>
 </div>
 
+
 <div class="main">
     <article class="main-text post-article">
-        <h1 id="whats-this-site">What’s this site?</h1>
+    <h1 id="whats-this-site">What’s this site?</h1>
 
 <p>This is Sharzy’s personal blog, used to record something I find interesting, updated randomly.</p>
 
@@ -92,26 +86,15 @@ You can view the source code on
   <li><a href="https://github.com/fengtony686">Tony</a> and his <a href="https://fengtony686.github.io/">blog</a></li>
 </ul>
 
-        <div id="post-switch">
-            <div>
-                
-            </div>
+    
+</article>
 
-            <div>
-                
-            </div>
-        </div>
-
-        <div id="gitalk-container"></div>
-    </article>
-
-    <div class="sidebar hidden-on-mobile" id="sidebar">
-        <div id="toc">
-            <h5 class="toc-title">- Contents</h5>
-        </div>
+<div class="sidebar hidden-on-mobile" id="sidebar">
+    <div class="sidebar__inner">
+        <div id="toc"></div>
     </div>
 </div>
-
+</div>
 <footer class="footer">
     <div class="container">
         <p style="margin: .5em">
@@ -127,45 +110,6 @@ You can view the source code on
     </div>
 </footer>
 
-
-<!-- use mathjax to handle formulas-->
-<script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-          tex2jax: {inlineMath: [['$','$']]}
-        });
-</script>
-
-<!-- use sticky-sidebar to wrap table of contents to a sidebar-->
-<script type="text/javascript">
-    String.prototype.hashCode = function() {
-        let hash = 0, i, chr;
-        if (this.length === 0) return hash;
-        for (i = 0; i < this.length; i++) {
-            chr   = this.charCodeAt(i);
-            hash  = ((hash << 5) - hash) + chr;
-            hash |= 0; // Convert to 32bit integer
-        }
-        return Math.abs(hash);
-    };
-    const gitalk = new Gitalk({
-        clientID: '56fd0766110ee8f26064',
-        clientSecret: '81aca02e7bc69deccda1d2f5d258eed60b38a859',
-        repo: 'SharzyL.github.io',
-        owner: 'SharzyL',
-        admin: ['SharzyL'],
-        id: location.pathname.hashCode().toString(),      // Ensure uniqueness and length less than 50
-        distractionFreeMode: true  // Facebook-like distraction free mode
-    });
-
-    gitalk.render('gitalk-container');
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const zooming = new Zooming({
-
-        });
-        zooming.listen('article img');
-    })
-</script>
 
 </body>
 </html>
