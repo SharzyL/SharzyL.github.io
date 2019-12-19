@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+    <channel>
+        <title></title>
+        <link>http://localhost:4000</link>
+        <description></description>
+        <lastBuildDate>Thu, 19 Dec 2019 20:23:05 +0800</lastBuildDate>
+        
+        <item>
+            <title>结构光技术——原理及其应用</title>
+            <link>
+                http://localhost:4000/2019/12/19/structured-light.html
+            </link>
+            <description>
+                <p>本文为我的写作与沟通课程期末长文终稿，主要介绍结构光原理及其应用</p>
+
+
+            </description>
+            <pubDate>Thu, 19 Dec 2019 00:00:00 +0800</pubDate>
+            <guid>
+                http://localhost:4000/2019/12/19/structured-light.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>为什么微信是垃圾</title>
+            <link>
+                http://localhost:4000/2019/11/17/wechat-shit.html
+            </link>
+            <description>
+                <p>微信者，人间之屑也。</p>
+
+
+            </description>
+            <pubDate>Sun, 17 Nov 2019 00:00:00 +0800</pubDate>
+            <guid>
+                http://localhost:4000/2019/11/17/wechat-shit.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>Theoretical Analysis of Multi-layer Neural Network: A Survey</title>
+            <link>
+                http://localhost:4000/2019/11/15/neural-network-theory.html
+            </link>
+            <description>
+                <p>本文是我在人工智能入门课上的期中论文。主要介绍关于多层神经网络的一些理论方面研究，包括可表达性，收敛性等。</p>
+
+
+            </description>
+            <pubDate>Fri, 15 Nov 2019 00:00:00 +0800</pubDate>
+            <guid>
+                http://localhost:4000/2019/11/15/neural-network-theory.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>多边形的三角形剖分结构及其应用</title>
+            <link>
+                http://localhost:4000/2019/11/10/triangle-short-art.html
+            </link>
+            <description>
+                <p>本文为我的写作与沟通课程的短文终稿。主要介绍了关于三角形剖分的一些问题和应用。</p>
+
+
+            </description>
+            <pubDate>Sun, 10 Nov 2019 00:00:00 +0800</pubDate>
+            <guid>
+                http://localhost:4000/2019/11/10/triangle-short-art.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>Dive into LaTeX, <i> Part 1 </i></title>
+            <link>
+                http://localhost:4000/2019/10/24/latex-tool.html
+            </link>
+            <description>
+                <p>TeX作为Kunth为了 TAOCP 所开发的排版工具，它专注于生成高质量的学术排版效果，秉持着高度的 Do not repeat yourself 原则，是我日常作业/文章写作的最佳选择之一。LaTeX 的输出主要是 pdf 文件，这意味着它能够在各种设备上保持相同的显示效果；这和注重自适应式布局的 web 型格式，例如 markdown, html 不同。对于没有较强排版需求的情况下，例如笔记，发言稿等等，我会使用 Typora 来写 Markdown。在本文和后续的一些文章中，我将介绍 LaTeX 的一些内容，以及用它来编写文章，尤其是学术文章的实践。</p>
+
+
+            </description>
+            <pubDate>Thu, 24 Oct 2019 00:00:00 +0800</pubDate>
+            <guid>
+                http://localhost:4000/2019/10/24/latex-tool.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>关于博客搭建过程的一些总结和吐槽</title>
+            <link>
+                http://localhost:4000/2019/08/08/pitfall.html
+            </link>
+            <description>
+                <p>前些日子看到Github pages的一些介绍（虽然之前就知道了），再加上想复习一下CSS，于是便<del>脑子一热</del>萌发了使用Github pages搭建blog的想法，写了几天代码<del>CSS</del>，算是把基本功能都完成了。这里总结一些搭建过程中遇到的问题。</p>
+
+
+            </description>
+            <pubDate>Thu, 08 Aug 2019 00:00:00 +0800</pubDate>
+            <guid>
+                http://localhost:4000/2019/08/08/pitfall.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>北夏第四题的证明</title>
+            <link>
+                http://localhost:4000/2019/08/06/bx.html
+            </link>
+            <description>
+                <p>昨晚看到今年北夏第一天的题目，显然第四题是最好看的一个，发现一个比较自然的做法，记录如下：</p>
+
+
+            </description>
+            <pubDate>Tue, 06 Aug 2019 00:00:00 +0800</pubDate>
+            <guid>
+                http://localhost:4000/2019/08/06/bx.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>小数部分均匀分布的初等（大概）证明</title>
+            <link>
+                http://localhost:4000/2019/08/04/uniform.html
+            </link>
+            <description>
+                <p>$\{n\alpha\}$的均匀分布性是一个非常方便好用的命题，之前我一直只知道使用Wyle判据的证明方法，但是这一证明方法需要用到稍深入的分析学，包括Weierstrass的三角多项式逼近定理。今天我正在思考另外一个和小数部分有关的命题，突然想到了一个有趣的方法，可以用于证明这个问题，于是便将它记录下来了.</p>
+
+
+            </description>
+            <pubDate>Sun, 04 Aug 2019 00:00:00 +0800</pubDate>
+            <guid>
+                http://localhost:4000/2019/08/04/uniform.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>一个猜想的证明</title>
+            <link>
+                http://localhost:4000/2019/08/01/sensitivity.html
+            </link>
+            <description>
+                <p>最近看到一篇<a href="https://www.quantamagazine.org/mathematician-solves-computer-science-conjecture-in-two-pages-20190725/">文章</a>，讲述了一个几十余年历史的猜想近日被证明的事情。令人惊讶的是<a href="https://arxiv.org/abs/1907.00847">论文</a>中的这个证明主题居然只有不到两页，并且只用到了基本的线性代数，遂记录之。</p>
+
+
+            </description>
+            <pubDate>Thu, 01 Aug 2019 00:00:00 +0800</pubDate>
+            <guid>
+                http://localhost:4000/2019/08/01/sensitivity.html
+            </guid>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>北夏第四题的证明 | Sharzy's random blog</title>
+    <meta http-equiv="Content-Language"content="zh-cn"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta name="description" content="Sharzy's personal blog, used to record something worth recording"/>
+    <meta name="keywords" content="mathwebCSMO"/>
+    <meta name="author" content="Sharzy"/>
+    <meta name="generator" content="jekyll"/>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/assets/css/common.css" rel="stylesheet">
+    <script src="/assets/nav/responsive-nav.js"></script>
+    <script src="/assets/js/page_util.js"></script>
+    
+     <link rel="stylesheet" href="/assets/css/highlight.css">  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>  <script type="text/javascript" src="/assets/nav/zooming.js"></script> 
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+    <div id="nav-wrap">
+    <a href="/" class="fa fa-home fa-2x show-on-mobile home-icon"></a>
+    <div id="nav">
+        <ul>
+            <li class="hidden-on-mobile"><a href="/" class="fa fa-home fa-2x"></a></li>
+            <li><a class="bold" href="/">HOME</a></li>
+            <li><a class="bold" href="/about">ABOUT</a></li>
+            <li><a class="bold" href="/clock/clock.html">CLOCK</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    let navigation = responsiveNav("#nav", {
+        animate: true,
+        transition: 400,
+        label: '',
+        init: function () {
+            document.getElementsByClassName('nav-toggle')[0].classList.add('fa', 'fa-navicon');
+        },
+    });
+    document.body.addEventListener('click', () => navigation.close())
+</script>
+    <div class="article-banner banner">
+        <div class="article-tags">
+            <i class="fa fa-tags"></i>
+            
+            <a class="tag header-tag" href="/?tags=math">math</a>
+            
+        </div>
+        <p class="article-title bold">
+            北夏第四题的证明
+        </p>
+        <p class="article-subtitle">
+            
+        </p>
+        <i class="article-date">
+            Written on Aug 6th, 2019
+        </i>
+    </div>
+</div>
+
+<div class="main">
+    <article class="main-text post-article">
+        <p>昨晚看到今年北夏第一天的题目，显然第四题是最好看的一个，发现一个比较自然的做法，记录如下：</p>
+
+<h1 id="problem">Problem</h1>
+<p>设 $f(x)$ 是一个实系数多项式，求证存在一个实系数多项式$g$，使得$\deg f = \deg g$，且</p>
+
+<script type="math/tex; mode=display">\lvert g(z) \rvert^2 = \lvert f(z) \rvert^2 + 1,\ \forall \lvert z \rvert = 1</script>
+
+<h1 id="sketch">Sketch</h1>
+
+<p>如果0是$f$的根，将$f$约去因子$z^u$使得剩下的多项式不含根0，注意到这不影响本题的结论，故不妨0不是$f$的根，进一步地，我们下文中所提到的多项式均默认是指不含根0的多项式.</p>
+
+<p>稍加计算不难发现$\lvert f(z) \rvert $在单位圆上是一个关于$x :=\Re z$的多项式，因此我们考虑研究对于什么样的 $r(x) \in \mathbf{R}[x]$，存在一个多项式 $k(x) \in \mathbf{R}[x]$，使得</p>
+
+<script type="math/tex; mode=display">r(x) = \lvert k(z) \rvert^2,\ \forall \lvert z \rvert = 1</script>
+
+<p>（其中$x := \Re z$），称这样的一个多项式$r$为模多项式，为了研究这样所有模多项式$r(x)$的性状，我们考虑研究它的根的情况，即研究$\lvert k(z)\rvert^2$作为一个关于$x = \Re z$的多项式的根是怎么样的. 注意到</p>
+
+<script type="math/tex; mode=display">\lvert k(z) \rvert^2 = A^2\prod\lvert z - r_j \rvert^2\prod \lvert (z - z_j)(z - \overline{z_j})\rvert^2</script>
+
+<p>其中$A$是$k$的首项系数，$r_j$是它的所有实根，$z_j, \overline{z_j}$是它的所有共轭复根对，$\prod$表示对这些根求乘积. 因此我们只需研究每个因式的根即可. 设$z_j = a_j + i b_j$，$z = x + iy$</p>
+
+<script type="math/tex; mode=display">\lvert z - r_j \rvert^2 = （x - r_j)^2 + y^2 = 1 + r_j^2 - 2r_jx</script>
+
+<p>它的根为</p>
+
+<script type="math/tex; mode=display">\frac{1 + r_j^2}{2r_j}</script>
+
+<p>这个数的绝对值不小于1，并且易见对于每个绝对值不小于1的实数$x$，都存在一个$r$，使得$x = \frac{1 + r_j^2}{2r_j}$，另一方面</p>
+
+<script type="math/tex; mode=display">\lvert (z - z_j)(z - \overline{z_j})\rvert^2 = \left((x - a_j)^2 + (y - b_j)^2)((x - a_j)^2 + (y - b_j)^2\right) = (1 + a_j^2 + b_j^2 - 2a_jx)^2 - (2by)^2</script>
+
+<p>经过一些计算，它的根是</p>
+
+<script type="math/tex; mode=display">x = \frac{1}{2} \left( (a_j + \frac{a_j}{a_j^2 + b_j^2}) \pm (b_j - \frac{b_j}{a_j^2 + b_j^2})i\right)</script>
+
+<p>不难验证对于任意实数$u, v$，均存在实数$a,b$，使得</p>
+
+<script type="math/tex; mode=display">u = a_j + \frac{a_j}{a_j^2 + b_j^2},\quad v = b_j - \frac{b_j}{a_j^2 + b_j^2}</script>
+
+<p>此外通过观察，我们还得到了$r$的常数项为正数. 我们猜想这是一个充要条件，也就是说，当且仅当$r(z)$的所有实根的绝对值不小于1时，且常数项为正时，存在一个满足$r(x) = \lvert k(z) \rvert^2,\ \forall \lvert z \rvert = 1$的多项式$k$. 根据上面的分析，这个命题的正确性是显然的.</p>
+
+<p>因此我们得到如下事实：</p>
+
+<p><strong>一个实系数多项式是模多项式当且仅当它的所有根的模均不小于1，且常数项为正数</strong></p>
+
+<p>显然它等价于</p>
+
+<p><strong>一个实系数多项式是模多项式当且仅当它在$[-1, 1]$上非负</strong></p>
+
+<p>注意到待证结论等价于证明一个模多项式加1之后仍是模多项式. 根据上面的结论，这显然成立.</p>
+
+<h1 id="postscript">Postscript</h1>
+
+<p>我之前犯了一些非常愚蠢的错误导致我最后误以为找到了反例（详见repo里面的commit历史），感谢迷神的指正.</p>
+
+<p>这个证明应该是非常自然的，将一个比较难控制的多项式的模转化为一个单元实多项式的性质，然后分析它的根. 当然，标答的处理似乎还要更自然一些，过程也简洁不少，让人看了一眼之后就能领会到它的意思. 总而言之，这个问题是非常漂亮的，可以说是一道很巧妙的题了（比起wk的毒瘤几何题来说）.</p>
+
+        <div id="post-switch">
+            <div>
+                
+                <a href="/2019/08/04/uniform.html" id="post-previous">
+                     <h5>
+                         PREVIOUS ARTICLE
+                     </h5>
+                    小数部分均匀分布的初等（大概）证明
+                </a>
+                
+            </div>
+
+            <div>
+                
+                <a href="/2019/08/08/pitfall.html" id="post-next">
+                    <h5>
+                         NEXT POST
+                    </h5>
+                    关于博客搭建过程的一些总结和吐槽
+                </a>
+                
+            </div>
+        </div>
+
+        <div id="gitalk-container"></div>
+    </article>
+
+    <div class="sidebar hidden-on-mobile" id="sidebar">
+        <div id="toc">
+            <h5 class="toc-title">- Contents</h5>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p style="margin: .5em">
+            Designed by <a href="https://github.com/SharzyL">Sharzy</a>.
+            Hosted on <a href="https://pages.github.com/">Github Pages</a>.
+            Powered by <a href="https://jekyllrb.com/">Jekyll</a>.
+        </p>
+        <p>
+            All text work on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+        </p>
+    </div>
+</footer>
+
+
+<!-- use mathjax to handle formulas-->
+<script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$']]}
+        });
+</script>
+
+<!-- use sticky-sidebar to wrap table of contents to a sidebar-->
+<script type="text/javascript">
+    String.prototype.hashCode = function() {
+        let hash = 0, i, chr;
+        if (this.length === 0) return hash;
+        for (i = 0; i < this.length; i++) {
+            chr   = this.charCodeAt(i);
+            hash  = ((hash << 5) - hash) + chr;
+            hash |= 0; // Convert to 32bit integer
+        }
+        return Math.abs(hash);
+    };
+    const gitalk = new Gitalk({
+        clientID: '56fd0766110ee8f26064',
+        clientSecret: '81aca02e7bc69deccda1d2f5d258eed60b38a859',
+        repo: 'SharzyL.github.io',
+        owner: 'SharzyL',
+        admin: ['SharzyL'],
+        id: location.pathname.hashCode().toString(),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const zooming = new Zooming({
+
+        });
+        zooming.listen('article img');
+    })
+</script>
+
+</body>
+</html>
