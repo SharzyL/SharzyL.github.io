@@ -94,6 +94,10 @@ p {
     padding: .2em 0;
 }
 
+.inline-block {
+    display: inline-block;
+}
+
 code {
     color: #eb7979;
     background-color: #eee;
@@ -267,10 +271,16 @@ body {
 
 .post-meta {
     display: flex;
+    align-items: flex-start;
 }
 
 .post-meta > a:first-child {
     flex: 1;
+}
+
+.horizon-sep {
+    /*border-left: #bbbbbb solid 1px;*/
+    margin: 0 .5em;
 }
 
 #post-switch {
@@ -354,6 +364,20 @@ footer * {
 
 #nav ul {
     color: white;
+}
+
+#search-line {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    color: white;
+    width: 10em;
+    transition: .5s;
+}
+
+.search-line-hidden {
+    width: 0 !important;
 }
 
 .nav-toggle {
@@ -578,7 +602,7 @@ img {
         justify-content: center;
     }
 
-    #nav .hidden-on-mobile {
+    #nav .hidden-on-mobile:first-child {
         flex: 1;
     }
 

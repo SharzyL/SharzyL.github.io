@@ -26,8 +26,9 @@ requirements:
         </div>
         <div class="post-meta">
             <span class="post-date">
-                Posted on <i>{{ post.date | date_to_string: "ordinal", "US"}}</i> ;
-                Last edited on <i>{{ post.last_modified_at | date_to_string: "ordinal", "US"}}</i>
+                <span class="inline-block">Posted on {{ post.date | date: "%Y-%m-%d"}}</span>
+                <span class="horizon-sep"></span>
+                <span class="inline-block">Last edited on {{ post.last_modified_at | date: "%Y-%m-%d"}}</span>
             </span>
 
             <span class="post_tags">
