@@ -1,6 +1,6 @@
 ---
 title: 关于博客搭建过程的一些总结和吐槽
-tags: [杂谈]
+tags: misc
 ---
 
 前些日子看到Github pages的一些介绍（虽然之前就知道了），再加上想复习一下CSS，于是便<del>脑子一热</del>萌发了使用Github pages搭建blog的想法，写了几天代码<del>CSS</del>，算是把基本功能都完成了。这里总结一些搭建过程中遇到的问题。 

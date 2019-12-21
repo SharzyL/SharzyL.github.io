@@ -1,6 +1,6 @@
 ---
 title: "Theoretical Analysis of Multi-layer Neural Network: A Survey"
-tags: AI, 论文
+tags: AI paper
 ---
 
 本文是我在人工智能入门课上的期中论文。主要介绍关于多层神经网络的一些理论方面研究，包括可表达性，收敛性等。
