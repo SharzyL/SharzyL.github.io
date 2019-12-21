@@ -24,8 +24,16 @@
     <a href="/" class="fa fa-home fa-2x show-on-mobile home-icon"></a>
     <div id="nav">
         <ul>
-            <li class="hidden-on-mobile"><a href="/" class="fa fa-home fa-2x"></a></li>
-            <li><a class="bold" href="/">HOME</a></li>
+            <li class="hidden-on-mobile home-"><a href="/" class="fa fa-home fa-2x"></a></li>
+            <li class="hidden-on-mobile">
+                <label for="search-line" id="search-btn">
+                    <a class="fa fa-search"></a>
+                </label>
+                <input type="text" id="search-line" class="search-line search-line-hidden">
+            </li>
+            <li>
+                <a class="bold" href="/">HOME</a>
+            </li>
             <li><a class="bold" href="/about">ABOUT</a></li>
             <li><a class="bold" href="/clock/clock.html">CLOCK</a></li>
         </ul>
@@ -56,8 +64,8 @@
             Powered by <a href="https://jekyllrb.com/">Jekyll</a>.
         </p>
         <p>
-            All text work on this site is licensed under a
-            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+            Content on this site is licensed under
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
             unless specified.
         </p>
     </div>

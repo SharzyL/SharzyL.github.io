@@ -66,7 +66,7 @@ const init_sidebar = (sidebar) => {
     }
     window.addEventListener('scroll', () => {
         if (sidebar.getBoundingClientRect().y < 0) { // when top of toc is down
-            console.log(sidebar.getBoundingClientRect().y)
+            console.log(sidebar.getBoundingClientRect().y);
             sidebar.classList.add('sidebar-detached');
         }
         if (document.querySelector('.header').getBoundingClientRect().bottom > 0) {
@@ -116,6 +116,31 @@ const init_nav = () => {
     });
 };
 
+const init_search = () => {
+    const dispatch_search = () => {
+        let search_text = document.getElementById('search-line').value.split(' ').join('+');
+        if (search_text) {
+            location.href = `https://www.google.com/search?q=site:sharzy.in+${search_text}`
+        }
+    };
+    let search_line = document.getElementById('search-line');
+    document.getElementById('search-btn').addEventListener('click', () => {
+        if (search_line.classList.contains('search-line-hidden')) {
+            search_line.classList.remove('search-line-hidden');
+        } else {
+            dispatch_search();
+        }
+    });
+    search_line.addEventListener('keyup', (event) => {
+        if (event.code === 'Enter') {
+            dispatch_search();
+        }
+    });
+    search_line.addEventListener('focusout', (event) => {
+        search_line.classList.add('search-line-hidden');
+    });
+};
+
 const scroll_to = (title) => {
     let length = document.getElementById(title.toLowerCase()).getBoundingClientRect().top;
     window.scrollBy({
@@ -132,4 +157,5 @@ window.addEventListener('DOMContentLoaded', () => {
         document.querySelector('article'),
         document.getElementById('toc')
     );
+    init_search();
 });
