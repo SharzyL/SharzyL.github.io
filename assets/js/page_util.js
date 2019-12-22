@@ -152,7 +152,8 @@ const init_search = () => {
 };
 
 const scroll_to = (title) => {
-    let length = document.getElementById(title.toLowerCase()).getBoundingClientRect().top;
+    let anchor_text = title.toLowerCase().split(' ').join('-');
+    let length = document.getElementById(anchor_text).getBoundingClientRect().top;
     window.scrollBy({
         top: length,
         left: 0,
