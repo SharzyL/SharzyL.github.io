@@ -76,7 +76,17 @@ const init_sidebar = (sidebar) => {
 };
 
 const init_nav = () => {
+    let navigation = responsiveNav("#nav", {
+        animate: true,
+        transition: 400,
+        label: '',
+        init: function () {
+            document.getElementsByClassName('nav-toggle')[0].classList.add('fa', 'fa-navicon');
+        },
+    });
+
     let navbar = document.getElementById('nav-wrap');
+    document.body.addEventListener('click', () => navigation.close());
     let ticking = false; // record if browser is painting, to avoid frequent repainting
     let display = () => {
         navbar.classList.add('nav-active');
@@ -150,6 +160,37 @@ const scroll_to = (title) => {
     })
 };
 
+const init_gitalk = () => {
+    String.prototype.hashCode = function() {
+        let hash = 0, i, chr;
+        if (this.length === 0) return hash;
+        for (i = 0; i < this.length; i++) {
+            chr   = this.charCodeAt(i);
+            hash  = ((hash << 5) - hash) + chr;
+            hash |= 0; // Convert to 32bit integer
+        }
+        return Math.abs(hash);
+    };
+    const gitalk = new Gitalk({
+        clientID: '56fd0766110ee8f26064',
+        clientSecret: '81aca02e7bc69deccda1d2f5d258eed60b38a859',
+        repo: 'SharzyL.github.io',
+        owner: 'SharzyL',
+        admin: ['SharzyL'],
+        id: location.pathname.hashCode().toString(),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+};
+
+const init_zoomer = () => {
+    const zooming = new Zooming({
+
+    });
+    zooming.listen('article img');
+};
+
 window.addEventListener('DOMContentLoaded', () => {
     init_nav();
     init_sidebar(document.getElementById('sidebar'));
@@ -158,4 +199,19 @@ window.addEventListener('DOMContentLoaded', () => {
         document.getElementById('toc')
     );
     init_search();
+});
+
+window.addEventListener('load', () => {
+    try {
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$','$']]}
+        });
+        init_zoomer();
+        init_gitalk();
+    } catch (e) {
+        if (e instanceof ReferenceError) {}
+        else {
+            throw e;
+        }
+    }
 });

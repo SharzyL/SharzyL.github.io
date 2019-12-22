@@ -1,15 +1,15 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ page.title | strip_html }} | Sharzy's random blog</title>
-    <meta http-equiv="Content-Language"content="zh-cn"/>
+    <meta http-equiv="Content-Language" content="zh-cn"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     {% for meta in site.meta %}<meta name="{{meta.name}}" content="{{meta.value}}"/>
     {% endfor %}<link rel="shortcut icon" href="/favicon.ico">
     <link href="/assets/css/common.css" rel="stylesheet">
-    <script src="/assets/nav/responsive-nav.js"></script>
-    <script src="/assets/js/page_util.js"></script>
     {% for requirement in page.requirements %} {{ requirement }} {% endfor %}
     {% for requirement in layout.requirements %} {{ requirement }} {% endfor %}
+    <script src="/assets/nav/responsive-nav.js" defer></script>
+    <script src="/assets/js/page_util.js" defer></script>
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>

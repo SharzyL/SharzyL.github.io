@@ -22,8 +22,8 @@ The pages are hosted on [Github pages](https://pages.github.com).
 You can view the source code on
  this [Github repo](https://github.com/SharzyL/SharzyL.github.io). 
  
-Due to my limited CSS skill, many features are hidden on mobile devices to avoid display disorder. 
-So reading in desktop is more recommended. 
+Due to my limited CSS skill, some features are hidden on mobile devices to avoid display disorder. 
+So reading on wide screen devices is more recommended. 
  
 Thanks for the developers of these utilities, which makes it much easier to construct such a site: 
 - [Responsive navigation](https://github.com/viljamis/responsive-nav.js)

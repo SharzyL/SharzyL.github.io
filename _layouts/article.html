@@ -3,9 +3,9 @@ layout: empty
 requirements:
  - <link rel="stylesheet" href="/assets/css/highlight.css">
  - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
- - <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
- - <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
- - <script type="text/javascript" src="/assets/nav/zooming.js"></script>
+ - <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" defer></script>
+ - <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" defer></script>
+ - <script type="text/javascript" src="/assets/nav/zooming.js" defer></script>
 ---
 
 {% include header_article.html %}
@@ -18,7 +18,7 @@ requirements:
                 {% if page.previous %}
                 <a href="{{ page.previous.url }}" id="post-previous">
                      <h5>
-                         PREVIOUS ARTICLE
+                         PREVIOUS POST
                      </h5>
                     {{ page.previous.title }}
                 </a>
@@ -49,42 +49,3 @@ requirements:
 
 {% include footer.html %}
 
-
-<!-- use mathjax to handle formulas-->
-<script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-          tex2jax: {inlineMath: [['$','$']]}
-        });
-</script>
-
-<!-- use sticky-sidebar to wrap table of contents to a sidebar-->
-<script type="text/javascript">
-    String.prototype.hashCode = function() {
-        let hash = 0, i, chr;
-        if (this.length === 0) return hash;
-        for (i = 0; i < this.length; i++) {
-            chr   = this.charCodeAt(i);
-            hash  = ((hash << 5) - hash) + chr;
-            hash |= 0; // Convert to 32bit integer
-        }
-        return Math.abs(hash);
-    };
-    const gitalk = new Gitalk({
-        clientID: '56fd0766110ee8f26064',
-        clientSecret: '81aca02e7bc69deccda1d2f5d258eed60b38a859',
-        repo: 'SharzyL.github.io',
-        owner: 'SharzyL',
-        admin: ['SharzyL'],
-        id: location.pathname.hashCode().toString(),      // Ensure uniqueness and length less than 50
-        distractionFreeMode: true  // Facebook-like distraction free mode
-    });
-
-    gitalk.render('gitalk-container');
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const zooming = new Zooming({
-
-        });
-        zooming.listen('article img');
-    })
-</script>

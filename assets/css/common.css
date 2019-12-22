@@ -57,6 +57,9 @@ article a:hover,
     text-decoration: underline;
 }
 
+.hover-underline:hover {
+    text-decoration: underline;
+}
 
 article p, strong {
     margin: 1em 0;
@@ -376,6 +379,11 @@ footer * {
     transition: .5s;
 }
 
+.nav-detach #search-line {
+    color: black;
+    border-bottom-color: black;
+}
+
 .search-line-hidden {
     width: 0 !important;
 }
@@ -573,8 +581,17 @@ img {
         padding: 1em;
     }
 
-    .main-title {
-        font-size: 32px;
+    .inline-block {
+        display: block;
+    }
+
+    .main-title, .article-title {
+        font-size: 28px;
+    }
+
+    .article-banner {
+        margin-bottom: 1em;
+        margin-top: 4em;
     }
 
     h1 {
@@ -677,7 +694,7 @@ img {
     }
 
     .article-title {
-        width: 50%;
+        width: 50vw;
     }
 }
 

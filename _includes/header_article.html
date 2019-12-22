@@ -13,8 +13,10 @@
         <p class="article-subtitle">
             {{ page.subtitle }}
         </p>
-        <i class="article-date">
-            Written on {{ page.date | date_to_string: "ordinal", "US" }}
-        </i>
+        <p class="article-date">
+            <span class="inline-block">Posted on {{ page.date | date: "%Y-%m-%d"}}</span>
+            <span class="horizon-sep"></span>
+            <span class="inline-block">Last edited on {{ page.last_modified_at | date: "%Y-%m-%d"}}</span>
+        </p>
     </div>
 </div>
