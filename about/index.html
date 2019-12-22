@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>About | Sharzy's random blog</title>
-    <meta http-equiv="Content-Language"content="zh-cn"/>
+    <meta http-equiv="Content-Language" content="zh-cn"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <meta name="description" content="Sharzy's personal blog, used to record something worth recording"/>
@@ -12,10 +12,10 @@
     <meta name="generator" content="jekyll"/>
     <link rel="shortcut icon" href="/favicon.ico">
     <link href="/assets/css/common.css" rel="stylesheet">
-    <script src="/assets/nav/responsive-nav.js"></script>
-    <script src="/assets/js/page_util.js"></script>
     
     
+    <script src="/assets/nav/responsive-nav.js" defer></script>
+    <script src="/assets/js/page_util.js" defer></script>
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
@@ -23,34 +23,23 @@
     <div id="nav-wrap">
     <a href="/" class="fa fa-home fa-2x show-on-mobile home-icon"></a>
     <div id="nav">
-        <ul>
-            <li class="hidden-on-mobile home-"><a href="/" class="fa fa-home fa-2x"></a></li>
+        <ul style="padding-inline-start: 0">
+            <li class="hidden-on-mobile"><a href="/" class="fa fa-home fa-2x"></a></li>
             <li class="hidden-on-mobile">
                 <label for="search-line" id="search-btn">
                     <a class="fa fa-search"></a>
                 </label>
-                <input type="text" id="search-line" class="search-line search-line-hidden">
+                <input type="text" id="search-line" class="search-line-hidden">
             </li>
             <li>
-                <a class="bold" href="/">HOME</a>
+                <a class="bold hover-underline" href="/">HOME</a>
             </li>
-            <li><a class="bold" href="/about">ABOUT</a></li>
-            <li><a class="bold" href="/clock/clock.html">CLOCK</a></li>
+            <li><a class="bold hover-underline" href="/about">ABOUT</a></li>
+            <li><a class="bold hover-underline" href="/clock/clock.html">CLOCK</a></li>
         </ul>
     </div>
 </div>
 
-<script>
-    let navigation = responsiveNav("#nav", {
-        animate: true,
-        transition: 400,
-        label: '',
-        init: function () {
-            document.getElementsByClassName('nav-toggle')[0].classList.add('fa', 'fa-navicon');
-        },
-    });
-    document.body.addEventListener('click', () => navigation.close())
-</script>
     <div class="banner">
         <p class="main-title bold">
             About
@@ -80,8 +69,8 @@ The pages are hosted on <a href="https://pages.github.com">Github pages</a>.
 You can view the source code on
  this <a href="https://github.com/SharzyL/SharzyL.github.io">Github repo</a>.</p>
 
-<p>Due to my limited CSS skill, many features are hidden on mobile devices to avoid display disorder. 
-So reading in desktop is more recommended.</p>
+<p>Due to my limited CSS skill, some features are hidden on mobile devices to avoid display disorder. 
+So reading on wide screen devices is more recommended.</p>
 
 <p>Thanks for the developers of these utilities, which makes it much easier to construct such a site:</p>
 <ul>
