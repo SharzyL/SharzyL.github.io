@@ -50,6 +50,11 @@ article a,
     text-decoration: none;
 }
 
+hr {
+    border-top: #eee solid 1px;
+    margin: .5em 0;
+}
+
 article a:hover,
 .link:hover,
 .footer a:hover {
@@ -224,6 +229,13 @@ body {
     margin-bottom: 6em;
 }
 
+.section-head {
+    font-weight: bold;
+    font-size: 1em;
+    color: #555555;
+    margin: .5em;
+}
+
 .main {
     display: flex;
     justify-content: center;
@@ -257,6 +269,10 @@ body {
     padding-right: .5em;
 }
 
+.post-header {
+    font-weight: normal;
+}
+
 .post-subtitle {
     font-family: inherit;
     padding-left: 2px;
@@ -275,6 +291,7 @@ body {
 .post-meta {
     display: flex;
     align-items: flex-start;
+    color: #555555;
 }
 
 .post-meta > a:first-child {
@@ -318,7 +335,7 @@ body {
     margin: .2em .2em;
     display: inline-block;
     border-radius: .75em;
-    color: black;
+    color: #555555;
     border: 1px solid #ddd;
     transition: .3s;
 }
@@ -341,6 +358,19 @@ body {
 
 .header-tag {
     color: white;
+}
+
+.sns-icon {
+    color: #555555;
+    display: block;
+}
+
+.sns-icon:hover {
+    text-decoration: underline;
+}
+
+.bio {
+    color: #555555;
 }
 
 footer {
@@ -376,7 +406,7 @@ footer * {
     outline: none;
     color: white;
     width: 10em;
-    transition: .5s;
+    transition: .5s width;
 }
 
 .nav-detach #search-line {
@@ -386,6 +416,7 @@ footer * {
 
 .search-line-hidden {
     width: 0 !important;
+    border-bottom-color: transparent !important;
 }
 
 .nav-toggle {
@@ -649,7 +680,7 @@ img {
         display: none!important;
     }
 
-    #toc, #tags-showcase {
+    #toc, #sidebar-inner {
         width: 15em;
         padding-left: 1em;
     }

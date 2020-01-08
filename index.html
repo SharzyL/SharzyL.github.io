@@ -53,7 +53,7 @@
 
 <div class="main">
     <div class="main-text">
-    <h3 id="content-hint" style="margin-left: 1em">
+    <h3 class="section-head" style="margin-left: 1em">
         ALL POSTS
     </h3>
 
@@ -102,7 +102,7 @@
             <span class="post-date">
                 <span class="inline-block">Posted on 2019-11-17</span>
                 <span class="horizon-sep"></span>
-                <span class="inline-block">Last edited on 2019-12-21</span>
+                <span class="inline-block">Last edited on 2019-12-23</span>
             </span>
 
             <span class="post_tags">
@@ -187,7 +187,7 @@
         </h4>
         
         <div class="post-preview">
-            TeX作为Kunth为了 TAOCP 所开发的排版工具，它专注于生成高质量的学术排版效果，秉持着高度的 Do not repeat yourself 原则，是我日常作业/文章写作的最佳选择之一。LaTeX 的输出主要是 pdf 文件，这意味着它能够在各种设备上保持相同的显示效果；这和注重自适应式布局的 web 型格式，例如 markdown, html 不同。对于没有较强排版需求的情况下，例如笔记，发言稿等等，我会使用 Typora 来写 Markdown。在本文和后续的一些文章中，我将介绍 LaTeX 的一些内容，以及用它来编写文章，尤其是学术文章的实践。
+            TeX作为 Kunth 为了 TAOCP 所开发的排版工具，它专注于生成高质量的学术排版效果，是我日常作业/文章写作的最佳选择之一。LaTeX 绝大多数情况下以 pdf 作为输出格式，能够在各种设备上保持相同的显示效果，这在很大程度上和 LaTeX 是针对出版物排版所设计的有关（这和注重自适应式布局的 web 型格式，例如 markdown, html, epub 不同）。对于没有较强排版需求的情况下，例如笔记，发言稿等等，我会使用 Typora 来写 Markdown。在本文和后续的一些文章中，我将介绍 LaTeX 的一些内容，以及用它来编写文章，尤其是学术文章的实践。
 
 
         </div>
@@ -195,7 +195,7 @@
             <span class="post-date">
                 <span class="inline-block">Posted on 2019-10-24</span>
                 <span class="horizon-sep"></span>
-                <span class="inline-block">Last edited on 2019-11-16</span>
+                <span class="inline-block">Last edited on 2020-01-08</span>
             </span>
 
             <span class="post_tags">
@@ -324,10 +324,18 @@
 </div>
 
 <div class="sidebar hidden-on-mobile" id="sidebar">
-    <div id="tags-showcase">
-        <h3><i class="fa fa-tags"></i> TAGS</h3>
+    <div id="sidebar-inner">
+        <h3 class="section-head"> TAGS</h3>
         <div id="tags-list"></div>
         <a id="show-tags-a" class="hidden link">Show all articles</a>
+        <hr style="margin: 1.5em 0;">
+        <h3 class="section-head"> ABOUT ME</h3>
+        <a href="/about">
+            <img src="favicon.ico" style="margin-left: 0">
+        </a>
+        <p class="bio">
+            Just an ordinary human.
+        </p>
     </div>
 </div>
 
@@ -350,6 +358,9 @@
             Content on this site is licensed under
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
             unless specified.
+        </p>
+        <p>
+            Subscribe this site via <a href="/feed.xml">RSS</a>
         </p>
     </div>
 </footer>

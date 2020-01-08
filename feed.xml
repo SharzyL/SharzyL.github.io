@@ -5,7 +5,7 @@
         <title></title>
         <link>http://localhost:4000</link>
         <description></description>
-        <lastBuildDate>Sun, 22 Dec 2019 10:39:42 +0800</lastBuildDate>
+        <lastBuildDate>Thu, 09 Jan 2020 00:55:23 +0800</lastBuildDate>
         
         <item>
             <title>结构光技术——原理及其应用</title>
@@ -77,7 +77,7 @@
                 http://localhost:4000/2019/10/24/latex-tool.html
             </link>
             <description>
-                <p>TeX作为Kunth为了 TAOCP 所开发的排版工具，它专注于生成高质量的学术排版效果，秉持着高度的 Do not repeat yourself 原则，是我日常作业/文章写作的最佳选择之一。LaTeX 的输出主要是 pdf 文件，这意味着它能够在各种设备上保持相同的显示效果；这和注重自适应式布局的 web 型格式，例如 markdown, html 不同。对于没有较强排版需求的情况下，例如笔记，发言稿等等，我会使用 Typora 来写 Markdown。在本文和后续的一些文章中，我将介绍 LaTeX 的一些内容，以及用它来编写文章，尤其是学术文章的实践。</p>
+                <p>TeX作为 Kunth 为了 TAOCP 所开发的排版工具，它专注于生成高质量的学术排版效果，是我日常作业/文章写作的最佳选择之一。LaTeX 绝大多数情况下以 pdf 作为输出格式，能够在各种设备上保持相同的显示效果，这在很大程度上和 LaTeX 是针对出版物排版所设计的有关（这和注重自适应式布局的 web 型格式，例如 markdown, html, epub 不同）。对于没有较强排版需求的情况下，例如笔记，发言稿等等，我会使用 Typora 来写 Markdown。在本文和后续的一些文章中，我将介绍 LaTeX 的一些内容，以及用它来编写文章，尤其是学术文章的实践。</p>
 
 
             </description>
