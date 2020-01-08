@@ -19,7 +19,7 @@ e-mail ([me@sharzy.in](mailto:me@sharzy.in)).
 # How is this built?
 I write articles in `markdown` and converted them to `html` by [Jekyll](https://jekyllrb.com). 
 The pages are hosted on [Github pages](https://pages.github.com). 
-You can view the source code on
+You can view the source code on `source` branch of 
  this [Github repo](https://github.com/SharzyL/SharzyL.github.io). 
  
 Due to my limited CSS skill, some features are hidden on mobile devices to avoid display disorder. 

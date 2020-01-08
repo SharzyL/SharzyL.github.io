@@ -17,6 +17,15 @@ const init_toc = (article, toc_obj) => {
         father.appendChild(ele);
         return ele;
     };
+    const scroll_to = (title) => {
+        let anchor_text = title.toLowerCase().split(' ').join('-');
+        let length = document.getElementById(anchor_text).getBoundingClientRect().top;
+        window.scrollBy({
+            top: length,
+            left: 0,
+            behavior: 'smooth'
+        })
+    };
     const head_tags = ['h1', 'h2', 'h3'];
     const selector = head_tags.join(', ');
     let head_objs = article.querySelectorAll(selector);
@@ -130,7 +139,7 @@ const init_search = () => {
     const dispatch_search = () => {
         let search_text = document.getElementById('search-line').value.split(' ').join('+');
         if (search_text) {
-            location.href = `https://www.google.com/search?q=site:sharzy.in+${search_text}`
+            location.href = `https://www.google.com/search?q=site:sharzy.in+${search_text}`;
         }
     };
     let search_line = document.getElementById('search-line');
@@ -146,19 +155,9 @@ const init_search = () => {
             dispatch_search();
         }
     });
-    search_line.addEventListener('focusout', (event) => {
+    search_line.addEventListener('focusout', () => {
         search_line.classList.add('search-line-hidden');
     });
-};
-
-const scroll_to = (title) => {
-    let anchor_text = title.toLowerCase().split(' ').join('-');
-    let length = document.getElementById(anchor_text).getBoundingClientRect().top;
-    window.scrollBy({
-        top: length,
-        left: 0,
-        behavior: 'smooth'
-    })
 };
 
 const init_gitalk = () => {
@@ -192,6 +191,12 @@ const init_zoomer = () => {
     zooming.listen('article img');
 };
 
+const ie_redirect = () => {
+    if ( window.ActiveXObject || "ActiveXObject" in window ) {
+        window.location.href = '/ie-redirect.html';
+    }
+};
+
 window.addEventListener('DOMContentLoaded', () => {
     init_nav();
     init_sidebar(document.getElementById('sidebar'));
@@ -203,6 +208,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('load', () => {
+    ie_redirect();
     try {
         MathJax.Hub.Config({
             tex2jax: {inlineMath: [['$','$']]}
