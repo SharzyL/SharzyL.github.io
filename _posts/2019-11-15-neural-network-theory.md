@@ -20,7 +20,7 @@ Though multi-layer neural network has been used in a wide range of areas, the ex
 - Conclusion
 
 # Document
-[pdf file](/assets/doc/survey_midterm.pdf)
+[pdf file](/assets/doc/survey-midterm.pdf)
 
 # References
 
@@ -71,7 +71,7 @@ works with non-sigmoid hidden layer activation functions — the Research Networ
 System. 1989. 321.
 
 [14] Matus Telgarsky. Benefits of depth in neural networks. page 23, 2016.
- 
+
 [15] X.-H. Yu. Can backpropagation error surface not have local minima. IEEE Trans. Neural
 Netw., 3(6):1019–1021, Nov./1992. ISSN 10459227. doi: 10.1109/72.165604.
 

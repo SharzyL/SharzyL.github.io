@@ -3,9 +3,7 @@ title: 多边形的三角形剖分结构及其应用
 tags: math paper algorithm
 ---
 
-本文为我的写作与沟通课程的短文终稿。主要介绍了关于三角形剖分的一些问题和应用。
-
-**由于可能的版权问题，此文保留一切权利**
+本文为写沟课的短文终稿。主要介绍了关于三角形剖分的一些问题和应用。
 
 # Abstract
 三角剖分问题在理论研究和实际问题中都有大量应用，因此也产生了众多相关的研究。本文介绍了其中的一些重要的问题和结果。
@@ -29,7 +27,7 @@ tags: math paper algorithm
   
 
 # Document
-[pdf file](/assets/doc/art-gallary.pdf)
+[pdf file](/assets/doc/art-gallery.pdf)
 
 # References
 [1] Peter Giblin. “Computational geometry: algorithms and applications (2nd edn.)” In: The Mathematical Gazette
