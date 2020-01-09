@@ -50,7 +50,7 @@ article a,
     text-decoration: none;
 }
 
-hr {
+.sep-line {
     border-top: #eee solid 1px;
     margin: .5em 0;
 }
