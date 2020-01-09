@@ -191,12 +191,6 @@ const init_zoomer = () => {
     zooming.listen('article img');
 };
 
-const ie_redirect = () => {
-    if ( window.ActiveXObject || "ActiveXObject" in window ) {
-        window.location.href = '/ie-redirect.html';
-    }
-};
-
 window.addEventListener('DOMContentLoaded', () => {
     init_nav();
     init_sidebar(document.getElementById('sidebar'));
@@ -208,7 +202,6 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('load', () => {
-    ie_redirect();
     try {
         MathJax.Hub.Config({
             tex2jax: {inlineMath: [['$','$']]}
