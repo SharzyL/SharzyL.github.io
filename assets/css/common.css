@@ -271,12 +271,14 @@ body {
 
 .post-header {
     font-weight: normal;
+    font-size: 20px;
 }
 
 .post-subtitle {
     font-family: inherit;
     padding-left: 2px;
     font-weight: lighter;
+    color: #444444;
 }
 
 .post-preview {
