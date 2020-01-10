@@ -75,7 +75,6 @@ const init_sidebar = (sidebar) => {
     }
     window.addEventListener('scroll', () => {
         if (sidebar.getBoundingClientRect().y < 0) { // when top of toc is down
-            console.log(sidebar.getBoundingClientRect().y);
             sidebar.classList.add('sidebar-detached');
         }
         if (document.querySelector('.header').getBoundingClientRect().bottom > 0) {
@@ -191,6 +190,12 @@ const init_zoomer = () => {
     zooming.listen('article img');
 };
 
+const ie_redirect = () => {
+    if ( window.ActiveXObject || "ActiveXObject" in window ) {
+        window.location.href = '/ie-redirect.html';
+    }
+};
+
 window.addEventListener('DOMContentLoaded', () => {
     init_nav();
     init_sidebar(document.getElementById('sidebar'));
@@ -202,10 +207,11 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('load', () => {
+    ie_redirect();
     try {
-        MathJax.Hub.Config({
-            tex2jax: {inlineMath: [['$','$']]}
-        });
+        // MathJax.Hub.Config({
+        //     tex2jax: {inlineMath: [['$','$']]}
+        // });
         init_zoomer();
         init_gitalk();
     } catch (e) {

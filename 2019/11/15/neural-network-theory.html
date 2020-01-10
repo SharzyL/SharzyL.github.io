@@ -13,9 +13,23 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <link href="/assets/css/common.css" rel="stylesheet">
     
-     <link rel="stylesheet" href="/assets/css/highlight.css">  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" defer></script>  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" defer></script>  <script type="text/javascript" src="/assets/nav/zooming.js" defer></script> 
+     <link rel="stylesheet" href="/assets/css/highlight.css">  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" defer></script>  <script type="text/javascript" src="/assets/nav/zooming.js" defer></script> 
     <script src="/assets/nav/responsive-nav.js" defer></script>
     <script src="/assets/js/page_util.js" defer></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" defer></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js">
+    </script>
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
@@ -58,7 +72,7 @@
         <p class="article-date">
             <span class="inline-block">Posted on 2019-11-15</span>
             <span class="horizon-sep"></span>
-            <span class="inline-block">Last edited on 2020-01-09</span>
+            <span class="inline-block">Last edited on 2020-01-10</span>
         </p>
     </div>
 </div>
@@ -90,7 +104,7 @@
 </ul>
 
 <h1 id="document">Document</h1>
-<p><a href="/assets/doc/survey-midterm.pdf">pdf file</a></p>
+<p><a href="/assets/doc/survey_midterm.pdf">pdf file</a></p>
 
 <h1 id="references">References</h1>
 
@@ -201,10 +215,5 @@ Netw., 3(6):1019–1021, Nov./1992. ISSN 10459227. doi: 10.1109/72.165604.</p>
 </footer>
 
 
-<script>
-    if ( window.ActiveXObject || "ActiveXObject" in window ) {
-        window.location.href = '/ie-redirect.html';
-    }
-</script>
 </body>
 </html>

@@ -13,9 +13,23 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <link href="/assets/css/common.css" rel="stylesheet">
     
-     <link rel="stylesheet" href="/assets/css/highlight.css">  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" defer></script>  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" defer></script>  <script type="text/javascript" src="/assets/nav/zooming.js" defer></script> 
+     <link rel="stylesheet" href="/assets/css/highlight.css">  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" defer></script>  <script type="text/javascript" src="/assets/nav/zooming.js" defer></script> 
     <script src="/assets/nav/responsive-nav.js" defer></script>
     <script src="/assets/js/page_util.js" defer></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" defer></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js">
+    </script>
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
@@ -192,10 +206,5 @@
 </footer>
 
 
-<script>
-    if ( window.ActiveXObject || "ActiveXObject" in window ) {
-        window.location.href = '/ie-redirect.html';
-    }
-</script>
 </body>
 </html>

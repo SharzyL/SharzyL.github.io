@@ -16,6 +16,20 @@
     
     <script src="/assets/nav/responsive-nav.js" defer></script>
     <script src="/assets/js/page_util.js" defer></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" defer></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js">
+    </script>
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
@@ -114,10 +128,5 @@ So reading on wide screen devices is more recommended.</p>
 </footer>
 
 
-<script>
-    if ( window.ActiveXObject || "ActiveXObject" in window ) {
-        window.location.href = '/ie-redirect.html';
-    }
-</script>
 </body>
 </html>
