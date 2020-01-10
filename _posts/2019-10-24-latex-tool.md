@@ -146,28 +146,10 @@ LaTeX Warning: There were undefined references.
 
 .blg 文件保存 bibtex 的日志文件，用来 debug. 我们再次运行 `latex example.tex` ，这时候 latex 还是会提示我们存在未定义的引用，最后再运行一次 `latex example.tex` 就能够得到我们最终想要的结果了。
 
-除了 bibTeX 以外，还有一个用来处理参考文献的工具，称为 bibLaTeX。它相比 bibTeX 来说更加现代化，可调整性更强。这是一个 bibLaTeX 的示例文档（.bib 文件不变）
-
-```latex
-\documentclass{article}
-\usepackage{biblatex}
-\addbibresource{ref.bib}
-
-\begin{document}
-
-    \cite{koji_midsummer_2001} is something good. 
-    
-    \printbibliography
- 
-\end{document}
-```
-
-编译这个文件需要的方法和 bibTeX 基本相同，除了 `bibtex` 换成 `biber` 之外。
-
 # Latexmk
 可以看到，按照上面的步骤，要想编译出来一个合格的输出文件是一件很繁琐的事情，Latexmk 正是为了解决这些问题而诞生的。Latexmk 使用 perl 编写，它的用途就是整合上面的组件，完成一键式编译流程（例如，只需要输入 `latexmk`命令就可以编译当前目录里面的所有 .tex 文件）。在[这里](https://mg.readthedocs.io/latexmk.html)可以看到 Latexmk 的文档。
 
-由于上面的文档的确非常友好，这里就不详细介绍它的用法了。后面介绍 LaTeX workshop 配置文件的时候会提及部分选项的含义。`.run.xml`，`.fdb_latexmk` 文件是 Latexmk 所生成的临时文件。
+由于上面的文档的确非常友好，这里就不详细介绍它的用法了。后面介绍 LaTeX workshop 配置文件的时候会提及部分选项的含义。
 
 # LaTeX 发行版
 上面的组件如果要逐一下载配置，必然是一件很麻烦的事情，为了能够快速搭建开发环境，有人将这些组件（以及众多的 LaTeX 宏包）整合起来发布，这样的东西就称为 LaTeX 发行版。常见的发行版包括 Windows 平台上的 MikTeX, TeXLive，MacOS 上的 MacTeX，以及 Linux 上的 TeXLive 等等。它们的安装比较简单，这里就不详述了。

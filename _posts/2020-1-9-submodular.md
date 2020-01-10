@@ -17,6 +17,7 @@ $ S = \{1, 2, \ldots, 2017\}$，$f: 2^S \to [0, +\infty)$ 满足
 3. $A \subset B \subset S \Longrightarrow f(A) \leq f(B)$
 
 4. $\forall\ r \in \{1, 2, 3\}, j \in S$,
+
     $$
     f(\{1, 2, \ldots, k\}) \geq f(\{1, 2, \ldots, k - 1\} \cup\{j\})
     $$
