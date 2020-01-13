@@ -209,9 +209,9 @@ window.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', () => {
     ie_redirect();
     try {
-        // MathJax.Hub.Config({
-        //     tex2jax: {inlineMath: [['$','$']]}
-        // });
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$','$']]}
+        });
         init_zoomer();
         init_gitalk();
     } catch (e) {

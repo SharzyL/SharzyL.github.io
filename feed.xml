@@ -5,7 +5,7 @@
         <title></title>
         <link>http://localhost:4000</link>
         <description></description>
-        <lastBuildDate>Fri, 10 Jan 2020 17:09:01 +0800</lastBuildDate>
+        <lastBuildDate>Mon, 13 Jan 2020 08:30:40 +0800</lastBuildDate>
         
         <item>
             <title>小记：Submodular 函数与社交网络</title>
@@ -20,6 +20,22 @@
             <pubDate>Thu, 09 Jan 2020 00:00:00 +0800</pubDate>
             <guid>
                 http://localhost:4000/2020/01/09/submodular.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>LaTeX 学术写作工作流</title>
+            <link>
+                http://localhost:4000/2020/01/08/latex-flow.html
+            </link>
+            <description>
+                <p>之前的文章中介绍了 LaTeX 的工具链的相关内容。在这一节中，我将根据我当前微小的经验，记录一下我目前使用 LaTeX 写出一篇完整的论文所需要的工具和工作流。</p>
+
+
+            </description>
+            <pubDate>Wed, 08 Jan 2020 00:00:00 +0800</pubDate>
+            <guid>
+                http://localhost:4000/2020/01/08/latex-flow.html
             </guid>
         </item>
         
