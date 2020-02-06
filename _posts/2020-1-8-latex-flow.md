@@ -1,5 +1,5 @@
 ---
-title: LaTeX 学术写作工作流
+title: LaTeX Writing Workflow
 tags: latex
 ---
 之前的文章中介绍了 LaTeX 的工具链的相关内容。在这一节中，我将根据我当前微小的经验，记录一下我目前使用 LaTeX 写出一篇完整的论文所需要的工具和工作流。
