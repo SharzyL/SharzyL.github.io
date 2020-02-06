@@ -5,7 +5,23 @@
         <title></title>
         <link>http://localhost:4000</link>
         <description></description>
-        <lastBuildDate>Mon, 13 Jan 2020 08:30:40 +0800</lastBuildDate>
+        <lastBuildDate>Thu, 06 Feb 2020 10:36:34 +0800</lastBuildDate>
+        
+        <item>
+            <title>VSCode 中文快捷键跳转解决方案</title>
+            <link>
+                http://localhost:4000/2020/02/04/cjk-helper.html
+            </link>
+            <description>
+                <p>之前的文章介绍过，我常用 VSCode 来进行 LaTeX 写作。但是当进行中文写作时，VSCode 的一个问题常常让我感到不快：对于英文的内容，我们可以使用 <code class="highlighter-rouge">ctrl</code> + 方向键 来进行以单词为单位的跳转（只用方向键可以做到以字符为单位跳转），<code class="highlighter-rouge">ctrl </code> + <code class="highlighter-rouge">backspace</code> 可以做到以单词为单位的删除，等等。然而这样的快捷健对于中文的效果是很糟糕的：它会将一整段中文识别为一个单词，这导致跳转 / 删除的范围是一整段，这一般并不是我们需要的。本文将记录我解决这一问题的过程。</p>
+
+
+            </description>
+            <pubDate>Tue, 04 Feb 2020 00:00:00 +0800</pubDate>
+            <guid>
+                http://localhost:4000/2020/02/04/cjk-helper.html
+            </guid>
+        </item>
         
         <item>
             <title>小记：Submodular 函数与社交网络</title>
@@ -24,7 +40,7 @@
         </item>
         
         <item>
-            <title>LaTeX 学术写作工作流</title>
+            <title>LaTeX Writing Workflow</title>
             <link>
                 http://localhost:4000/2020/01/08/latex-flow.html
             </link>
