@@ -245,7 +245,6 @@ body {
 .main-text {
     margin-top: 3em;
     border-bottom: 1px solid #eee;
-    padding-bottom: 2em;
 }
 
 .main-text > p:first-child {
@@ -255,7 +254,7 @@ body {
 .post-card {
     color: black;
     padding: 1em;
-    margin: .5em;
+    margin: 0 .5em;
     transition: .2s;
     overflow: visible;
     border-top: #eee solid 1px;
