@@ -172,7 +172,7 @@ const init_gitalk = () => {
     };
     const gitalk = new Gitalk({
         clientID: '56fd0766110ee8f26064',
-        clientSecret: '81aca02e7bc69deccda1d2f5d258eed60b38a859',
+        clientSecret: 'e889ed7c286b99d8c4f5a431733fe06a8af3762a',
         repo: 'SharzyL.github.io',
         owner: 'SharzyL',
         admin: ['SharzyL'],
