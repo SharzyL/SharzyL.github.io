@@ -1,0 +1,1 @@
+git add . & git commit -m %1 & git push & jekyll build & cd _site & git add . & git commit -m %1 & git push
