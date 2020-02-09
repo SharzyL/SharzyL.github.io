@@ -24,7 +24,7 @@ const init_toc = (article, toc_obj) => {
             top: length,
             left: 0,
             behavior: 'smooth'
-        })
+        });
     };
     const head_tags = ['h1', 'h2', 'h3'];
     const selector = head_tags.join(', ');

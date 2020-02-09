@@ -314,18 +314,46 @@ body {
 }
 
 #post-switch a {
-    text-align: center;
     display: block;
-    color: black;
-    border: 1px black solid;
-    border-radius: .3em;
-    padding: .5em;
+    color: #666666;
+    padding: .7em 1.6em;
+    border-color: #ccc;
+    transition: .2s;
+    overflow: visible;
 }
 
 #post-switch a:hover {
     text-decoration: none;
-    color: #1B76C4;
-    border-color: #1B76C4;
+}
+
+#post-switch h5 {
+    margin-bottom: .5em;
+    font-family: "Arial Black", "Microsoft YaHei", "Simsum", Helvetica, sans-serif;
+}
+
+#post-previous {
+    text-align: left;
+    border: 1px solid;
+    border-left: .3em solid;
+}
+
+#post-previous:hover {
+    padding-left: 1.8em;
+}
+
+#post-next {
+    text-align: right;
+    border: 1px solid;
+    border-right: .3em solid;
+}
+
+#post-next:hover {
+    padding-right: 1.8em;
+}
+
+#post-previous:hover, #post-next:hover {
+    border-color: #2a7ae2;
+    color: #2a7ae2;
 }
 
 .tag {
@@ -392,7 +420,6 @@ footer * {
 #nav-wrap a,
 #nav-wrap a:before {
     color: inherit;
-    text-transform: uppercase;
 }
 
 #nav ul {
@@ -568,6 +595,10 @@ img {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.gt-container .gt-comments-null {
+    display: none !important;
 }
 
 /* for mobile devices that responsive nav is enabled */
