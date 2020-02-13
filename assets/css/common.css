@@ -162,11 +162,11 @@ th, td {
 }
 
 .underlined {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #f5f5f5;
 }
 
 div.highlight {
-    background-color: #eee;
+    background-color: #f5f5f5;
     padding: .7em;
     border-radius: .3em;
     overflow-x: auto;
@@ -180,16 +180,20 @@ div.highlight {
 
 blockquote {
     margin: .5em 0;
-    padding: .5em 2em;
-    background-color: #eee;
-    border-left: .5em #999 solid;
+    padding: .2em 2em;
+    border-left: 3px #bbb solid;
     font-style: italic;
+    color: #666666;
 }
 
 /* handle positioning exception with formulas in blockquote*/
 blockquote .MJXc-display {
     padding-bottom: 1em;
     margin-bottom: 0;
+}
+
+blockquote > p {
+    margin: 0;
 }
 
 body {
