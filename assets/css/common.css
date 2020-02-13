@@ -216,8 +216,7 @@ body {
 }
 
 .header {
-    background: #1B76C4 center;
-    background-size: cover;
+    background: linear-gradient(90deg, #1b86e4,#1ba6f4,#1b86e4);
 }
 
 .main-title {
