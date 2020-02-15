@@ -7,9 +7,7 @@ requirements:
 ---
 
 <div class="main-text">
-    <h3 class="section-head" style="margin-left: 1em">
-        ALL POSTS
-    </h3>
+    <h3 class="section-head" style="margin-left: 1em"></h3>
 
     {% for post in site.posts %}
     <div class="post-card" url={{post.url}} tags="{% for tag in post.tags %}{{tag}} {% endfor %}">
@@ -45,8 +43,8 @@ requirements:
 
 <div class="sidebar hidden-on-mobile" id="sidebar">
     <div id="sidebar-inner">
-        <h3 class="section-head"> TAGS</h3>
         <div class="sep-line" style="margin: 0 0 1.5em;"></div>
+        <h3 class="section-head"> TAGS</h3>
         <div id="tags-list"></div>
         <a id="show-tags-a" class="hidden link">Show all articles</a>
         <div class="sep-line" style="margin: 1.5em 0;"></div>

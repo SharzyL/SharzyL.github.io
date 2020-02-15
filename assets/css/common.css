@@ -246,7 +246,7 @@ body {
 }
 
 .main-text {
-    margin-top: 3em;
+    margin-top: 2.5em;
     border-bottom: 1px solid #eee;
 }
 
@@ -299,6 +299,11 @@ body {
 
 .post-meta > a:first-child {
     flex: 1;
+}
+
+.post-date {
+    color: #888;
+    font-size: .9em;
 }
 
 .horizon-sep {
@@ -384,7 +389,7 @@ body {
 
 #show-tags-a {
     display: block;
-    margin: 1em 3px;
+    margin: 1em .5em -1em;
 }
 
 .header-tag {

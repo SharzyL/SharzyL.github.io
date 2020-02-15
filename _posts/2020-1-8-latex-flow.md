@@ -167,7 +167,7 @@ VSCode + LaTeX workshop 的安装过程就不赘述了。有一定门槛的是 L
 "latex-workshop.view.pdf.internal.synctex.keybinding":"double-click",
 ```
 
-`ctrl + P` 输入 `settings.json` 进入设置界面。由于这是一部分的配置项，所以需要把它们放在一个大括号里面才能生效。此外，102 行和 108 行中的`"<your-path>/SumatraPDF.exe"`需要自行修改成 Sumatra 阅读器的路径。
+为了应用这些配置项，`ctrl + P` 输入 `settings.json` 进入设置界面，将上面的 json 代码复制进去。由于这是一部分的配置项，所以需要把它们放在一个大括号里面才能生效。此外，上述代码中的`"<your-path>/SumatraPDF.exe"`需要自行修改成 Sumatra 阅读器的路径。
 
 进行完上面的配置之后，打开 VSCode 侧边栏的 TeX 栏，就可以看到这样的一些选项了：
 
@@ -178,12 +178,14 @@ VSCode + LaTeX workshop 的安装过程就不赘述了。有一定门槛的是 L
 1. `-synctex=1`：这个命令表示生成 synctex 文件。这种文件的扩展名为 `.synctex.gz`，它的作用在于创建一个 pdf 文件和 tex 文件之间的对应关系。这样的话就可以在 pdf 文件和 tex 文件之间进行同步的穿梭了。使用方法下述。
 2. `-shell-escape`：表示处理转义字符的方式。这个命令行参数主要是在使用 minted 这个代码高亮宏包的时候用到，由于在处理其它语言代码的时候，会违背普通 tex 的转义规则，因此这个参数在使用 minted 宏包的时候是必须的。
 
-当需要编译文件的时候，一般只需要点 `Recipe: latexmk`就可以进行编译了。某些情况下可能需要手动控制编译，这个时候可以使用下面的两个 recipe，它们的作用比较一目了然。需要浏览生成的 pdf 文件需，可以在 `View LaTeX PDF` 中使用对应的选项。虽然市面上有许多 PDF 阅读器，但是对于 LaTeX 编写而言， VSCode tab 和 Sumatra 依然是最好用的之二。Sumatra 是开源的 PDF 浏览器，它的许多功能都是针对程序员或 LaTeX 写作者设计的。例如，它的 H, J, K, L 快捷键功能显然是从 vim 一流继承下来的，此外，它提供许多命令行参数，提供文本式的配置编辑。
+完成上面这些配置之后，只需要点 `Recipe: latexmk`，就可以使用 latexmk 来编译当前的 .tex 文档了，当文档发生变化时，它会自动重新编译。某些情况下，我们可能需要手动控制编译，这个时候可以使用另外的两个 recipe。
 
-这里主要介绍一下它的 .tex to .pdf 同步功能。首先我们需要打开 Sumatra 的设置，将 “设置反向搜索命令行” 设置为 `"<your-path>\Code.exe" -r -g "%f:%l"`，其中 `<your-path>` 是 VSCode 的路径。设置完之后，双向同步功能应该就可以正常使用了：在使用 VSCode 编辑 .tex 文件的时候，使用快捷键 `ctrl + alt + J` 之后就可以在阅读器中高亮相应的段落。在使用阅读器阅读 PDF 文件时，双击某处即可自动跳转到 .tex 文件的对应段落。
+需要浏览生成的 pdf 文件时，可以在 `View LaTeX PDF` 中打开对应的阅读器。虽然市面上有许多 PDF 阅读器，但是对于 LaTeX 编写而言， VSCode 内置的 VSCode tab 和开源的 Sumatra 依然是最好用的两个。Sumatra 作为开源的 PDF 阅读器，它的许多功能都是针对程序员或 LaTeX 写作者设计的。例如，它的 H, J, K, L 快捷键功能显然是从 vim 一流继承下来的，此外，它提供许多命令行参数，提供文本式的配置编辑。
+
+LaTeX Workshop 的一个重要功能就是在 .pdf 文件和 .tex 文件之间的双向同步跳转，也就是说，我们可以在浏览 pdf 文件时，快速跳转到 .tex 文件中的对应位置，反之同理。这个功能对于 VSCode Tab 是默认生效的，使用方法详见文档。对于 Sumatra 来说，为了启用这个功能，需要打开 Sumatra 的设置，将 “设置反向搜索命令行” 设置为 `"<your-path>\Code.exe" -r -g "%f:%l"`，其中 `<your-path>` 是 VSCode 的路径。设置完之后，双向同步功能应该就可以正常使用了：在使用 VSCode 编辑 .tex 文件的时候，使用快捷键 `ctrl + alt + J` 之后就可以在阅读器中高亮相应的段落。而在使用阅读器阅读 PDF 文件时，双击某处即可自动跳转到 .tex 文件的对应段落。
 
 LaTeX Workshop 提供了许多其它的便捷功能和快捷键，这些可以在 [GitHub wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki) 中看到。这里就不重复了。
 
-为了使用 lint （语法检查）功能，需要先安装 chktex （大部分发行版应该都会提供，如果没有提供的话可以用对应的包管理器安装，在命令行输入 chktex 可以检查是否安装完成）。然后在 `settings.json` 中输入 `"latex-workshop.chktex.enabled": true,`即可。chktex 会给你的代码提供一些贴心的建议（笑）。
+为了使用 lint （语法检查）功能，需要先安装 chktex （大部分发行版应该都会提供，如果没有提供的话可以用对应的包管理器安装，在命令行输入 chktex 可以检查是否安装完成）。然后在 `settings.json` 中输入 `"latex-workshop.chktex.enabled": true,`即可启用。chktex 会给你的代码提供一些贴心的建议（笑）。
 
 > 未完待续，之后将会介绍一些宏包的使用，一些本地化的相关内容
