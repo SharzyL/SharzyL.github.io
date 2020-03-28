@@ -12,7 +12,7 @@ This is Sharzy's personal blog, used to record something I find interesting, upd
 I am a CS student with MO background, as well as a anime, music lover (just a listener). 
 
 You can find me on [Github](https://github.com/SharzyL), [Bangumi](https://bangumi.tv/user/430803),
-or [NetEase Music](https://music.163.com/#/user/home?id=91540849) (Welcome for following), or contact me via telegram ([@RhoveL](https://t.me/RhoveL)), 
+or [NetEase Music](https://music.163.com/#/user/home?id=91540849) (Welcome for following), or contact me via telegram ([@SharzyL](https://t.me/SharzyL)), 
 e-mail ([me@sharzy.in](mailto:me@sharzy.in)).
 
 
