@@ -26,6 +26,7 @@ tags: latex
 2. 拖拽文件：可以通过拖拽文件到 Zotero 中直接添加一个不属于任何 Item 的 attachment。对于一些 attachment，例如 pdf 文件，可以自动识别出这个 attachment 的类型、metadata，当可以做到这一点时，Zotero 会创建一个相应的 Item，并自动把这个文件作为 attachment 添加到 Item 中。顺带一提，attachment 文件会被复制到 Zotero 的一个内部目录中，并且将它重命名为一个比较规整的名字。这是我最常用的一种方式，因为它的识别率还是比较高的。同时这样创建的 Item 非常方便，双击就可以打开对应的 pdf 文件。
 3. 手动添加：手动创建一个 Item，然后手动填写 metadata 表项，手动添加 attachment，一切都在你的掌控之中。
 4. 从 metadata 添加：Zotero 支持输入 DOI, ISBN, PMDI, Arxiv ID 来自动创建相应的 Item，不过 attachment 还是需要自己添加。
+5. 从剪切板添加：File > Import from clipboard. 这个我一般用来从文献网站提供的 bibtex 文本来创建 Item。
 
 **导出 Item**：为了让这些 Item 能够被转化为方便我们使用的 .bib 文件，Zotero 提供了相应的功能。对于任意一个 Collection（包括 Subcollection），Zotero 支持将这个 Collection 导出成各种各样的格式。当然，对于我们来说，BibTeX 是最需要关注的一个格式）。我们将这个导出之后，会得到一个文件夹，里面包含我们想要的 .bib 文件。
 
