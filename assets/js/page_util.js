@@ -36,7 +36,7 @@ const init_toc = (article, toc_obj) => {
             `<a class="toc-link">${node.innerText}</a>`,
             {'class': `toc-${node.tagName.toLowerCase()}`}
         );
-        toc_item.addEventListener('click', () => scroll_to(node.innerText));
+        toc_item.addEventListener('click', () => scroll_to(node.id));
         toc_items.push(toc_item);
     }
 

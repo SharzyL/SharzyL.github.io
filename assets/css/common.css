@@ -151,6 +151,10 @@ th, td {
     display: none!important;
 }
 
+.center {
+    text-align: center;
+}
+
 .bold {
     font-weight: bold;
     font-family: "Microsoft YaHei", Segoe, Arial, sans-serif;
@@ -236,6 +240,7 @@ body {
     font-size: 1em;
     color: #555555;
     margin: .5em;
+    text-align: center;
 }
 
 .main {
@@ -247,7 +252,6 @@ body {
 
 .main-text {
     margin-top: 2.5em;
-    border-bottom: 1px solid #eee;
 }
 
 .main-text > p:first-child {
@@ -444,6 +448,10 @@ footer * {
     transition: .5s width;
 }
 
+#search-line::placeholder {
+    color: rgba(255, 255, 255, .7);
+}
+
 .nav-detach #search-line {
     color: black;
     border-bottom-color: black;
@@ -502,8 +510,30 @@ footer * {
     top: 0;
 }
 
+#bio {
+    text-align: center;
+    font-family: Consolas, "Microsoft YaHei UI", Monospace, sans-serif;
+    font-size: .9em;
+}
+
+#bio > a {
+    display: block;
+    font-family: inherit;
+    color: #aaa;
+    transition: .3s;
+}
+
+#bio > a:hover {
+    color: black;
+}
+
 #toc > li {
     list-style: none;
+}
+
+#avatar {
+    display: block;
+    margin: auto;
 }
 
 .toc-link {
@@ -548,7 +578,7 @@ footer * {
     font-size: .9em;
 }
 
-img {
+article img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -653,6 +683,7 @@ img {
     .main-text {
         width: 100vw;
         padding: 1em;
+        border-bottom: 1px solid #eee;
     }
 
     .inline-block {
@@ -725,7 +756,7 @@ img {
 
     #toc, #sidebar-inner {
         width: 15em;
-        padding-left: 1em;
+        padding-right: 1em;
     }
 }
 
@@ -733,23 +764,30 @@ img {
 @media screen and (min-width: 40em) and (max-width: 79.999999999em) {
     .main {
         justify-content: flex-start;
+        border-bottom: 1px solid #eee;
     }
+
     .article-banner {
         padding-left: 3em;
     }
 
     .main-text {
-        width: 75%;
+        width: 75vw;
+        flex: none;
+    }
+
+    .main-text.post-article {
+        padding-left: 1em;
     }
 
     #sidebar {
-        width: 25%;
-        left: calc(75% - 1.5em);
+        width: 25vw;
+        left: 75vw;
+        flex: none;
     }
 
-    .main {
-        margin-left: 3em;
-        margin-right: 3em;
+    #toc, #sidebar-inner {
+        width: 100%;
     }
 }
 
@@ -761,6 +799,7 @@ img {
 
     .main-text {
         width: 50%;
+        border-bottom: 1px solid #eee;
     }
 
     .sidebar-detached {
