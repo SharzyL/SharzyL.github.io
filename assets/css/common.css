@@ -441,8 +441,9 @@ footer * {
 #search-line {
     background: transparent;
     border: none;
-    border-bottom: 2px solid white;
     outline: none;
+    box-shadow: none;
+    border-bottom: 2px solid white;
     color: white;
     width: 10em;
     transition: .5s width;
@@ -525,6 +526,11 @@ footer * {
 
 #bio > a:hover {
     color: black;
+}
+
+#toc {
+    margin-top: -1em;
+    margin-left: 1em;
 }
 
 #toc > li {
@@ -787,7 +793,7 @@ article img {
     }
 
     #toc, #sidebar-inner {
-        width: 100%;
+        width: calc(100% - 1em);
     }
 }
 

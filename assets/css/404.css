@@ -4,7 +4,8 @@
     flex-flow: column;
     justify-content: space-between;
     align-items: center;
-    background: #2a7ae2 url("https://i.loli.net/2019/08/02/5d43e8e3f05dd56979.jpg");
+    /*background: #2a7ae2 url("https://i.loli.net/2019/08/02/5d43e8e3f05dd56979.jpg");*/
+    background: #2a7ae2;
     background-size: cover;
 }
 
