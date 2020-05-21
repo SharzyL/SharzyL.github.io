@@ -16,7 +16,7 @@
      <link rel="stylesheet" href="/assets/css/404.css"> 
     <script src="/assets/nav/responsive-nav.js" defer></script>
     <script src="/assets/js/page_util.js" defer></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script><script>
     MathJax = {
         tex: {
             inlineMath: [['$', '$'], ['\\(', '\\)']]
@@ -30,21 +30,21 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js" defer></script>
     <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>
+
 <body>
 <div id="body-wrap">
     <div id="nav-wrap">
     <a href="/" class="fa fa-home fa-2x show-on-mobile home-icon"></a>
     <div id="nav">
         <ul style="padding-inline-start: 0">
-            <li class="hidden-on-mobile"><a href="/" class="bold hover-underline">Sharzy's Blog</a></li>
+            <li class="hidden-on-mobile">
+                <a href="/" class="hover-underline fa fa-home"></a>
+            </li>
             <li class="hidden-on-mobile">
                 <label for="search-line" id="search-btn">
                     <a class="fa fa-search"></a>
                 </label>
                 <input type="text" id="search-line" class="search-line-hidden" placeholder="Search by Google">
-            </li>
-            <li>
-                <a class="bold hover-underline" href="/">HOME</a>
             </li>
             <li><a class="bold hover-underline" href="/about">ABOUT</a></li>
             <li><a class="bold hover-underline" href="/clock/clock.html">CLOCK</a></li>
@@ -52,11 +52,17 @@
     </div>
 </div>
 
-    <h1 id="banner-404" class="bold">
+    <div id="banner-404" class="bold">
         404 :(
         <br>
-        <span>Some oblivious world...</span>
-    </h1>
+        <span style="font-size: .8em">
+            Some oblivious world...
+        </span>
+        <br>
+        <a href="/">
+            Back to home
+        </a>
+    </div>
     <footer class="footer">
     <div class="container">
         <p>
@@ -75,5 +81,6 @@
     </div>
 </footer>
 </div>
+
 </body>
 </html>

@@ -16,7 +16,7 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" defer></script> 
     <script src="/assets/nav/responsive-nav.js" defer></script>
     <script src="/assets/js/page_util.js" defer></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script><script>
     MathJax = {
         tex: {
             inlineMath: [['$', '$'], ['\\(', '\\)']]
@@ -30,21 +30,21 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js" defer></script>
     <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>
+
 <body>
-<div class="header">
+<div class="article-header header">
     <div id="nav-wrap">
     <a href="/" class="fa fa-home fa-2x show-on-mobile home-icon"></a>
     <div id="nav">
         <ul style="padding-inline-start: 0">
-            <li class="hidden-on-mobile"><a href="/" class="bold hover-underline">Sharzy's Blog</a></li>
+            <li class="hidden-on-mobile">
+                <a href="/" class="hover-underline fa fa-home"></a>
+            </li>
             <li class="hidden-on-mobile">
                 <label for="search-line" id="search-btn">
                     <a class="fa fa-search"></a>
                 </label>
                 <input type="text" id="search-line" class="search-line-hidden" placeholder="Search by Google">
-            </li>
-            <li>
-                <a class="bold hover-underline" href="/">HOME</a>
             </li>
             <li><a class="bold hover-underline" href="/about">ABOUT</a></li>
             <li><a class="bold hover-underline" href="/clock/clock.html">CLOCK</a></li>
@@ -52,32 +52,44 @@
     </div>
 </div>
 
-    <div class="article-banner banner">
-        <div class="article-tags">
-            <i class="fa fa-tags"></i>
-            
-            <a class="tag header-tag" href="/?tags=dev">dev</a>
-            
-            <a class="tag header-tag" href="/?tags=VSCode">VSCode</a>
-            
-        </div>
-        <p class="article-title bold">
-            VSCode 中文快捷键跳转解决方案
-        </p>
-        <p class="article-subtitle">
-            记一次 VSCode 插件的开发（魔改）过程
-        </p>
-        <p class="article-date">
-            <span class="inline-block">Posted on 2020-02-04</span>
-            <span class="horizon-sep"></span>
-            <span class="inline-block">Last edited on 2020-02-07</span>
-        </p>
-    </div>
 </div>
 
 <div class="main">
-    <article class="main-text post-article">
-        <p>之前的文章介绍过，我常用 VSCode 来进行 LaTeX 写作。但是当进行中文写作时，VSCode 的一个问题常常让我感到不快：对于英文的内容，我们可以使用 <code class="highlighter-rouge">ctrl</code> + 方向键 来进行以单词为单位的跳转（如果只用方向键的话，效果是以字符为单位跳转），<code class="highlighter-rouge">ctrl</code>  + <code class="highlighter-rouge">backspace</code> 可以做到以单词为单位的删除，等等。然而由于 VSCode 机制的原因，这样的快捷健对于中文的效果是很糟糕的：它会将一整段中文识别为一个单词，这导致跳转 / 删除的范围是一整段，这一般并不是我们需要的。本文将记录我解决这一问题的过程。</p>
+    <div class="central_col">
+        <article class="post-article article-card">
+            <div class="article-banner">
+                <h1 class="article-title">
+                    VSCode 中文快捷键跳转解决方案
+                </h1>
+                
+                    <h2 class="article-subtitle">
+                        记一次 VSCode 插件的开发（魔改）过程
+                    </h2>
+                
+                
+                    <div class="article-date">
+                        <i class="fa fa-calendar"></i>
+                        <span class="inline-block">
+                            Posted on 2020-02-04
+                        </span>
+                        <span class="inline-block">
+                            Last edited on 2020-05-21
+                        </span>
+                    </div>
+                
+                
+                    <div class="article-tags">
+                        <i class="fa fa-tags"></i>
+                        
+                        <a class="tag header-tag" href="/?tags=dev">dev</a>
+                        
+                        <a class="tag header-tag" href="/?tags=VSCode">VSCode</a>
+                        
+                    </div>
+                
+            </div>
+            <div id="article-content">
+                <p>之前的文章介绍过，我常用 VSCode 来进行 LaTeX 写作。但是当进行中文写作时，VSCode 的一个问题常常让我感到不快：对于英文的内容，我们可以使用 <code class="highlighter-rouge">ctrl</code> + 方向键 来进行以单词为单位的跳转（如果只用方向键的话，效果是以字符为单位跳转），<code class="highlighter-rouge">ctrl</code>  + <code class="highlighter-rouge">backspace</code> 可以做到以单词为单位的删除，等等。然而由于 VSCode 机制的原因，这样的快捷健对于中文的效果是很糟糕的：它会将一整段中文识别为一个单词，这导致跳转 / 删除的范围是一整段，这一般并不是我们需要的。本文将记录我解决这一问题的过程。</p>
 
 <h1 id="introduction">Introduction</h1>
 
@@ -137,27 +149,21 @@
 
 <p>Unicode 使用“<strong>中日韩统一表意文字</strong>”（<strong>CJK Unified Ideographs</strong>）标准来处理这些“汉字”的编码。在这一标准中，对于汉字收录的处理使用<strong>表意文字认同原则</strong>（Han Unification Rule，又称<strong>表意文字统合原则</strong>）与<strong>字源分离原则</strong>（Source Separation Rule，又称<strong>原规格分离原则</strong>）。一个字（character）如果在不同语言中具有不同的字型（glyph），那么这些不同的字型会被编为同一个编码，由字体来负责处理显示不同的字型。而如果一个字在同一个语言中具有多种不同的字型，那么这些不同的字型会被编为多个编码。</p>
 
-<p><img src="https://i.loli.net/2020/02/06/Te2kqplVQbicrxR.png" alt="image.png" /></p>
+<p><img src="https://p.sda1.dev/0/17316a4d38fb6a29a373d1d09b8a1da5/Te2kqplVQbicrxR.png" alt="image.png" /></p>
 
 <p>（上图图源和上文的主要参考来源均为 <a href="https://zh.wikipedia.org/zh-cn/中日韓統一表意文字">wiki</a>）</p>
 
 <p>由此可见，“汉字”在 Unicode 中不是一个明确的概念，Unicode 中只有 CJK 这个概念。方便起见，我们只能将所有的 CJK 字符全部当作汉字来处理了。Unicode 中收录的 CJK 字符分为若干个区（block），基本的区域 CJK Unified Ideographs （编码范围 0x4E00–0x9FFF）包含了两万余个 CJK 字符，除此之外还有若干个扩展区域（目前有 CJK Unified Ideographs Extension A ~ CJK Unified Ideographs Extension F）收录一些比较生僻的字符。因此，最后选取的判别汉字的函数如下：</p>
 
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">isHanChar</span><span class="p">(</span><span class="nx">charCode</span> <span class="p">:</span> <span class="nx">number</span><span class="p">)</span> <span class="p">:</span> <span class="nx">boolean</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="mh">0x3400</span> <span class="o">&lt;=</span> <span class="nx">charCode</span> <span class="o">&amp;&amp;</span> <span class="nx">charCode</span> <span class="o">&lt;=</span> <span class="mh">0x4dbf</span>  
+    <span class="k">return</span> <span class="mh">0x3400</span> <span class="o">&lt;=</span> <span class="nx">charCode</span> <span class="o">&amp;&amp;</span> <span class="nx">charCode</span> <span class="o">&lt;=</span> <span class="mh">0x4dbf</span>  
         <span class="c1">// CJK Unified Ideographs Extension A</span>
         <span class="o">||</span> <span class="mh">0x4e00</span> <span class="o">&lt;=</span> <span class="nx">charCode</span> <span class="o">&amp;&amp;</span> <span class="nx">charCode</span> <span class="o">&lt;=</span> <span class="mh">0x9fff</span>  
         <span class="c1">// CJK Unified Ideographs</span>
         <span class="o">||</span> <span class="mh">0x20000</span> <span class="o">&lt;=</span> <span class="nx">charCode</span> <span class="o">&amp;&amp;</span> <span class="nx">charCode</span> <span class="o">&lt;=</span> <span class="mh">0x2a6df</span>  
         <span class="c1">// CJK Unified Ideographs Extension B</span>
-        <span class="o">||</span> <span class="mh">0x2a700</span> <span class="o">&lt;=</span> <span class="nx">charCode</span> <span class="o">&amp;&amp;</span> <span class="nx">charCode</span> <span class="o">&lt;=</span> <span class="mh">0x2ebef</span>  
-        <span class="c1">// CJK Unified Ideographs Extension C,D,E,F</span>
-        <span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+        <span class="o">||</span> <span class="mh">0x2a700</span> <span class="o">&lt;=</span> <span class="nx">charCode</span> <span class="o">&amp;&amp;</span> <span class="nx">charCode</span> <span class="o">&lt;=</span> <span class="mh">0x2ebef</span><span class="p">;</span>
+        <span class="p">}</span>
 </code></pre></div></div>
 
 <p>将上面的代码扔进 <a href="https://marketplace.visualstudio.com/items?itemName=sgryjp.japanese-word-handler">Japanese Word Handler</a> 的代码中稍作整理就可以得到一个简单的，对汉字适用的插件版本了，在这个版本中，连续的一串汉字会被识别为一个单词，换言之，它是将一个句子识别为一个词。这样的效果在很多情况下都是够用的。</p>
@@ -190,28 +196,31 @@
 <p>目前该插件已经发布至 VSCode Marketplace，插件名为 <a href="https://marketplace.visualstudio.com/items?itemName=SharzyL.cjk-word-handler">CJK word handler</a>。这个插件基本完全解决了上文中提到的问题 1, 2, 3，后续还会加入一些优化和改进。欢迎有需求的读者安装使用。如果在使用过程中发现 bug 可以前往 GitHub 提出 <a href="https://github.com/SharzyL/cjk-word-handler/issues">Issue</a>。</p>
 
 
-        <div id="post-switch">
-            <div>
-                
-                <a href="/2020/01/09/submodular.html" id="post-previous">
-                     <h5>
-                         PREVIOUS
-                     </h5>
-                    小记：Submodular 函数与社交网络
-                </a>
-                
             </div>
+        </article>
+        
+            <div id="post-switch">
+                <div>
+                    
+                    <a href="/2020/01/09/submodular.html" id="post-previous" class="card">
+                        <h5>
+                            PREVIOUS
+                        </h5>
+                        小记：Submodular 函数与社交网络
+                    </a>
+                    
+                </div>
 
-            <div>
-                
+                <div>
+                    
+                </div>
             </div>
-        </div>
-
+        
         <div id="gitalk-container"></div>
-    </article>
+    </div>
 
     <div class="sidebar hidden-on-mobile" id="sidebar">
-        <div id="toc">
+        <div id="toc" class="sidebar-inner">
             <div class="sep-line"></div>
             <h5 class="section-head">Contents</h5>
         </div>

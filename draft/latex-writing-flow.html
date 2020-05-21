@@ -16,7 +16,7 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" defer></script> 
     <script src="/assets/nav/responsive-nav.js" defer></script>
     <script src="/assets/js/page_util.js" defer></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script><script>
     MathJax = {
         tex: {
             inlineMath: [['$', '$'], ['\\(', '\\)']]
@@ -30,21 +30,21 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js" defer></script>
     <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>
+
 <body>
-<div class="header">
+<div class="article-header header">
     <div id="nav-wrap">
     <a href="/" class="fa fa-home fa-2x show-on-mobile home-icon"></a>
     <div id="nav">
         <ul style="padding-inline-start: 0">
-            <li class="hidden-on-mobile"><a href="/" class="bold hover-underline">Sharzy's Blog</a></li>
+            <li class="hidden-on-mobile">
+                <a href="/" class="hover-underline fa fa-home"></a>
+            </li>
             <li class="hidden-on-mobile">
                 <label for="search-line" id="search-btn">
                     <a class="fa fa-search"></a>
                 </label>
                 <input type="text" id="search-line" class="search-line-hidden" placeholder="Search by Google">
-            </li>
-            <li>
-                <a class="bold hover-underline" href="/">HOME</a>
             </li>
             <li><a class="bold hover-underline" href="/about">ABOUT</a></li>
             <li><a class="bold hover-underline" href="/clock/clock.html">CLOCK</a></li>
@@ -52,28 +52,21 @@
     </div>
 </div>
 
-    <div class="article-banner banner">
-        <div class="article-tags">
-            <i class="fa fa-tags"></i>
-            
-        </div>
-        <p class="article-title bold">
-            LaTeX 学术写作工作流
-        </p>
-        <p class="article-subtitle">
-            
-        </p>
-        <p class="article-date">
-            <span class="inline-block">Posted on </span>
-            <span class="horizon-sep"></span>
-            <span class="inline-block">Last edited on 2020-01-10</span>
-        </p>
-    </div>
 </div>
 
 <div class="main">
-    <article class="main-text post-article">
-        <p>之前的文章中介绍了 LaTeX 的工具链的相关内容。在这一节中，我将根据我当前微小的经验，记录一下我目前使用 LaTeX 写出一篇完整的论文所需要的工具和工作流。</p>
+    <div class="central_col">
+        <article class="post-article article-card">
+            <div class="article-banner">
+                <h1 class="article-title">
+                    LaTeX 学术写作工作流
+                </h1>
+                
+                
+                
+            </div>
+            <div id="article-content">
+                <p>之前的文章中介绍了 LaTeX 的工具链的相关内容。在这一节中，我将根据我当前微小的经验，记录一下我目前使用 LaTeX 写出一篇完整的论文所需要的工具和工作流。</p>
 
 <h1 id="bibliography">Bibliography</h1>
 
@@ -92,21 +85,24 @@
 <p>而关于如何管理 Items，Zotero 提供了两个主要层级：Library 和 Collection。Library 默认只有一个 My Library，这个是指本地的 library。</p>
 
 
-        <div id="post-switch">
-            <div>
-                
             </div>
+        </article>
+        
+            <div id="post-switch">
+                <div>
+                    
+                </div>
 
-            <div>
-                
+                <div>
+                    
+                </div>
             </div>
-        </div>
-
+        
         <div id="gitalk-container"></div>
-    </article>
+    </div>
 
     <div class="sidebar hidden-on-mobile" id="sidebar">
-        <div id="toc">
+        <div id="toc" class="sidebar-inner">
             <div class="sep-line"></div>
             <h5 class="section-head">Contents</h5>
         </div>

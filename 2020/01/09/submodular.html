@@ -16,7 +16,7 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" defer></script> 
     <script src="/assets/nav/responsive-nav.js" defer></script>
     <script src="/assets/js/page_util.js" defer></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script><script>
     MathJax = {
         tex: {
             inlineMath: [['$', '$'], ['\\(', '\\)']]
@@ -30,21 +30,21 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js" defer></script>
     <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>
+
 <body>
-<div class="header">
+<div class="article-header header">
     <div id="nav-wrap">
     <a href="/" class="fa fa-home fa-2x show-on-mobile home-icon"></a>
     <div id="nav">
         <ul style="padding-inline-start: 0">
-            <li class="hidden-on-mobile"><a href="/" class="bold hover-underline">Sharzy's Blog</a></li>
+            <li class="hidden-on-mobile">
+                <a href="/" class="hover-underline fa fa-home"></a>
+            </li>
             <li class="hidden-on-mobile">
                 <label for="search-line" id="search-btn">
                     <a class="fa fa-search"></a>
                 </label>
                 <input type="text" id="search-line" class="search-line-hidden" placeholder="Search by Google">
-            </li>
-            <li>
-                <a class="bold hover-underline" href="/">HOME</a>
             </li>
             <li><a class="bold hover-underline" href="/about">ABOUT</a></li>
             <li><a class="bold hover-underline" href="/clock/clock.html">CLOCK</a></li>
@@ -52,30 +52,42 @@
     </div>
 </div>
 
-    <div class="article-banner banner">
-        <div class="article-tags">
-            <i class="fa fa-tags"></i>
-            
-            <a class="tag header-tag" href="/?tags=math">math</a>
-            
-        </div>
-        <p class="article-title bold">
-            小记：Submodular 函数与社交网络
-        </p>
-        <p class="article-subtitle">
-            论 2017 CTST D1T3 的背景
-        </p>
-        <p class="article-date">
-            <span class="inline-block">Posted on 2020-01-09</span>
-            <span class="horizon-sep"></span>
-            <span class="inline-block">Last edited on 2020-01-10</span>
-        </p>
-    </div>
 </div>
 
 <div class="main">
-    <article class="main-text post-article">
-        <p>2017 年的 CTST 上有一道看起来有些奇特的题目，当年这道题由于放送事故被整成了错题，导致没有起到任何区分度。我原本也没有太在意这样的一个题目，直到这学期某位老师给我们讲课的时候讲到了一些关于社交网络传播的内容，经过一些思考之后，我发现老师讲的内容里面正好蕴含了上面这道题目的背景。遂（在大半个学期之后）记录之。</p>
+    <div class="central_col">
+        <article class="post-article article-card">
+            <div class="article-banner">
+                <h1 class="article-title">
+                    小记：Submodular 函数与社交网络
+                </h1>
+                
+                    <h2 class="article-subtitle">
+                        论 2017 CTST D1T3 的背景
+                    </h2>
+                
+                
+                    <div class="article-date">
+                        <i class="fa fa-calendar"></i>
+                        <span class="inline-block">
+                            Posted on 2020-01-09
+                        </span>
+                        <span class="inline-block">
+                            Last edited on 2020-01-10
+                        </span>
+                    </div>
+                
+                
+                    <div class="article-tags">
+                        <i class="fa fa-tags"></i>
+                        
+                        <a class="tag header-tag" href="/?tags=math">math</a>
+                        
+                    </div>
+                
+            </div>
+            <div id="article-content">
+                <p>2017 年的 CTST 上有一道看起来有些奇特的题目，当年这道题由于放送事故被整成了错题，导致没有起到任何区分度。我原本也没有太在意这样的一个题目，直到这学期某位老师给我们讲课的时候讲到了一些关于社交网络传播的内容，经过一些思考之后，我发现老师讲的内容里面正好蕴含了上面这道题目的背景。遂（在大半个学期之后）记录之。</p>
 
 <h1 id="problem">Problem</h1>
 
@@ -177,35 +189,38 @@
 
 <p>鸽了大半个学期，终于期末把这玩意写了，有点奇妙。</p>
 
-        <div id="post-switch">
-            <div>
-                
-                <a href="/2020/01/08/latex-flow.html" id="post-previous">
-                     <h5>
-                         PREVIOUS
-                     </h5>
-                    LaTeX Writing Workflow
-                </a>
-                
             </div>
+        </article>
+        
+            <div id="post-switch">
+                <div>
+                    
+                    <a href="/2020/01/08/latex-flow.html" id="post-previous" class="card">
+                        <h5>
+                            PREVIOUS
+                        </h5>
+                        LaTeX Writing Workflow
+                    </a>
+                    
+                </div>
 
-            <div>
-                
-                <a href="/2020/02/04/cjk-helper.html" id="post-next">
-                    <h5>
-                         NEXT
-                    </h5>
-                    VSCode 中文快捷键跳转解决方案
-                </a>
-                
+                <div>
+                    
+                    <a href="/2020/02/04/cjk-helper.html" id="post-next" class="card">
+                        <h5>
+                            NEXT
+                        </h5>
+                        VSCode 中文快捷键跳转解决方案
+                    </a>
+                    
+                </div>
             </div>
-        </div>
-
+        
         <div id="gitalk-container"></div>
-    </article>
+    </div>
 
     <div class="sidebar hidden-on-mobile" id="sidebar">
-        <div id="toc">
+        <div id="toc" class="sidebar-inner">
             <div class="sep-line"></div>
             <h5 class="section-head">Contents</h5>
         </div>

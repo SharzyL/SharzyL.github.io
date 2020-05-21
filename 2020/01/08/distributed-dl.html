@@ -16,7 +16,7 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" defer></script> 
     <script src="/assets/nav/responsive-nav.js" defer></script>
     <script src="/assets/js/page_util.js" defer></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script><script>
     MathJax = {
         tex: {
             inlineMath: [['$', '$'], ['\\(', '\\)']]
@@ -30,21 +30,21 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js" defer></script>
     <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>
+
 <body>
-<div class="header">
+<div class="article-header header">
     <div id="nav-wrap">
     <a href="/" class="fa fa-home fa-2x show-on-mobile home-icon"></a>
     <div id="nav">
         <ul style="padding-inline-start: 0">
-            <li class="hidden-on-mobile"><a href="/" class="bold hover-underline">Sharzy's Blog</a></li>
+            <li class="hidden-on-mobile">
+                <a href="/" class="hover-underline fa fa-home"></a>
+            </li>
             <li class="hidden-on-mobile">
                 <label for="search-line" id="search-btn">
                     <a class="fa fa-search"></a>
                 </label>
                 <input type="text" id="search-line" class="search-line-hidden" placeholder="Search by Google">
-            </li>
-            <li>
-                <a class="bold hover-underline" href="/">HOME</a>
             </li>
             <li><a class="bold hover-underline" href="/about">ABOUT</a></li>
             <li><a class="bold hover-underline" href="/clock/clock.html">CLOCK</a></li>
@@ -52,32 +52,40 @@
     </div>
 </div>
 
-    <div class="article-banner banner">
-        <div class="article-tags">
-            <i class="fa fa-tags"></i>
-            
-            <a class="tag header-tag" href="/?tags=AI">AI</a>
-            
-            <a class="tag header-tag" href="/?tags=paper">paper</a>
-            
-        </div>
-        <p class="article-title bold">
-            Distributed System for Deep learning Training: A Survey
-        </p>
-        <p class="article-subtitle">
-            
-        </p>
-        <p class="article-date">
-            <span class="inline-block">Posted on 2020-01-08</span>
-            <span class="horizon-sep"></span>
-            <span class="inline-block">Last edited on 2020-01-10</span>
-        </p>
-    </div>
 </div>
 
 <div class="main">
-    <article class="main-text post-article">
-        <p>某奇妙课程的期末论文。主要介绍分布式深度学习的架构和技术。</p>
+    <div class="central_col">
+        <article class="post-article article-card">
+            <div class="article-banner">
+                <h1 class="article-title">
+                    Distributed System for Deep learning Training: A Survey
+                </h1>
+                
+                
+                    <div class="article-date">
+                        <i class="fa fa-calendar"></i>
+                        <span class="inline-block">
+                            Posted on 2020-01-08
+                        </span>
+                        <span class="inline-block">
+                            Last edited on 2020-01-10
+                        </span>
+                    </div>
+                
+                
+                    <div class="article-tags">
+                        <i class="fa fa-tags"></i>
+                        
+                        <a class="tag header-tag" href="/?tags=AI">AI</a>
+                        
+                        <a class="tag header-tag" href="/?tags=paper">paper</a>
+                        
+                    </div>
+                
+            </div>
+            <div id="article-content">
+                <p>某奇妙课程的期末论文。主要介绍分布式深度学习的架构和技术。</p>
 
 <h1 id="abstract">Abstract</h1>
 
@@ -216,35 +224,38 @@ tributed Training of Deep Neural Networks 这篇文章的时候，作者提到�
 
 <p>还有一个奇妙的问题是，distributed DL 的主要技术有两个 model parallelism 和 data parallelism，这两个技术从各种方面上来说都是非常平衡的关系 —— 除了文献里面介绍它们的内容以外。data parallelism 里面有各种技术分类和优化技巧，而 model parallelism 几乎很少有介绍技术细节的，就算某些 framework 使用了 model parallelism ，一般也只提效果不提实现。唯一一篇讲的比较详细的文章 STRADS: A distributed framework for scheduled model parallel machine learning 里面讲得有点一眼难尽，不知道它在说啥。最后只能非常把 data parallelism 写了 5 个 subsection，model parallelism 写了一面多。</p>
 
-        <div id="post-switch">
-            <div>
-                
-                <a href="/2019/12/19/structured-light.html" id="post-previous">
-                     <h5>
-                         PREVIOUS
-                     </h5>
-                    结构光技术——原理及其应用
-                </a>
-                
             </div>
+        </article>
+        
+            <div id="post-switch">
+                <div>
+                    
+                    <a href="/2019/12/19/structured-light.html" id="post-previous" class="card">
+                        <h5>
+                            PREVIOUS
+                        </h5>
+                        结构光技术——原理及其应用
+                    </a>
+                    
+                </div>
 
-            <div>
-                
-                <a href="/2020/01/08/latex-flow.html" id="post-next">
-                    <h5>
-                         NEXT
-                    </h5>
-                    LaTeX Writing Workflow
-                </a>
-                
+                <div>
+                    
+                    <a href="/2020/01/08/latex-flow.html" id="post-next" class="card">
+                        <h5>
+                            NEXT
+                        </h5>
+                        LaTeX Writing Workflow
+                    </a>
+                    
+                </div>
             </div>
-        </div>
-
+        
         <div id="gitalk-container"></div>
-    </article>
+    </div>
 
     <div class="sidebar hidden-on-mobile" id="sidebar">
-        <div id="toc">
+        <div id="toc" class="sidebar-inner">
             <div class="sep-line"></div>
             <h5 class="section-head">Contents</h5>
         </div>

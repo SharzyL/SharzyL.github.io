@@ -16,7 +16,7 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" defer></script> 
     <script src="/assets/nav/responsive-nav.js" defer></script>
     <script src="/assets/js/page_util.js" defer></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script><script>
     MathJax = {
         tex: {
             inlineMath: [['$', '$'], ['\\(', '\\)']]
@@ -30,21 +30,21 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js" defer></script>
     <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>
+
 <body>
-<div class="header">
+<div class="article-header header">
     <div id="nav-wrap">
     <a href="/" class="fa fa-home fa-2x show-on-mobile home-icon"></a>
     <div id="nav">
         <ul style="padding-inline-start: 0">
-            <li class="hidden-on-mobile"><a href="/" class="bold hover-underline">Sharzy's Blog</a></li>
+            <li class="hidden-on-mobile">
+                <a href="/" class="hover-underline fa fa-home"></a>
+            </li>
             <li class="hidden-on-mobile">
                 <label for="search-line" id="search-btn">
                     <a class="fa fa-search"></a>
                 </label>
                 <input type="text" id="search-line" class="search-line-hidden" placeholder="Search by Google">
-            </li>
-            <li>
-                <a class="bold hover-underline" href="/">HOME</a>
             </li>
             <li><a class="bold hover-underline" href="/about">ABOUT</a></li>
             <li><a class="bold hover-underline" href="/clock/clock.html">CLOCK</a></li>
@@ -52,30 +52,42 @@
     </div>
 </div>
 
-    <div class="article-banner banner">
-        <div class="article-tags">
-            <i class="fa fa-tags"></i>
-            
-            <a class="tag header-tag" href="/?tags=math">math</a>
-            
-        </div>
-        <p class="article-title bold">
-            一个猜想的证明
-        </p>
-        <p class="article-subtitle">
-            立方体图子图的最大度
-        </p>
-        <p class="article-date">
-            <span class="inline-block">Posted on 2019-08-01</span>
-            <span class="horizon-sep"></span>
-            <span class="inline-block">Last edited on 2019-11-16</span>
-        </p>
-    </div>
 </div>
 
 <div class="main">
-    <article class="main-text post-article">
-        <p>最近看到一篇<a href="https://www.quantamagazine.org/mathematician-solves-computer-science-conjecture-in-two-pages-20190725/">文章</a>，讲述了一个几十余年历史的猜想近日被证明的事情。令人惊讶的是<a href="https://arxiv.org/abs/1907.00847">论文</a>中的这个证明主题居然只有不到两页，并且只用到了基本的线性代数，遂记录之。</p>
+    <div class="central_col">
+        <article class="post-article article-card">
+            <div class="article-banner">
+                <h1 class="article-title">
+                    一个猜想的证明
+                </h1>
+                
+                    <h2 class="article-subtitle">
+                        立方体图子图的最大度
+                    </h2>
+                
+                
+                    <div class="article-date">
+                        <i class="fa fa-calendar"></i>
+                        <span class="inline-block">
+                            Posted on 2019-08-01
+                        </span>
+                        <span class="inline-block">
+                            Last edited on 2019-11-16
+                        </span>
+                    </div>
+                
+                
+                    <div class="article-tags">
+                        <i class="fa fa-tags"></i>
+                        
+                        <a class="tag header-tag" href="/?tags=math">math</a>
+                        
+                    </div>
+                
+            </div>
+            <div id="article-content">
+                <p>最近看到一篇<a href="https://www.quantamagazine.org/mathematician-solves-computer-science-conjecture-in-two-pages-20190725/">文章</a>，讲述了一个几十余年历史的猜想近日被证明的事情。令人惊讶的是<a href="https://arxiv.org/abs/1907.00847">论文</a>中的这个证明主题居然只有不到两页，并且只用到了基本的线性代数，遂记录之。</p>
 
 <h1 id="hypothesis">Hypothesis</h1>
 <p>这个猜想可以是在研究 Bool 函数的“敏感性”时被提出来的，其内容可等价叙述如下：</p>
@@ -161,28 +173,31 @@ A=\left(\begin{array}{c|c}{B} & {c} \\ \hline c^{*} & {d}\end{array}\right) %]]>
 
 <p>注意到等式左边是一个实对称矩阵，右边是 $\lvert A - xI_n\rvert + \alpha \lvert B - xI_{n - 1} \rvert = f + \alpha g$ ，这便表明了 $f + \alpha g$ 的根均为实数.</p>
 
-        <div id="post-switch">
-            <div>
-                
             </div>
+        </article>
+        
+            <div id="post-switch">
+                <div>
+                    
+                </div>
 
-            <div>
-                
-                <a href="/2019/08/04/uniform.html" id="post-next">
-                    <h5>
-                         NEXT
-                    </h5>
-                    小数部分均匀分布的初等（大概）证明
-                </a>
-                
+                <div>
+                    
+                    <a href="/2019/08/04/uniform.html" id="post-next" class="card">
+                        <h5>
+                            NEXT
+                        </h5>
+                        小数部分均匀分布的初等（大概）证明
+                    </a>
+                    
+                </div>
             </div>
-        </div>
-
+        
         <div id="gitalk-container"></div>
-    </article>
+    </div>
 
     <div class="sidebar hidden-on-mobile" id="sidebar">
-        <div id="toc">
+        <div id="toc" class="sidebar-inner">
             <div class="sep-line"></div>
             <h5 class="section-head">Contents</h5>
         </div>

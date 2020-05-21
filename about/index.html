@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About | Sharzy's random blog</title>
+    <title>About the Site | Sharzy's random blog</title>
     <meta http-equiv="Content-Language" content="zh-cn"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -16,7 +16,7 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" defer></script> 
     <script src="/assets/nav/responsive-nav.js" defer></script>
     <script src="/assets/js/page_util.js" defer></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script><script>
     MathJax = {
         tex: {
             inlineMath: [['$', '$'], ['\\(', '\\)']]
@@ -30,21 +30,21 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js" defer></script>
     <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>
+
 <body>
-<div class="header">
+<div class="article-header header">
     <div id="nav-wrap">
     <a href="/" class="fa fa-home fa-2x show-on-mobile home-icon"></a>
     <div id="nav">
         <ul style="padding-inline-start: 0">
-            <li class="hidden-on-mobile"><a href="/" class="bold hover-underline">Sharzy's Blog</a></li>
+            <li class="hidden-on-mobile">
+                <a href="/" class="hover-underline fa fa-home"></a>
+            </li>
             <li class="hidden-on-mobile">
                 <label for="search-line" id="search-btn">
                     <a class="fa fa-search"></a>
                 </label>
                 <input type="text" id="search-line" class="search-line-hidden" placeholder="Search by Google">
-            </li>
-            <li>
-                <a class="bold hover-underline" href="/">HOME</a>
             </li>
             <li><a class="bold hover-underline" href="/about">ABOUT</a></li>
             <li><a class="bold hover-underline" href="/clock/clock.html">CLOCK</a></li>
@@ -52,20 +52,31 @@
     </div>
 </div>
 
-    <div class="banner">
-        <p class="main-title bold">
-            About
-        </p>
-        <p>
-             
-        </p>
-    </div>
 </div>
 
-
 <div class="main">
-    <article class="main-text post-article">
-    <h1 id="whats-this-site">What’s this site?</h1>
+    <div class="central_col">
+        <article class="post-article article-card">
+            <div class="article-banner">
+                <h1 class="article-title">
+                    About the Site
+                </h1>
+                
+                
+                    <div class="article-date">
+                        <i class="fa fa-calendar"></i>
+                        <span class="inline-block">
+                            Posted on 2019-07-30
+                        </span>
+                        <span class="inline-block">
+                            Last edited on 2020-05-21
+                        </span>
+                    </div>
+                
+                
+            </div>
+            <div id="article-content">
+                <h1 id="whats-this-site">What’s this site?</h1>
 
 <p>This is Sharzy’s personal blog, used to record something I find interesting, updated randomly.</p>
 
@@ -98,15 +109,20 @@ So reading on wide screen devices is more recommended.</p>
   <li><a href="https://github.com/fengtony686">Tony</a> and his <a href="https://fengtony686.github.io/">blog</a></li>
 </ul>
 
-    <div id="gitalk-container"></div>
-</article>
+            </div>
+        </article>
+        
+        <div id="gitalk-container"></div>
+    </div>
 
-<div class="sidebar hidden-on-mobile" id="sidebar">
-    <div class="sidebar__inner">
-        <div id="toc"></div>
+    <div class="sidebar hidden-on-mobile" id="sidebar">
+        <div id="toc" class="sidebar-inner">
+            <div class="sep-line"></div>
+            <h5 class="section-head">Contents</h5>
+        </div>
     </div>
 </div>
-</div>
+
 <footer class="footer">
     <div class="container">
         <p>

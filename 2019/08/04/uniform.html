@@ -16,7 +16,7 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" defer></script> 
     <script src="/assets/nav/responsive-nav.js" defer></script>
     <script src="/assets/js/page_util.js" defer></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script><script>
     MathJax = {
         tex: {
             inlineMath: [['$', '$'], ['\\(', '\\)']]
@@ -30,21 +30,21 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js" defer></script>
     <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>
+
 <body>
-<div class="header">
+<div class="article-header header">
     <div id="nav-wrap">
     <a href="/" class="fa fa-home fa-2x show-on-mobile home-icon"></a>
     <div id="nav">
         <ul style="padding-inline-start: 0">
-            <li class="hidden-on-mobile"><a href="/" class="bold hover-underline">Sharzy's Blog</a></li>
+            <li class="hidden-on-mobile">
+                <a href="/" class="hover-underline fa fa-home"></a>
+            </li>
             <li class="hidden-on-mobile">
                 <label for="search-line" id="search-btn">
                     <a class="fa fa-search"></a>
                 </label>
                 <input type="text" id="search-line" class="search-line-hidden" placeholder="Search by Google">
-            </li>
-            <li>
-                <a class="bold hover-underline" href="/">HOME</a>
             </li>
             <li><a class="bold hover-underline" href="/about">ABOUT</a></li>
             <li><a class="bold hover-underline" href="/clock/clock.html">CLOCK</a></li>
@@ -52,30 +52,38 @@
     </div>
 </div>
 
-    <div class="article-banner banner">
-        <div class="article-tags">
-            <i class="fa fa-tags"></i>
-            
-            <a class="tag header-tag" href="/?tags=math">math</a>
-            
-        </div>
-        <p class="article-title bold">
-            小数部分均匀分布的初等（大概）证明
-        </p>
-        <p class="article-subtitle">
-            
-        </p>
-        <p class="article-date">
-            <span class="inline-block">Posted on 2019-08-04</span>
-            <span class="horizon-sep"></span>
-            <span class="inline-block">Last edited on 2019-11-16</span>
-        </p>
-    </div>
 </div>
 
 <div class="main">
-    <article class="main-text post-article">
-        <p>$\{n\alpha\}$的均匀分布性是一个非常方便好用的命题，之前我一直只知道使用Wyle判据的证明方法，但是这一证明方法需要用到稍深入的分析学，包括Weierstrass的三角多项式逼近定理。今天我正在思考另外一个和小数部分有关的命题，突然想到了一个有趣的方法，可以用于证明这个问题，于是便将它记录下来了.</p>
+    <div class="central_col">
+        <article class="post-article article-card">
+            <div class="article-banner">
+                <h1 class="article-title">
+                    小数部分均匀分布的初等（大概）证明
+                </h1>
+                
+                
+                    <div class="article-date">
+                        <i class="fa fa-calendar"></i>
+                        <span class="inline-block">
+                            Posted on 2019-08-04
+                        </span>
+                        <span class="inline-block">
+                            Last edited on 2019-11-16
+                        </span>
+                    </div>
+                
+                
+                    <div class="article-tags">
+                        <i class="fa fa-tags"></i>
+                        
+                        <a class="tag header-tag" href="/?tags=math">math</a>
+                        
+                    </div>
+                
+            </div>
+            <div id="article-content">
+                <p>$\{n\alpha\}$的均匀分布性是一个非常方便好用的命题，之前我一直只知道使用Wyle判据的证明方法，但是这一证明方法需要用到稍深入的分析学，包括Weierstrass的三角多项式逼近定理。今天我正在思考另外一个和小数部分有关的命题，突然想到了一个有趣的方法，可以用于证明这个问题，于是便将它记录下来了.</p>
 
 <h1 id="problem">Problem</h1>
 
@@ -150,35 +158,38 @@
 
 <p>不知有无简单的解法</p>
 
-        <div id="post-switch">
-            <div>
-                
-                <a href="/2019/08/01/sensitivity.html" id="post-previous">
-                     <h5>
-                         PREVIOUS
-                     </h5>
-                    一个猜想的证明
-                </a>
-                
             </div>
+        </article>
+        
+            <div id="post-switch">
+                <div>
+                    
+                    <a href="/2019/08/01/sensitivity.html" id="post-previous" class="card">
+                        <h5>
+                            PREVIOUS
+                        </h5>
+                        一个猜想的证明
+                    </a>
+                    
+                </div>
 
-            <div>
-                
-                <a href="/2019/08/06/bx.html" id="post-next">
-                    <h5>
-                         NEXT
-                    </h5>
-                    北夏第四题的证明
-                </a>
-                
+                <div>
+                    
+                    <a href="/2019/08/06/bx.html" id="post-next" class="card">
+                        <h5>
+                            NEXT
+                        </h5>
+                        北夏第四题的证明
+                    </a>
+                    
+                </div>
             </div>
-        </div>
-
+        
         <div id="gitalk-container"></div>
-    </article>
+    </div>
 
     <div class="sidebar hidden-on-mobile" id="sidebar">
-        <div id="toc">
+        <div id="toc" class="sidebar-inner">
             <div class="sep-line"></div>
             <h5 class="section-head">Contents</h5>
         </div>

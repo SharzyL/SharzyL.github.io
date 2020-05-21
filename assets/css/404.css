@@ -20,6 +20,14 @@
     padding-top: 35vh;
 }
 
+#banner-404 > a {
+    font-size: .6em;
+}
+
+#banner-404 > a:hover {
+    text-decoration: underline;
+}
+
 .footer {
     color: white;
 }
