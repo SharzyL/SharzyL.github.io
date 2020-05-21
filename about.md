@@ -1,7 +1,8 @@
 ---
-layout: about
-title: About
-comment: disable
+layout: article
+title: About the Site
+standalone: true
+date: 2019-7-30
 permalink: /about/
 ---
 
