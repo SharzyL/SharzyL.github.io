@@ -21,7 +21,7 @@ const init_toc = (article, toc_obj) => {
         let anchor_text = title.toLowerCase().split(' ').join('-');
         let length = document.getElementById(anchor_text).getBoundingClientRect().top;
         window.scrollBy({
-            top: length,
+            top: length - 50,
             left: 0,
             behavior: 'smooth'
         });

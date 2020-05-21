@@ -24,3 +24,11 @@ In this version, I introduce a brand new Material Design-based design for my blo
 ### Removed
 
 - Subtitle of the homepage. 
+
+## [1.0.1] - 2020.5.22
+
+### Added
+
+- Introduce roboto font for better English display. 
+- Introduce Cascadia font and OneDark highlighting theme for code. 
+- Use bold font for article title. 

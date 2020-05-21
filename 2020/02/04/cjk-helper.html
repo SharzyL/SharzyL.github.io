@@ -16,15 +16,16 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" defer></script> 
     <script src="/assets/nav/responsive-nav.js" defer></script>
     <script src="/assets/js/page_util.js" defer></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script><script>
-    MathJax = {
-        tex: {
-            inlineMath: [['$', '$'], ['\\(', '\\)']]
-        },
-        svg: {
-            fontCache: 'global'
-        }
-    };
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
     </script>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" defer></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js" defer></script>
@@ -163,7 +164,7 @@
         <span class="o">||</span> <span class="mh">0x20000</span> <span class="o">&lt;=</span> <span class="nx">charCode</span> <span class="o">&amp;&amp;</span> <span class="nx">charCode</span> <span class="o">&lt;=</span> <span class="mh">0x2a6df</span>  
         <span class="c1">// CJK Unified Ideographs Extension B</span>
         <span class="o">||</span> <span class="mh">0x2a700</span> <span class="o">&lt;=</span> <span class="nx">charCode</span> <span class="o">&amp;&amp;</span> <span class="nx">charCode</span> <span class="o">&lt;=</span> <span class="mh">0x2ebef</span><span class="p">;</span>
-        <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <p>将上面的代码扔进 <a href="https://marketplace.visualstudio.com/items?itemName=sgryjp.japanese-word-handler">Japanese Word Handler</a> 的代码中稍作整理就可以得到一个简单的，对汉字适用的插件版本了，在这个版本中，连续的一串汉字会被识别为一个单词，换言之，它是将一个句子识别为一个词。这样的效果在很多情况下都是够用的。</p>
