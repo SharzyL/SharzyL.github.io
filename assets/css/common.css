@@ -1,8 +1,9 @@
 * {
     margin: 0;
-    font-family: Arial, "Microsoft YaHei UI Light", "Simsum", Helvetica, sans-serif;
+    font-family: Helvetica, "Microsoft YaHei UI Light", "Simsum", Arial, sans-serif;
     box-sizing: border-box;
 }
+
 
 body {
     background: #f8f8f8;
@@ -30,7 +31,7 @@ i, b {
 }
 
 .article-banner {
-    padding: 2.5em .5em 2em;
+    padding: 2.5em 0 .5em;
 }
 
 .article-card {
@@ -53,6 +54,7 @@ i, b {
 
 .article-title,
 .article-subtitle,
+.post-header,
 #article-content h1,
 #article-content h2,
 #article-content h3 {
@@ -123,6 +125,10 @@ h5, .h5 {
 
 h6, .h6 {
     font-size:12px
+}
+
+.dynamic-inline-block {
+    display: inline-block;
 }
 
 .inline-block {
@@ -236,7 +242,7 @@ body {
 }
 
 .article-title {
-    font-size: 2.5em;
+    font-size: 2.1em;
     font-family: Arial, "Microsoft YaHei", "Simsum", Helvetica, sans-serif;
     border-bottom: 1px solid #ddd;
     font-weight: normal;
@@ -245,7 +251,7 @@ body {
 .article-subtitle {
     font-size: 1.5em;
     font-family: Arial, "Microsoft YaHei", "Simsum", Helvetica, sans-serif;
-    padding: .5em 0 .5em;
+    padding: .3em 0 .5em;
     font-weight: normal;
 }
 
@@ -256,8 +262,11 @@ body {
     margin: .3em 0;
 }
 
+.article-date > span {
+    margin: 0 .5em;
+}
+
 .side-card {
-    margin-left: 2vw;
     margin-bottom: 1em;
     padding: .5em;
 }
@@ -280,16 +289,14 @@ body {
 
 .main-title {
     font-size: 2.5em;
-    font-weight: bolder;
     color: white;
-    margin: 1em 0;
+    margin: 1.5em 0 1em;
 }
 
 .section-head {
     font-weight: bold;
     font-size: 1em;
     color: #555555;
-    margin: .5em;
     text-align: center;
 }
 
@@ -305,7 +312,7 @@ body {
 
 .post-card {
     color: black;
-    margin: 0 .5em 1.5em;
+    margin-bottom: 1.5em;
     transition: .2s;
     overflow: visible;
     padding: 1em;
@@ -328,7 +335,7 @@ body {
 }
 
 .post-preview {
-    padding: .5em 0;
+    padding-top: .5em;
     color: #808080;
 }
 
@@ -520,13 +527,12 @@ footer * {
 #nav-wrap {
     color: white;
     width: 100%;
-    height: 3em;
     position: absolute;
     transition: .5s;
 }
 
 .nav-detach {
-    background-color: rgba(255, 255, 255, .8);
+    background-color: white;
     position: fixed!important;
     top: -58px;
     z-index: 1;
@@ -556,10 +562,6 @@ footer * {
 
 #bio > a:hover {
     color: black;
-}
-
-#toc {
-    margin-left: 1em;
 }
 
 #toc > li {
@@ -661,14 +663,14 @@ footer * {
 
 /* for mobile devices that responsive nav is enabled */
 @media screen and (max-width: 40em) {
+    .main-title {
+        padding: 1em 1em .5em;
+    }
+
     #nav ul {
         list-style:none;
         float:left;
-        /* don't touch above line of code, dangerous */
-    }
-
-    .header {
-        background: linear-gradient(90deg, #1b86e4,#1b96f4,#1b86e4);
+        /* don't touch above line of code, DANGEROUS */
     }
 
     .nav-collapse {
@@ -705,7 +707,7 @@ footer * {
         padding: 1em;
     }
 
-    .inline-block {
+    .dynamic-inline-block {
         display: block;
     }
 
@@ -763,29 +765,51 @@ footer * {
     .nav-toggle {
         display: none!important;
     }
-
-    .sidebar-inner {
-        width: 20em;
-        padding-right: 1em;
-    }
 }
 
 /* for tablet users*/
 @media screen and (min-width: 40em) and (max-width: 79.999999999em) {
     .central_col {
-        width: 75vw;
+        width: calc(100vw - 18em);
         flex: none;
+        padding: 2.5em 0 0 1em;
     }
 
     #sidebar {
-        width: 25vw;
-        left: 75vw;
-        flex: none;
+        width: 16em;
+        margin-right: 1em;
+        left: calc(100vw - 18em + 1em);
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 
     .sidebar-inner {
-        width: calc(100% - 1em);
+        position: sticky;
+        top: 0;
+        padding-top: 2.5em;
     }
+
+    .article-title {
+        font-size: 26px;
+    }
+
+    .article-subtitle {
+        font-size: 20px;
+    }
+
+    .main-title {
+        padding-left: .5em;
+    }
+
+    .sidebar-inner {
+        width: 100%;
+        padding-top: 2.5em;
+    }
+
+    .central_col {border-bottom: none}
+    .main {border-bottom: #eee solid 1px;}
 }
 
 /* for wide screen devices*/
@@ -801,10 +825,11 @@ footer * {
 
     #sidebar {
         position: absolute;
-        left: 75vw;
+        left: calc(75vw + 2em);
         top: 0;
         height: 100%;
-        width: fit-content;
+        width: 16em;
+        --width: 16em;
     }
 
     .sidebar-inner {
@@ -859,4 +884,8 @@ footer * {
 
 .gt-header-textarea {
     background: white !important;
+}
+
+.fa-home:before {
+    font-size: 1.3em;
 }

@@ -13,7 +13,7 @@ requirements:
     <div class="central_col">
         <article class="post-article article-card">
             <div class="article-banner">
-                <h1 class="article-title bold">
+                <h1 class="article-title">
                     {{ page.title }}
                 </h1>
                 {% if page.subtitle %}
@@ -24,10 +24,12 @@ requirements:
                 {% if page.date %}
                     <div class="article-date">
                         <i class="fa fa-calendar"></i>
-                        <span class="horizon-sep"></span>
-                        <span class="inline-block">Posted on {{ page.date | date: "%Y-%m-%d"}}</span>
-                        <span class="horizon-sep"></span>
-                        <span class="inline-block">Last edited on {{ page.last_modified_at | date: "%Y-%m-%d"}}</span>
+                        <span class="inline-block">
+                            Posted on {{ page.date | date: "%Y-%m-%d"}}
+                        </span>
+                        <span class="inline-block">
+                            Last edited on {{ page.last_modified_at | date: "%Y-%m-%d"}}
+                        </span>
                     </div>
                 {% endif %}
                 {% if page.tags %}
