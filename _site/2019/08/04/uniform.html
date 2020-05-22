@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小数部分均匀分布的初等（大概）证明 | Sharzy's random blog</title>
+    <meta http-equiv="Content-Language" content="zh-cn"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta name="description" content="Sharzy's personal blog, used to record something worth recording"/>
+    <meta name="keywords" content="mathwebCSMO"/>
+    <meta name="author" content="Sharzy"/>
+    <meta name="generator" content="jekyll"/>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/assets/css/common.css" rel="stylesheet">
+    
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" defer></script> 
+    <script src="/assets/nav/responsive-nav.js" defer></script>
+    <script src="/assets/js/page_util.js" defer></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" defer></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js" defer></script>
+    <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="article-header header">
+    <div id="nav-wrap">
+    <a href="/" class="fa fa-home fa-2x show-on-mobile home-icon"></a>
+    <div id="nav">
+        <ul style="padding-inline-start: 0">
+            <li class="hidden-on-mobile">
+                <a href="/" class="hover-underline fa fa-home"></a>
+            </li>
+            <li class="hidden-on-mobile">
+                <label for="search-line" id="search-btn">
+                    <a class="fa fa-search"></a>
+                </label>
+                <input type="text" id="search-line" class="search-line-hidden" placeholder="Search by Google">
+            </li>
+            <li><a class="bold hover-underline" href="/about">ABOUT</a></li>
+            <li><a class="bold hover-underline" href="/clock/clock.html">CLOCK</a></li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+<div class="main">
+    <div class="central_col">
+        <article class="post-article article-card">
+            <div class="article-banner">
+                <h1 class="article-title">
+                    小数部分均匀分布的初等（大概）证明
+                </h1>
+                
+                
+                    <div class="article-date">
+                        <i class="fa fa-calendar"></i>
+                        <span class="inline-block">
+                            Posted on 2019-08-04
+                        </span>
+                        <span class="inline-block">
+                            Last edited on 2019-11-16
+                        </span>
+                    </div>
+                
+                
+                    <div class="article-tags">
+                        <i class="fa fa-tags"></i>
+                        
+                        <a class="tag header-tag" href="/?tags=math">math</a>
+                        
+                    </div>
+                
+            </div>
+            <div id="article-content">
+                <p>$\{n\alpha\}$的均匀分布性是一个非常方便好用的命题，之前我一直只知道使用Wyle判据的证明方法，但是这一证明方法需要用到稍深入的分析学，包括Weierstrass的三角多项式逼近定理。今天我正在思考另外一个和小数部分有关的命题，突然想到了一个有趣的方法，可以用于证明这个问题，于是便将它记录下来了.</p>
+
+<h1 id="problem">Problem</h1>
+
+<p>$\alpha \in \mathbb{R} \backslash \mathbb{Q}$，求证对于任何一个区间$I \in [0, 1]$，均有</p>
+
+<script type="math/tex; mode=display">\lim_{n \to \infty }\frac{\#\{i \in \mathbb{Z} \mid 1 \leq i \leq n, \{i\alpha\} \in I\}}{n} = \lvert I\rvert</script>
+
+<h1 id="proof">Proof</h1>
+
+<p>不妨设$\alpha \in [0, 1]$，对任何一个实数$a$，记 $a^* = \{a + n \mid n \in \mathbb{Z}\}$</p>
+
+<p>对任意一个$\mathbb{R}$上的区间$I$和正整数$n$，记$f(I, n) = \sum_{i = 0}^n \lvert (n\alpha)^*\cap I\rvert$ ，称$I$是好的，如果</p>
+
+<script type="math/tex; mode=display">\lim_{n \to \infty}\frac{f(I, n)}{n} = \lvert I\rvert</script>
+
+<p>其中$\lvert I\rvert$表示$I$的长度. 则结论等价于证明任何一个区间都是好的.</p>
+
+<p>任取$u\in \mathbb{R}$，注意到</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+[-1, 1]\ni &\{n\alpha\ - u\} - \{-u\} = \sum_{i = 1}^n(\{i\alpha - u\} - \{(i - 1)\alpha - u\})\\
+= &n\alpha - \#\{i = 1, 2, \ldots, n\mid \{i\alpha - u\}<\alpha\}\\
+= &n\alpha - f([u, u+\alpha], n)
+\end{aligned} %]]></script>
+
+<p>取$n\to \infty$，得</p>
+
+<script type="math/tex; mode=display">\lim_{n\to \infty}\frac{f([u, u + \alpha], n)}{n} = 1/\alpha</script>
+
+<p>这表明$[u, u + 1/\alpha]$是好的. 由于$u$是任取的，故任何一个长为$\alpha$的区间都是好的.</p>
+
+<p>注意到如下事实：</p>
+
+<ol>
+  <li>
+    <p>如果有限个好区间不交，那么它们的并是好的</p>
+  </li>
+  <li>
+    <p>如果一个好区间是另一个的子集，那么这两个区间的差也是好的.</p>
+  </li>
+  <li>
+    <p>长为整数的区间是好的.</p>
+  </li>
+</ol>
+
+<p>根据上面的第一点，所有长度为$\alpha$的倍数的区间都是好的，结合第二点和第三点，可以得到任何长度形如$n\alpha - k\ (n, k \in \mathbb{Z})$的区间都是好的，记$K = \{n\alpha - k \mid n, k \in \mathbb{Z}\}$，熟知$K$是稠密的.</p>
+
+<p>最后，对于任何一个区间$I$和正实数$\epsilon$，由上面的结论知存在两个区间$I_1, I_2$，使得$I_1 \subseteq I \subseteq I_2$，$\lvert I_2 \backslash I\rvert &lt;\epsilon$，$\lvert I\backslash I_1\rvert &lt; \epsilon$，且$I_1, I_2$是好的. 因此</p>
+
+<script type="math/tex; mode=display">\liminf_{n \to \infty}\frac{f(I, n)}{n} \geq \liminf_{n \to \infty}\frac{f(I_1, n)}{n}
+= \lim_{n \to \infty}\frac{f(I_1, n)}{n} = \rvert I_1\lvert > \lvert I\rvert - \epsilon</script>
+
+<p>由于$\epsilon$是任取的，故</p>
+
+<script type="math/tex; mode=display">\liminf_{n \to \infty}\frac{f(I, n)}{n} \geq \lvert I\rvert</script>
+
+<p>同理</p>
+
+<script type="math/tex; mode=display">\limsup_{n \to \infty}\frac{f(I, n)}{n} \leq \lvert I\rvert</script>
+
+<p>故$\lim\limits_{n \to \infty} \frac{f(I, n)}{n} = \lvert I\rvert$，即$I$是好的. 证毕.</p>
+
+<h1 id="postscript">Postscript</h1>
+
+<p>顺带一提，我最开始思考的问题是</p>
+<blockquote>
+  <p>$\forall \alpha \in \mathbb{R} \backslash \mathbb{Q}$，</p>
+
+  <script type="math/tex; mode=display">\lim_{n \to \infty} \frac{\sum_{i = 1}^{n}\{i\alpha\}}{n} = \frac{1}{2}</script>
+</blockquote>
+
+<p>不知有无简单的解法</p>
+
+            </div>
+        </article>
+        
+            <div id="post-switch">
+                <div>
+                    
+                    <a href="/2019/08/01/sensitivity.html" id="post-previous" class="card">
+                        <h5>
+                            PREVIOUS
+                        </h5>
+                        一个猜想的证明
+                    </a>
+                    
+                </div>
+
+                <div>
+                    
+                    <a href="/2019/08/06/bx.html" id="post-next" class="card">
+                        <h5>
+                            NEXT
+                        </h5>
+                        北夏第四题的证明
+                    </a>
+                    
+                </div>
+            </div>
+        
+        <div class="comment-card">
+            <div id="gitalk-container"></div>
+        </div>
+    </div>
+
+    <div class="sidebar hidden-on-mobile" id="sidebar">
+        <div id="toc" class="sidebar-inner">
+            <div class="sep-line"></div>
+            <h5 class="section-head">Contents</h5>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p>
+            Designed by <a href="https://github.com/SharzyL">Sharzy</a>.
+            Hosted on <a href="https://pages.github.com/">Github Pages</a>.
+            Powered by <a href="https://jekyllrb.com/">Jekyll</a>.
+        </p>
+        <p>
+            Content on this site is licensed under
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+            unless specified.
+        </p>
+        <p>
+            Subscribe this site via <a href="/feed.xml">RSS</a>
+        </p>
+    </div>
+</footer>
+
+
+</body>
+</html>

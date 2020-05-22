@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LaTeX 学术写作工作流 | Sharzy's random blog</title>
+    <meta http-equiv="Content-Language" content="zh-cn"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta name="description" content="Sharzy's personal blog, used to record something worth recording"/>
+    <meta name="keywords" content="mathwebCSMO"/>
+    <meta name="author" content="Sharzy"/>
+    <meta name="generator" content="jekyll"/>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/assets/css/common.css" rel="stylesheet">
+    
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" defer></script> 
+    <script src="/assets/nav/responsive-nav.js" defer></script>
+    <script src="/assets/js/page_util.js" defer></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" defer></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js" defer></script>
+    <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="article-header header">
+    <div id="nav-wrap">
+    <a href="/" class="fa fa-home fa-2x show-on-mobile home-icon"></a>
+    <div id="nav">
+        <ul style="padding-inline-start: 0">
+            <li class="hidden-on-mobile">
+                <a href="/" class="hover-underline fa fa-home"></a>
+            </li>
+            <li class="hidden-on-mobile">
+                <label for="search-line" id="search-btn">
+                    <a class="fa fa-search"></a>
+                </label>
+                <input type="text" id="search-line" class="search-line-hidden" placeholder="Search by Google">
+            </li>
+            <li><a class="bold hover-underline" href="/about">ABOUT</a></li>
+            <li><a class="bold hover-underline" href="/clock/clock.html">CLOCK</a></li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+<div class="main">
+    <div class="central_col">
+        <article class="post-article article-card">
+            <div class="article-banner">
+                <h1 class="article-title">
+                    LaTeX 学术写作工作流
+                </h1>
+                
+                
+                
+            </div>
+            <div id="article-content">
+                <p>之前的文章中介绍了 LaTeX 的工具链的相关内容。在这一节中，我将根据我当前微小的经验，记录一下我目前使用 LaTeX 写出一篇完整的论文所需要的工具和工作流。</p>
+
+<h1 id="bibliography">Bibliography</h1>
+
+<p>参考文献是论文中重要的一环，但是如果手动输入参考文献的话，无论是编写的复杂度（手动输入非常麻烦，而且 Reference 的不同信息的字体可能不一样，需要不停切换），还是维护的复杂度（尤其是对于带序号的参考文献，加一个参考文献需要改一堆），都无疑是灾难性的。而在这一点上，LaTeX 做的比较到位，它将收集文献（创建 .bib 文件）、使用文献（<code class="highlighter-rouge">\cite</code>命令）、排版文献（<code class="highlighter-rouge">\bibliographystyle</code>命令，.bst 文件）的过程完全解耦，达到高度自动化的效果。</p>
+
+<p>基本的参考文献使用在之前的文章中已经介绍过了。当然这个过程还不够自动化，尤其是 .bib 文件的创建和维护上，手动填写表项显然时比较浪费时间的事情。此外，如何定制化参考文献的样式以及引用的格式也是一个重要的问题。</p>
+
+<h2 id="reference-management">Reference Management</h2>
+
+<p>市面上有若干成熟的参考文献管理工具，出于免费和开放的角度我目前使用的是 Zotero。这里简要介绍一下我目前摸索出来的 Zotero 的用法。</p>
+
+<p>首先介绍一下 Zotero 的基本模型。Zotero 的基本对象是 item，一个 item 可以有若干种类型，包括 Journal Article, Book, Presentation, Bill, Webpage 等等。根据 item 的不同，它会记载多种 metadata。例如，Journal Article 就包含有 Title, Author, Abstract, Publication, Volume, Issue, DOI 等多个 metadata。除此之外，还可以给每个 Item 添加 tags 和 related items。</p>
+
+<p>每个 Item 中可以下属一些资源，例如 pdf 文件，网页，Notes 之类的。这些资源可以直接通过拖动来进行添加。例如，将一个 pdf 文件拖到一个 Journal Article Item 下，这个文件就会自动成为这个 Item 的下属资源。对于 Notes，这是 Zotero 内部所提供的功能。可以通过 Zotero 自带的富文本编辑器进行添加。这个功能目前我还不太常用，尚不太了解。</p>
+
+<p>而关于如何管理 Items，Zotero 提供了两个主要层级：Library 和 Collection。Library 默认只有一个 My Library，这个是指本地的 library。</p>
+
+
+            </div>
+        </article>
+        
+            <div id="post-switch">
+                <div>
+                    
+                </div>
+
+                <div>
+                    
+                </div>
+            </div>
+        
+        <div class="comment-card">
+            <div id="gitalk-container"></div>
+        </div>
+    </div>
+
+    <div class="sidebar hidden-on-mobile" id="sidebar">
+        <div id="toc" class="sidebar-inner">
+            <div class="sep-line"></div>
+            <h5 class="section-head">Contents</h5>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p>
+            Designed by <a href="https://github.com/SharzyL">Sharzy</a>.
+            Hosted on <a href="https://pages.github.com/">Github Pages</a>.
+            Powered by <a href="https://jekyllrb.com/">Jekyll</a>.
+        </p>
+        <p>
+            Content on this site is licensed under
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+            unless specified.
+        </p>
+        <p>
+            Subscribe this site via <a href="/feed.xml">RSS</a>
+        </p>
+    </div>
+</footer>
+
+
+</body>
+</html>
