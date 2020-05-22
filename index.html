@@ -14,7 +14,7 @@
     <link href="/assets/css/common.css" rel="stylesheet">
      <script src="/assets/js/index_util.js"></script> 
     
-    <script src="/assets/nav/responsive-nav.js" defer></script>
+<!--    <script src="/assets/nav/responsive-nav.js" defer></script>-->
     <script src="/assets/js/page_util.js" defer></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
     <script>
@@ -28,6 +28,7 @@
         };
     </script>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js" defer></script>
     <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>
@@ -38,20 +39,20 @@
 </script>
 <div class="header">
     <div id="nav-wrap">
-    <a href="/" class="fa fa-home fa-2x show-on-mobile home-icon"></a>
+<!--    <a href="/" class="fa fa-home fa-2x show-on-mobile home-icon"></a>-->
     <div id="nav">
         <ul style="padding-inline-start: 0">
-            <li class="hidden-on-mobile">
+            <li>
                 <a href="/" class="hover-underline fa fa-home"></a>
             </li>
-            <li class="hidden-on-mobile">
+            <li>
                 <label for="search-line" id="search-btn">
                     <a class="fa fa-search"></a>
                 </label>
                 <input type="text" id="search-line" class="search-line-hidden" placeholder="Search by Google">
             </li>
-            <li><a class="bold hover-underline" href="/about">ABOUT</a></li>
-            <li><a class="bold hover-underline" href="/clock/clock.html">CLOCK</a></li>
+            <li><a class="hover-underline" href="/about">ABOUT</a></li>
+            <li class="hidden-on-mobile"><a class="hover-underline" href="/clock/clock.html">CLOCK</a></li>
         </ul>
     </div>
 </div>
@@ -470,7 +471,7 @@
                 <h3 class="section-head center"> TAGS</h3>
                 <div class="sep-line"></div>
                 <div id="tags-list" class="center"></div>
-                <a id="show-tags-a" class="hidden link">Show all articles</a>
+                <a id="show-tags-a" class="hidden link center">Show all articles</a>
             </div>
             <div class="card side-card">
                 <h3 class="section-head center"> ABOUT ME</h3>
@@ -489,8 +490,9 @@
             </div>
         </div>
     </div>
+</div>
 
-    <footer class="footer">
+<footer class="footer">
     <div class="container">
         <p>
             Designed by <a href="https://github.com/SharzyL">Sharzy</a>.
@@ -508,9 +510,9 @@
     </div>
 </footer>
 
-    <!-- use mathjax to handle formulas-->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-</div>
+<!-- use mathjax to handle formulas-->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
 
 
 </body>

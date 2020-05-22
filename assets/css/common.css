@@ -3,204 +3,26 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: "Cascadia Code PL";
-    src: local("Cascadia Code PL"), url("../font/CascadiaCodePL.woff2");
-}
-
-/* cyrillic-ext */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fCRc4EsA.woff2) format('woff2'), url("../font/Roboto-Light.ttf");
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fABc4EsA.woff2) format('woff2'), url("../font/Roboto-Light.ttf");
-    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fCBc4EsA.woff2) format('woff2'), url("../font/Roboto-Light.ttf");
-    unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2) format('woff2'), url("../font/Roboto-Light.ttf");
-    unicode-range: U+0370-03FF;
-}
-/* vietnamese */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fCxc4EsA.woff2) format('woff2'), url("../font/Roboto-Light.ttf");
-    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2) format('woff2'), url("../font/Roboto-Light.ttf");
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format('woff2'), url("../font/Roboto-Light.ttf");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fCRc4EsA.woff2) format('woff2'), url("../font/Roboto-Medium.ttf");
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fABc4EsA.woff2) format('woff2'), url("../font/Roboto-Medium.ttf");
-    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fCBc4EsA.woff2) format('woff2'), url("../font/Roboto-Medium.ttf");
-    unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fBxc4EsA.woff2) format('woff2'), url("../font/Roboto-Medium.ttf");
-    unicode-range: U+0370-03FF;
-}
-/* vietnamese */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2) format('woff2'), url("../font/Roboto-Medium.ttf");
-    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2) format('woff2'), url("../font/Roboto-Medium.ttf");
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format('woff2'), url("../font/Roboto-Medium.ttf");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfCRc4EsA.woff2) format('woff2'), url("../font/Roboto-Bold.ttf");
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfABc4EsA.woff2) format('woff2'), url("../font/Roboto-Bold.ttf");
-    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfCBc4EsA.woff2) format('woff2'), url("../font/Roboto-Bold.ttf");
-    unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBxc4EsA.woff2) format('woff2'), url("../font/Roboto-Bold.ttf");
-    unicode-range: U+0370-03FF;
-}
-/* vietnamese */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2) format('woff2'), url("../font/Roboto-Bold.ttf");
-    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format('woff2'), url("../font/Roboto-Bold.ttf");
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format('woff2'), url("../font/Roboto-Bold.ttf");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+:root {
+    --theme-color: #1B86E4;
+    --text-theme: #155e9d;
+    --text-link: #2a7ae2;
+    --text-base: black;
+    --shadow: rgba(184, 194, 215, 0.35);
+    --text-sub: #666;
+    --text-sub2: #888;
+    --text-sub-hide: #aaa;
+    --background-text: #eee;
+    --text-in-header: white;
+    --sep: #eee;
+    --sep-deep: #ddd;
+    --background-body: #f8f8f8;
+    --background-base: white;
 }
 
 body {
     font-family: Roboto, Helvetica, Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
-    background: #f8f8f8;
+    background: var(--background-body);
 }
 
 i, b {
@@ -209,7 +31,7 @@ i, b {
 
 #article-content h1 {
     font-weight: normal;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--sep-deep);
     margin: .5em 0;
 }
 
@@ -221,34 +43,38 @@ i, b {
     font-weight: normal;
 }
 
+.highlight-header {
+    background: var(--background-text);
+}
+
 .article-banner {
     padding: 2.5em 0 .5em;
 }
 
 .article-card {
-    box-shadow: rgba(184, 194, 215, 0.35) 0 3px 6px 3px;
+    box-shadow: var(--shadow) 0 3px 6px 3px;
     margin-top: -17em;
     border-radius: 8px;
-    background: white;
+    background: var(--background-base);
     padding: 0 1.5em 2em;
 }
 
 .comment-card {
-    box-shadow: rgba(184, 194, 215, 0.35) 0 3px 6px 3px;
+    box-shadow: var(--shadow) 0 3px 6px 3px;
     border-radius: 8px;
-    background: white;
+    background: var(--background-base);
     padding: .5em 1.5em 2em;
     margin: 1em 0;
 }
 
 .card {
-    box-shadow: rgba(184, 194, 215, 0.35) 0 3px 4px 2px;
+    box-shadow: var(--shadow) 0 3px 4px 2px;
     border-radius: 4px;
-    background: white;
+    background: var(--background-base);
 }
 
 .card:hover {
-    box-shadow: rgba(184, 194, 215, 0.35) 0 6px 9px 3px;
+    box-shadow: var(--shadow) 0 6px 9px 3px;
 }
 
 .article-title,
@@ -257,7 +83,18 @@ i, b {
 #article-content h1,
 #article-content h2,
 #article-content h3 {
-    color: #155e9d;
+    color: var(--text-theme);
+    transition: .3s;
+}
+
+#article-content h1,
+#article-content h2,
+#article-content h3 {
+    border-radius: .3em;
+    margin-right: -.3em;
+    margin-left: -.3em;
+    padding-right: .3em;
+    padding-left: .3em;
 }
 
 a {
@@ -273,12 +110,12 @@ a:hover {
 #article-content a,
 .link,
 .footer a {
-    color: #2a7ae2;
+    color: var(--text-link);
     text-decoration: none;
 }
 
 .sep-line {
-    border-top: #eee solid 1px;
+    border-top: var(--sep) solid 1px;
     margin: .5em 0;
 }
 
@@ -330,25 +167,35 @@ h6, .h6 {
     display: inline-block;
 }
 
-code {
-    background-color: #eee;
-    padding: 1px .3em;
+.highlighter-rouge {
+    background-color: var(--background-text);
     border-radius: 4px;
 }
 
-.rouge-code pre,
+.rouge-code > pre,
 .highlighter-rouge,
 .lineno{
     font-family: "Cascadia Code PL", Consolas, "Microsoft YaHei", monospace;
 }
 
-.rouge-gutter {
-    border-right: 2px #444 solid;
+.rouge-code > pre {
+    margin-left: .4em;
 }
 
-table {
+.rouge-gutter {
+    border-right: 2px #444 solid;
+    padding: 0 .7em 0 0;
+    text-align: right;
+}
+
+#article-content table:not(.rouge-table) {
     border-collapse: collapse;
     margin:0 auto;
+    box-shadow: var(--shadow) 0 1px 2px 2px;
+}
+
+#article-content table:not(.rouge-table) > tbody > tr:hover {
+    background-color: var(--background-text);
 }
 
 code table {
@@ -360,17 +207,17 @@ code tbody tr {
 }
 
 thead tr {
-    border-bottom: 1px solid black;
-    border-top: 2px solid black;
+    border-bottom: var(--sep-deep) 1px solid;
     text-align: left;
 }
 
 tbody tr {
-    border-bottom: 1px solid #eee;
+    transition: .3s;
 }
 
-th, td {
-    padding: .3em 1em;
+table:not(.rouge-table) th,
+table:not(.rouge-table) td {
+    padding: .8em 1em;
 }
 
 .hidden {
@@ -391,14 +238,14 @@ th, td {
 }
 
 .underlined {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--sep);
 }
 
 div.highlight {
-    padding: .7em;
+    padding: .1em .7em;
     border-radius: .3em;
     overflow-x: auto;
-    box-shadow: rgba(184, 194, 215, 0.35) 0 3px 5px 3px;
+    box-shadow: var(--shadow) 0 3px 5px 3px;
 }
 
 .highlight code {
@@ -410,9 +257,8 @@ div.highlight {
 blockquote {
     margin: .5em 0;
     padding: .2em 2em;
-    border-left: 3px #bbb solid;
-    font-style: italic;
-    color: #666666;
+    border-left: 3px var(--sep-deep) solid;
+    color: var(--text-sub2);
 }
 
 /* handle positioning exception with formulas in blockquote*/
@@ -438,9 +284,8 @@ body {
 
 .article-title {
     font-size: 2.1em;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--sep-deep);
     font-weight: bold;
-    margin-bottom: .5em;
 }
 
 .article-subtitle {
@@ -449,14 +294,28 @@ body {
 }
 
 .article-date {
-    color: #666666;
-    font-size: .9em;
-    font-weight: bold;
-    margin: .3em 0;
+    margin-top: 1em;
 }
 
-.article-date > span {
-    margin: 0 .5em;
+.article-date,
+.article-date-label{
+    color: var(--text-sub);
+    font-size: .9em;
+    font-weight: bold;
+}
+
+.article-date > .fa,
+.article-tags > .fa {
+    width: 15px
+}
+
+.article-tags > .tag {
+    margin: 0;
+}
+
+.article-date > span,
+.article-date-label{
+    margin: 0 .3em;
 }
 
 .side-card {
@@ -470,26 +329,26 @@ body {
 
 .home-icon {
     flex: 1;
-    color: white;
+    color: var(--text-in-header);
     margin: .25em;
     font-weight: bolder;
     line-height: 100%;
 }
 
 .header {
-    background: #1b86e4;
+    background: var(--theme-color);
 }
 
 .main-title {
     font-size: 2.5em;
-    color: white;
+    color: var(--text-in-header);
     margin: 1.5em 0 1em;
 }
 
 .section-head {
     font-weight: bold;
     font-size: 1em;
-    color: #555555;
+    color: var(--text-sub);
     text-align: center;
 }
 
@@ -523,12 +382,12 @@ body {
 .post-subtitle {
     font-family: inherit;
     padding-left: 2px;
-    color: #444444;
+    color: var(--text-sub);
 }
 
 .post-preview {
     padding-top: .5em;
-    color: #808080;
+    color: var(--text-sub2);
 }
 
 .post-preview {
@@ -538,7 +397,7 @@ body {
 .post-meta {
     display: flex;
     align-items: flex-start;
-    color: #555555;
+    color: var(--text-sub);
 }
 
 .post-meta > a:first-child {
@@ -546,7 +405,7 @@ body {
 }
 
 .post-date {
-    color: #888;
+    color: var(--text-sub);
     font-size: .9em;
 }
 
@@ -567,9 +426,8 @@ body {
 
 #post-switch a {
     display: block;
-    color: #666666;
+    color: var(--text-sub);
     padding: .7em 1.6em;
-    border-color: #ccc;
     transition: .2s;
     overflow: visible;
 }
@@ -589,49 +447,49 @@ body {
     margin: .2em .2em;
     display: inline-block;
     border-radius: .75em;
-    color: #555555;
-    border: 1px solid #ddd;
+    color: var(--text-sub);
+    border: 1px solid var(--sep-deep);
     transition: .3s;
 }
 
 .tag-selected {
-    background-color: #eee;
+    background-color: var(--background-text);
 }
 
 .tag:hover {
     text-decoration: none;
-    color: #1B76C4;
+    color: var(--theme-color);
     cursor: pointer;
-    border-color: #1B76C4;
+    border-color: var(--theme-color);
 }
 
 #show-tags-a {
     display: block;
-    margin: 1em .5em -1em;
+    margin-top: .5em;
 }
 
-.sns-icon {
-    color: #555555;
+.sns-line {
+    color: var(--text-sub);
     display: block;
 }
 
-.sns-icon:hover {
+.sns-line:hover {
     text-decoration: underline;
 }
 
 .bio {
-    color: #555555;
+    color: var(--text-sub);
 }
 
 .central_col {
-    border-bottom: #eee solid 1px;
+    border-bottom: var(--sep) solid 1px;
 }
 
 footer {
     width: 100%;
     text-align: center;
     padding : 0 20vw;
-    color: #808080;
+    color: var(--text-sub2);
 }
 
 footer p {
@@ -661,8 +519,8 @@ footer * {
     border: none;
     outline: none;
     box-shadow: none;
-    border-bottom: 2px solid white;
-    color: white;
+    border-bottom: 2px solid var(--text-in-header);
+    color: var(--text-in-header);
     width: 10em;
     transition: .5s width;
 }
@@ -681,27 +539,11 @@ footer * {
     float: right;
 }
 
-.nav-toggle:hover {
-    text-decoration: none;
-}
-
-.nav-toggle:before {
-    color: white;
-    font-size: 2em;
-}
-
 #nav-wrap {
-    color: white;
+    color: var(--text-in-header);
     width: 100%;
     position: absolute;
     transition: .5s;
-}
-
-.nav-detach {
-    background-color: #1B86E4;
-    position: fixed!important;
-    top: -58px;
-    z-index: 1;
 }
 
 .nav-detach a,
@@ -722,12 +564,12 @@ footer * {
 #bio > a {
     display: block;
     font-family: inherit;
-    color: #aaa;
+    color: var(--text-sub-hide);
     transition: .3s;
 }
 
 #bio > a:hover {
-    color: black;
+    color: var(--text-base);
 }
 
 #toc > li {
@@ -742,7 +584,7 @@ footer * {
 .toc-link {
     list-style-type: none;
     display: block;
-    color: #888;
+    color: var(--text-sub2);
     font-size: .9em;
     padding: .2em 0;
     transition: .3s;
@@ -753,18 +595,18 @@ footer * {
     text-transform: uppercase;
     padding-bottom: 1.3em;
     font-size: 1.2em;
-    color: #555;
+    color: var(--text-sub);
 }
 
 .toc-link:hover {
     text-decoration: none;
-    color: #2a7ae2;
+    color: var(--theme-color);
     margin-left: .2em;
 }
 
 .h-active {
     border-radius: .3em;
-    background-color: #eee;
+    background-color: var(--background-text);
 }
 
 .toc-h1 {
@@ -785,8 +627,8 @@ footer * {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    box-shadow: rgba(184, 194, 215, 0.35) 0 3px 5px 3px;
+    max-height: 50vh;
+    box-shadow: var(--shadow) 0 3px 5px 3px;
 }
 
 .nav-collapse ul {
@@ -829,44 +671,13 @@ footer * {
 }
 
 /* for mobile devices that responsive nav is enabled */
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 39.99999999em) {
     .main-title {
         padding: 1em 1em .5em;
     }
 
-    #nav ul {
-        list-style:none;
-        float:left;
-        /* don't touch above line of code, DANGEROUS */
-    }
-
-    .nav-collapse {
-        border-radius: .3em;
-        margin-left: calc(100% - 10em);
-        color: black;
-        background: white;
-    }
-
-    #nav li {
-        color: #666;
-        width:100%;
-        display:block;
-        font-weight: bold;
-        margin: .5em 0;
-        text-align: center;
-    }
-
-    #nav a {
-        display: block;
-        font-size: 1.2em;
-    }
-
     .hidden-on-mobile {
         display: none !important;
-    }
-
-    * {
-        font-size: 14px;
     }
 
     .central_col {
@@ -895,30 +706,30 @@ footer * {
     }
 }
 
+#nav > ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#nav li:first-child {
+    flex: 1;
+}
+
+#nav a,
+#nav a:before{
+    font-weight: bolder;
+    line-height: 100%;
+}
+
+#nav li {
+    display:inline-block;
+    width:auto;
+    margin: .5em 1em;
+}
+
 /* for desktop devices on which responsive nav is disabled*/
 @media screen and (min-width: 40em) {
-    #nav > ul {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    #nav .hidden-on-mobile:first-child {
-        flex: 1;
-    }
-
-    #nav a,
-    #nav a:before{
-        font-weight: bolder;
-        line-height: 100%;
-    }
-
-    #nav li {
-        display:inline-block;
-        width:auto;
-        margin: .5em 1em;
-    }
-
     .show-on-mobile {
         display: none !important;
     }
@@ -976,7 +787,7 @@ footer * {
     }
 
     .central_col {border-bottom: none}
-    .main {border-bottom: #eee solid 1px;}
+    .main {border-bottom: var(--sep) solid 1px;}
 }
 
 /* for wide screen devices*/
@@ -1019,4 +830,9 @@ footer * {
 
 .fa-home:before {
     font-size: 1.3em;
+}
+
+@font-face {
+    font-family: "Cascadia Code PL";
+    src: local("Cascadia Code PL"), url("../font/CascadiaCodePL.woff2");
 }

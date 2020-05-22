@@ -39,3 +39,34 @@ In this version, I introduce a brand new Material Design-based design for my blo
 - Use dark-background card and line numbers for code fences. 
 - Blue navigation bar. 
 - Include gitalk in a card. 
+
+### TODO
+
+- Optimize the style of `.article-date` and `.article-tags
+- Material table
+- DARKMODE
+
+## [1.0.2] - 2020.5.22
+
+### Removed
+
+- Floating navigation bar
+- Responsive navigation bar
+
+### Fixed
+
+- Misplaced “show all articles” button. 
+- Misplaced footer code in article.html
+
+### Optimized
+
+- Article header style
+- table style
+- Image sizing
+- Code fence spacing
+- **Semantic color using** (prepare for dark mode)
+
+### Added
+
+- Better table-of-contents jumping
+- Code line number
