@@ -97,9 +97,11 @@
 <h1 id="tex">TeX</h1>
 <p>TeX 是 Kunth 最开始所发明的工具，wiki 称它是一个 typesetting system，它非常接近底层，提供了一些基础的命令可以使用，以宏为主要的编程工具。下面是一个 TeX 的示例</p>
 
-<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The quadratic formula is <span class="p">$</span><span class="o">-</span><span class="nb">b </span><span class="nv">\pm</span><span class="nb"> </span><span class="nv">\sqrt</span><span class="p">{</span><span class="nb">b</span><span class="p">^</span><span class="m">2</span><span class="nb"> </span><span class="o">-</span><span class="nb"> </span><span class="m">4</span><span class="nb">ac</span><span class="p">}</span><span class="nb"> </span><span class="nv">\over</span><span class="nb"> </span><span class="m">2</span><span class="nb">a</span><span class="p">$</span>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>The quadratic formula is <span class="p">$</span><span class="o">-</span><span class="nb">b </span><span class="nv">\pm</span><span class="nb"> </span><span class="nv">\sqrt</span><span class="p">{</span><span class="nb">b</span><span class="p">^</span><span class="m">2</span><span class="nb"> </span><span class="o">-</span><span class="nb"> </span><span class="m">4</span><span class="nb">ac</span><span class="p">}</span><span class="nb"> </span><span class="nv">\over</span><span class="nb"> </span><span class="m">2</span><span class="nb">a</span><span class="p">$</span>
 <span class="k">\bye</span> <span class="c">% \bye means the end of compilation unit</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>将上面的文件保存为 <code class="highlighter-rouge">example.tex</code> 后用 <code class="highlighter-rouge">tex example.tex</code> 编译之后就可以得到一个名为 <code class="highlighter-rouge">example.dvi</code> 的二进制文件。同时生成一个名为 <code class="highlighter-rouge">example.log</code> 的日志文件。dvi 是一种和 pdf 类似的文件，用来表示用于打印目的格式的文档，但是不像 pdf 一样具有一些便于阅读的特性，现在已经很少看到了。MikTeX 自带的 Yap 可以打开 dvi 文件。</p>
 
@@ -112,7 +114,21 @@
 <h1 id="latex">LaTeX</h1>
 <p>LaTeX 是 TeX 的一个封装。Leslie Lamport 于 1983 年发明了它。wiki 称它是一个 document preparation system。相比起 Plain TeX，LaTeX有更多更高级的命令，更加语义化，从而更加接近于我们的写作过程，下面是一个简单的示例</p>
 
-<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="p">{</span>article<span class="p">}</span>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="k">\documentclass</span><span class="p">{</span>article<span class="p">}</span>
 <span class="k">\usepackage</span><span class="p">{</span>amsmath<span class="p">}</span>
 <span class="k">\title</span><span class="p">{</span>example article<span class="p">}</span>
 <span class="k">\author</span><span class="p">{</span>unknown<span class="p">}</span>
@@ -126,7 +142,7 @@
         E <span class="p">&amp;</span>= <span class="k">\frac</span><span class="p">{</span>mc<span class="p">^</span>2<span class="p">}{</span><span class="k">\sqrt</span><span class="p">{</span>1-<span class="k">\frac</span><span class="p">{</span>v<span class="p">^</span>2<span class="p">}{</span>c<span class="p">^</span>2<span class="p">}}}</span>
     <span class="nt">\end{align}</span> 
 <span class="nt">\end{document}</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>保存成 <code class="highlighter-rouge">example.tex</code> 后用 <code class="highlighter-rouge">latex example.tex</code> 编译后依然会得到一个 <code class="highlighter-rouge">example.dvi</code> 的文件。如果我们加上编译选项，用 <code class="highlighter-rouge">latex --output-format=pdf example</code> 编译后，就可以得到 <code class="highlighter-rouge">example.pdf</code> 文件了。除了 pdf, log 以外还有 xdv 文件（这个文件可以看成是上文所说的 dvi 文件的加强）和 aux 文件，aux 文件主要是用来存储一些辅助信息，例如引用(\cite, \ref) 和标签(\lable)的信息，对于含有这样辅助信息的 tex 文档，编译第一次时会提示我们有未定义的引用，得到的输出文件中包含引用的位置会出现问好，为了得到完整的 dvi，需要再次运行 <code class="highlighter-rouge">latex example</code>，在第二次编译时 latex 会同时使用 .tex 文件和 .aux 文件来获得完整的输出。</p>
 
@@ -146,7 +162,27 @@
 
 <p>XeTeX 作为另一个 TeX 的扩展，它主要可以看作是对于 LaTeX 的增强。它相对于 LaTeX 最大的改进之处在于对多国语言和自定义字体的支持。下面是一个示例</p>
 
-<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="na">[12pt]</span><span class="p">{</span>article<span class="p">}</span>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="rouge-code"><pre><span class="k">\documentclass</span><span class="na">[12pt]</span><span class="p">{</span>article<span class="p">}</span>
 <span class="k">\usepackage</span><span class="p">{</span>fontspec<span class="p">}</span> <span class="c">% fontspec is a package for customizing fonts, it is only available with xelatex</span>
  
 <span class="k">\setmainfont</span><span class="p">{</span>Microsoft Yahei UI<span class="p">}</span>
@@ -166,14 +202,25 @@
  可以看到，中文也是可以正常编译的
  
 <span class="nt">\end{document}</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>用 <code class="highlighter-rouge">xelatex example.tex</code> 编译后就能看到想看到的结果了。<code class="highlighter-rouge">LuaLaTeX</code> 是一个和 <code class="highlighter-rouge">XeLaTeX</code> 类似的项目，用 Lua 编写，不过相对少见一些。只要在的 <code class="highlighter-rouge">\setmainfont</code> 后输入一些包含中文的字体，中文就能够编译出来的。但是这个中文的支持并不完全，很多中文的细节问题没有完善的处理，例如标点距离压缩，空格控制等等，稍后会详细介绍这些问题及解决方法。</p>
 
 <h1 id="bibtex">bibTeX</h1>
 <p>学术写作的一个很重要的部分就是参考文献，在 LaTeX 中并没有直接的参考文献支持，bibtex 就是为了解决这个问题所用的工具。LaTeX 使用 .bib 文件来保存参考文献信息，下面是一个 .bib 文件的样例：（这里只含有一个条目，一般来说应该会有很多条目的）</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{koji_midsummer_2001,
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre>@article{koji_midsummer_2001,
 	address = {Tokyo},
 	title = {Midsummer night obscenity},
 	isbn = {114514-810-893},
@@ -184,11 +231,19 @@
 	author = {Koji Tadokoro},
 	year = {2001},
 }
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>把上面的文件保存为 <code class="highlighter-rouge">ref.bib</code> ，在同一个目录下我们再来创建一个 <code class="highlighter-rouge">example.tex</code> ：</p>
 
-<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="p">{</span>article<span class="p">}</span>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="k">\documentclass</span><span class="p">{</span>article<span class="p">}</span>
 <span class="nt">\begin{document}</span>
 
     <span class="k">\cite</span><span class="p">{</span>koji<span class="p">_</span>midsummer<span class="p">_</span>2001<span class="p">}</span> is something good. 
@@ -196,24 +251,39 @@
     <span class="k">\bibliography</span><span class="p">{</span>ref<span class="p">}</span>
  
 <span class="nt">\end{document}</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>其中 \bibliographystyle{acm} 指的是一个参考文献的格式，它保存在一个 acm.bst 的文件里面，这个文件位于 MikTeX 的某个内部目录。</p>
 
 <p>输入 <code class="highlighter-rouge">latex example.tex</code> 后按照惯例可以得到 aux, dvi, log 文件，但是输出的 dvi 文件里并没有输出参考文献。查看 .log 文件后可以发现有这样的警告：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LaTeX Warning: Citation `koji_midsummer_2001' on page 1 undefined on input line
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>LaTeX Warning: Citation `koji_midsummer_2001' on page 1 undefined on input line
  4.
 
 No file example.bbl.
 [1] (example.aux)
 
 LaTeX Warning: There were undefined references.
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>为了得到最后的结果，我们输入 <code class="highlighter-rouge">bibtex example</code>，bibtex 的作用是分析 .aux 文件里面出现的 cite 信息，输出两个文件：<code class="highlighter-rouge">example.bbl, example.blg</code>，其中 .bbl 文件是综合 .aux 文件和 .bib 文件后得出的一个 tex 代码片段，用于插入到我们的 tex 文件中，它的示例如下：</p>
 
-<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{thebibliography}</span><span class="p">{</span>1<span class="p">}</span>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="nt">\begin{thebibliography}</span><span class="p">{</span>1<span class="p">}</span>
 
 <span class="k">\bibitem</span><span class="p">{</span>koji<span class="p">_</span>midsummer<span class="p">_</span>2001<span class="p">}</span>
 <span class="p">{</span><span class="k">\sc</span> Tadokoro, K.<span class="p">}</span>
@@ -221,7 +291,7 @@ LaTeX Warning: There were undefined references.
 <span class="k">\newblock</span> <span class="p">{</span><span class="k">\em</span> Babylon<span class="p">}</span>, 24 (2001).
 
 <span class="nt">\end{thebibliography}</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>.blg 文件保存 bibtex 的日志文件，用来 debug. 我们再次运行 <code class="highlighter-rouge">latex example.tex</code> ，这时候 latex 还是会提示我们存在未定义的引用，最后再运行一次 <code class="highlighter-rouge">latex example.tex</code> 就能够得到我们最终想要的结果了。</p>
 
@@ -262,7 +332,9 @@ LaTeX Warning: There were undefined references.
                 </div>
             </div>
         
-        <div id="gitalk-container"></div>
+        <div class="comment-card">
+            <div id="gitalk-container"></div>
+        </div>
     </div>
 
     <div class="sidebar hidden-on-mobile" id="sidebar">

@@ -128,7 +128,17 @@
 
 <p>其中字符的类别包括 拉丁字符 / 数字，空白字符，标点符号，平假名，片假名，其它，分隔符（分割单词的符号），无效字符（表示光标位于实际上不存位置时的特殊类别）。</p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">enum</span> <span class="nx">CharClass</span> <span class="p">{</span>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="kr">enum</span> <span class="nx">CharClass</span> <span class="p">{</span>
     <span class="nx">Alnum</span><span class="p">,</span>  <span class="c1">// alphabet &amp; numbers</span>
     <span class="nx">Whitespace</span><span class="p">,</span>
     <span class="nx">Punctuation</span><span class="p">,</span>
@@ -138,7 +148,7 @@
     <span class="nx">Separator</span><span class="p">,</span> <span class="c1">// word separators</span>
     <span class="nx">Invalid</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>为了将这个逻辑更改为对于中文也适用的模式，首先在上面的类别中添加汉字 <code class="highlighter-rouge">Han</code>。下面考虑如何判别汉字。</p>
 
@@ -156,7 +166,16 @@
 
 <p>由此可见，“汉字”在 Unicode 中不是一个明确的概念，Unicode 中只有 CJK 这个概念。方便起见，我们只能将所有的 CJK 字符全部当作汉字来处理了。Unicode 中收录的 CJK 字符分为若干个区（block），基本的区域 CJK Unified Ideographs （编码范围 0x4E00–0x9FFF）包含了两万余个 CJK 字符，除此之外还有若干个扩展区域（目前有 CJK Unified Ideographs Extension A ~ CJK Unified Ideographs Extension F）收录一些比较生僻的字符。因此，最后选取的判别汉字的函数如下：</p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">isHanChar</span><span class="p">(</span><span class="nx">charCode</span> <span class="p">:</span> <span class="nx">number</span><span class="p">)</span> <span class="p">:</span> <span class="nx">boolean</span> <span class="p">{</span>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">isHanChar</span><span class="p">(</span><span class="nx">charCode</span> <span class="p">:</span> <span class="nx">number</span><span class="p">)</span> <span class="p">:</span> <span class="nx">boolean</span> <span class="p">{</span>
     <span class="k">return</span> <span class="mh">0x3400</span> <span class="o">&lt;=</span> <span class="nx">charCode</span> <span class="o">&amp;&amp;</span> <span class="nx">charCode</span> <span class="o">&lt;=</span> <span class="mh">0x4dbf</span>  
         <span class="c1">// CJK Unified Ideographs Extension A</span>
         <span class="o">||</span> <span class="mh">0x4e00</span> <span class="o">&lt;=</span> <span class="nx">charCode</span> <span class="o">&amp;&amp;</span> <span class="nx">charCode</span> <span class="o">&lt;=</span> <span class="mh">0x9fff</span>  
@@ -165,7 +184,7 @@
         <span class="c1">// CJK Unified Ideographs Extension B</span>
         <span class="o">||</span> <span class="mh">0x2a700</span> <span class="o">&lt;=</span> <span class="nx">charCode</span> <span class="o">&amp;&amp;</span> <span class="nx">charCode</span> <span class="o">&lt;=</span> <span class="mh">0x2ebef</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>将上面的代码扔进 <a href="https://marketplace.visualstudio.com/items?itemName=sgryjp.japanese-word-handler">Japanese Word Handler</a> 的代码中稍作整理就可以得到一个简单的，对汉字适用的插件版本了，在这个版本中，连续的一串汉字会被识别为一个单词，换言之，它是将一个句子识别为一个词。这样的效果在很多情况下都是够用的。</p>
 
@@ -181,10 +200,13 @@
 
 <p>在 <code class="highlighter-rouge">package.json</code> （项目的配置文件）中，我把 segment 这个库加入到了 <code class="highlighter-rouge">devDependencies</code> 中，然而这个配置只是代表在开发时的库依赖，在用 <code class="highlighter-rouge">vsce</code> 打包时这个库是不会被打包进去的，而用户安装时更不会自动安装这个库。因此当我在全局环境下导入这个库 <code class="highlighter-rouge">const Segment = require(‘segment’);</code> 时会抛出异常，从而整个插件的执行都会被中止，<code class="highlighter-rouge">activate</code> 函数的逻辑自然也不会被执行。为了解决这个问题，只需要在 <code class="highlighter-rouge">package.json</code> 中加上：</p>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nl">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"segment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^0.1.3"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>即可。</p>
 
@@ -217,7 +239,9 @@
                 </div>
             </div>
         
-        <div id="gitalk-container"></div>
+        <div class="comment-card">
+            <div id="gitalk-container"></div>
+        </div>
     </div>
 
     <div class="sidebar hidden-on-mobile" id="sidebar">

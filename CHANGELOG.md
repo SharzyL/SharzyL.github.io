@@ -32,3 +32,10 @@ In this version, I introduce a brand new Material Design-based design for my blo
 - Introduce roboto font for better English display. 
 - Introduce Cascadia font and OneDark highlighting theme for code. 
 - Use bold font for article title. 
+- Add shadow for images and code fences. 
+
+### Changed
+
+- Use dark-background card and line numbers for code fences. 
+- Blue navigation bar. 
+- Include gitalk in a card. 

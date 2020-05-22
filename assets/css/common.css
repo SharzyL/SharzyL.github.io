@@ -1,6 +1,5 @@
 * {
     margin: 0;
-    font-family: Roboto, Helvetica, "Microsoft YaHei", "PingFang SC", "Simsum", Arial, sans-serif;
     box-sizing: border-box;
 }
 
@@ -200,6 +199,7 @@
 }
 
 body {
+    font-family: Roboto, Helvetica, Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
     background: #f8f8f8;
 }
 
@@ -231,6 +231,14 @@ i, b {
     border-radius: 8px;
     background: white;
     padding: 0 1.5em 2em;
+}
+
+.comment-card {
+    box-shadow: rgba(184, 194, 215, 0.35) 0 3px 6px 3px;
+    border-radius: 8px;
+    background: white;
+    padding: .5em 1.5em 2em;
+    margin: 1em 0;
 }
 
 .card {
@@ -323,15 +331,19 @@ h6, .h6 {
 }
 
 code {
-    color: #eb7979;
     background-color: #eee;
     padding: 1px .3em;
     border-radius: 4px;
 }
 
-code,
-code span {
+.rouge-code pre,
+.highlighter-rouge,
+.lineno{
     font-family: "Cascadia Code PL", Consolas, "Microsoft YaHei", monospace;
+}
+
+.rouge-gutter {
+    border-right: 2px #444 solid;
 }
 
 table {
@@ -342,6 +354,11 @@ table {
 code table {
     margin:0;
 }
+
+code tbody tr {
+    border: none;
+}
+
 thead tr {
     border-bottom: 1px solid black;
     border-top: 2px solid black;
@@ -381,6 +398,7 @@ div.highlight {
     padding: .7em;
     border-radius: .3em;
     overflow-x: auto;
+    box-shadow: rgba(184, 194, 215, 0.35) 0 3px 5px 3px;
 }
 
 .highlight code {
@@ -427,7 +445,7 @@ body {
 
 .article-subtitle {
     font-size: 1.5em;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .article-date {
@@ -466,7 +484,6 @@ body {
     font-size: 2.5em;
     color: white;
     margin: 1.5em 0 1em;
-    font-weight: normal;
 }
 
 .section-head {
@@ -504,7 +521,6 @@ body {
 }
 
 .post-subtitle {
-    font-weight: normal;
     font-family: inherit;
     padding-left: 2px;
     color: #444444;
@@ -540,7 +556,7 @@ body {
 }
 
 #post-switch {
-    padding: 2em 0;
+    margin: 2em 0;
     display: flex;
     justify-content: space-between;
 }
@@ -655,11 +671,6 @@ footer * {
     color: rgba(255, 255, 255, .7);
 }
 
-.nav-detach #search-line {
-    color: black;
-    border-bottom-color: black;
-}
-
 .search-line-hidden {
     width: 0 !important;
     border-bottom-color: transparent !important;
@@ -687,7 +698,7 @@ footer * {
 }
 
 .nav-detach {
-    background-color: white;
+    background-color: #1B86E4;
     position: fixed!important;
     top: -58px;
     z-index: 1;
@@ -695,7 +706,7 @@ footer * {
 
 .nav-detach a,
 .nav-detach a:before {
-    color: black!important;
+    /*color: black!important;*/
 }
 
 .nav-active {
@@ -704,7 +715,7 @@ footer * {
 
 #bio {
     text-align: center;
-    font-family: Consolas, "Microsoft YaHei UI", Monospace, monospace;
+    font-family: "Cascadia Code PL", "Microsoft YaHei UI", Monospace, monospace;
     font-size: .9em;
 }
 
@@ -775,6 +786,7 @@ footer * {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    box-shadow: rgba(184, 194, 215, 0.35) 0 3px 5px 3px;
 }
 
 .nav-collapse ul {
@@ -927,7 +939,7 @@ footer * {
     .central_col {
         width: calc(100vw - 18em);
         flex: none;
-        padding: 2.5em 0 0 1em;
+        padding: 3em 0 0 1em;
     }
 
     #sidebar {
@@ -960,7 +972,7 @@ footer * {
 
     .sidebar-inner {
         width: 100%;
-        padding-top: 2.5em;
+        padding-top: 3em;
     }
 
     .central_col {border-bottom: none}
@@ -971,7 +983,7 @@ footer * {
 @media screen and (min-width: 80em) {
     .central_col {
         width: 50%;
-        margin: 2.5em auto 0;
+        margin: 3em auto 0;
     }
 
     .main-title {
@@ -990,7 +1002,7 @@ footer * {
     .sidebar-inner {
         position: sticky;
         top: 0;
-        padding-top: 2.5em;
+        padding-top: 3em;
     }
 }
 
@@ -1003,10 +1015,6 @@ footer * {
 
 .gt-header-comment {
     margin-left: 0 !important;
-}
-
-.gt-header-textarea {
-    background: white !important;
 }
 
 .fa-home:before {

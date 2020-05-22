@@ -100,25 +100,32 @@
 
 <p>mathjax的渲染速度和代码体积都要落后于katex，但是它可以直接渲染整个文档。默认行内和行间公式的定界符分别是<code class="highlighter-rouge">\( \)</code>和<code class="highlighter-rouge">\[ \]</code>，这和我平时写 $\LaTeX$的习惯不太一致，好在这个可以自行配置，具体的配置代码大致如下</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/x-mathjax-config"</span><span class="nt">&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/x-mathjax-config"</span><span class="nt">&gt;</span>
         <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
           <span class="na">tex2jax</span><span class="p">:</span> <span class="p">{</span><span class="na">inlineMath</span><span class="p">:</span> <span class="p">[[</span><span class="dl">'</span><span class="s1">$</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">$</span><span class="dl">'</span><span class="p">]]}</span>
         <span class="p">});</span>
 <span class="nt">&lt;/script&gt;</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>使用mathjax的时候遇到了若干个坑：</p>
 
 <h2 id="mathjax的js文件的配置问题">mathjax的js文件的配置问题</h2>
 <p>我本来照看官网上的Quick Start引用了下述js文件</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'</span> <span class="na">async</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre></div></div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'</span> <span class="na">async</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>然而这个渲染出来的公式再布局上有比较严重的问题，例如行内分式的分子分母部分重叠，下标字号过大等等。经过仔细研究<del>看隔壁的源码</del>，发现应该引用下述文件</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"</span> <span class="na">async</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre></div></div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"</span> <span class="na">async</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 <p>在更换之后，排版质量显著改善。</p>
 
 <h2 id="行间公式的空行问题">行间公式的空行问题</h2>
@@ -181,12 +188,17 @@ kramdown将markdown转换为html文件时会把你输入的行间公式当成一
 <p>这个设定还是很符合逻辑的，但是如果用户不了解这一点的话，可能会造成一些麻烦，这个麻烦在有序列表中体现地尤为明显。</p>
 
 <p>问题主要发生在用户试图在有序列表的一项中插入一个块级元素（例如代码块，行间公式）的时候，如果不了解kramdown的缩进法则的话，用户可能认为只需要新启一行就可以了。例如</p>
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">1.</span> nsert some formula
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="p">1.</span> nsert some formula
 
 $$ a + b = b + a $$
 <span class="p">
 2.</span> one more item
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>然而不幸的是这样无法正常显示有序列表的序号，它的输出结果如下：</p>
 
@@ -204,12 +216,17 @@ $$ a + b = b + a $$
 
 <p>注意到有序列表的标号在第二项上被重置了，出现这个的原因在于kramdown会把缩进层级相同的元素当作同级元素看待，所以中间的行间公式会被它看作一个和有序列表同级的块级元素（类似段落），因此这个有序列表被这个块级元素中断了. 解决这个问题的方法很简单，把中间的公式缩进就可以了。(<em>这里也顺带解释了上文中提到的数学公式空行问题</em>)</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   /|                
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>   /|                
   / +-----------------+
  &lt;    To be continued |
   \ +-----------------+
    \|               
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
             </div>
         </article>
@@ -238,7 +255,9 @@ $$ a + b = b + a $$
                 </div>
             </div>
         
-        <div id="gitalk-container"></div>
+        <div class="comment-card">
+            <div id="gitalk-container"></div>
+        </div>
     </div>
 
     <div class="sidebar hidden-on-mobile" id="sidebar">
