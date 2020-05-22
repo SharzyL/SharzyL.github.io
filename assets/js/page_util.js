@@ -19,9 +19,14 @@ const init_toc = (article, toc_obj) => {
     };
     const scroll_to = (title) => {
         let anchor_text = title.toLowerCase().split(' ').join('-');
-        let length = document.getElementById(anchor_text).getBoundingClientRect().top;
+        let head_obj = document.getElementById(anchor_text);
+        let length = head_obj.getBoundingClientRect().top;
+        head_obj.classList.add('highlight-header');
+        setTimeout(() => {
+            head_obj.classList.remove('highlight-header');
+        }, 1000);
         window.scrollBy({
-            top: length,
+            top: length - 15,
             left: 0,
             behavior: 'smooth'
         });
@@ -66,22 +71,7 @@ const init_toc = (article, toc_obj) => {
             toc_items[current_index].classList.add('h-active');
         }
     });
-
 };
-
-// const init_sidebar = (sidebar) => {
-//     if (!sidebar) {
-//         return;
-//     }
-//     window.addEventListener('scroll', () => {
-//         if (sidebar.getBoundingClientRect().y < 0) { // when top of toc is down
-//             sidebar.classList.add('sidebar-detached');
-//         }
-//         if (document.querySelector('.header').getBoundingClientRect().bottom > 0) {
-//             sidebar.classList.remove('sidebar-detached');
-//         }
-//     });
-// };
 
 const init_nav = () => {
     let navigation = responsiveNav("#nav", {
@@ -197,7 +187,7 @@ const ie_redirect = () => {
 };
 
 window.addEventListener('DOMContentLoaded', () => {
-    init_nav();
+    // init_nav();
     init_toc(
         document.getElementById('article-content'),
         document.getElementById('toc')

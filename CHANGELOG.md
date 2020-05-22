@@ -19,4 +19,54 @@ In this version, I introduce a brand new Material Design-based design for my blo
 - Adjust text in `404.html` .
 - Fine-tune the font-size of html titles and navigation bar. 
 - Change the Horizontal positioning and sizing rule for sidebar. 
+- Change the color of sticky navigation bar from semi-transparent to pure white. 
 
+### Removed
+
+- Subtitle of the homepage. 
+
+## [1.0.1] - 2020.5.22
+
+### Added
+
+- Introduce roboto font for better English display. 
+- Introduce Cascadia font and OneDark highlighting theme for code. 
+- Use bold font for article title. 
+- Add shadow for images and code fences. 
+
+### Changed
+
+- Use dark-background card and line numbers for code fences. 
+- Blue navigation bar. 
+- Include gitalk in a card. 
+
+### TODO
+
+- Optimize the style of `.article-date` and `.article-tags
+- Material table
+- DARKMODE
+
+## [1.0.2] - 2020.5.22
+
+### Removed
+
+- Floating navigation bar
+- Responsive navigation bar
+
+### Fixed
+
+- Misplaced “show all articles” button. 
+- Misplaced footer code in article.html
+
+### Optimized
+
+- Article header style
+- table style
+- Image sizing
+- Code fence spacing
+- **Semantic color using** (prepare for dark mode)
+
+### Added
+
+- Better table-of-contents jumping
+- Code line number
