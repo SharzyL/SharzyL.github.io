@@ -12,6 +12,12 @@
     <meta name="generator" content="jekyll"/>
     <link rel="shortcut icon" href="/favicon.ico">
     <link href="/assets/css/common.css" rel="stylesheet">
+    <script>
+        const darkModeAttributeName = 'dark-mode-enabled';
+        if (window.localStorage.getItem(darkModeAttributeName) != null) {
+            document.documentElement.setAttribute(darkModeAttributeName, 'true');
+        }
+    </script>
      <script src="/assets/js/index_util.js"></script> 
     
 <!--    <script src="/assets/nav/responsive-nav.js" defer></script>-->
@@ -51,6 +57,7 @@
                 </label>
                 <input type="text" id="search-line" class="search-line-hidden" placeholder="Search by Google">
             </li>
+            <li><a id="dark-mode-toggle" class="fa"></a> </li>
             <li><a class="hover-underline" href="/about">ABOUT</a></li>
             <li class="hidden-on-mobile"><a class="hover-underline" href="/clock/clock.html">CLOCK</a></li>
         </ul>

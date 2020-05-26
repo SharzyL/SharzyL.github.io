@@ -180,14 +180,25 @@ const init_zoomer = () => {
     zooming.listen('article img');
 };
 
-const ie_redirect = () => {
-    if ( window.ActiveXObject || "ActiveXObject" in window ) {
-        window.location.href = '/ie-redirect.html';
-    }
+const init_dark_mode_toggle = () => {
+    const storage = window.localStorage;
+    const darkModeAttributeName = 'dark-mode-enabled';
+    let isDarkMode = storage.getItem(darkModeAttributeName) != null;
+    const toggleDarkMode = () => {
+        document.documentElement.toggleAttribute(darkModeAttributeName);
+        isDarkMode = !isDarkMode;
+        if (isDarkMode) {
+            storage.setItem(darkModeAttributeName, 'true');
+        } else {
+            storage.removeItem(darkModeAttributeName);
+        }
+    };
+    const toggler = document.getElementById('dark-mode-toggle');
+    toggler.addEventListener('click', toggleDarkMode);
 };
 
 window.addEventListener('DOMContentLoaded', () => {
-    // init_nav();
+    init_dark_mode_toggle();
     init_toc(
         document.getElementById('article-content'),
         document.getElementById('toc')
@@ -196,7 +207,6 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('load', () => {
-    ie_redirect();
     try {
         MathJax.Hub.Config({
             tex2jax: {inlineMath: [['$','$']]}
