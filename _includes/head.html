@@ -7,6 +7,12 @@
     {% for meta in site.meta %}<meta name="{{meta.name}}" content="{{meta.value}}"/>
     {% endfor %}<link rel="shortcut icon" href="/favicon.ico">
     <link href="/assets/css/common.css" rel="stylesheet">
+    <script>
+        const darkModeAttributeName = 'dark-mode-enabled';
+        if (window.localStorage.getItem(darkModeAttributeName) != null) {
+            document.documentElement.setAttribute(darkModeAttributeName, 'true');
+        }
+    </script>
     {% for requirement in page.requirements %} {{ requirement }} {% endfor %}
     {% for requirement in layout.requirements %} {{ requirement }} {% endfor %}
 <!--    <script src="/assets/nav/responsive-nav.js" defer></script>-->
