@@ -6,6 +6,7 @@ tags: misc
 前些日子看到Github pages的一些介绍（虽然之前就知道了），再加上想复习一下CSS，于是便<del>脑子一热</del>萌发了使用Github pages搭建blog的想法，写了几天代码<del>CSS</del>，算是把基本功能都完成了。这里总结一些搭建过程中遇到的问题。 
 
 # Jekyll
+
 [Jekyll](https://jekyllrb.com)用于将html模板（使用Liquid模板引擎）和markdown（使用kramdowm方言）解析成浏览器能够直接显示的html文件，是一个用ruby编写的博客生成工具，被Github pages原生地支持。在使用gem安装之后，使用`jekyll build`能够完成一次当前目录的构建，使用`jekyll serve`能够使jekyll在检测到文件更新时自动重新构建，并且在`localhost:4000`运行一个本地HTTP服务器，便于调试。
 
 Jekyll由于使用ruby编写，配置文件一般通过yaml文件提供，并且在需要当成模板渲染地文件开头书写yaml文件头。
@@ -13,6 +14,7 @@ Jekyll由于使用ruby编写，配置文件一般通过yaml文件提供，并且
 Jekyll的官方文档很友好，搜索功能也比较高效，有国人维护的一个中文翻译网站，不过遗憾的是中文翻译网站不支持搜索功能。
 
 # Math
+
 平时我都是用$\LaTeX$进行数学相关的文字编辑/排版工作，好在目前已经有现成的轮子可以用来在html中渲染数学公式了。其中比较成熟的工具包括mathjax和katex。这两个均以js库的形式导入到html中，具体的调用方法略有差异。
 
 katex的调用方法有点复杂，它暴露的主要接口是一个将给定给定字符串渲染成公式然后塞到dom元素里面的函数，官方提供了一个可以直接渲染整个文档的扩展，但是由于不明原因没有效果，也没有报错。日后再研究一下吧。
