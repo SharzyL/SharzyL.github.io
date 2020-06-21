@@ -12,6 +12,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) t
 ### Optimized
 - Table coloring
 
+### TODO
+- Optimization for gitalk under dark mode
+- Outline publish date for instant view
 
 ## [1.0.3]
 
