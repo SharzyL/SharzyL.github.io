@@ -1,1 +1,1 @@
-Sitemap: https://sharzy.in/sitemap.xml
+Sitemap: http://localhost:40001/sitemap.xml
