@@ -20,7 +20,6 @@
     </script>
      <script src="/assets/js/index_util.js"></script> 
     
-<!--    <script src="/assets/nav/responsive-nav.js" defer></script>-->
     <script src="/assets/js/page_util.js" defer></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
     <script>
@@ -77,16 +76,16 @@
         <div class="post-card card" url=/2020/07/11/search-algorithm.html tags="tech algorithm ">
             <a href="/2020/07/11/search-algorithm.html">
                 <h3 class="post-header bold">
-                    全文检索技术简介
+                    如何搭建一个 full-text search 引擎
                 </h3>
                 
                     <h4 class="post-subtitle">
-                        如何在大量文档中进行查询
+                        在文档中查询的技术
                     </h4>
                 
                 <div class="sep-line"></div>
                 <div class="post-preview">
-                    当我们使用搜索引擎，使用网站或者在线服务内置的搜索功能，或者管理本地的文本文件的时候，都会面临这样一种需求：如何在大量的自然语言文本中快速找到符合特定模式的部分？
+                    当我们使用搜索引擎，使用网站或者在线服务内置的搜索功能，或者管理本地的文本文件的时候，都会面临这样一种需求：如何在大量的自然语言文本中快速找到符合特定模式的部分？对于精确的字符串匹配，当然已经有成熟的算法了。但是更多的时候我们需要处理更复杂的需求：用户可能只记得大概的模式，因此我们的搜索功能应该能够在一定限度内容忍不一致；为了让用户能够更快找到有用的信息，我们需要将搜索的结果按照 “相关性” 排序；为了让交互更加直观，我们需要向用户展示一些预览文本，从而让用户能够了解自己搜索到了什么。
 
 
                 </div>
@@ -95,7 +94,7 @@
                 <span class="post-date">
                     <span class="dynamic-inline-block">Posted on 2020-07-11</span>
                     <span class="horizon-sep"></span>
-                    <span class="dynamic-inline-block">Last edited on 2020-07-11</span>
+                    <span class="dynamic-inline-block">Last edited on 2020-07-12</span>
                 </span>
                 <span class="post_tags">
                     
