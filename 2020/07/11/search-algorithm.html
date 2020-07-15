@@ -81,7 +81,7 @@
                             Posted on 2020-07-11
                         </span>
                         <span class="inline-block">
-                            Last edited on 2020-07-12
+                            Last edited on 2020-07-16
                         </span>
                     </div>
                 
@@ -288,8 +288,9 @@
 
 <p>我们可以用信息论的角度来简单论证一下 $\text{tf-idf}$ 的合理性（ref：<a href="https://www.sciencedirect.com/science/article/abs/pii/S0306457302000213">Aizawa, A., 2003. An information-theoretic perspective of tf–idf measures q. Information Processing and Management 21.</a>）。</p>
 
-<p>注意到信息论中的互信息（mutual information）
-<script type="math/tex">M(X, Y) = H(X) - H(X \mid Y) = \sum_{x,\ y} p(x, y) \log\frac{p(x, y)}{p(x)p(y)}</script></p>
+<p>注意到信息论中的互信息（mutual information）</p>
+
+<script type="math/tex; mode=display">M(X, Y) = H(X) - H(X \mid Y) = \sum_{x,\ y} p(x, y) \log\frac{p(x, y)}{p(x)p(y)}</script>
 
 <p>这一概念可以用来衡量在知道随机变量 $Y$ 时，变量 $Y$ 的不确定程度减小的程度（其中 $H$ 表示条件熵）。这个减小程度越大，就说明 $X$ 和 $Y$ 的相关性越强。考虑用 $Y$ 看成是一个衡量某个给定关键词在文章中出现情况的随机变量，$X$ 看成是一个随机文档。那么 $M(X, Y)$ 就可以衡量关键词对于这篇文档的重要程度。</p>
 
