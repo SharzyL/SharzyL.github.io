@@ -50,4 +50,4 @@ A History of Modern Computing 是一本记叙计算机历史的书。或者准�
 
 # 文件
 
-[pdf file](/assets/doc/survey_midterm.pdf)
+[pdf file](/assets/doc/computer-history.pdf)

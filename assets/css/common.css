@@ -8,7 +8,7 @@
     --text-theme: #155e9d;
     --text-link: #2a7ae2;
     --text-base: black;
-    --shadow: rgba(184, 194, 215, 0.35);
+    --shadow: rgba(124,124,124,0.1);
     --text-sub: #666;
     --text-sub2: #888;
     --text-sub-hide: #aaa;
@@ -106,13 +106,14 @@ i, b, strong, del {
 }
 
 .card {
-    box-shadow: var(--shadow) 0 3px 4px 2px;
+    box-shadow: var(--shadow) 0 2px 2px 2px;
     border-radius: 4px;
     background: var(--background-base);
+    transition: .3s;
 }
 
 .card:hover {
-    box-shadow: var(--shadow) 0 6px 9px 3px;
+    box-shadow: var(--shadow) 0 3px 10px 3px;
 }
 
 .article-title,
@@ -673,7 +674,8 @@ footer * {
     margin-left: auto;
     margin-right: auto;
     max-height: 50vh;
-    box-shadow: var(--shadow) 0 3px 5px 3px;
+    max-width: 100%;
+    box-shadow: var(--shadow) 0 1px 2px 1px;
 }
 
 .nav-collapse ul {
