@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Language" content="zh-cn"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <meta name="description" content="Sharzy's personal blog, used to record something worth recording"/>
+    <meta name="description" content="这里是 Sharzy 的个人博客，用来记录一些个人的发现，以及一些兴致来时写的文章，或者一些我认为比垃圾要略好一些的课程论文。"/>
     <meta name="keywords" content="mathwebCSMOsharzy"/>
     <meta name="author" content="Sharzy"/>
     <meta name="generator" content="jekyll"/>
@@ -14,8 +14,11 @@
     <link href="/assets/css/common.css" rel="stylesheet">
     <script>
         const darkModeAttributeName = 'dark-mode-enabled';
-        if (window.localStorage.getItem(darkModeAttributeName) != null) {
+        let darkModeEnabled = window.matchMedia('(prefers-color-scheme: dark)').matches
+                           || window.localStorage.getItem(darkModeAttributeName) != null;
+        if (darkModeEnabled) {
             document.documentElement.setAttribute(darkModeAttributeName, 'true');
+            storage.setItem(darkModeAttributeName, 'true');
         }
     </script>
     

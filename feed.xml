@@ -2,10 +2,10 @@
 <rss version="2.0">
 
     <channel>
-        <title></title>
+        <title>Sharzy's random blog</title>
         <link>https://sharzy.in</link>
-        <description></description>
-        <lastBuildDate>Thu, 16 Jul 2020 00:25:02 +0800</lastBuildDate>
+        <description>这里是 Sharzy 的个人博客，用来记录一些个人的发现，以及一些兴致来时写的文章，或者一些我认为比垃圾要略好一些的课程论文。</description>
+        <lastBuildDate>Thu, 16 Jul 2020 15:25:37 +0800</lastBuildDate>
         
         <item>
             <title>如何搭建一个 full-text search 引擎</title>

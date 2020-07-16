@@ -39,6 +39,26 @@
     --background-base: #282C34;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root[dark-mode-enabled] {
+        --theme-color: #282C34;
+        --text-theme: #b3c7e6;
+        --text-link: #2a7ae2;
+        --text-base: #CCC;
+        --shadow: #222222;
+        --text-sub: #AFB1B3;
+        --text-sub2: #9D9FA1;
+        --text-sub-hide: #aaa;
+        --background-text: #3E4249;
+        --background-text-sub: #2C313C;
+        --text-in-header: #EBEBEB;
+        --sep: #444;
+        --sep-deep: #555;
+        --background-body: #21252B;
+        --background-base: #282C34;
+    }
+}
+
 body,
 .header,
 .card{
