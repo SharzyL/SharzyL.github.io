@@ -7,7 +7,7 @@
     --theme-color: #1B86E4;
     --text-theme: #155e9d;
     --text-link: #2a7ae2;
-    --text-base: black;
+    --text-base: #444;
     --shadow: rgba(124,124,124,0.1);
     --text-sub: #666;
     --text-sub2: #888;
@@ -19,6 +19,9 @@
     --sep-deep: #ddd;
     --background-body: #f8f8f8;
     --background-base: white;
+
+    --font-sans: Roboto, Helvetica, Arial, "Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    --font-serif: "Noto Serif SC", Georgia, "Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei", serif;
 }
 
 [dark-mode-enabled] {
@@ -66,8 +69,16 @@ body,
 }
 
 body {
-    font-family: Roboto, Helvetica, Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    font-family: var(--font-sans);
     background: var(--background-body);
+}
+
+.sans {
+    font-family: var(--font-sans);
+}
+
+.serif {
+    font-family: var(--font-serif);
 }
 
 i, b, strong, del {
@@ -127,13 +138,13 @@ i, b, strong, del {
 
 .card {
     box-shadow: var(--shadow) 0 2px 2px 2px;
-    border-radius: 4px;
+    border-radius: 10px;
     background: var(--background-base);
-    transition: .3s;
+    transition: .5s;
 }
 
 .card:hover {
-    box-shadow: var(--shadow) 0 3px 10px 3px;
+    box-shadow: var(--shadow) 0 3px 10px 8px;
 }
 
 .article-title,
@@ -143,6 +154,7 @@ i, b, strong, del {
 #article-content h2,
 #article-content h3 {
     color: var(--text-theme);
+    font-family: var(--font-sans);
     transition: .3s;
 }
 
@@ -233,6 +245,7 @@ h6, .h6 {
 .highlighter-rouge {
     background-color: var(--background-text);
     border-radius: 4px;
+    font-size: .9em;
 }
 
 .rouge-code > pre,
@@ -365,7 +378,7 @@ body {
 
 .article-date,
 .article-date-label{
-    color: var(--text-sub);
+    color: var(--text-sub2);
     font-size: .9em;
     font-weight: bold;
 }
@@ -407,6 +420,7 @@ body {
 
 .main-title {
     font-size: 2.5em;
+    font-family: var(--font-sans);
     color: var(--text-in-header);
     margin: 1.5em 0 1em;
 }
@@ -416,6 +430,7 @@ body {
     font-size: 1em;
     color: var(--text-sub);
     text-align: center;
+    font-family: var(--font-sans);
 }
 
 .main {
@@ -446,7 +461,6 @@ body {
 }
 
 .post-subtitle {
-    font-family: inherit;
     padding-left: 2px;
     color: var(--text-sub);
 }
@@ -513,9 +527,10 @@ body {
     margin: .2em .2em;
     display: inline-block;
     border-radius: .75em;
-    color: var(--text-sub);
+    color: var(--text-sub2);
     border: 1px solid var(--sep-deep);
     transition: .3s;
+    font-family: var(--font-sans);
 }
 
 .tag-selected {
@@ -910,6 +925,8 @@ footer * {
 
 #gitalk-container .gt-header-textarea {
     background-color: var(--background-text);
+    color: var(--text-base);
+    font-family: inherit;
 }
 
 #gitalk-container .gt-meta {

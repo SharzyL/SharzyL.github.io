@@ -6,10 +6,9 @@
     <meta http-equiv="Content-Language" content="zh-cn"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <meta name="description" content="这里是 Sharzy 的个人博客，用来记录一些个人的发现，以及一些兴致来时写的文章，或者一些我认为比垃圾要略好一些的课程论文。"/>
-    <meta name="keywords" content="mathwebCSMOsharzy"/>
-    <meta name="author" content="Sharzy"/>
-    <meta name="generator" content="jekyll"/>
+    <meta name="keywords" content="math, web, CS, MO, sharzy, LaTeX"><meta name="author" content="Sharzy, me@sharzy.in"><meta name="generator" content="jekyll">
+    <meta name="description" content="$\{n\alpha\}$的均匀分布性是一个非常方便好用的命题，之前我一直只知道使用Wyle判据的证明方法，但是这一证明方法需要用到稍深入的分析学，包括Weierstrass的三角多项式逼近定理。今天我正在思考另外一个和小数部分有关的命题，突然想到了一个有趣的方法，可以用于证明这个问题，于是便将它记录下来了.">
+    
     <link rel="shortcut icon" href="/favicon.ico">
     <link href="/assets/css/common.css" rel="stylesheet">
     <script>
@@ -20,12 +19,6 @@
             document.documentElement.setAttribute(darkModeAttributeName, 'true');
             storage.setItem(darkModeAttributeName, 'true');
         }
-    </script>
-    
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" defer></script> 
-    <script src="/assets/js/page_util.js" defer></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
-    <script>
         MathJax = {
             tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']]
@@ -35,8 +28,12 @@
             }
         };
     </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" defer></script>
+    
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" defer></script> 
+    <script src="/assets/js/page_util.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" defer></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js" defer></script>
     <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>
@@ -57,8 +54,7 @@
                 <input type="text" id="search-line" class="search-line-hidden" placeholder="Search by Google">
             </li>
             <li><a id="dark-mode-toggle" title="Toggle dark mode" class="fa"></a> </li>
-            <li><a class="hover-underline" href="/about">ABOUT</a></li>
-            <li class="hidden-on-mobile"><a class="hover-underline" href="/clock/clock.html">CLOCK</a></li>
+            <li><a class="hover-underline sans" href="/about">ABOUT</a></li>
         </ul>
     </div>
 </div>
@@ -177,7 +173,7 @@
                 <div>
                     
                     <a href="/2019/08/01/sensitivity.html" id="post-previous" class="card">
-                        <h5>
+                        <h5 class="sans">
                             PREVIOUS
                         </h5>
                         一个猜想的证明
@@ -188,7 +184,7 @@
                 <div>
                     
                     <a href="/2019/08/06/bx.html" id="post-next" class="card">
-                        <h5>
+                        <h5 class="sans">
                             NEXT
                         </h5>
                         北夏第四题的证明
