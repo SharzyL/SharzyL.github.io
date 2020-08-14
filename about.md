@@ -40,9 +40,11 @@ Key fingerprint：9424 DF6A 6779 5802 3ACA  3A63 2347 0D4F D461 AA84
 
 [Public key](/assets/gpg.txt)
 
-# Friends' link
+# Friends
 
-欢迎留言添加友链。
-
-- [Tony](https://github.com/fengtony686) and his [blog](https://fengtony686.github.io/)
+| [Tony's blog](https://fengtony686.github.io/) | Record Interesting Things in My Life |
+| [MiaoTony’s 小窝](https://miaotony.xyz/) | 仰望星空，脚踏实地，未来可期 |
+| [1A23 Studio](https://1a23.com/) | We create. | 
+| [not b@tk1z](https://blog.batkiz.com/) | 一帘新语随风去，半山明月踏江来。 |
+| [Benpigchu](https://benpigchu.com/) | Box Packaged Creature |
 

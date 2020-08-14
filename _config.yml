@@ -44,7 +44,7 @@ kramdown:
       start_line: 1
 
 title: Sharzy's random blog
-description: 这里是 Sharzy 的个人博客，用来记录一些个人的发现，以及一些兴致来时写的文章，或者一些我认为比垃圾要略好一些的课程论文。
+description: Sharzy's miscellaneous random stuff.
 
 meta:
   -
