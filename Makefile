@@ -7,10 +7,8 @@ source:
 
 site:
 	jekyll build
-	cd _site
-	pwd
-	git add .
-	git commit -m '$(msg)'
-	git push
+	cd _site && git add .
+	cd _site &&	git commit -m '$(msg)'
+	cd _site && git push
 
 .PHONY: source site all

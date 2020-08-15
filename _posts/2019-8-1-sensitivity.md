@@ -83,6 +83,6 @@ $$
     {B - xI} & {c} \\ \hline
     c^* & \alpha 
 \end{array}\right\rvert
- $$
+$$
 
  注意到等式左边是一个实对称矩阵，右边是 $\lvert A - xI_n\rvert + \alpha \lvert B - xI_{n - 1} \rvert = f + \alpha g$ ，这便表明了 $f + \alpha g$ 的根均为实数. 
