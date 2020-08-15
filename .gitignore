@@ -1,0 +1,7 @@
+.sass-cache
+.jekyll-metadata
+.vscode
+.idea
+_site
+*.bat
+Makefile
