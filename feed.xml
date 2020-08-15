@@ -5,7 +5,23 @@
         <title>Sharzy's random blog</title>
         <link>https://sharzy.in</link>
         <description>Sharzy's miscellaneous random stuff.</description>
-        <lastBuildDate>Sat, 15 Aug 2020 19:57:12 +0800</lastBuildDate>
+        <lastBuildDate>Sun, 16 Aug 2020 01:10:15 +0800</lastBuildDate>
+        
+        <item>
+            <title>关于 FELT 的杂谈</title>
+            <link>
+                https://sharzy.in/2020/08/15/FELT.html
+            </link>
+            <description>
+                <p>今天正准备洗澡，忽闻群友谈到车万同人社团 FELT 的事情，去主催 NAGI 的 Twitter 上果然看到了这样置顶的 <a href="https://twitter.com/nagi_hoshi/status/1294592855009136641">Tweet</a>。凭借我蹩脚的日语，姑且理解了其意义，简而言之：FELT 即将休止创作，下一张专辑就会是 FELT 的最后一张专辑。看到这条消息之后，想了想还是要写点什么，本来只是打算在 telegram channel 里面提几句，不过眼见篇幅不短，遂移到 blog 上来了。</p>
+
+
+            </description>
+            <pubDate>Sat, 15 Aug 2020 00:00:00 +0800</pubDate>
+            <guid>
+                https://sharzy.in/2020/08/15/FELT.html
+            </guid>
+        </item>
         
         <item>
             <title>如何搭建一个 full-text search 引擎</title>
