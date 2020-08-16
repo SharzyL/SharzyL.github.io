@@ -1,12 +1,12 @@
 ---
 layout: article
-title: About the Site
+title: About
 standalone: true
 date: 2019-7-30
 permalink: /about/
 ---
 
-# What's this site?
+# About me
 
 这里是 Sharzy 的个人博客，用来记录一些个人的发现，以及一些兴致来时写的文章，或者一些我认为比垃圾要略好一些的课程论文。更新随缘。
 
@@ -16,17 +16,17 @@ permalink: /about/
 
 欢迎通过我的邮箱 [me@sharzy.in](mailto:me@sharzy.in) 或者 Telegram 账号 [@sharzyl](https://t.me/sharzyl) 与我联系。
 
-# How is it built?
+# About the site
 
 本站使用使用了 [Jekyll](https://jekyllrb.com) 作为网页生成器，使用 `markdown` 写作，生成的网页均托管在 GitHub pages 上，在[这个 Github 仓库](https://github.com/SharzyL/SharzyL.github.io/tree/source)可以看到源代码。下面是本站使用的一些第三方库列表：
 
 - [gitalk](https://github.com/gitalk/gitalk) 提供了评论功能，可以通过 GitHub 账号登陆发表评论。
 - [mathjax](https://www.mathjax.org/) 提供了数学公式的支持。
-- [zooming.js](https://desmonding.me/zooming/) 提供了对于图片放大的支持。
+- [zooming.js](https://github.com/kingdido999/zooming) 提供了对于图片放大的支持。
 
 本站支持夜间模式，您可以通过右上角的月亮形图标开启，目前暂不支持自动识别设备的夜间模式。
 
-本站博文中代码高亮使用的是 One Dark 主题，代码使用的等宽字体是 Cascadia Code PL，站内英文字体使用的是 Roboto。
+本站博文中代码高亮使用的是 One Dark 主题，代码使用的等宽字体是 Cascadia Code，站内英文字体使用的是 Roboto。
 
 如果需要订阅本站的消息，可以通过这个 [RSS 链接](/feed.xml)。
 
