@@ -1,6 +1,7 @@
 ---
 title: "Distributed System for Deep learning Training: A Survey"
 tags: AI paper
+preview: Recent years have witnessed a growth in computation requirement to train modern deep neural networks with massive data volume and model size. Distributed systems are widely employed to accelerate the training process. In this article, we survey the principle and technology to construct such a system. 
 ---
 
 某奇妙课程的期末论文。主要介绍分布式深度学习的架构和技术。

@@ -30,7 +30,8 @@ requirements:
                 {% endif %}
                 <div class="sep-line"></div>
                 <div class="post-preview">
-                    {{ post.excerpt | strip_html }}
+                    {% if post.preview %} {{post.preview}} {% else %}
+                    {{ post.excerpt | strip_html }} {% endif %}
                 </div>
                 <div class="sep-line"></div>
                 <div class="post-meta">

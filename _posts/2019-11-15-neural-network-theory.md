@@ -1,6 +1,7 @@
 ---
 title: "Theoretical Analysis of Multi-layer Neural Network: A Survey"
 tags: AI paper
+preview: Though multi-layer neural network has been used in a wide range of areas, the explanation about how it works well is still insufficient. This survey primarily focus on the theoretical analysis about the approximation ability and training process of neural network. 
 ---
 
 本文是我在人工智能入门课上的期中论文。主要介绍关于多层神经网络的一些理论方面研究，包括可表达性，收敛性等。
@@ -71,7 +72,7 @@ works with non-sigmoid hidden layer activation functions — the Research Networ
 System. 1989. 321.
 
 [14] Matus Telgarsky. Benefits of depth in neural networks. page 23, 2016.
- 
+
 [15] X.-H. Yu. Can backpropagation error surface not have local minima. IEEE Trans. Neural
 Netw., 3(6):1019–1021, Nov./1992. ISSN 10459227. doi: 10.1109/72.165604.
 
