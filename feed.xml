@@ -5,7 +5,7 @@
         <title>Sharzy's random blog</title>
         <link>https://sharzy.in</link>
         <description>Sharzy's miscellaneous random stuff.</description>
-        <lastBuildDate>Sun, 16 Aug 2020 16:59:05 +0800</lastBuildDate>
+        <lastBuildDate>Sun, 16 Aug 2020 17:08:56 +0800</lastBuildDate>
         
         <item>
             <title>关于 FELT 的杂谈</title>
@@ -125,29 +125,13 @@
                 https://sharzy.in/2019/12/19/structured-light.html
             </link>
             <description>
-                <p>本文为我的写作与沟通课程期末长文终稿，主要介绍结构光原理及其应用</p>
+                <p>本文为我的写作与沟通课程期末长文终稿，主要介绍结构光原理及其应用。结构光技术是一种非接触式的、高精度的三维测量技术。通过一个投影装置投射出特定的图案，摄像机拍摄并识别这个图案，可以对被拍摄的物体的表面三维情况进行测量。本文对结构光技术的原理和应用进行了综合的考察。</p>
 
 
             </description>
             <pubDate>Thu, 19 Dec 2019 00:00:00 +0800</pubDate>
             <guid>
                 https://sharzy.in/2019/12/19/structured-light.html
-            </guid>
-        </item>
-        
-        <item>
-            <title>为什么微信是屑</title>
-            <link>
-                https://sharzy.in/2019/11/17/wechat-shit.html
-            </link>
-            <description>
-                <p>屑微信</p>
-
-
-            </description>
-            <pubDate>Sun, 17 Nov 2019 00:00:00 +0800</pubDate>
-            <guid>
-                https://sharzy.in/2019/11/17/wechat-shit.html
             </guid>
         </item>
         
