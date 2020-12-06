@@ -13,8 +13,7 @@
     <link href="/assets/css/common.css" rel="stylesheet">
     <script>
         const darkModeAttributeName = 'dark-mode-enabled';
-        let darkModeEnabled = window.matchMedia('(prefers-color-scheme: dark)').matches
-                           || window.localStorage.getItem(darkModeAttributeName) != null;
+        let darkModeEnabled = window.localStorage.getItem(darkModeAttributeName) != null;
         if (darkModeEnabled) {
             document.documentElement.setAttribute(darkModeAttributeName, 'true');
             storage.setItem(darkModeAttributeName, 'true');
@@ -80,7 +79,7 @@
                             Posted on 2020-06-21
                         </span>
                         <span class="inline-block">
-                            Last edited on 2020-06-21
+                            Last edited on 2020-07-16
                         </span>
                     </div>
                 

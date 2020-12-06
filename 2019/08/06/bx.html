@@ -13,8 +13,7 @@
     <link href="/assets/css/common.css" rel="stylesheet">
     <script>
         const darkModeAttributeName = 'dark-mode-enabled';
-        let darkModeEnabled = window.matchMedia('(prefers-color-scheme: dark)').matches
-                           || window.localStorage.getItem(darkModeAttributeName) != null;
+        let darkModeEnabled = window.localStorage.getItem(darkModeAttributeName) != null;
         if (darkModeEnabled) {
             document.documentElement.setAttribute(darkModeAttributeName, 'true');
             storage.setItem(darkModeAttributeName, 'true');
@@ -76,7 +75,7 @@
                             Posted on 2019-08-06
                         </span>
                         <span class="inline-block">
-                            Last edited on 2019-11-16
+                            Last edited on 2019-10-25
                         </span>
                     </div>
                 
@@ -96,7 +95,7 @@
 <h1 id="problem">Problem</h1>
 <p>设 $f(x)$ 是一个实系数多项式，求证存在一个实系数多项式$g$，使得$\deg f = \deg g$，且</p>
 
-<script type="math/tex; mode=display">\lvert g(z) \rvert^2 = \lvert f(z) \rvert^2 + 1,\ \forall \lvert z \rvert = 1</script>
+\[\lvert g(z) \rvert^2 = \lvert f(z) \rvert^2 + 1,\ \forall \lvert z \rvert = 1\]
 
 <h1 id="sketch">Sketch</h1>
 
@@ -104,31 +103,31 @@
 
 <p>稍加计算不难发现$\lvert f(z) \rvert $在单位圆上是一个关于$x :=\Re z$的多项式，因此我们考虑研究对于什么样的 $r(x) \in \mathbf{R}[x]$，存在一个多项式 $k(x) \in \mathbf{R}[x]$，使得</p>
 
-<script type="math/tex; mode=display">r(x) = \lvert k(z) \rvert^2,\ \forall \lvert z \rvert = 1</script>
+\[r(x) = \lvert k(z) \rvert^2,\ \forall \lvert z \rvert = 1\]
 
 <p>（其中$x := \Re z$），称这样的一个多项式$r$为模多项式，为了研究这样所有模多项式$r(x)$的性状，我们考虑研究它的根的情况，即研究$\lvert k(z)\rvert^2$作为一个关于$x = \Re z$的多项式的根是怎么样的. 注意到</p>
 
-<script type="math/tex; mode=display">\lvert k(z) \rvert^2 = A^2\prod\lvert z - r_j \rvert^2\prod \lvert (z - z_j)(z - \overline{z_j})\rvert^2</script>
+\[\lvert k(z) \rvert^2 = A^2\prod\lvert z - r_j \rvert^2\prod \lvert (z - z_j)(z - \overline{z_j})\rvert^2\]
 
 <p>其中$A$是$k$的首项系数，$r_j$是它的所有实根，$z_j, \overline{z_j}$是它的所有共轭复根对，$\prod$表示对这些根求乘积. 因此我们只需研究每个因式的根即可. 设$z_j = a_j + i b_j$，$z = x + iy$</p>
 
-<script type="math/tex; mode=display">\lvert z - r_j \rvert^2 = （x - r_j)^2 + y^2 = 1 + r_j^2 - 2r_jx</script>
+\[\lvert z - r_j \rvert^2 = （x - r_j)^2 + y^2 = 1 + r_j^2 - 2r_jx\]
 
 <p>它的根为</p>
 
-<script type="math/tex; mode=display">\frac{1 + r_j^2}{2r_j}</script>
+\[\frac{1 + r_j^2}{2r_j}\]
 
 <p>这个数的绝对值不小于1，并且易见对于每个绝对值不小于1的实数$x$，都存在一个$r$，使得$x = \frac{1 + r_j^2}{2r_j}$，另一方面</p>
 
-<script type="math/tex; mode=display">\lvert (z - z_j)(z - \overline{z_j})\rvert^2 = \left((x - a_j)^2 + (y - b_j)^2)((x - a_j)^2 + (y - b_j)^2\right) = (1 + a_j^2 + b_j^2 - 2a_jx)^2 - (2by)^2</script>
+\[\lvert (z - z_j)(z - \overline{z_j})\rvert^2 = \left((x - a_j)^2 + (y - b_j)^2)((x - a_j)^2 + (y - b_j)^2\right) = (1 + a_j^2 + b_j^2 - 2a_jx)^2 - (2by)^2\]
 
 <p>经过一些计算，它的根是</p>
 
-<script type="math/tex; mode=display">x = \frac{1}{2} \left( (a_j + \frac{a_j}{a_j^2 + b_j^2}) \pm (b_j - \frac{b_j}{a_j^2 + b_j^2})i\right)</script>
+\[x = \frac{1}{2} \left( (a_j + \frac{a_j}{a_j^2 + b_j^2}) \pm (b_j - \frac{b_j}{a_j^2 + b_j^2})i\right)\]
 
 <p>不难验证对于任意实数$u, v$，均存在实数$a,b$，使得</p>
 
-<script type="math/tex; mode=display">u = a_j + \frac{a_j}{a_j^2 + b_j^2},\quad v = b_j - \frac{b_j}{a_j^2 + b_j^2}</script>
+\[u = a_j + \frac{a_j}{a_j^2 + b_j^2},\quad v = b_j - \frac{b_j}{a_j^2 + b_j^2}\]
 
 <p>此外通过观察，我们还得到了$r$的常数项为正数. 我们猜想这是一个充要条件，也就是说，当且仅当$r(z)$的所有实根的绝对值不小于1时，且常数项为正时，存在一个满足$r(x) = \lvert k(z) \rvert^2,\ \forall \lvert z \rvert = 1$的多项式$k$. 根据上面的分析，这个命题的正确性是显然的.</p>
 

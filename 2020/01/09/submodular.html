@@ -13,8 +13,7 @@
     <link href="/assets/css/common.css" rel="stylesheet">
     <script>
         const darkModeAttributeName = 'dark-mode-enabled';
-        let darkModeEnabled = window.matchMedia('(prefers-color-scheme: dark)').matches
-                           || window.localStorage.getItem(darkModeAttributeName) != null;
+        let darkModeEnabled = window.localStorage.getItem(darkModeAttributeName) != null;
         if (darkModeEnabled) {
             document.documentElement.setAttribute(darkModeAttributeName, 'true');
             storage.setItem(darkModeAttributeName, 'true');
@@ -114,11 +113,11 @@
   <li>
     <p>$\forall\ r \in {1, 2, 3}, j \in S$,</p>
 
-    <script type="math/tex; mode=display">f(\{1, 2, \ldots, k\}) \geq f(\{1, 2, \ldots, k - 1\} \cup\{j\})</script>
+\[f(\{1, 2, \ldots, k\}) \geq f(\{1, 2, \ldots, k - 1\} \cup\{j\})\]
 
     <p>求证对任意 $S$ 的三元子集 $T$,</p>
 
-    <script type="math/tex; mode=display">f(T) \leq \frac{27}{19}f(\{1, 2, 3\})</script>
+\[f(T) \leq \frac{27}{19}f(\{1, 2, 3\})\]
   </li>
 </ol>
 
@@ -126,19 +125,18 @@
 
 <p>$\forall\ a, b, c \in S$,</p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{align*}
-	f(a, b, c) &\leq f(a) + f(b) + f(c) \\
-	&\leq 3f(1) \\
-	\frac53 f(a, b, c) & \leq f(a, b, c) + 2f(1)\\
-	&\leq f(1, a, b, c) + 2f(1)\\
-	& \leq f(1, a) + f(1, b) + f(1, c) \\
-	& \leq 3f(1, 2) \\
-	\frac{19}9 f(a, b, c) &\leq f(a, b, c) + 2f(1, 2)\\
-	&\leq f(1, 2, a, b, c) + 2f(1, 2) \\
-	&\leq f(1, 2, a) + f(1, 2, b) + f(1, 2, c)\\
-	&\leq 3f(1, 2, 3)
-\end{align*} %]]></script>
+\[\begin{align*}
+	f(a, b, c) &amp;\leq f(a) + f(b) + f(c) \\
+	&amp;\leq 3f(1) \\
+	\frac53 f(a, b, c) &amp; \leq f(a, b, c) + 2f(1)\\
+	&amp;\leq f(1, a, b, c) + 2f(1)\\
+	&amp; \leq f(1, a) + f(1, b) + f(1, c) \\
+	&amp; \leq 3f(1, 2) \\
+	\frac{19}9 f(a, b, c) &amp;\leq f(a, b, c) + 2f(1, 2)\\
+	&amp;\leq f(1, 2, a, b, c) + 2f(1, 2) \\
+	&amp;\leq f(1, 2, a) + f(1, 2, b) + f(1, 2, c)\\
+	&amp;\leq 3f(1, 2, 3)
+\end{align*}\]
 
 <p>Q.E.D</p>
 
@@ -158,8 +156,8 @@
 
 <p>为了方便描述，对于任何一个顶点的子集 $V$，我们用一个随机集合 $\mathcal{S}_t(V)$ 表示时间 $t$ 后传播的顶点的集合。于是问题变成了，求</p>
 
-<script type="math/tex; mode=display">\DeclareMathOperator{\argmax}{arg\,max}
-\argmax_{V: |V| = k} \mathbb{E}(\mathcal{S}_T(V))</script>
+\[\DeclareMathOperator{\argmax}{arg\,max}
+\argmax_{V: |V| = k} \mathbb{E}(\mathcal{S}_T(V))\]
 
 <p>为了研究这个问题，我们转而研究函数 $ f(V) = \mathbb{E}(\mathcal{S}_T(V))$ 的性质。显然，下面几条性质是显然被满足的：</p>
 
@@ -178,7 +176,7 @@
 
 <p>记 $X = A$, $Y = A\cap B$, $C = B \backslash A$，那么上面的性质等价于</p>
 
-<p><script type="math/tex">X \subseteq Y \Longrightarrow f(X \cup C) - f(X) \leq f(Y\cup C) - f(Y)</script>
+<p>\(X \subseteq Y \Longrightarrow f(X \cup C) - f(X) \leq f(Y\cup C) - f(Y)\)
 这个式子，从某种意义上来说，表示的是 “边界效应递减”。也就是说，当目前已经拥有的资源越多的时候，获得一个新的资源所带来的收益就越小。当把这个效应带入到我们目前的模型当中来的时候，可以发现，这样的效应是很符合我们的期望的 —— 已经知道这个消息的人越多，新加入一个人所带来的收益就越小。</p>
 
 <p>当然这一点是需要严格的数学证明的， 但是对于我们当前的模型来说，这个证明是容易的，因而留给读者。我们更关心的是这样一个性质能够带来什么。在此之前，我们需要阐明一下我们的标题：submodular 函数（次模函数）就是指满足上面这个式子的函数。而如果再加上性质1， 2 的话，这个函数就被称为 “非负单调 submodular 函数”。有了这个拗口的名词之后，我们的问题可以简化为：如何求一个非负单调 submodular 函数在集合元素个数一定时候的最大值？</p>
@@ -187,10 +185,10 @@
 
 <p>既然没法精确地解决，我们可以考虑使用万能的贪心算法：从 $V = \emptyset$开始，我们每次选取一个 $w \not \in V$ 的 $w$，使得 $f(V\cup w)$ 最大，直到有 $k$ 个元素未知。记这样得到的集合为 $V_{greedy}$，不妨记 $V_{greedy} = {1, 2, \ldots, k}$，那么就有 $\forall\ r \in V_{greedy}, j\in V(G)$：</p>
 
-<script type="math/tex; mode=display">f(\{1, 2, \ldots, r\}) \geq f(\{1, 2, \ldots, r - 1\} \cup\{j\})</script>
+\[f(\{1, 2, \ldots, r\}) \geq f(\{1, 2, \ldots, r - 1\} \cup\{j\})\]
 
 <p>现在我们已经离那道 CTST 题目很接近了。首先我们将那道 CTST 题目推广一下，我们把 3 改成 $k$，把 $\frac{27}{19}$改成 $\frac{k^k}{k^k - (k - 1)^{k - 1}}$，用完全相同的手法不难证明命题仍然成立。那么根据题目的结论，我们就有，对于任何一个 $k$ 元集 $V$：
-<script type="math/tex">f(V_{greedy}) \leq \frac{k^k}{k^k - (k - 1)^{k - 1}} f(V)</script>
+\(f(V_{greedy}) \leq \frac{k^k}{k^k - (k - 1)^{k - 1}} f(V)\)
 注意到 $\frac{k^k}{k^k - (k - 1)^{k - 1}} \leq \frac{e}{e - 1} \approx 1.582$，这也就是说，相比起最佳策略，贪心策略不会坏到哪里去：最好的策略也不可能比它更好 $0.6$ 倍。</p>
 
 <h1 id="postscript">Postscript</h1>

@@ -5,7 +5,22 @@
         <title>Sharzy's random blog</title>
         <link>https://sharzy.in</link>
         <description>Sharzy's miscellaneous random stuff.</description>
-        <lastBuildDate>Sun, 16 Aug 2020 17:08:56 +0800</lastBuildDate>
+        <lastBuildDate>Sun, 06 Dec 2020 14:12:21 +0800</lastBuildDate>
+        
+        <item>
+            <title>「我就进去看看」</title>
+            <link>
+                https://sharzy.in/2020/12/06/rock-live.html
+            </link>
+            <description>
+                <p>12.4 日，一个周五的晚上，在代码中沉浸了一个下午，又在城市中游荡了许久，最终想起了几天前看到的海报：今晚 8 点，在学校附近的 live house，似乎有一个 rock live。想来今晚也无事，便从快餐店中冲出，急速赶往 live house。</p>
+
+            </description>
+            <pubDate>Sun, 06 Dec 2020 00:00:00 +0800</pubDate>
+            <guid>
+                https://sharzy.in/2020/12/06/rock-live.html
+            </guid>
+        </item>
         
         <item>
             <title>关于 FELT 的杂谈</title>
@@ -14,7 +29,6 @@
             </link>
             <description>
                 <p>今天正准备洗澡，忽闻群友谈到车万同人社团 FELT 的事情，去主催 NAGI 的 Twitter 上果然看到了这样置顶的 <a href="https://twitter.com/nagi_hoshi/status/1294592855009136641">Tweet</a>。凭借我蹩脚的日语，姑且理解了其意义，简而言之：FELT 即将休止创作，下一张专辑就会是 FELT 的最后一张专辑。看到这条消息之后，想了想还是要写点什么，本来只是打算在 telegram channel 里面提几句，不过眼见篇幅不短，遂移到 blog 上来了。</p>
-
 
             </description>
             <pubDate>Sat, 15 Aug 2020 00:00:00 +0800</pubDate>
@@ -31,7 +45,6 @@
             <description>
                 <p>当我们使用搜索引擎，使用网站或者在线服务内置的搜索功能，或者管理本地的文本文件的时候，都会面临这样一种需求：如何在大量的自然语言文本中快速找到符合特定模式的部分？对于精确的字符串匹配，当然已经有成熟的算法了。但是更多的时候我们需要处理更复杂的需求：用户可能只记得大概的模式，因此我们的搜索功能应该能够在一定限度内容忍不一致；为了让用户能够更快找到有用的信息，我们需要将搜索的结果按照 “相关性” 排序；为了让交互更加直观，我们需要向用户展示一些预览文本，从而让用户能够了解自己搜索到了什么。</p>
 
-
             </description>
             <pubDate>Sat, 11 Jul 2020 00:00:00 +0800</pubDate>
             <guid>
@@ -47,7 +60,6 @@
             <description>
                 <p>在上学期选了《技术哲学》课知难而退后，这学期我还是忍不住选了胡老师的《技术通史》课。这门课的期末作业是读书笔记，胡老师提供了几十本各种各样的书（如下图所示）。在这学期里面者确实读过其中的好几本，包括《人类简史》，《技术与文明》，《理解媒介》，《城市发展史》（看了一半），《口语文化和书面文化》（看了一小部分）。最后还是选择了 A History of Modern Computing 这本书作为读书笔记的对象。</p>
 
-
             </description>
             <pubDate>Sun, 21 Jun 2020 00:00:00 +0800</pubDate>
             <guid>
@@ -61,8 +73,7 @@
                 https://sharzy.in/2020/02/04/cjk-helper.html
             </link>
             <description>
-                <p>之前的文章介绍过，我常用 VSCode 来进行 LaTeX 写作。但是当进行中文写作时，VSCode 的一个问题常常让我感到不快：对于英文的内容，我们可以使用 <code class="highlighter-rouge">ctrl</code> + 方向键 来进行以单词为单位的跳转（如果只用方向键的话，效果是以字符为单位跳转），<code class="highlighter-rouge">ctrl</code>  + <code class="highlighter-rouge">backspace</code> 可以做到以单词为单位的删除，等等。然而由于 VSCode 机制的原因，这样的快捷健对于中文的效果是很糟糕的：它会将一整段中文识别为一个单词，这导致跳转 / 删除的范围是一整段，这一般并不是我们需要的。本文将记录我解决这一问题的过程。</p>
-
+                <p>之前的文章介绍过，我常用 VSCode 来进行 LaTeX 写作。但是当进行中文写作时，VSCode 的一个问题常常让我感到不快：对于英文的内容，我们可以使用 <code class="language-plaintext highlighter-rouge">ctrl</code> + 方向键 来进行以单词为单位的跳转（如果只用方向键的话，效果是以字符为单位跳转），<code class="language-plaintext highlighter-rouge">ctrl</code>  + <code class="language-plaintext highlighter-rouge">backspace</code> 可以做到以单词为单位的删除，等等。然而由于 VSCode 机制的原因，这样的快捷健对于中文的效果是很糟糕的：它会将一整段中文识别为一个单词，这导致跳转 / 删除的范围是一整段，这一般并不是我们需要的。本文将记录我解决这一问题的过程。</p>
 
             </description>
             <pubDate>Tue, 04 Feb 2020 00:00:00 +0800</pubDate>
@@ -79,7 +90,6 @@
             <description>
                 <p>2017 年的 CTST 上有一道看起来有些奇特的题目，当年这道题由于放送事故被整成了错题，导致没有起到任何区分度。我原本也没有太在意这样的一个题目，直到这学期某位老师给我们讲课的时候讲到了一些关于社交网络传播的内容，经过一些思考之后，我发现老师讲的内容里面正好蕴含了上面这道题目的背景。遂（在大半个学期之后）记录之。</p>
 
-
             </description>
             <pubDate>Thu, 09 Jan 2020 00:00:00 +0800</pubDate>
             <guid>
@@ -94,7 +104,6 @@
             </link>
             <description>
                 <p>之前的文章中介绍了 LaTeX 的工具链的相关内容。在这一节中，我将根据我当前微小的经验，记录一下我目前使用 LaTeX 写出一篇完整的论文所需要的工具和工作流。</p>
-
 
             </description>
             <pubDate>Wed, 08 Jan 2020 00:00:00 +0800</pubDate>
@@ -111,7 +120,6 @@
             <description>
                 <p>某奇妙课程的期末论文。主要介绍分布式深度学习的架构和技术。</p>
 
-
             </description>
             <pubDate>Wed, 08 Jan 2020 00:00:00 +0800</pubDate>
             <guid>
@@ -126,7 +134,6 @@
             </link>
             <description>
                 <p>本文为我的写作与沟通课程期末长文终稿，主要介绍结构光原理及其应用。结构光技术是一种非接触式的、高精度的三维测量技术。通过一个投影装置投射出特定的图案，摄像机拍摄并识别这个图案，可以对被拍摄的物体的表面三维情况进行测量。本文对结构光技术的原理和应用进行了综合的考察。</p>
-
 
             </description>
             <pubDate>Thu, 19 Dec 2019 00:00:00 +0800</pubDate>
@@ -143,7 +150,6 @@
             <description>
                 <p>本文是我在人工智能入门课上的期中论文。主要介绍关于多层神经网络的一些理论方面研究，包括可表达性，收敛性等。</p>
 
-
             </description>
             <pubDate>Fri, 15 Nov 2019 00:00:00 +0800</pubDate>
             <guid>
@@ -158,7 +164,6 @@
             </link>
             <description>
                 <p>本文为我的写作与沟通课程的短文终稿。主要介绍了关于三角形剖分的一些问题和应用。</p>
-
 
             </description>
             <pubDate>Sun, 10 Nov 2019 00:00:00 +0800</pubDate>
@@ -175,7 +180,6 @@
             <description>
                 <p>TeX作为 Kunth 为了 TAOCP 所开发的排版工具，它专注于生成高质量的学术排版效果，是我日常作业/文章写作的最佳选择之一。LaTeX 绝大多数情况下以 pdf 作为输出格式，能够在各种设备上保持相同的显示效果，这在很大程度上和 LaTeX 是针对出版物排版所设计的有关（这和注重自适应式布局的 web 型格式，例如 markdown, html, epub 不同）。对于没有较强排版需求的情况下，例如笔记，发言稿等等，我会使用 Typora 来写 Markdown。在本文和后续的一些文章中，我将介绍 LaTeX 的一些内容，以及用它来编写文章，尤其是学术文章的实践。</p>
 
-
             </description>
             <pubDate>Thu, 24 Oct 2019 00:00:00 +0800</pubDate>
             <guid>
@@ -190,7 +194,6 @@
             </link>
             <description>
                 <p>前些日子看到Github pages的一些介绍（虽然之前就知道了），再加上想复习一下CSS，于是便<del>脑子一热</del>萌发了使用Github pages搭建blog的想法，写了几天代码<del>CSS</del>，算是把基本功能都完成了。这里总结一些搭建过程中遇到的问题。</p>
-
 
             </description>
             <pubDate>Thu, 08 Aug 2019 00:00:00 +0800</pubDate>
@@ -207,7 +210,6 @@
             <description>
                 <p>昨晚看到今年北夏第一天的题目，显然第四题是最好看的一个，发现一个比较自然的做法，记录如下：</p>
 
-
             </description>
             <pubDate>Tue, 06 Aug 2019 00:00:00 +0800</pubDate>
             <guid>
@@ -223,7 +225,6 @@
             <description>
                 <p>$\{n\alpha\}$的均匀分布性是一个非常方便好用的命题，之前我一直只知道使用Wyle判据的证明方法，但是这一证明方法需要用到稍深入的分析学，包括Weierstrass的三角多项式逼近定理。今天我正在思考另外一个和小数部分有关的命题，突然想到了一个有趣的方法，可以用于证明这个问题，于是便将它记录下来了.</p>
 
-
             </description>
             <pubDate>Sun, 04 Aug 2019 00:00:00 +0800</pubDate>
             <guid>
@@ -238,7 +239,6 @@
             </link>
             <description>
                 <p>最近看到一篇<a href="https://www.quantamagazine.org/mathematician-solves-computer-science-conjecture-in-two-pages-20190725/">文章</a>，讲述了一个几十余年历史的猜想近日被证明的事情。令人惊讶的是<a href="https://arxiv.org/abs/1907.00847">论文</a>中的这个证明主题居然只有不到两页，并且只用到了基本的线性代数，遂记录之。</p>
-
 
             </description>
             <pubDate>Thu, 01 Aug 2019 00:00:00 +0800</pubDate>

@@ -13,8 +13,7 @@
     <link href="/assets/css/common.css" rel="stylesheet">
     <script>
         const darkModeAttributeName = 'dark-mode-enabled';
-        let darkModeEnabled = window.matchMedia('(prefers-color-scheme: dark)').matches
-                           || window.localStorage.getItem(darkModeAttributeName) != null;
+        let darkModeEnabled = window.localStorage.getItem(darkModeAttributeName) != null;
         if (darkModeEnabled) {
             document.documentElement.setAttribute(darkModeAttributeName, 'true');
             storage.setItem(darkModeAttributeName, 'true');
@@ -202,36 +201,36 @@
 
 <span class="k">class</span> <span class="nc">Searcher</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">reverse_index</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Set</span><span class="p">[</span><span class="n">DocumentPos</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_document_storage</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">reverse_index</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Set</span><span class="p">[</span><span class="n">DocumentPos</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_document_storage</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
 
     <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">document</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">uid</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>  
         <span class="c1"># 将 document 添加到索引中（uid 是文档的编号）
-</span>        <span class="n">document</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="s">' '</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">seg</span> <span class="ow">in</span> <span class="n">jieba</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">document</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'search'</span><span class="p">):</span>
+</span>        <span class="n">document</span> <span class="o">=</span> <span class="n">document</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="s">' '</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">seg</span> <span class="ow">in</span> <span class="n">jieba</span><span class="p">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">document</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'search'</span><span class="p">):</span>
             <span class="n">word</span> <span class="o">=</span> <span class="n">seg</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
             <span class="n">document_pos</span> <span class="o">=</span> <span class="n">DocumentPos</span><span class="p">(</span><span class="n">uid</span><span class="p">,</span> <span class="n">seg</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">seg</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-            <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">reverse_index</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">reverse_index</span><span class="p">[</span><span class="n">word</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">document_pos</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">reverse_index</span><span class="p">:</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">reverse_index</span><span class="p">[</span><span class="n">word</span><span class="p">].</span><span class="n">add</span><span class="p">(</span><span class="n">document_pos</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">reverse_index</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">document_pos</span><span class="p">}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_document_storage</span><span class="p">[</span><span class="n">uid</span><span class="p">]</span> <span class="o">=</span> <span class="n">document</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">reverse_index</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">document_pos</span><span class="p">}</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_document_storage</span><span class="p">[</span><span class="n">uid</span><span class="p">]</span> <span class="o">=</span> <span class="n">document</span>
 
     <span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seg</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="n">DocumentPos</span><span class="p">]:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">reverse_index</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">seg</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">reverse_index</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">seg</span><span class="p">,</span> <span class="p">{})</span>
 
     <span class="k">def</span> <span class="nf">get_doc_part</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">:</span> <span class="n">DocumentPos</span><span class="p">,</span> <span class="n">padding</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
         <span class="n">uid</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="n">pos</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_document_storage</span><span class="p">[</span><span class="n">uid</span><span class="p">][</span><span class="n">start</span> <span class="o">-</span> <span class="n">padding</span><span class="p">:</span> <span class="n">end</span> <span class="o">+</span> <span class="n">padding</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">_document_storage</span><span class="p">[</span><span class="n">uid</span><span class="p">][</span><span class="n">start</span> <span class="o">-</span> <span class="n">padding</span><span class="p">:</span> <span class="n">end</span> <span class="o">+</span> <span class="n">padding</span><span class="p">]</span>
     
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
     <span class="n">idx</span> <span class="o">=</span> <span class="n">Searcher</span><span class="p">()</span>
     <span class="n">corpus_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s">'corpus'</span><span class="p">)</span>  <span class="c1"># 存放文档的目录
-</span>    <span class="k">for</span> <span class="n">uid</span><span class="p">,</span> <span class="n">document_path</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">corpus_path</span><span class="o">.</span><span class="n">iterdir</span><span class="p">()):</span>
-        <span class="n">idx</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">document_path</span><span class="o">.</span><span class="n">read_text</span><span class="p">(),</span> <span class="n">uid</span><span class="p">)</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">idx</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s">'亲自部署'</span><span class="p">)</span>
+</span>    <span class="k">for</span> <span class="n">uid</span><span class="p">,</span> <span class="n">document_path</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">corpus_path</span><span class="p">.</span><span class="n">iterdir</span><span class="p">()):</span>
+        <span class="n">idx</span><span class="p">.</span><span class="n">index</span><span class="p">(</span><span class="n">document_path</span><span class="p">.</span><span class="n">read_text</span><span class="p">(),</span> <span class="n">uid</span><span class="p">)</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">idx</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="s">'亲自部署'</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">idx</span><span class="o">.</span><span class="n">get_doc_part</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">idx</span><span class="p">.</span><span class="n">get_doc_part</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 </pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>当文档数量太多的时候，建立起倒排索引需要大量的空间，因此需要将这些索引放在硬盘上持久化，并且通过适当的方式来快速从硬盘中获得需要的索引。持久化的过程、以及如何从硬盘上高效地读取索引常常是全文搜索库的核心，但是由于这不是本文的重点，这里就不多做介绍了；相关信息可以参考 Elasticsearch 或者 Lucene 的文档。</p>
@@ -251,29 +250,29 @@
 
 <p>一个非常常用的策略被称为 $\text{tf-idf}$，它的原理如下：我们用 $\mathcal W$ 和 $\mathcal D$ 分别表示词典和文档库（corpus）。对于每个 $w\in\mathcal W$, $d\in\mathcal D$，我们用 $f(w, d)$ 表示 $w$ 在 $d$ 中出现的次数，用 $L(d)$ 表示 $d$ 中的总词数，用 $w\in d$ 表示 $f(w,d) &gt; 0$；同时，我们用 $N(w)$ 来表示词 $w$ 出现的文档数，用 $N$  表示文档的总数。我们定义</p>
 
-<script type="math/tex; mode=display">\begin{gather}
+\[\begin{gather}
 \text{tf}(w, d) = \frac{f(w, d)}{L(d)},\\
 \text{idf}(w) = \log\frac{N}{N(w)}.
-\end{gather}</script>
+\end{gather}\]
 
 <p>其中 $\text{tf}$ 和 $\text{idf}$ 分别是 term frequency 和 inverse document frequency 的缩写。注意到 $\text{tf}$ 可以衡量一个词在某个文章中出现的频率，$\text{idf}$ 可以衡量某个词的 “稀有程度”，因此 $\text{tf-idf}$ 就是将它们乘起来作为权重。</p>
 
 <p>实践中使用 $\text{tf-idf}$ 的时候还需要考虑一些工程上的问题。由于 $\text{idf}$ 的分母可能为 $0$，这会给计算造成麻烦，为了避免这种麻烦，同时也为了让 $\text{idf}$ 在对于频率很小的词的时候表现更加平滑，我们常用修正过的 $\text{idf}$，例如像下面这样的式子</p>
 
-<script type="math/tex; mode=display">\text{idf-smooth} =
-\log\frac{N + 1}{N(w) + 1} + 1</script>
+\[\text{idf-smooth} =
+\log\frac{N + 1}{N(w) + 1} + 1\]
 
 <p>来进行代替（当然，里面的参数 1 也可以调节成随便什么合理的数值）。关于 $\text{tf}$，也可以用类似的策略来平滑化，例如在应用广泛的 <a href="https://en.wikipedia.org/wiki/Okapi_BM25">BM25 算法</a>中，它考虑了这样的平滑化</p>
 
-<script type="math/tex; mode=display">\text{tf-smooth} = \frac{f(w, d)(k_1 + 1)}{f(w, d) + k_1(1 - b + b\cdot L(d) / \text{avg}L)},</script>
+\[\text{tf-smooth} = \frac{f(w, d)(k_1 + 1)}{f(w, d) + k_1(1 - b + b\cdot L(d) / \text{avg}L)},\]
 
 <p>其中 $k_1, b$ 是参数，$\text{avg}L$ 表示 $L(d)$ 的平均值。总的来说，在实际操作过程中，我们一般用</p>
 
-<script type="math/tex; mode=display">\sum_{w \in Q}\text{tf-smooth}(w, d)\cdot \text{idf-smooth}(w)</script>
+\[\sum_{w \in Q}\text{tf-smooth}(w, d)\cdot \text{idf-smooth}(w)\]
 
 <p>来衡量每个文档 $d$ 与查询 $Q$ 的相关程度。至于 Lucene，它默认采用了一种奇怪的加权</p>
 
-<script type="math/tex; mode=display">\sum_{w\in Q} \text{tf-smooth}(w, d)^{1/2} \cdot\text{idf-smooth}(w)^2\cdot\text{boost}.</script>
+\[\sum_{w\in Q} \text{tf-smooth}(w, d)^{1/2} \cdot\text{idf-smooth}(w)^2\cdot\text{boost}.\]
 
 <p>其中 $\text{boost}$ 是用户指定的权重。至于为什么选取这样的指数，我在它的<a href="https://lucene.apache.org/core/8_5_2/core/org/apache/lucene/search/similarities/TFIDFSimilarity.html">文档</a>中没有看到什么解释。此外，Lucene 为了处理复杂的<a href="https://lucene.apache.org/core/8_5_2/queryparser/org/apache/lucene/queryparser/classic/package-summary.html">查询语法</a>，对于不同关键词的权重进行了比较复杂的处理，详情可见这篇<a href="https://lucene.apache.org/core/8_5_2/core/org/apache/lucene/search/package-summary.html">文档</a>。</p>
 
@@ -289,32 +288,30 @@
 
 <p>注意到信息论中的互信息（mutual information）</p>
 
-<script type="math/tex; mode=display">M(X, Y) = H(X) - H(X \mid Y) = \sum_{x,\ y} p(x, y) \log\frac{p(x, y)}{p(x)p(y)}</script>
+\[M(X, Y) = H(X) - H(X \mid Y) = \sum_{x,\ y} p(x, y) \log\frac{p(x, y)}{p(x)p(y)}\]
 
 <p>这一概念可以用来衡量在知道随机变量 $Y$ 时，变量 $Y$ 的不确定程度减小的程度（其中 $H$ 表示条件熵）。这个减小程度越大，就说明 $X$ 和 $Y$ 的相关性越强。考虑用 $Y$ 看成是一个衡量某个给定关键词在文章中出现情况的随机变量，$X$ 看成是一个随机文档。那么 $M(X, Y)$ 就可以衡量关键词对于这篇文档的重要程度。</p>
 
 <p>$\Omega = {(w, d) \mid w \in D}$ 是我们所考虑的概率空间，在这个概率空间中，每个文档被赋予了相同的概率；给定一篇文档 $d$，$p(w \mid d)$ 与 $f(w, d)$ 成正比。我们用 $W$ 和 $D$ 表示 $\Omega$ 中代表关键词和文档的随机变量。为了计算 $M(W, D)$，我们首先注意到对于每个 $w\in \mathcal W$, $d\in\mathcal D$，若 $w \in d$ ，则</p>
 
-<script type="math/tex; mode=display">p(d \mid w) = \frac{1}{\# \{d \in \mathcal D : w \in d\}},</script>
+\[p(d \mid w) = \frac{1}{\# \{d \in \mathcal D : w \in d\}},\]
 
 <p>反之 $p(d\mid w) = 0$，因此我们可以计算出</p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{aligned}
-H(D \mid W = w) &= -\sum_{d \in \mathcal D} p(d \mid w)\cdot\log p(d \mid w)\\
-&= -\log  \frac{1}{\#\{d\in \mathcal D: w \in d\}} \\
-&= \log\#\mathcal D - \text{idf}(w) \\
-&= H(D) - \text{idf}(w).
-\end{aligned} %]]></script>
+\[\begin{aligned}
+H(D \mid W = w) &amp;= -\sum_{d \in \mathcal D} p(d \mid w)\cdot\log p(d \mid w)\\
+&amp;= -\log  \frac{1}{\#\{d\in \mathcal D: w \in d\}} \\
+&amp;= \log\#\mathcal D - \text{idf}(w) \\
+&amp;= H(D) - \text{idf}(w).
+\end{aligned}\]
 
 <p>从而</p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{aligned}
-M(D, W) &= H(D) - H(D\mid W) = H(D) - \sum_{w\in\mathcal W} p(w) H(D\mid W = w) \\
-&= \sum_{w\in\mathcal W} \text{idf}(w)\cdot p(w) \\
-&= \sum_{w, d \in \Omega} \text{tf}(w, d) \cdot\text{idf}(w).
-\end{aligned} %]]></script>
+\[\begin{aligned}
+M(D, W) &amp;= H(D) - H(D\mid W) = H(D) - \sum_{w\in\mathcal W} p(w) H(D\mid W = w) \\
+&amp;= \sum_{w\in\mathcal W} \text{idf}(w)\cdot p(w) \\
+&amp;= \sum_{w, d \in \Omega} \text{tf}(w, d) \cdot\text{idf}(w).
+\end{aligned}\]
 
 <p>因此我们可以看到，$M(X, Y)$ 即为所有 $\text{tf-idf}$ 的总和。而 $M$ 正是衡量 $D$ 和 $W$ 这两个随机变量的相关程度的，因此 $\text{tf-idf}$ 可以被解释为对于某个特定的文档和关键词，它们对于总的相关程度的贡献值。</p>
 
@@ -347,11 +344,11 @@ M(D, W) &= H(D) - H(D\mid W) = H(D) - \sum_{w\in\mathcal W} p(w) H(D\mid W = w) 
 7
 8
 </pre></td><td class="rouge-code"><pre><span class="c1"># Add up the boosts for the matched terms in this passage
-</span><span class="n">score</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">boost</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">matches</span><span class="p">)</span>  <span class="c1"># boost 表示权重
+</span><span class="n">score</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">boost</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">f</span><span class="p">.</span><span class="n">matches</span><span class="p">)</span>  <span class="c1"># boost 表示权重
 </span>
 <span class="c1"># Favor diversity: multiply score by the number of separate
 # terms matched
-</span><span class="n">score</span> <span class="o">*=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">matched_terms</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="ow">or</span> <span class="mi">1</span>
+</span><span class="n">score</span> <span class="o">*=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">matched_terms</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="ow">or</span> <span class="mi">1</span>
 
 <span class="k">return</span> <span class="n">score</span>
 </pre></td></tr></tbody></table></code></pre></div></div>
@@ -364,7 +361,7 @@ M(D, W) &= H(D) - H(D\mid W) = H(D) - \sum_{w\in\mathcal W} p(w) H(D\mid W = w) 
 
 <h2 id="拼写纠错">拼写纠错</h2>
 
-<p>拼写纠错。例如当我搜索 “pank band” 的时候，duckduckgo 就会提示 <code class="highlighter-rouge">Including results for "punk band"? </code>，如下图所示。</p>
+<p>拼写纠错。例如当我搜索 “pank band” 的时候，duckduckgo 就会提示 <code class="language-plaintext highlighter-rouge">Including results for "punk band"? </code>，如下图所示。</p>
 
 <p><img src="https://p.sda1.dev/0/414cad5176d70c729c303201bb622206/image.png" alt="" /></p>
 

@@ -13,8 +13,7 @@
     <link href="/assets/css/common.css" rel="stylesheet">
     <script>
         const darkModeAttributeName = 'dark-mode-enabled';
-        let darkModeEnabled = window.matchMedia('(prefers-color-scheme: dark)').matches
-                           || window.localStorage.getItem(darkModeAttributeName) != null;
+        let darkModeEnabled = window.localStorage.getItem(darkModeAttributeName) != null;
         if (darkModeEnabled) {
             document.documentElement.setAttribute(darkModeAttributeName, 'true');
             storage.setItem(darkModeAttributeName, 'true');
@@ -76,7 +75,7 @@
                             Posted on 2019-08-04
                         </span>
                         <span class="inline-block">
-                            Last edited on 2019-11-16
+                            Last edited on 2019-09-06
                         </span>
                     </div>
                 
@@ -97,7 +96,7 @@
 
 <p>$\alpha \in \mathbb{R} \backslash \mathbb{Q}$，求证对于任何一个区间$I \in [0, 1]$，均有</p>
 
-<script type="math/tex; mode=display">\lim_{n \to \infty }\frac{\#\{i \in \mathbb{Z} \mid 1 \leq i \leq n, \{i\alpha\} \in I\}}{n} = \lvert I\rvert</script>
+\[\lim_{n \to \infty }\frac{\#\{i \in \mathbb{Z} \mid 1 \leq i \leq n, \{i\alpha\} \in I\}}{n} = \lvert I\rvert\]
 
 <h1 id="proof">Proof</h1>
 
@@ -105,22 +104,21 @@
 
 <p>对任意一个$\mathbb{R}$上的区间$I$和正整数$n$，记$f(I, n) = \sum_{i = 0}^n \lvert (n\alpha)^*\cap I\rvert$ ，称$I$是好的，如果</p>
 
-<script type="math/tex; mode=display">\lim_{n \to \infty}\frac{f(I, n)}{n} = \lvert I\rvert</script>
+\[\lim_{n \to \infty}\frac{f(I, n)}{n} = \lvert I\rvert\]
 
 <p>其中$\lvert I\rvert$表示$I$的长度. 则结论等价于证明任何一个区间都是好的.</p>
 
 <p>任取$u\in \mathbb{R}$，注意到</p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{aligned}
-[-1, 1]\ni &\{n\alpha\ - u\} - \{-u\} = \sum_{i = 1}^n(\{i\alpha - u\} - \{(i - 1)\alpha - u\})\\
-= &n\alpha - \#\{i = 1, 2, \ldots, n\mid \{i\alpha - u\}<\alpha\}\\
-= &n\alpha - f([u, u+\alpha], n)
-\end{aligned} %]]></script>
+\[\begin{aligned}
+[-1, 1]\ni &amp;\{n\alpha\ - u\} - \{-u\} = \sum_{i = 1}^n(\{i\alpha - u\} - \{(i - 1)\alpha - u\})\\
+= &amp;n\alpha - \#\{i = 1, 2, \ldots, n\mid \{i\alpha - u\}&lt;\alpha\}\\
+= &amp;n\alpha - f([u, u+\alpha], n)
+\end{aligned}\]
 
 <p>取$n\to \infty$，得</p>
 
-<script type="math/tex; mode=display">\lim_{n\to \infty}\frac{f([u, u + \alpha], n)}{n} = 1/\alpha</script>
+\[\lim_{n\to \infty}\frac{f([u, u + \alpha], n)}{n} = 1/\alpha\]
 
 <p>这表明$[u, u + 1/\alpha]$是好的. 由于$u$是任取的，故任何一个长为$\alpha$的区间都是好的.</p>
 
@@ -142,16 +140,16 @@
 
 <p>最后，对于任何一个区间$I$和正实数$\epsilon$，由上面的结论知存在两个区间$I_1, I_2$，使得$I_1 \subseteq I \subseteq I_2$，$\lvert I_2 \backslash I\rvert &lt;\epsilon$，$\lvert I\backslash I_1\rvert &lt; \epsilon$，且$I_1, I_2$是好的. 因此</p>
 
-<script type="math/tex; mode=display">\liminf_{n \to \infty}\frac{f(I, n)}{n} \geq \liminf_{n \to \infty}\frac{f(I_1, n)}{n}
-= \lim_{n \to \infty}\frac{f(I_1, n)}{n} = \rvert I_1\lvert > \lvert I\rvert - \epsilon</script>
+\[\liminf_{n \to \infty}\frac{f(I, n)}{n} \geq \liminf_{n \to \infty}\frac{f(I_1, n)}{n}
+= \lim_{n \to \infty}\frac{f(I_1, n)}{n} = \rvert I_1\lvert &gt; \lvert I\rvert - \epsilon\]
 
 <p>由于$\epsilon$是任取的，故</p>
 
-<script type="math/tex; mode=display">\liminf_{n \to \infty}\frac{f(I, n)}{n} \geq \lvert I\rvert</script>
+\[\liminf_{n \to \infty}\frac{f(I, n)}{n} \geq \lvert I\rvert\]
 
 <p>同理</p>
 
-<script type="math/tex; mode=display">\limsup_{n \to \infty}\frac{f(I, n)}{n} \leq \lvert I\rvert</script>
+\[\limsup_{n \to \infty}\frac{f(I, n)}{n} \leq \lvert I\rvert\]
 
 <p>故$\lim\limits_{n \to \infty} \frac{f(I, n)}{n} = \lvert I\rvert$，即$I$是好的. 证毕.</p>
 
@@ -161,7 +159,7 @@
 <blockquote>
   <p>$\forall \alpha \in \mathbb{R} \backslash \mathbb{Q}$，</p>
 
-  <script type="math/tex; mode=display">\lim_{n \to \infty} \frac{\sum_{i = 1}^{n}\{i\alpha\}}{n} = \frac{1}{2}</script>
+\[\lim_{n \to \infty} \frac{\sum_{i = 1}^{n}\{i\alpha\}}{n} = \frac{1}{2}\]
 </blockquote>
 
 <p>不知有无简单的解法</p>

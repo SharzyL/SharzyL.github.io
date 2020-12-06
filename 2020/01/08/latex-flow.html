@@ -13,8 +13,7 @@
     <link href="/assets/css/common.css" rel="stylesheet">
     <script>
         const darkModeAttributeName = 'dark-mode-enabled';
-        let darkModeEnabled = window.matchMedia('(prefers-color-scheme: dark)').matches
-                           || window.localStorage.getItem(darkModeAttributeName) != null;
+        let darkModeEnabled = window.localStorage.getItem(darkModeAttributeName) != null;
         if (darkModeEnabled) {
             document.documentElement.setAttribute(darkModeAttributeName, 'true');
             storage.setItem(darkModeAttributeName, 'true');
@@ -95,7 +94,7 @@
 
 <h1 id="bibliography">Bibliography</h1>
 
-<p>参考文献是论文中重要的一环，但是如果手动输入参考文献的话，无论是编写的复杂度（手动输入非常麻烦，而且 Reference 的不同信息的字体可能不一样，需要不停切换），还是维护的复杂度（尤其是对于带序号的参考文献，加一个参考文献需要改一堆），都无疑是灾难性的。而在这一点上，LaTeX 做的比较到位，它将收集文献（创建 .bib 文件）、使用文献（<code class="highlighter-rouge">\cite</code>命令）、排版文献（<code class="highlighter-rouge">\bibliographystyle</code>命令，.bst 文件）的过程完全解耦，达到高度自动化的效果。</p>
+<p>参考文献是论文中重要的一环，但是如果手动输入参考文献的话，无论是编写的复杂度（手动输入非常麻烦，而且 Reference 的不同信息的字体可能不一样，需要不停切换），还是维护的复杂度（尤其是对于带序号的参考文献，加一个参考文献需要改一堆），都无疑是灾难性的。而在这一点上，LaTeX 做的比较到位，它将收集文献（创建 .bib 文件）、使用文献（<code class="language-plaintext highlighter-rouge">\cite</code>命令）、排版文献（<code class="language-plaintext highlighter-rouge">\bibliographystyle</code>命令，.bst 文件）的过程完全解耦，达到高度自动化的效果。</p>
 
 <p>基本的参考文献使用在之前的文章中已经介绍过了。当然这个过程还不够自动化，尤其是 .bib 文件的创建和维护上，手动填写表项显然时比较浪费时间的事情。此外，如何定制化参考文献的样式以及引用的格式也是一个重要的问题。由于目前主要使用的是 BibTeX 工具链，因此介绍的时候以 BibTeX 为主。BibLaTeX 是另一个给 LaTeX 提供的参考文献工具，它相比 BibTeX 而言更加现代化，如果以后有时间的话会写一下它。</p>
 
@@ -134,7 +133,7 @@
 <ol>
   <li>IDE：例如 TeXStudio, TeXWorks, WinEdt 等。这类 IDE 由于是针对 LaTeX 写作，一般都非常方便和一键化。缺点是这些 IDE 一般都是个人开发，UI / 扩展性 / 更新频度 一般都不太理想。</li>
   <li>Online service：目前已经有了一些基于浏览器的 web 服务，可以提供在线的 LaTeX 编写 / 编译服务。Overleaf 是目前最主流的 LaTeX online service。它另外一个主要的 feature 在于可以多人协作，也就是类似于目前的在线文档的模式，每个人控制一个光标进行编辑，免费账号支持最多两人同时编辑，付费可以解锁更多。它的体验还是比较好的，编译速度也比本地的要快一些。</li>
-  <li>Editor + Extension：主流的编辑器一般都支持用户开发插件，通过为 LaTeX 编写的插件，用户可以方便地在编辑器内编写 / 编译 LaTeX，同时还能享受到编辑器的其它插件的便利。由于我常用的编辑器是 VSCode，而 VSCode 含有一个比较成熟的 LaTeX 插件 <code class="highlighter-rouge">LaTeX Workshop</code>，因此这里以介绍 VSCode + LaTeX Workshop 为主。</li>
+  <li>Editor + Extension：主流的编辑器一般都支持用户开发插件，通过为 LaTeX 编写的插件，用户可以方便地在编辑器内编写 / 编译 LaTeX，同时还能享受到编辑器的其它插件的便利。由于我常用的编辑器是 VSCode，而 VSCode 含有一个比较成熟的 LaTeX 插件 <code class="language-plaintext highlighter-rouge">LaTeX Workshop</code>，因此这里以介绍 VSCode + LaTeX Workshop 为主。</li>
 </ol>
 
 <p>VSCode + LaTeX workshop 的安装过程就不赘述了。有一定门槛的是 LaTeX workshop 的配置。关于LaTeX Workshop 的功能和文档可见这个 <a href="https://github.com/James-Yu/LaTeX-Workshop/">GitHub repo</a>。下面提供一下我关于 LaTeX workshop 的配置项：</p>
@@ -379,28 +378,28 @@
 </span><span class="nl">"latex-workshop.view.pdf.internal.synctex.keybinding"</span><span class="p">:</span><span class="s2">"double-click"</span><span class="err">,</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<p>为了应用这些配置项，<code class="highlighter-rouge">ctrl + P</code> 输入 <code class="highlighter-rouge">settings.json</code> 进入设置界面，将上面的 json 代码复制进去。由于这是一部分的配置项，所以需要把它们放在一个大括号里面才能生效。此外，上述代码中的<code class="highlighter-rouge">"&lt;your-path&gt;/SumatraPDF.exe"</code>需要自行修改成 Sumatra 阅读器的路径。</p>
+<p>为了应用这些配置项，<code class="language-plaintext highlighter-rouge">ctrl + P</code> 输入 <code class="language-plaintext highlighter-rouge">settings.json</code> 进入设置界面，将上面的 json 代码复制进去。由于这是一部分的配置项，所以需要把它们放在一个大括号里面才能生效。此外，上述代码中的<code class="language-plaintext highlighter-rouge">"&lt;your-path&gt;/SumatraPDF.exe"</code>需要自行修改成 Sumatra 阅读器的路径。</p>
 
 <p>进行完上面的配置之后，打开 VSCode 侧边栏的 TeX 栏，就可以看到这样的一些选项了：</p>
 
 <p><img src="https://i.loli.net/2020/01/09/mDIPWjiz34ZlgQE.png" alt="image.png" style="max-width:20em;" /></p>
 
-<p>如果了解了上一篇文章中提到的 LaTeX 工具链的相关内容的话， 上面配置文件的 <code class="highlighter-rouge">"latex-workshop.latex.tools"</code>和<code class="highlighter-rouge">latex-workshop.latex.recipes</code>部分应该比较容易理解。这里解释几个命令行参数的含义，其它的命令行参数可以自行参看相关文档。</p>
+<p>如果了解了上一篇文章中提到的 LaTeX 工具链的相关内容的话， 上面配置文件的 <code class="language-plaintext highlighter-rouge">"latex-workshop.latex.tools"</code>和<code class="language-plaintext highlighter-rouge">latex-workshop.latex.recipes</code>部分应该比较容易理解。这里解释几个命令行参数的含义，其它的命令行参数可以自行参看相关文档。</p>
 
 <ol>
-  <li><code class="highlighter-rouge">-synctex=1</code>：这个命令表示生成 synctex 文件。这种文件的扩展名为 <code class="highlighter-rouge">.synctex.gz</code>，它的作用在于创建一个 pdf 文件和 tex 文件之间的对应关系。这样的话就可以在 pdf 文件和 tex 文件之间进行同步的穿梭了。使用方法下述。</li>
-  <li><code class="highlighter-rouge">-shell-escape</code>：表示处理转义字符的方式。这个命令行参数主要是在使用 minted 这个代码高亮宏包的时候用到，由于在处理其它语言代码的时候，会违背普通 tex 的转义规则，因此这个参数在使用 minted 宏包的时候是必须的。</li>
+  <li><code class="language-plaintext highlighter-rouge">-synctex=1</code>：这个命令表示生成 synctex 文件。这种文件的扩展名为 <code class="language-plaintext highlighter-rouge">.synctex.gz</code>，它的作用在于创建一个 pdf 文件和 tex 文件之间的对应关系。这样的话就可以在 pdf 文件和 tex 文件之间进行同步的穿梭了。使用方法下述。</li>
+  <li><code class="language-plaintext highlighter-rouge">-shell-escape</code>：表示处理转义字符的方式。这个命令行参数主要是在使用 minted 这个代码高亮宏包的时候用到，由于在处理其它语言代码的时候，会违背普通 tex 的转义规则，因此这个参数在使用 minted 宏包的时候是必须的。</li>
 </ol>
 
-<p>完成上面这些配置之后，只需要点 <code class="highlighter-rouge">Recipe: latexmk</code>，就可以使用 latexmk 来编译当前的 .tex 文档了，当文档发生变化时，它会自动重新编译。某些情况下，我们可能需要手动控制编译，这个时候可以使用另外的两个 recipe。</p>
+<p>完成上面这些配置之后，只需要点 <code class="language-plaintext highlighter-rouge">Recipe: latexmk</code>，就可以使用 latexmk 来编译当前的 .tex 文档了，当文档发生变化时，它会自动重新编译。某些情况下，我们可能需要手动控制编译，这个时候可以使用另外的两个 recipe。</p>
 
-<p>需要浏览生成的 pdf 文件时，可以在 <code class="highlighter-rouge">View LaTeX PDF</code> 中打开对应的阅读器。虽然市面上有许多 PDF 阅读器，但是对于 LaTeX 编写而言， VSCode 内置的 VSCode tab 和开源的 Sumatra 依然是最好用的两个。Sumatra 作为开源的 PDF 阅读器，它的许多功能都是针对程序员或 LaTeX 写作者设计的。例如，它的 H, J, K, L 快捷键功能显然是从 vim 一流继承下来的，此外，它提供许多命令行参数，提供文本式的配置编辑。</p>
+<p>需要浏览生成的 pdf 文件时，可以在 <code class="language-plaintext highlighter-rouge">View LaTeX PDF</code> 中打开对应的阅读器。虽然市面上有许多 PDF 阅读器，但是对于 LaTeX 编写而言， VSCode 内置的 VSCode tab 和开源的 Sumatra 依然是最好用的两个。Sumatra 作为开源的 PDF 阅读器，它的许多功能都是针对程序员或 LaTeX 写作者设计的。例如，它的 H, J, K, L 快捷键功能显然是从 vim 一流继承下来的，此外，它提供许多命令行参数，提供文本式的配置编辑。</p>
 
-<p>LaTeX Workshop 的一个重要功能就是在 .pdf 文件和 .tex 文件之间的双向同步跳转，也就是说，我们可以在浏览 pdf 文件时，快速跳转到 .tex 文件中的对应位置，反之同理。这个功能对于 VSCode Tab 是默认生效的，使用方法详见文档。对于 Sumatra 来说，为了启用这个功能，需要打开 Sumatra 的设置，将 “设置反向搜索命令行” 设置为 <code class="highlighter-rouge">"&lt;your-path&gt;\Code.exe" -r -g "%f:%l"</code>，其中 <code class="highlighter-rouge">&lt;your-path&gt;</code> 是 VSCode 的路径。设置完之后，双向同步功能应该就可以正常使用了：在使用 VSCode 编辑 .tex 文件的时候，使用快捷键 <code class="highlighter-rouge">ctrl + alt + J</code> 之后就可以在阅读器中高亮相应的段落。而在使用阅读器阅读 PDF 文件时，双击某处即可自动跳转到 .tex 文件的对应段落。</p>
+<p>LaTeX Workshop 的一个重要功能就是在 .pdf 文件和 .tex 文件之间的双向同步跳转，也就是说，我们可以在浏览 pdf 文件时，快速跳转到 .tex 文件中的对应位置，反之同理。这个功能对于 VSCode Tab 是默认生效的，使用方法详见文档。对于 Sumatra 来说，为了启用这个功能，需要打开 Sumatra 的设置，将 “设置反向搜索命令行” 设置为 <code class="language-plaintext highlighter-rouge">"&lt;your-path&gt;\Code.exe" -r -g "%f:%l"</code>，其中 <code class="language-plaintext highlighter-rouge">&lt;your-path&gt;</code> 是 VSCode 的路径。设置完之后，双向同步功能应该就可以正常使用了：在使用 VSCode 编辑 .tex 文件的时候，使用快捷键 <code class="language-plaintext highlighter-rouge">ctrl + alt + J</code> 之后就可以在阅读器中高亮相应的段落。而在使用阅读器阅读 PDF 文件时，双击某处即可自动跳转到 .tex 文件的对应段落。</p>
 
 <p>LaTeX Workshop 提供了许多其它的便捷功能和快捷键，这些可以在 <a href="https://github.com/James-Yu/LaTeX-Workshop/wiki">GitHub wiki</a> 中看到。这里就不重复了。</p>
 
-<p>为了使用 lint （语法检查）功能，需要先安装 chktex （大部分发行版应该都会提供，如果没有提供的话可以用对应的包管理器安装，在命令行输入 chktex 可以检查是否安装完成）。然后在 <code class="highlighter-rouge">settings.json</code> 中输入 <code class="highlighter-rouge">"latex-workshop.chktex.enabled": true,</code>即可启用。chktex 会给你的代码提供一些贴心的建议（笑）。</p>
+<p>为了使用 lint （语法检查）功能，需要先安装 chktex （大部分发行版应该都会提供，如果没有提供的话可以用对应的包管理器安装，在命令行输入 chktex 可以检查是否安装完成）。然后在 <code class="language-plaintext highlighter-rouge">settings.json</code> 中输入 <code class="language-plaintext highlighter-rouge">"latex-workshop.chktex.enabled": true,</code>即可启用。chktex 会给你的代码提供一些贴心的建议（笑）。</p>
 
 <blockquote>
   <p>未完待续，之后将会介绍一些宏包的使用，一些本地化的相关内容</p>

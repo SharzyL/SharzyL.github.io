@@ -13,8 +13,7 @@
     <link href="/assets/css/common.css" rel="stylesheet">
     <script>
         const darkModeAttributeName = 'dark-mode-enabled';
-        let darkModeEnabled = window.matchMedia('(prefers-color-scheme: dark)').matches
-                           || window.localStorage.getItem(darkModeAttributeName) != null;
+        let darkModeEnabled = window.localStorage.getItem(darkModeAttributeName) != null;
         if (darkModeEnabled) {
             document.documentElement.setAttribute(darkModeAttributeName, 'true');
             storage.setItem(darkModeAttributeName, 'true');
@@ -95,7 +94,7 @@
 
 <h1 id="jekyll">Jekyll</h1>
 
-<p><a href="https://jekyllrb.com">Jekyll</a>用于将html模板（使用Liquid模板引擎）和markdown（使用kramdowm方言）解析成浏览器能够直接显示的html文件，是一个用ruby编写的博客生成工具，被Github pages原生地支持。在使用gem安装之后，使用<code class="highlighter-rouge">jekyll build</code>能够完成一次当前目录的构建，使用<code class="highlighter-rouge">jekyll serve</code>能够使jekyll在检测到文件更新时自动重新构建，并且在<code class="highlighter-rouge">localhost:4000</code>运行一个本地HTTP服务器，便于调试。</p>
+<p><a href="https://jekyllrb.com">Jekyll</a>用于将html模板（使用Liquid模板引擎）和markdown（使用kramdowm方言）解析成浏览器能够直接显示的html文件，是一个用ruby编写的博客生成工具，被Github pages原生地支持。在使用gem安装之后，使用<code class="language-plaintext highlighter-rouge">jekyll build</code>能够完成一次当前目录的构建，使用<code class="language-plaintext highlighter-rouge">jekyll serve</code>能够使jekyll在检测到文件更新时自动重新构建，并且在<code class="language-plaintext highlighter-rouge">localhost:4000</code>运行一个本地HTTP服务器，便于调试。</p>
 
 <p>Jekyll由于使用ruby编写，配置文件一般通过yaml文件提供，并且在需要当成模板渲染地文件开头书写yaml文件头。</p>
 
@@ -107,7 +106,7 @@
 
 <p>katex的调用方法有点复杂，它暴露的主要接口是一个将给定给定字符串渲染成公式然后塞到dom元素里面的函数，官方提供了一个可以直接渲染整个文档的扩展，但是由于不明原因没有效果，也没有报错。日后再研究一下吧。</p>
 
-<p>mathjax的渲染速度和代码体积都要落后于katex，但是它可以直接渲染整个文档。默认行内和行间公式的定界符分别是<code class="highlighter-rouge">\( \)</code>和<code class="highlighter-rouge">\[ \]</code>，这和我平时写 $\LaTeX$的习惯不太一致，好在这个可以自行配置，具体的配置代码大致如下</p>
+<p>mathjax的渲染速度和代码体积都要落后于katex，但是它可以直接渲染整个文档。默认行内和行间公式的定界符分别是<code class="language-plaintext highlighter-rouge">\( \)</code>和<code class="language-plaintext highlighter-rouge">\[ \]</code>，这和我平时写 $\LaTeX$的习惯不太一致，好在这个可以自行配置，具体的配置代码大致如下</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -138,8 +137,8 @@
 <p>在更换之后，排版质量显著改善。</p>
 
 <h2 id="行间公式的空行问题">行间公式的空行问题</h2>
-<p>在$\LaTeX$中，只要使用<code class="highlighter-rouge">\[ \]</code>开启行间公式时，它会自动新启一行排版公式（废话）。但是在写markdown时这一点会出现一些问题。mathjax会寻找块级元素，当检测到包含行间公式的开头/结尾字段时将其当作行间公式渲染。但是如果在markdown里面不换行的话，
-kramdown将markdown转换为html文件时会把你输入的行间公式当成一个行内元素（因为markdown会忽略非空行的换行），所以这样无法正常渲染行间公式（<em>似乎只限于kramdown，用一些内置$TeX$支持的markdown编辑器不会出现这个问题</em>）。要想让它正常渲染，必须在行间公式的上下空行，使得它被翻译为html的<code class="highlighter-rouge">&lt;p&gt;</code>标签。</p>
+<p>在$\LaTeX$中，只要使用<code class="language-plaintext highlighter-rouge">\[ \]</code>开启行间公式时，它会自动新启一行排版公式（废话）。但是在写markdown时这一点会出现一些问题。mathjax会寻找块级元素，当检测到包含行间公式的开头/结尾字段时将其当作行间公式渲染。但是如果在markdown里面不换行的话，
+kramdown将markdown转换为html文件时会把你输入的行间公式当成一个行内元素（因为markdown会忽略非空行的换行），所以这样无法正常渲染行间公式（<em>似乎只限于kramdown，用一些内置$TeX$支持的markdown编辑器不会出现这个问题</em>）。要想让它正常渲染，必须在行间公式的上下空行，使得它被翻译为html的<code class="language-plaintext highlighter-rouge">&lt;p&gt;</code>标签。</p>
 
 <h2 id="反斜杠的转义问题">反斜杠的转义问题</h2>
 <p>这是一个奇妙的问题。在markdown中反斜杠会被转义，准确来说，当一个反斜杠后面接着一个标点符号时，这个反斜杠会被当作转义符号，它本身会被忽略，而它后面接的标点符号不会被当作markdown的特殊字符。</p>
@@ -147,15 +146,15 @@ kramdown将markdown转换为html文件时会把你输入的行间公式当成一
 <p>但是这个规则也有一些奇妙的例外，例如，在代码模式下（即被反引号包裹的东西里面）这个转义会被忽略，也就是说反斜杠不会被当作转义字符而被隐藏（顺便一提，这一点使得在行内的公式里面打出反引号并不容易）。此外，<strong>行间</strong>公式环境下这种转义也会出现。</p>
 
 <p>但是最坑的是这件事情在行内公式中不会出现（<em>也只限于kramdown</em>），也就是说，行内公式中的反斜杠仍被当作转义字符，这种不一致性让人非常不爽。
-例如，在行内若想输出一对花括号，你需要写<code class="highlighter-rouge">${}$</code>，但是在行间的话你需要写的是<code class="highlighter-rouge">$$\{\}$$</code>（不要忘了上下空行）。</p>
+例如，在行内若想输出一对花括号，你需要写<code class="language-plaintext highlighter-rouge">${}$</code>，但是在行间的话你需要写的是<code class="language-plaintext highlighter-rouge">$$\{\}$$</code>（不要忘了上下空行）。</p>
 
 <h1 id="code">Code</h1>
 <p>Jekyll 内置了<a href="http://rouge.jneen.net/">Rouge</a>的语法高亮功能，可以将markdown中的行间代码进行语法高亮，但是值得注意的是它只负责将markdown转换为html然后把代码中不同的token赋予不同的class，具体的着色方案需要额外提供css文件完成。</p>
 
-<p>好在已经有人制作了这样的css供我们直接使用，例如这个<a href="https://github.com/jwarby/jekyll-pygments-themes">repo</a>。但是是这里面的css文件里面有的不仅提供了<code class="highlighter-rouge">color</code>这个css属性，而且还提供了<code class="highlighter-rouge">background-color</code>这个属性，也就是说它可能会改变部分文字（比如说字符串）的背景颜色，这不一定总是我们想要的，可能需要手动删除，或者自己覆盖<code class="highlighter-rouge">background-color</code>属性。</p>
+<p>好在已经有人制作了这样的css供我们直接使用，例如这个<a href="https://github.com/jwarby/jekyll-pygments-themes">repo</a>。但是是这里面的css文件里面有的不仅提供了<code class="language-plaintext highlighter-rouge">color</code>这个css属性，而且还提供了<code class="language-plaintext highlighter-rouge">background-color</code>这个属性，也就是说它可能会改变部分文字（比如说字符串）的背景颜色，这不一定总是我们想要的，可能需要手动删除，或者自己覆盖<code class="language-plaintext highlighter-rouge">background-color</code>属性。</p>
 
 <h1 id="domain">Domain</h1>
-<p>虽然Github pages默认给出的<code class="highlighter-rouge">sharzyl.github.io</code>域名还算不错，但是考虑到它还提供了自定义域名服务，所以我还是希望有一个自己的域名。在域名商处购买一个域名之后，添加两条dns记录</p>
+<p>虽然Github pages默认给出的<code class="language-plaintext highlighter-rouge">sharzyl.github.io</code>域名还算不错，但是考虑到它还提供了自定义域名服务，所以我还是希望有一个自己的域名。在域名商处购买一个域名之后，添加两条dns记录</p>
 
 <table>
   <thead>
@@ -216,7 +215,7 @@ $$ a + b = b + a $$
     <li>insert some formula</li>
   </ol>
 
-  <script type="math/tex; mode=display">a + b = b + a</script>
+\[a + b = b + a\]
 
   <ol>
     <li>one more item</li>
@@ -225,7 +224,7 @@ $$ a + b = b + a $$
 
 <p>注意到有序列表的标号在第二项上被重置了，出现这个的原因在于kramdown会把缩进层级相同的元素当作同级元素看待，所以中间的行间公式会被它看作一个和有序列表同级的块级元素（类似段落），因此这个有序列表被这个块级元素中断了. 解决这个问题的方法很简单，把中间的公式缩进就可以了。(<em>这里也顺带解释了上文中提到的数学公式空行问题</em>)</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
