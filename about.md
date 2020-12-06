@@ -32,7 +32,7 @@ permalink: /about/
 
 本站的内容，如无特别说明，均使用 CC BY 4.0 协议发布，只要**注明来源和修改部分**，并且不施加额外的限制，可以将内容分享到任何地方，详情请见 [Creative Commons](https://creativecommons.org/licenses/by/4.0/) 网站的说明。
 
-# GPG
+# PGP
 
 Key ID: C929DD40779344DF
 
@@ -40,7 +40,7 @@ Key fingerprint：9424 DF6A 6779 5802 3ACA  3A63 2347 0D4F D461 AA84
 
 [Public key](/assets/gpg.txt)
 
-# Friends
+# Link exchange
 
 | [Tony's blog](https://fengtony686.github.io/) | Record Interesting Things in My Life |
 | [MiaoTony’s 小窝](https://miaotony.xyz/) | 仰望星空，脚踏实地，未来可期 |
