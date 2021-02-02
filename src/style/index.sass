@@ -1,0 +1,66 @@
+#brand-title
+  font-family: var(--font-display)
+  font-size: 72px
+  font-weight: 200
+
+  color: var(--color-brand)
+
+#brand-subtitle
+  margin-top: 10px
+
+  font-style: italic
+  font-weight: 200
+  font-family: var(--font-alternative)
+  font-size: 1.5rem
+
+  color: var(--color-alternative)
+
+#main-wrapper
+  flex: 1
+
+  display: flex
+  flex-flow: column
+
+#body
+  display: flex
+  min-height: 100vh
+  flex-flow: column
+  justify-content: center
+  align-items: center
+  background-color: var(--color-bg)
+
+#brand
+  margin-top: 100px
+  width: 300px
+
+#site-entries-list
+  margin-top: 80px
+  width: 100vw
+  max-width: 400px
+
+  a
+    position: relative
+    display: block
+    font-size: 3rem
+    font-weight: 200
+
+    width: 100%
+    margin-top: 1rem
+    color: var(--color-base)
+    font-family: var(--font-base)
+    text-decoration: none
+    transition: transform 0.2s
+
+    &::after
+      content: ''
+      width: 15px
+      height: 15px
+      border-top: var(--color-base) 1px solid
+      border-right: var(--color-base) 1px solid
+      position: absolute
+      right: 0
+      top: 28px
+      transform: rotate(45deg)
+
+    &:hover
+      transform: translate(4px, 0)
