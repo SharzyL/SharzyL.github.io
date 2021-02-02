@@ -1,15 +1,15 @@
 ---
 title: 结构光技术——原理及其应用
-tags: paper tech
+tags: [paper tech]
 preview: 结构光技术是一种非接触式的、高精度的三维测量技术。通过一个投影装置投射出特定的图案，摄像机拍摄并识别这个图案，可以对被拍摄的物体的表面三维情况进行测量。本文对结构光技术的原理和应用进行了综合的考察。
 ---
 
 本文为我的写作与沟通课程期末长文终稿，主要介绍结构光原理及其应用。结构光技术是一种非接触式的、高精度的三维测量技术。通过一个投影装置投射出特定的图案，摄像机拍摄并识别这个图案，可以对被拍摄的物体的表面三维情况进行测量。本文对结构光技术的原理和应用进行了综合的考察。
 
-# Abstract
+## Abstract
 结构光技术是一种非接触式的、高精度的三维测量技术。通过一个投影装置投射出特定的图案，摄像机拍摄并识别这个图案，可以对被拍摄的物体的表面三维情况进行测量。本文对结构光技术的原理和应用进行了综合的考察。首先，我们考察了结构光的投影图案的分类和主流的编码技术，并简述了不可见结构光的光源的原理。然后，我们考虑了一些类似的非接触式三维测量技术，包括 ToF 技术和双目视觉技术，对比了这些技术的优劣。最后，我们展示了结构光在消费电子、医学和工业等领域的许多应用。
 
-# Table of content
+## Table of content
 - 引论
 - 编码原理
   - 直接编码
@@ -23,10 +23,10 @@ preview: 结构光技术是一种非接触式的、高精度的三维测量技�
   - 工业
 - 结论
 
-# Document
+## Document
 [pdf file](/assets/doc/structured-light.pdf)
 
-# References
+## References
 
 [1] J.L Posdamer and M.D Altschuler. “Surface Measurement by Space-Encoded Projected Beam Systems”. en.
 In: Computer Graphics and Image Processing 18.1 (Jan. 1982), pp. 1–17. issn: 0146664X. doi: 10.1016/0146-

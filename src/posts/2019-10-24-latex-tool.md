@@ -8,7 +8,7 @@ TeX作为 Kunth 为了 TAOCP 所开发的排版工具，它专注于生成高质
 
 由于 VSCode 的方便性和高度的可扩展性，我选择使用 VSCode 作为我的 LaTeX 编辑器。LaTeX Workshop 是 VSCode 的一个 LaTeX 插件，能够对 LaTeX 提供良好的支持。LaTeX Workshop 虽然比较自动化，但是编译环境仍然需要自己配置，而且它的配置文件仍然手动编写编写，为了编写这样的配置文件，了解 LaTeX 的工具链是非常重要的，本篇将介绍 LaTeX 的编译工具链中的各个组成部分。
 
-# TeX
+## TeX
 TeX 是 Kunth 最开始所发明的工具，wiki 称它是一个 typesetting system，它非常接近底层，提供了一些基础的命令可以使用，以宏为主要的编程工具。下面是一个 TeX 的示例
 
 ```latex
@@ -24,7 +24,7 @@ TeX 提供的命令非常底层，例如它没有我们常用的 `\begin{documen
 
 TeX 的版本以圆周率的前若干位小数命名，例如我当前的 TeX 版本为 $3.14159265$。
 
-# LaTeX
+## LaTeX
 LaTeX 是 TeX 的一个封装。Leslie Lamport 于 1983 年发明了它。wiki 称它是一个 document preparation system。相比起 Plain TeX，LaTeX有更多更高级的命令，更加语义化，从而更加接近于我们的写作过程，下面是一个简单的示例
 
 ```latex
@@ -54,11 +54,11 @@ LaTeX 的重要之处还在于它的宏包（package）系统。`\usepackage{ams
 
 $\LaTeX2\epsilon$ 是目前的 LaTeX 版本，它取代了 1994 年的 $\LaTeX~2.09$。$\LaTeX3$作为$\LaTeX2\epsilon$的继任者，早在上世纪九十年代就已经开始开发了，它的主要目的之一在于给LaTeX提供更高的灵活性，更好的简洁性，更加现代化的接口和界面，更好的报错机制（现在 LaTeX 的报错是非常不友好的，如果不熟悉实现细节的话，大多数情况下只能人眼 debug），但是要开发出一个能够革新当前的LaTeX的系统面临着巨大的技术困难，同时由于LaTeX的开发完全依赖于社区，没有商业支持，因此 $\LaTeX 3$ 目前仍然处于不成熟的状态，距离它的最终完成仍然遥遥无期。这里是$\LaTeX3$的 [github repo](https://github.com/latex3/latex3)。
 
-# pdfTeX
+## pdfTeX
 
 pdfTeX 是一个对于 `tex` 指令的直接封装，它的主要目的在于生成 pdf 文件而不是 dvi 文件。pdflatex 与之类似，是对于 `latex` 命令的封装。
 
-# XeTeX
+## XeTeX
 
 XeTeX 作为另一个 TeX 的扩展，它主要可以看作是对于 LaTeX 的增强。它相对于 LaTeX 最大的改进之处在于对多国语言和自定义字体的支持。下面是一个示例
 
@@ -87,7 +87,7 @@ XeTeX 作为另一个 TeX 的扩展，它主要可以看作是对于 LaTeX 的�
 
 用 `xelatex example.tex` 编译后就能看到想看到的结果了。`LuaLaTeX` 是一个和 `XeLaTeX` 类似的项目，用 Lua 编写，不过相对少见一些。只要在的 `\setmainfont` 后输入一些包含中文的字体，中文就能够编译出来的。但是这个中文的支持并不完全，很多中文的细节问题没有完善的处理，例如标点距离压缩，空格控制等等，稍后会详细介绍这些问题及解决方法。
 
-# bibTeX
+## bibTeX
 学术写作的一个很重要的部分就是参考文献，在 LaTeX 中并没有直接的参考文献支持，bibtex 就是为了解决这个问题所用的工具。LaTeX 使用 .bib 文件来保存参考文献信息，下面是一个 .bib 文件的样例：（这里只含有一个条目，一般来说应该会有很多条目的）
 
 ```
@@ -146,12 +146,12 @@ LaTeX Warning: There were undefined references.
 
 .blg 文件保存 bibtex 的日志文件，用来 debug. 我们再次运行 `latex example.tex` ，这时候 latex 还是会提示我们存在未定义的引用，最后再运行一次 `latex example.tex` 就能够得到我们最终想要的结果了。
 
-# Latexmk
+## Latexmk
 可以看到，按照上面的步骤，要想编译出来一个合格的输出文件是一件很繁琐的事情，Latexmk 正是为了解决这些问题而诞生的。Latexmk 使用 perl 编写，它的用途就是整合上面的组件，完成一键式编译流程（例如，只需要输入 `latexmk`命令就可以编译当前目录里面的所有 .tex 文件）。在[这里](https://mg.readthedocs.io/latexmk.html)可以看到 Latexmk 的文档。
 
 由于上面的文档的确非常友好，这里就不详细介绍它的用法了。后面介绍 LaTeX workshop 配置文件的时候会提及部分选项的含义。
 
-# LaTeX 发行版
+## LaTeX 发行版
 上面的组件如果要逐一下载配置，必然是一件很麻烦的事情，为了能够快速搭建开发环境，有人将这些组件（以及众多的 LaTeX 宏包）整合起来发布，这样的东西就称为 LaTeX 发行版。常见的发行版包括 Windows 平台上的 MikTeX, TeXLive，MacOS 上的 MacTeX，以及 Linux 上的 TeXLive 等等。它们的安装比较简单，这里就不详述了。
 
 下一篇中我们将介绍 LaTeX 在 VSCode 中的具体配置问题。<del>希望不要鸽太久吧</del>。

@@ -1,13 +1,25 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
+import "katex/dist/katex.min.css"
+import "../style/global.sass"
+import "../style/blog-post.sass"
+import "../style/syntax-highlighting.sass"
+
+import NavBar from "../components/navbar";
+import Footer from "../components/footer";
+
 export default ({ data }) => {
     const post = data.markdownRemark
     return (
-        <div>
-            <h1>{post.frontmatter.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        </div>
+        <>
+            <NavBar/>
+            <article id={"blog-post"}>
+                <h1 id={"blog-post-title"}>{post.frontmatter.title}</h1>
+                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            </article>
+            <Footer/>
+        </>
     )
 }
 export const query = graphql`

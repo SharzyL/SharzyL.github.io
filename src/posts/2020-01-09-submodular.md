@@ -1,12 +1,12 @@
 ---
 title: "小记：Submodular 函数与社交网络"
 subtitle: 论 2017 CTST D1T3 的背景
-tags: math
+tags: [math]
 ---
 
 2017 年的 CTST 上有一道看起来有些奇特的题目，当年这道题由于放送事故被整成了错题，导致没有起到任何区分度。我原本也没有太在意这样的一个题目，直到这学期某位老师给我们讲课的时候讲到了一些关于社交网络传播的内容，经过一些思考之后，我发现老师讲的内容里面正好蕴含了上面这道题目的背景。遂（在大半个学期之后）记录之。
 
-# Problem
+## Problem
 
 $ S = \{1, 2, \ldots, 2017\}$，$f: 2^S \to [0, +\infty)$ 满足
 
@@ -31,12 +31,12 @@ $ S = \{1, 2, \ldots, 2017\}$，$f: 2^S \to [0, +\infty)$ 满足
     $$
     
 
-# Solution
+## Solution
 
 $\forall\ a, b, c \in S$, 
 
 $$
-\begin{align*}
+\begin{aligned}
 	f(a, b, c) &\leq f(a) + f(b) + f(c) \\
 	&\leq 3f(1) \\
 	\frac53 f(a, b, c) & \leq f(a, b, c) + 2f(1)\\
@@ -47,14 +47,14 @@ $$
 	&\leq f(1, 2, a, b, c) + 2f(1, 2) \\
 	&\leq f(1, 2, a) + f(1, 2, b) + f(1, 2, c)\\
 	&\leq 3f(1, 2, 3)
-\end{align*}
+\end{aligned}
 $$
 
 Q.E.D
 
 *PS: 从解答来看，这题作为 TST P3 也太水了。而由于当年的放送事故，也不知道这个题目的实际难度如何。*
 
-# Background
+## Background
 
 > 道理我懂，可是这个题和社交网络有什么关系？
 
@@ -67,7 +67,6 @@ Q.E.D
 为了方便描述，对于任何一个顶点的子集 $V$，我们用一个随机集合 $\mathcal{S}_t(V)$ 表示时间 $t$ 后传播的顶点的集合。于是问题变成了，求
 
 $$
-\DeclareMathOperator{\argmax}{arg\,max}
 \argmax_{V: |V| = k} \mathbb{E}(\mathcal{S}_T(V))
 $$
 
@@ -105,6 +104,6 @@ $$
 $$
 注意到 $\frac{k^k}{k^k - (k - 1)^{k - 1}} \leq \frac{e}{e - 1} \approx 1.582$，这也就是说，相比起最佳策略，贪心策略不会坏到哪里去：最好的策略也不可能比它更好 $0.6$ 倍。
 
-# Postscript
+## Postscript
 
 鸽了大半个学期，终于期末把这玩意写了，有点奇妙。

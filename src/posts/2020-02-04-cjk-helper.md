@@ -1,12 +1,12 @@
 ---
 title: "VSCode 中文快捷键跳转解决方案"
 subtitle: "记一次 VSCode 插件的开发（魔改）过程"
-tags: dev VSCode
+tags: [dev VSCode]
 ---
 
 之前的文章介绍过，我常用 VSCode 来进行 LaTeX 写作。但是当进行中文写作时，VSCode 的一个问题常常让我感到不快：对于英文的内容，我们可以使用 `ctrl` + 方向键 来进行以单词为单位的跳转（如果只用方向键的话，效果是以字符为单位跳转），`ctrl`  + `backspace` 可以做到以单词为单位的删除，等等。然而由于 VSCode 机制的原因，这样的快捷健对于中文的效果是很糟糕的：它会将一整段中文识别为一个单词，这导致跳转 / 删除的范围是一整段，这一般并不是我们需要的。本文将记录我解决这一问题的过程。
 
-# Introduction
+## Introduction
 
 VSCode 会将若干个连续的，非空白 / 英文标点（含下划线，不含连接符）符号的字符识别为一个单词。通过这样的单词划分，VSCode 实现了下述的一些快捷功能：
 
@@ -24,7 +24,7 @@ VSCode 会将若干个连续的，非空白 / 英文标点（含下划线，不�
 
 可以看到，插件 1 能提供比较完善的中文分词，但是对于功能的支持数量不佳；插件 2 对日文提供了比较粗糙的分词，但是功能比较完善。
 
-# First step
+## First step
 
 由于不想重复造轮子，因此我们考虑魔改上面两个插件中的一个来达成我们的目的。考虑到第二个插件已经考虑到了绝大部分逻辑，因此从它下手比较方便。
 
@@ -77,7 +77,7 @@ function isHanChar(charCode : number) : boolean {
 
 将上面的代码扔进 [Japanese Word Handler](https://marketplace.visualstudio.com/items?itemName=sgryjp.japanese-word-handler) 的代码中稍作整理就可以得到一个简单的，对汉字适用的插件版本了，在这个版本中，连续的一串汉字会被识别为一个单词，换言之，它是将一个句子识别为一个词。这样的效果在很多情况下都是够用的。
 
-# Word segmentation
+## Word segmentation
 
 简单的修补并不能让人满意，因此我考虑将分词的功能也加上去。node.js 生态下，有两个分词库比较常用，一个是基于 python 生态下著名的分词库 jieba 移植而成的 [nodejieba](https://github.com/yanyiwu/nodejieba)，另一个是上文提到的 [Quick Chinese Deletion](https://marketplace.visualstudio.com/items?itemName=ZacharyJia.quick-chinese-deletion) 插件所使用的 [node-segment](https://github.com/leizongmin/node-segment)。由于 nodejieba 宣称性能比较高，因此我本来准备使用 nodejieba，然而在使用的过程中发现出了一些问题。
 
@@ -101,7 +101,7 @@ nodejieba 包含一些使用 c / c++ 编写的扩展用以提高性能，我在�
 
 至此，整个插件的功能就基本完成了。完善一下 README，画了一个草率的 icon 之后就可以提交到 VSCode Marketplace 了。
 
-# Release
+## Release
 
 目前该插件已经发布至 VSCode Marketplace，插件名为 [CJK word handler](https://marketplace.visualstudio.com/items?itemName=SharzyL.cjk-word-handler)。这个插件基本完全解决了上文中提到的问题 1, 2, 3，后续还会加入一些优化和改进。欢迎有需求的读者安装使用。如果在使用过程中发现 bug 可以前往 GitHub 提出 [Issue](https://github.com/SharzyL/cjk-word-handler/issues)。
 

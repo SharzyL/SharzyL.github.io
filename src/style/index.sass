@@ -1,25 +1,23 @@
 #brand-title
   font-family: var(--font-display)
-  font-size: 72px
-  font-weight: 200
-
-  color: var(--color-brand)
+  font-size: var(--fontsize-brand)
+  font-weight: var(--fontweight-brand)
 
 #brand-subtitle
-  margin-top: 10px
+  margin-top: var(--metric-spacing-unit)
 
   font-style: italic
-  font-weight: 200
+  font-weight: var(--fontsize-light)
   font-family: var(--font-alternative)
-  font-size: 1.5rem
+  font-size: var(--fontsize-h4)
 
-  color: var(--color-alternative)
+  color: var(--color-alternative-dark)
 
 #main-wrapper
   flex: 1
-
   display: flex
   flex-flow: column
+  width: calc(min(var(--metric-center-width), 400px))
 
 #body
   display: flex
@@ -30,19 +28,18 @@
   background-color: var(--color-bg)
 
 #brand
-  margin-top: 100px
-  width: 300px
+  margin-top: calc(3 * var(--metric-spacing-unit))
 
 #site-entries-list
-  margin-top: 80px
-  width: 100vw
-  max-width: 400px
+  margin:
+    top: calc(2 * var(--metric-spacing-unit))
+    bottom: var(--metric-spacing-unit)
 
   a
     position: relative
     display: block
-    font-size: 3rem
-    font-weight: 200
+    font-size: var(--fontsize-h1)
+    font-weight: var(--fontweight-brand)
 
     width: 100%
     margin-top: 1rem
@@ -53,12 +50,12 @@
 
     &::after
       content: ''
-      width: 15px
-      height: 15px
+      width: 0.5em
+      height: 0.5em
       border-top: var(--color-base) 1px solid
       border-right: var(--color-base) 1px solid
       position: absolute
-      right: 0
+      right: 1em
       top: 28px
       transform: rotate(45deg)
 

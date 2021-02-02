@@ -1,16 +1,16 @@
 ---
 title: "Distributed System for Deep learning Training: A Survey"
-tags: AI paper
+tags: [AI paper]
 preview: Recent years have witnessed a growth in computation requirement to train modern deep neural networks with massive data volume and model size. Distributed systems are widely employed to accelerate the training process. In this article, we survey the principle and technology to construct such a system. 
 ---
 
 某奇妙课程的期末论文。主要介绍分布式深度学习的架构和技术。
 
-# Abstract
+## Abstract
 
 Recent years have witnessed a growth in computation requirement to train modern deep neural networks with massive data volume and model size. Distributed systems are widely employed to accelerate the training process. In this article, we survey the principle and technology to construct such a system. Data parallelism and model parallelism are two fundamental strategies to parallelize the training process. Data parallelism separate training data to different nodes, while model parallelism partition the model. We summarize the architecture to utilize these strategies and how to minimize communication overhead and reach high scalability. Besides some compression techniques to accelerate data transmission are investigated in detail. 
 
-# Table of Content
+## Table of Content
 
 - Introduction
 - Data Parallelism
@@ -24,11 +24,11 @@ Recent years have witnessed a growth in computation requirement to train modern 
   - Lower Arithmetic Precision 
   - Sparsification
 
-# Document
+## Document
 
 [pdf file](/assets/doc/survey-final.pdf)
 
-# References
+## References
 
 Alham Fikri Aji and Kenneth Heafield. Sparse Communication for Distributed Gradient
 Descent. Proceedings of the 2017 Conference on Empirical Methods in Natural Language
@@ -122,7 +122,7 @@ Shuxin Zheng, Qi Meng, Taifeng Wang, Wei Chen, Nenghai Yu, Zhi-Ming Ma, and
 Tie-Yan Liu. Asynchronous Stochastic Gradient Descent with Delay Compensation.
 arXiv:1609.08326 [cs], August 2019.
 
-# Postscript
+## Postscript
 
 果然比期中的时候肝多了。这次的内容相比上次来说没有那么艰深（几乎没有什么 math），但是作为偏向工程的问题，其中涉及大量的技术细节，读起来比较费劲。此外，将这么一大坨庞杂的技术进行一个分类确实是比较有挑战性的事情。
 

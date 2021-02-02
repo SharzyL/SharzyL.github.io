@@ -1,15 +1,15 @@
 ---
 title: "Theoretical Analysis of Multi-layer Neural Network: A Survey"
-tags: AI paper
+tags: [AI paper]
 preview: Though multi-layer neural network has been used in a wide range of areas, the explanation about how it works well is still insufficient. This survey primarily focus on the theoretical analysis about the approximation ability and training process of neural network. 
 ---
 
 本文是我在人工智能入门课上的期中论文。主要介绍关于多层神经网络的一些理论方面研究，包括可表达性，收敛性等。
 
-# Abstract
+## Abstract
 Though multi-layer neural network has been used in a wide range of areas, the explanation about how it works well is still insufficient. This survey primarily focus on the theoretical analysis about the approximation ability and training process of neural network. For approximation ability, researches show that it can be arbitrarily strong with the increase of network complexity. Qualified relationship between such ability and width/depth has been partially constructed. For training, we investigates the SGD algorithm. To analysis its performance, the trajectory around loss surface critical points are surveyed, and some theoretical results about SGD instances are summarized. 
 
-# Table of Content
+## Table of Content
 - Introduction
 - Approximation
   - Universal approximation theorem
@@ -20,10 +20,10 @@ Though multi-layer neural network has been used in a wide range of areas, the ex
   - Instance analysis
 - Conclusion
 
-# Document
+## Document
 [pdf file](/assets/doc/survey_midterm.pdf)
 
-# References
+## References
 
 [1]  Zeyuan Allen-Zhu, Yuanzhi Li, and Zhao Song. A Convergence Theory for Deep Learning
 via Over-Parameterization. arXiv:1811.03962 [cs, math, stat] , June 2019. 120.
@@ -76,5 +76,5 @@ System. 1989. 321.
 [15] X.-H. Yu. Can backpropagation error surface not have local minima. IEEE Trans. Neural
 Netw., 3(6):1019–1021, Nov./1992. ISSN 10459227. doi: 10.1109/72.165604.
 
-# PS
+## PS
 本文是我迄今为止写文章最肝的一次了。我选的这个 subarea 的论文非常杂，里面还有很多奇怪的 math，导致看进度论文缓慢。某些同学两天写完，我写了接近一个星期还只写了三分之二（关于 generalization 的问题本来想写的，但是时间所限，被我魔改删掉了）。可以预见的是，今后还会有很多更肝的事情即将发生。

@@ -1,13 +1,29 @@
 import * as React from "react"
+import { Link } from "gatsby"
+import { css } from "@emotion/react"
 
-import SEO from "../components/seo"
+import "../style/index.sass"
+import "../style/global.sass"
+import "katex/dist/katex.min.css"
+import Footer from "../components/footer";
 
-const NotFoundPage = () => (
-  <div>
-    <SEO title="404: Not found" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
+const IndexPage = () => (
+    <>
+        <div id={"body"}>
+            <nav/>
+            <main id={"main-wrapper"}>
+
+                <h1 id={"index-prompt"}>
+                    404: <span style={{fontWeight: 300}}>Page not found</span>
+                </h1>
+
+                <div id={"site-entries-list"}>
+                    <Link to={"/"}>Homepage</Link>
+                </div>
+            </main>
+            <Footer/>
+        </div>
+    </>
 )
 
-export default NotFoundPage
+export default IndexPage

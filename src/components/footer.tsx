@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Link } from "gatsby";
 
 import "./footer.component.sass"
 
@@ -10,7 +11,10 @@ const Footer = ({}) => (
             Hosted on <a href={"https://github.io"}>Github Pages</a>.
         </p>
         <p>
-            Copyright 2021
+            Content on this site is licensed under <a href={"https://creativecommons.org/licenses/by/4.0/"}>CC BY 4.0</a> unless specified.
+        </p>
+        <p>
+            Subscribe this site via <Link to={"/feed.xml"}>RSS</Link>.
         </p>
     </footer>
 )

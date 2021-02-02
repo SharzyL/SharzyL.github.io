@@ -1,0 +1,35 @@
+#blog-index
+  color: var(--color-base)
+
+  font-family: var(--font-base)
+
+  max-width: var(--metric-center-width)
+  margin:
+    left: auto
+    right: auto
+
+  .blog-index-item-excerpt
+    margin:
+      top: var(--metric-spacing-unit)
+      bottom: calc(2 * var(--metric-spacing-unit))
+
+  .blog-index-item-title
+    position: relative
+    margin:
+      top: calc(2 * var(--metric-spacing-unit))
+      bottom: var(--metric-spacing-unit)
+
+    &::before
+      background-color: var(--color-alternative)
+      bottom: 0
+      content: ''
+      height: 2px
+      left: 0
+      position: absolute
+      display: inline-block
+      transition: transform 0.2s ease-in-out
+      transform: scaleX(0)
+      width: 100%
+
+    &:hover::before
+      transform: scaleX(1)

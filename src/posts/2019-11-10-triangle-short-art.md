@@ -1,13 +1,13 @@
 ---
 title: 多边形的三角形剖分结构及其应用
-tags: math paper algorithm
+tags: [math paper algorithm]
 ---
 
 本文为我的写作与沟通课程的短文终稿。主要介绍了关于三角形剖分的一些问题和应用。
 
 **由于可能的版权问题，此文保留一切权利**
 
-# Abstract
+## Abstract
 三角剖分问题在理论研究和实际问题中都有大量应用，因此也产生了众多相关的研究。本文介绍了其中的一些重要的问题和结果。
 
 本文主要选取了三方面的内容。第一方面是三角形剖分的应用，包括在理论上的应用，例如组合几何中的美术馆问题，
@@ -16,7 +16,7 @@ tags: math paper algorithm
 以及一些优化曲面三角形剖分的一些方法。 第三方面是关于三角形剖分在高维情形，特别是三维情形的推广，
 说明了多面体的四面体剖分的不可行性和判定方法的困难性。
 
-# Table of Content
+## Table of Content
 - 引言
 - 三角形剖分的应用
   - 美术馆问题
@@ -28,10 +28,10 @@ tags: math paper algorithm
 - 结论
   
 
-# Document
+## Document
 [pdf file](/assets/doc/art-gallary.pdf)
 
-# References
+## References
 [1] Peter Giblin. “Computational geometry: algorithms and applications (2nd edn.)” In: The Mathematical Gazette
 85.502 (2001), pp. 175–176.
 
@@ -77,7 +77,7 @@ pp. 411–413.
 [15] Cristopher Moore and Stephan Mertens. The nature of computation. OCLC: ocn180753706. Oxford [England]
 ; New York: Oxford University Press, 2011.
 
-# PS
+## PS
 这篇文章本身没有花太多时间（大概一整天吧），但是各种微调花了挺久。比如说折腾 LaTeX 的格式，特别是参考文献，图片 caption，脚注之类的，
 使得它表现上和老师给的 word 模板一样，（实际上要好看不少）。在画图上也花了一些功夫。图中一些矢量图是用 Adobe Illustrator 画的
 （后来发现可以用 tikz 画出更符合我想法的图，不过这都是写完文章之后的事情了，日后可以写一下关于 tikz 的一些笔记）。关于推广到四面体那一个
