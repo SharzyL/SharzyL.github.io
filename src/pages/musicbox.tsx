@@ -13,10 +13,10 @@ const IndexPage = () => (
             <main id={"main-wrapper"}>
                 <div id={"brand"}>
                     <h1 id={"brand-title"} style={{color: 'var(--color-brand)'}}>
-                        404
+                        Under construction
                     </h1>
                     <h2 id={"brand-subtitle"}>
-                        Oblivious page here…
+                        Sharzy has no idea on it yet.
                     </h2>
                 </div>
                 <div id={"site-entries-list"}>

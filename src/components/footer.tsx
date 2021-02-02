@@ -14,7 +14,7 @@ const Footer = ({}) => (
             Content on this site is licensed under <a href={"https://creativecommons.org/licenses/by/4.0/"}>CC BY 4.0</a> unless specified.
         </p>
         <p>
-            Subscribe this site via <Link to={"/feed.xml"}>RSS</Link>.
+            Subscribe the blog via <Link to={"/feed.xml"}>RSS</Link>.
         </p>
     </footer>
 )

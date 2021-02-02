@@ -1,3 +1,5 @@
+@import "global"
+
 #blog-index
   color: var(--color-base)
 
@@ -8,28 +10,30 @@
     left: auto
     right: auto
 
-  .blog-index-item-excerpt
-    margin:
-      top: var(--metric-spacing-unit)
-      bottom: calc(2 * var(--metric-spacing-unit))
-
-  .blog-index-item-title
-    position: relative
+  .blog-index-item
     margin:
       top: calc(2 * var(--metric-spacing-unit))
-      bottom: var(--metric-spacing-unit)
+      bottom: calc(1.5 * var(--metric-spacing-unit))
 
-    &::before
-      background-color: var(--color-alternative)
-      bottom: 0
-      content: ''
-      height: 2px
-      left: 0
-      position: absolute
-      display: inline-block
-      transition: transform 0.2s ease-in-out
-      transform: scaleX(0)
-      width: 100%
+    > .blog-index-item-title
+      position: relative
+      margin-top: calc(2 * var(--metric-spacing-unit))
 
-    &:hover::before
-      transform: scaleX(1)
+    > .blog-index-item-excerpt
+      font-size: var(--fontsize-secondary)
+      color: var(--color-secondary)
+
+    > .blog-index-item-subtitle
+      font-size: var(--fontsize-h5)
+      color: var(--color-base)
+      margin-top: 10px
+
+    > .blog-index-item-sep
+      width: 200px
+      border: 1px white solid
+
+    .blog-index-item-date
+      color: var(--color-brand-dark)
+
+.blog-index-item-title.live-link::before
+  background-color: var(--color-alternative)

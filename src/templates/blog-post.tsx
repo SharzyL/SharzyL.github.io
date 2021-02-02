@@ -2,21 +2,37 @@ import * as React from "react"
 import { graphql } from "gatsby"
 
 import "katex/dist/katex.min.css"
-import "../style/global.sass"
 import "../style/blog-post.sass"
-import "../style/syntax-highlighting.sass"
 
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
 
 export default ({ data }) => {
-    const post = data.markdownRemark
+    const node = data.markdownRemark
+    const title = <h1 id={"blog-post-title"} className={"h-centering inner-block"}
+                      dangerouslySetInnerHTML={{ __html: node.frontmatter.title}}/>
+    let subtitle = <></>
+    let date = <></>
+
+    if (node.frontmatter.subtitle) {
+        subtitle = <h2 id={"blog-post-subtitle"} className={"h-centering inner-block"}
+                       dangerouslySetInnerHTML={{__html: node.frontmatter.subtitle}}/>
+    }
+    if (node.fields.date) {
+        date = (
+            <p id={"blog-post-info"} className={"h-centering inner-block"}>
+                Posted on <span id={"blog-post-date"}>{(new Date(node.fields.date)).toLocaleDateString()}</span>
+            </p>
+        )
+    }
     return (
         <>
             <NavBar/>
-            <article id={"blog-post"}>
-                <h1 id={"blog-post-title"}>{post.frontmatter.title}</h1>
-                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <article id={"blog-post"} className={"para-block"}>
+                {title}
+                {subtitle}
+                {date}
+                <div id={"blog-post-main"} dangerouslySetInnerHTML={{ __html: node.html }} />
             </article>
             <Footer/>
         </>
@@ -28,6 +44,10 @@ export const query = graphql`
       html
       frontmatter {
         title
+        subtitle
+      }
+      fields {
+        date
       }
     }
   }

@@ -1,26 +1,49 @@
 import * as React from "react"
 import {graphql, Link} from "gatsby"
 
-import "../style/global.sass"
 import "../style/blog-index.sass"
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
 
 export default ({data}) => {
+    const render_node = (node, idx) => {
+        const title = (
+            <h2 className={"h-centering inner-block"}>
+                <Link to={node.fields.slug} className={"blog-index-item-title live-link"}
+                      dangerouslySetInnerHTML={{__html: node.frontmatter.title}}/>
+            </h2>
+        )
+        const excerpt = <p className={"blog-index-item-excerpt inner-block"}
+                           dangerouslySetInnerHTML={{__html: node.excerpt}}/>
+        let subtitle = <></>
+        let date = <></>
+        if (node.frontmatter.subtitle) {
+            subtitle = <p className={"blog-index-item-subtitle h-centering inner-block"} dangerouslySetInnerHTML={{__html: node.frontmatter.subtitle}}/>
+        }
+        if (node.fields.date) {
+            date = (
+                <p id={"blog-index-item-info"} className={"h-centering inner-block"}>
+                    Posted on <span className={"blog-index-item-date"}>{(new Date(node.fields.date)).toLocaleDateString()}</span>
+                </p>
+            )
+        }
+        return (
+            <div key={node.id} className={"blog-index-item"}>
+                {title}
+                {subtitle}
+                {excerpt}
+                {date}
+            </div>
+        )
+    }
     return (
         <>
             <NavBar/>
             <main id={"blog-index"}>
-                {data.allMarkdownRemark.nodes.filter(
-                    node => !node.frontmatter.permalink
-                ).map(node => (
-                    <div key={node.id} className={"blog-index-item"}>
-                        <h2>
-                            <Link to={node.fields.slug} className={"blog-index-item-title"} dangerouslySetInnerHTML={{__html: node.frontmatter.title}}/>
-                        </h2>
-                        <p className={"blog-index-item-excerpt"} dangerouslySetInnerHTML={{__html: node.excerpt}}/>
-                    </div>
-                ))}
+                {data.allMarkdownRemark.nodes
+                    .filter( node => !node.frontmatter.permalink )
+                    .map(render_node)
+                }
             </main>
             <Footer/>
         </>
@@ -28,18 +51,14 @@ export default ({data}) => {
 }
 export const query = graphql`
 query {
-  allMarkdownRemark {
+  allMarkdownRemark (
+    sort: {fields: fields___date, order: DESC},
+  ){
     nodes {
       id
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-        subtitle
-        permalink
-      }
-      excerpt(truncate:true)
+      fields { slug date }
+      frontmatter { title subtitle permalink }
+      excerpt (truncate:true)
     }
     totalCount
   }

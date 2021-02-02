@@ -1,8 +1,9 @@
 #nav-bar
   display: flex
   align-items: center
-  background-color: var(--color-dark)
+  background-color: var(--color-bg-dark)
   color: var(--color-primary)
+  width: 100%
   padding:
     top: 0.5em
     bottom: 0.5em
@@ -19,3 +20,6 @@
   .nav-item
     font-size: var(--fontsize-h3)
     color: var(--color-secondary)
+
+.nav-item.live-link::before
+  background-color: var(--color-secondary)

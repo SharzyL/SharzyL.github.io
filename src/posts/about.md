@@ -6,9 +6,9 @@ date: 2019-7-30
 permalink: /about/
 ---
 
-## About me
+这里是 Sharzy 的个人站点。
 
-这里是 Sharzy 的个人博客，用来记录一些个人的发现，以及一些兴致来时写的文章，或者一些我认为比垃圾要略好一些的课程论文。更新随缘。
+## About me
 
 我是一名 CS 学生，中学时曾有过 MO 背景。虽然宅但也不抗拒运动，对许多 non-trivial 的话题感兴趣，只是常常感慨精力有限，往往只能浅尝辄止。除了（CS 意义上的）技术和数学以外，对音乐和动画也略知一二，并长期试图涉足各种各样的领域。
 
@@ -17,14 +17,6 @@ permalink: /about/
 欢迎通过我的邮箱 [me@sharzy.in](mailto:me@sharzy.in) 或者 Telegram 账号 [@sharzyl](https://t.me/sharzyl) 与我联系。
 
 ## About the site
-
-本站使用使用了 [Jekyll](https://jekyllrb.com) 作为网页生成器，使用 `markdown` 写作，生成的网页均托管在 GitHub pages 上，在[这个 Github 仓库](https://github.com/SharzyL/SharzyL.github.io/tree/source)可以看到源代码。下面是本站使用的一些第三方库列表：
-
-- [gitalk](https://github.com/gitalk/gitalk) 提供了评论功能，可以通过 GitHub 账号登陆发表评论。
-- [mathjax](https://www.mathjax.org/) 提供了数学公式的支持。
-- [zooming.js](https://github.com/kingdido999/zooming) 提供了对于图片放大的支持。
-
-本站支持夜间模式，您可以通过右上角的月亮形图标开启，目前暂不支持自动识别设备的夜间模式。
 
 本站博文中代码高亮使用的是 One Dark 主题，代码使用的等宽字体是 Cascadia Code，站内英文字体使用的是 Roboto。
 
@@ -42,11 +34,31 @@ Key fingerprint：9424 DF6A 6779 5802 3ACA  3A63 2347 0D4F D461 AA84
 
 # Link exchange
 
-| | |
-|:---:|:--:|:--:|
-| [Tony's blog](https://fengtony686.github.io/) | Record Interesting Things in My Life |
-| [MiaoTony’s 小窝](https://miaotony.xyz/) | 仰望星空，脚踏实地，未来可期 |
-| [1A23 Studio](https://1a23.com/) | We create. | 
-| [not b@tk1z](https://blog.batkiz.com/) | 一帘新语随风去，半山明月踏江来。 |
-| [Benpigchu](https://benpigchu.com/) | Box Packaged Creature |
-| [Reliena's Garage](https://blog.cyanoxygen.xyz) | Experience more, write more. |
+<table>
+    <tbody>
+        <tr>
+            <td align="center"><a href="https://fengtony686.github.io/">Tony's blog</a></td>
+            <td align="center">Record Interesting Things in My Life</td>
+        </tr>
+        <tr>
+            <td align="center"><a href="https://miaotony.xyz/">MiaoTony’s 小窝</a></td>
+            <td align="center">仰望星空，脚踏实地，未来可期</td>
+        </tr>
+        <tr>
+            <td align="center"><a href="https://1a23.com/">1A23 Studio</a></td>
+            <td align="center">We create.</td>
+        </tr>
+        <tr>
+            <td align="center"><a href="https://blog.batkiz.com/">not b@tk1z</a></td>
+            <td align="center">一帘新语随风去，半山明月踏江来。</td>
+        </tr>
+        <tr>
+            <td align="center"><a href="https://benpigchu.com/">Benpigchu</a></td>
+            <td align="center">Box Packaged Creature</td>
+        </tr>
+        <tr>
+            <td align="center"><a href="https://blog.cyanoxygen.xyz">Reliena's Garage</a></td>
+            <td align="center">Experience more, write more.</td>
+        </tr>
+    </tbody>
+</table>

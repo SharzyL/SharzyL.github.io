@@ -22,7 +22,7 @@ const IndexPage = () => (
                 <div id={"site-entries-list"}>
                     <Link to={"/blog"}>Blog</Link>
                     <Link to={"/about"}>About</Link>
-                    <Link to={"/"}>Music Box</Link>
+                    <Link to={"/musicbox"}>Music Box</Link>
                 </div>
             </main>
             <Footer/>

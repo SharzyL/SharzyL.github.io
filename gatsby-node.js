@@ -7,11 +7,19 @@
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const path = require(`path`)
 
+const dateInFilenameRegex = /^(\d{4}-\d{2}-\d{2})/
+
 exports.onCreateNode = ({node, getNode, actions}) => {
     const {createNodeField} = actions
     if (node.internal.type === `MarkdownRemark`) {
         const slug = node.frontmatter.permalink || createFilePath({node, getNode, basePath: `pages`})
-        console.log(slug)
+        const matchedDateStr = path.parse(node.fileAbsolutePath).name.match(dateInFilenameRegex)
+        const nodeDate = matchedDateStr && new Date(matchedDateStr[0])
+        createNodeField({
+            node,
+            name: `date`,
+            value: nodeDate,
+        })
         createNodeField({
             node,
             name: `slug`,

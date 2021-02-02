@@ -1,24 +1,82 @@
+@import "global"
+@import "syntax-highlighting"
+
 body
   background-color: var(--color-bg)
 
 #blog-post
   color: var(--color-base)
-
   font-family: var(--font-base)
 
-  max-width: var(--metric-center-width)
-  margin:
-    left: auto
-    right: auto
+  width: 100%
+
+#blog-post-main
+  > *
+    max-width: var(--metric-center-width)
+    @include h-centering
+
+  > blockquote, >table, .gatsby-highlight
+    max-width: var(--metric-stretchout-width)
+
+  > p > img
+    max-width: var(--metric-center-width)
+
+  blockquote
+    background-color: var(--color-bg-dark)
+    border-radius: var(--metric-box-radius)
+    padding: 0.001em var(--metric-spacing-unit)
 
   img
     display: block
     margin:
       left: auto
       right: auto
-    max-width: 100%
     max-height: 50vh
+
+  a.anchor
+    fill: var(--color-alternative)
+    > svg
+      transform: scale(2)
+      transform-origin: right bottom
+
+
+  table
+    --table-rule: 1px solid var(--color-base)
+    --table-v-padding: 0.5em
+    border-collapse: collapse
+    > thead
+      > tr
+        > th
+          border:
+            top: var(--table-rule)
+          padding: .4em var(--table-v-padding)
+    > tbody
+      td
+        padding: .4em var(--table-v-padding)
+      > tr:first-child
+        > td
+          padding-top: calc(2 * var(--table-v-padding))
+          border-top: var(--table-rule)
+      > tr:last-child
+        > td
+          padding-bottom: calc(2 * var(--table-v-padding))
+          border-bottom: var(--table-rule)
+    margin:
+      left: auto
+      right: auto
 
   .katex-display
     max-width: 100%
     overflow-x: auto
+
+#blog-post-title
+  color: var(--color-alternative)
+
+#blog-post-subtitle
+  color: var(--color-brand)
+
+#blog-post-info
+  color: var(--color-base)
+
+#blog-post-date
+  color: var(--color-brand-dark)

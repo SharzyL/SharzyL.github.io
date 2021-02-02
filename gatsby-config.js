@@ -3,6 +3,7 @@ module.exports = {
     title: `Sharzy`,
     description: `21st century schizoid man`,
     author: `Sharzy L`,
+    siteUrl: `https://sharzy.in`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -28,16 +29,64 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
+
     // `gatsby-plugin-offline`,
     `gatsby-plugin-sass`,
+
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.nodes.filter(
+                node => !node.frontmatter.permalink
+              ).map(node => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  nodes {
+                    excerpt
+                    html
+                    fields { slug }
+                    frontmatter { title date }
+                  }
+                }
+              }
+            `,
+            output: "/feed.xml",
+            title: `RSS feed of sharzy.in`,
+          },
+        ],
+      },
+    },
 
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         footnotes: true,
-        commonmark: true,
         plugins: [
           {
             resolve: `gatsby-remark-katex`,
@@ -50,6 +99,10 @@ module.exports = {
             options: {
               showLineNumbers: true,
             }
+          },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {}
           }
         ]
       }
