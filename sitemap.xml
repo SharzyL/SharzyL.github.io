@@ -1,95 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://sharzy.in/2019/08/01/sensitivity.html</loc>
-<lastmod>2020-08-16T01:10:03+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/2019/08/04/uniform.html</loc>
-<lastmod>2019-09-06T19:03:04+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/2019/08/06/bx.html</loc>
-<lastmod>2019-10-25T17:07:39+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/2019/08/08/pitfall.html</loc>
-<lastmod>2020-06-21T21:02:30+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/2019/10/24/latex-tool.html</loc>
-<lastmod>2020-01-10T17:10:57+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/2019/11/10/triangle-short-art.html</loc>
-<lastmod>2020-01-10T17:10:57+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/2019/11/15/neural-network-theory.html</loc>
-<lastmod>2020-08-16T17:08:46+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/2019/12/19/structured-light.html</loc>
-<lastmod>2020-08-16T17:08:46+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/2020/01/08/distributed-dl.html</loc>
-<lastmod>2020-08-16T17:08:46+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/2020/01/08/latex-flow.html</loc>
-<lastmod>2020-04-27T14:33:26+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/2020/01/09/submodular.html</loc>
-<lastmod>2020-01-10T17:10:57+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/2020/02/04/cjk-helper.html</loc>
-<lastmod>2020-05-22T21:58:24+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/2020/06/21/computer-history.html</loc>
-<lastmod>2020-07-16T00:24:37+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/2020/07/11/search-algorithm.html</loc>
-<lastmod>2020-12-06T17:00:11+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/2020/08/15/FELT.html</loc>
-<lastmod>2020-08-16T16:58:54+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/2020/12/06/rock-live.html</loc>
-<lastmod>2020-12-06T17:00:11+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/about/</loc>
-<lastmod>2020-12-06T14:11:51+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/</loc>
-<lastmod>2020-12-06T14:11:51+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/assets/doc/art-gallary.pdf</loc>
-<lastmod>2020-01-10T14:41:16+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/assets/doc/computer-history.pdf</loc>
-<lastmod>2020-06-21T21:16:40+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/assets/doc/structured-light.pdf</loc>
-<lastmod>2020-01-10T14:41:16+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/assets/doc/survey_midterm.pdf</loc>
-<lastmod>2020-01-10T14:41:16+08:00</lastmod>
-</url>
-<url>
-<loc>https://sharzy.in/ie-redirect.html</loc>
-<lastmod>2020-01-08T23:03:30+08:00</lastmod>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://sharzy.in/posts/2019-08-01-sensitivity/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2019-08-06-bx/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2019-08-04-uniform/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2019-10-24-latex-tool/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2019-08-08-pitfall/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2019-11-10-triangle-short-art/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2019-11-15-neural-network-theory/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2020-01-08-latex-flow/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2019-12-19-structured-light/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2020-02-04-cjk-helper/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2020-06-21-computer-history/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2020-07-11-search-algorithm/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2020-08-15-FELT/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2020-12-06-rock-live/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2020-01-08-distributed-dl/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2020-01-09-submodular/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/about/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/blog/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/musicbox/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
 </urlset>
