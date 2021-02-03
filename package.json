@@ -1,31 +1,24 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "sharzy.in",
+  "description": "Sharzy's personal site",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Sharzy L",
   "dependencies": {
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.5.0",
-    "gatsby-plugin-manifest": "^2.6.1",
     "gatsby-plugin-offline": "^3.4.0",
     "gatsby-plugin-react-helmet": "^3.4.0",
-    "gatsby-plugin-sharp": "^2.8.0",
     "gatsby-source-filesystem": "^2.5.0",
-    "gatsby-transformer-sharp": "^2.6.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "@emotion/react": "^11.1.4",
-    "emotion": "^11.0.0",
     "gatsby-plugin-feed": "^2.12.0",
     "gatsby-plugin-sass": "^3.1.0",
     "gatsby-plugin-sitemap": "^2.12.0",
     "gatsby-remark-autolink-headers": "^2.10.0",
-    "gatsby-remark-images": "^3.11.0",
     "gatsby-remark-katex": "^3.9.0",
     "gatsby-remark-prismjs": "^3.12.0",
     "gatsby-transformer-remark": "^2.15.0",
@@ -49,9 +42,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/sharzyl.github.io"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/sharzyl.github.io/issues"
   }
 }
