@@ -1,3 +1,5 @@
+@import "fonts"
+
 \:root
   --color-bg: #000549
   --color-bg-dark: #000023
@@ -12,15 +14,15 @@
   --color-primary: #ccc
   --color-secondary: #94abc4
 
-  --font-display: Roboto, Helvetica, sans-serif
+  --font-display: Roboto_local, Roboto
   --font-alternative: Georgia, serif
-  --font-base: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif
-  --font-cjk: source-han-sans-cjk-sc, source-han-sans-cjk-ja, "Noto Sans CJK SC", "Source Han Sans SC", "Noto Sans CJK JP", "Source Han Sans", "Noto Sans SC", "Noto Sans JP", "Noto Sans TC", "Hiragino Sans", "Microsoft YaHei", "WenQuanYi Micro Hei"
-  --font-mono: Cascadia Code PL, Monaco, Consolas, 'Courier New', Courier, monospace
+  --font-base: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, "Helvetica Neue", Helvetica, Oxygen, Ubuntu, Cantarell, sans-serif
+  --font-cjk: source-han-sans-cjk-sc, source-han-sans-cjk-ja, "Noto Sans CJK SC", "Source Han Sans SC", "Noto Sans CJK JP", "Source Han Sans", "Noto Sans SC", "Noto Sans JP", "Noto Sans TC", "Hiragino Sans", "Microsoft YaHei", "微软雅黑", "WenQuanYi Micro Hei", STXihei, "华文细黑", Heiti, "黑体"
+  --font-mono: Cascadia Code, Monaco, Consolas, 'Courier New', Courier, monospace
 
-  --fontsize-base: 18px
-  --fontsize-secondary: 17px
   --fontsize-sub: 15px
+  --fontsize-secondary: 17px
+  --fontsize-base: 18px
   --fontsize-brand: 72px
   --fontsize-h1: 48px
   --fontsize-h2: 36px
@@ -29,21 +31,30 @@
   --fontsize-h5: 24px
   --fontsize-h6: 20px
 
-  --fontweight-base: 400
+  --fontweight-brand: 100
   --fontweight-display: 300
-  --fontweight-brand: 200
-  --fontweight-emph: 600
+  --fontweight-base: 400
+  --fontweight-emph: 700
 
-  --metric-spacing-unit: 30px
+  --metric-unit-spacing: 30px
   --metric-inner-spacing: 15px
   --metric-box-radius: 5px
-  --metric-center-width: min(calc(100vw - 8 * var(--metric-spacing-unit)), 700px)
-  --metric-stretchout-width: min(calc(100vw - 6 * var(--metric-spacing-unit)), 900px)
+  --metric-center-width: min(calc(100vw - 8 * var(--metric-unit-spacing)), 700px)
+  --metric-stretchout-width: min(calc(100vw - 6 * var(--metric-unit-spacing)), 900px)
 
 @media only screen and (max-width: 730px)
   \:root
-    --fontsize-h1: 40px
+    --fontsize-sub:  14px
+    --fontsize-secondary: 15px
+    --fontsize-base: 16px
 
-    --metric-spacing-unit: 18px
-    --metric-center-width: calc(100vw - 2 * var(--metric-spacing-unit))
-    --metric-stretchout-width: min(calc(100vw - 2 * var(--metric-spacing-unit)), 900px)
+    --fontsize-h1: 40px
+    --fontsize-h2: 32px
+    --fontsize-h3: 26px
+    --fontsize-h4: 22px
+    --fontsize-h5: 20px
+    --fontsize-h6: 18px
+
+    --metric-unit-spacing: 18px
+    --metric-center-width: calc(100vw - 2 * var(--metric-unit-spacing))
+    --metric-stretchout-width: min(calc(100vw - 2 * var(--metric-unit-spacing)), 900px)

@@ -57,7 +57,7 @@ js 中的 `charCodeAt( i: number): number` 函数能给出字符串在某一位�
 
 Unicode 使用“**中日韩统一表意文字**”（**CJK Unified Ideographs**）标准来处理这些“汉字”的编码。在这一标准中，对于汉字收录的处理使用**表意文字认同原则**（Han Unification Rule，又称**表意文字统合原则**）与**字源分离原则**（Source Separation Rule，又称**原规格分离原则**）。一个字（character）如果在不同语言中具有不同的字型（glyph），那么这些不同的字型会被编为同一个编码，由字体来负责处理显示不同的字型。而如果一个字在同一个语言中具有多种不同的字型，那么这些不同的字型会被编为多个编码。
 
-![image.png](https://p.sda1.dev/0/17316a4d38fb6a29a373d1d09b8a1da5/Te2kqplVQbicrxR.png)
+![Wiki 所展示的一个码位对应不同字型，例如「房」字在 Unicode 中对应 U+623F 码位，但是它对应的简体中文，香港和台湾的繁体字型，以及日文、韩文、越文中的字型均不相同](https://p.sda1.dev/0/17316a4d38fb6a29a373d1d09b8a1da5/Te2kqplVQbicrxR.png)
 
 （上图图源和上文的主要参考来源均为 [wiki](https://zh.wikipedia.org/zh-cn/中日韓統一表意文字)）
 

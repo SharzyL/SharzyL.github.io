@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby";
 
 import "./footer.component.sass"
 
@@ -14,7 +13,7 @@ const Footer = ({}) => (
             Content on this site is licensed under <a href={"https://creativecommons.org/licenses/by/4.0/"}>CC BY 4.0</a> unless specified.
         </p>
         <p>
-            Subscribe the blog via <Link to={"/feed.xml"}>RSS</Link>.
+            Subscribe the blog via <a href={"/feed.xml"}>RSS</a>.
         </p>
     </footer>
 )

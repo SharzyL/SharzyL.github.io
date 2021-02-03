@@ -1,5 +1,6 @@
 @import "global"
 @import "syntax-highlighting"
+@import "autolink-patch"
 
 body
   background-color: var(--color-bg)
@@ -24,7 +25,7 @@ body
   blockquote
     background-color: var(--color-bg-dark)
     border-radius: var(--metric-box-radius)
-    padding: 0.001em var(--metric-spacing-unit)
+    padding: 0.001em var(--metric-unit-spacing)
 
   img
     display: block
@@ -33,17 +34,12 @@ body
       right: auto
     max-height: 50vh
 
-  a.anchor
-    fill: var(--color-alternative)
-    > svg
-      transform: scale(2)
-      transform-origin: right bottom
-
-
   table
     --table-rule: 1px solid var(--color-base)
     --table-v-padding: 0.5em
     border-collapse: collapse
+    width: var(--metric-center-width)
+    max-width: var(--metric-stretchout-width)
     > thead
       > tr
         > th
@@ -65,18 +61,24 @@ body
       left: auto
       right: auto
 
-  .katex-display
-    max-width: 100%
-    overflow-x: auto
-
 #blog-post-title
-  color: var(--color-alternative)
+  color: var(--color-brand)
 
 #blog-post-subtitle
-  color: var(--color-brand)
+  color: var(--color-base)
+  font-size: var(--fontsize-h3)
 
 #blog-post-info
   color: var(--color-base)
 
 #blog-post-date
   color: var(--color-brand-dark)
+
+.katex-display
+  max-width: 100%
+  overflow-x: auto
+  overflow-y: hidden
+
+  // When we set `overflow-x: auto`, a vertical scrollbar will appear on some formulas for unknown reasons
+  // This is a bruteforce approach to prevent this scrollbar in most cases
+  padding: 0.3em 0

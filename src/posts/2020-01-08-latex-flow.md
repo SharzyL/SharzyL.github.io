@@ -18,7 +18,9 @@ tags: [latex]
 
 而关于如何管理 Items，Zotero 提供了两个主要层级：Library 和 Collection。Library 默认只有一个 My Library，这个是指本地的 library。可以将 Library 利用 Zotero 账号进行同步，或者在线协作。免费 Zotero 账号有 200 MB 的空间可以进行同步，可以通过付费解锁更多（不过是买断制的，比较良心）。Collection 是管理 Items 的主要层级，它支持无限层级细分（创建 Subcollection, Subsubcollection 等）。
 
-<img src="https://i.loli.net/2020/01/09/OZsj9VtRaClgrpD.png" alt="image.png" style="max-width:15em;" />
+![Zotero 显示 collections 的界面，可以看到，它支持对文献多个层级的管理，同时也有 My publications, Duplicated Items, Unified Items 等特殊的 collections](https://i.loli.net/2020/01/09/OZsj9VtRaClgrpD.png)
+
+
 
 **添加 Item**：Zotero 提供了若干种方式添加 Item，下面列出比较常用的几类：
 
@@ -172,7 +174,7 @@ VSCode + LaTeX workshop 的安装过程就不赘述了。有一定门槛的是 L
 
 进行完上面的配置之后，打开 VSCode 侧边栏的 TeX 栏，就可以看到这样的一些选项了：
 
-<img src="https://i.loli.net/2020/01/09/mDIPWjiz34ZlgQE.png" alt="image.png" style="max-width:20em;" />
+![VSCode 的 LaTeX 菜单，包括编译、预览、日志、导航等选项](https://i.loli.net/2020/01/09/mDIPWjiz34ZlgQE.png)
 
 如果了解了上一篇文章中提到的 LaTeX 工具链的相关内容的话， 上面配置文件的 `"latex-workshop.latex.tools"`和`latex-workshop.latex.recipes`部分应该比较容易理解。这里解释几个命令行参数的含义，其它的命令行参数可以自行参看相关文档。
 

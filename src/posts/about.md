@@ -12,27 +12,29 @@ permalink: /about/
 
 我是一名 CS 学生，中学时曾有过 MO 背景。虽然宅但也不抗拒运动，对许多 non-trivial 的话题感兴趣，只是常常感慨精力有限，往往只能浅尝辄止。除了（CS 意义上的）技术和数学以外，对音乐和动画也略知一二，并长期试图涉足各种各样的领域。
 
-在  [Github](https://github.com/SharzyL)，[Bangumi](https://bgm.tv/user/sharzy)，[豆瓣](https://www.douban.com/people/sharzy/) 可以看到我的一些动态。平时会在我的 telegram channel [@sharzy_talk](https://t.me/sharzy_talk) 发送一些吐槽或者一些短篇的文字。
+在  [Github](https://github.com/SharzyL)，[Bangumi](https://bgm.tv/user/sharzy)，[豆瓣](https://www.douban.com/people/sharzy/) 可以看到我的一些动态。平时会在我的 telegram channel [@sharzy_talk](https://t.me/sharzy_talk) 发送一些一些短篇的文字，或者进行一些社交网络式的分享和讨论。
 
-欢迎通过我的邮箱 [me@sharzy.in](mailto:me@sharzy.in) 或者 Telegram 账号 [@sharzyl](https://t.me/sharzyl) 与我联系。
+欢迎通过我的邮箱 [me [at] sharzy.in](mailto:me@sharzy.in) 
+
+[^]: avoid spammer
+
+或者 Telegram 账号 [@sharzyl](https://t.me/sharzyl) 与我联系。
 
 ## About the site
 
-本站博文中代码高亮使用的是 One Dark 主题，代码使用的等宽字体是 Cascadia Code，站内英文字体使用的是 Roboto。
-
-如果需要订阅本站的消息，可以通过这个 [RSS 链接](/feed.xml)。
+如果需要订阅本站博客的消息，可以通过这个 [RSS 链接](/feed.xml)。
 
 本站的内容，如无特别说明，均使用 CC BY 4.0 协议发布，只要**注明来源和修改部分**，并且不施加额外的限制，可以将内容分享到任何地方，详情请见 [Creative Commons](https://creativecommons.org/licenses/by/4.0/) 网站的说明。
 
+本站不使用追踪器，我们不会记录您的个人数据或者使用追踪性的用户标识；但可能偶尔会去看一眼 CDN 服务商的统计数据。
+
 ## PGP
 
-Key ID: C929DD40779344DF
+Fingerprint: `FCC0 1E57 6D77 32FF 264B DE53 C929 DD40 7793 44DF`
 
-Key fingerprint：9424 DF6A 6779 5802 3ACA  3A63 2347 0D4F D461 AA84
+Download public key [here](https://keys.openpgp.org/vks/v1/by-fingerprint/FCC01E576D7732FF264BDE53C929DD40779344DF). 
 
-[Public key](https://keys.openpgp.org/vks/v1/by-fingerprint/FCC01E576D7732FF264BDE53C929DD40779344DF)
-
-# Link exchange
+## Link exchange
 
 <table>
     <tbody>

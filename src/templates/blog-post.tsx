@@ -6,6 +6,7 @@ import "../style/blog-post.sass"
 
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
+import SEO from "../components/seo"
 
 export default ({ data }) => {
     const node = data.markdownRemark
@@ -27,12 +28,13 @@ export default ({ data }) => {
     }
     return (
         <>
+            <SEO title={node.frontmatter.title}/>
             <NavBar/>
             <article id={"blog-post"} className={"para-block"}>
                 {title}
                 {subtitle}
                 {date}
-                <div id={"blog-post-main"} dangerouslySetInnerHTML={{ __html: node.html }} />
+                <div id={"blog-post-main"} className={"para-block"} dangerouslySetInnerHTML={{ __html: node.html }} />
             </article>
             <Footer/>
         </>

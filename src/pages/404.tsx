@@ -2,12 +2,13 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 import "../style/index.sass"
-import "../style/global.sass"
-import Footer from "../components/footer";
+import SEO from "../components/seo"
 import NavBar from "../components/navbar";
+import Footer from "../components/footer";
 
 const IndexPage = () => (
     <>
+        <SEO title={"404"}/>
         <div id={"body"}>
             <NavBar/>
             <main id={"main-wrapper"}>

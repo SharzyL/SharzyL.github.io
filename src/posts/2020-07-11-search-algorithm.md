@@ -8,7 +8,7 @@ tags: [tech algorithm]
 
 下图展示了搜索引擎的一个用例，我们可以从中看到上面这些机制的运作。当我们搜索 post punk bands 1980s 时，它不会严格地匹配这个字符串，而是能够容忍一些改动，例如将 post 和 punk 之间用连字符连接，或者把 1980s 替换成 1980。尽管可以容忍一些关键词的缺失，但是它仍然能够衡量某个网页和查询的相关程度，例如 List of post punk-bands 的 wiki 就比 post-punk 的 wiki 排名靠前。
 
-![](https://p.sda1.dev/0/d528ffd7aa369877acbfb04f3d88dce5/image.png)
+![在搜索引擎上搜索 post punk bands 1980s 的搜索结果](https://p.sda1.dev/0/d528ffd7aa369877acbfb04f3d88dce5/image.png)
 
 催生本文的是这样一个场景：某日看到我在我的 [Telegram channel](https://t.me/sharzy_talk) 写下的几百条文字，但是又想到 Telegram 的聊天记录搜索对于中文相当不友好（详情可以参考[这篇文章](https://www.newlearner.site/2020/04/25/telegram-search.html)），如果不做一个更好的搜索工具的话，之前写下的文字很快就会淹没在时间线之中，难以被挖掘出来了。于是我便萌生了搭建一个搜索服务的想法，在 GitHub 上稍加搜索就能找到一个叫 [telegram-search](https://github.com/EYHN/telegram-search) 的仓库，提供了一个利用 bot 进行搜索的程序。但是当我搭建起来之后，发现了一个问题：这个程序是利用 Elasticsearch 提供搜索服务的，但是我手头的机器内存太小了，无法满足 Elasticsearch 的内存需求，只能使用大量的 swap，这导致搜索过程的稳定性很差。一番考虑之后，决定另寻他法。在一番查找之后，发现了一个纯 python 的库 [whoosh](https://whoosh.readthedocs.io/) 能够提供类似的需求，于是将 telegram-search 的代码一番魔改，做成了 [tg-searcher](https://github.com/SharzyL/tg_searcher) 这个新的服务，占用内存远比 Elasticsearch 小，并且能够达到类似的效果。
 
@@ -195,11 +195,11 @@ $$
 
 在找到相关的文档之后，为了展示给用户，我们还需要在文档中摘取合适的片段。为了让用户能够一目了然，我们应当使得这个片段中包含相关程度尽可能高的关键词，并且将关键词用醒目的方式标注出来（例如用**粗体**）。例如在文首的例子中（见下图），这个 wiki 页面里面包含了很多关键词，但是搜索引擎能够向用户展示这样一段相关度很高的片段。
 
-![](https://p.sda1.dev/0/27485c5cae7c66d1a91dfc3a8c38a336/image.png)
+![搜索引擎展示了 List of post-punk bands 的 Wiki 条目，其中 post-punk bands, Post-punk 等词被高亮显示出来了](https://p.sda1.dev/0/27485c5cae7c66d1a91dfc3a8c38a336/image.png)
 
 当文档中的关键词比较分散的时候，我们也许需要提供多个片段才能更好地展示信息。
 
-![](https://p.sda1.dev/0/5502afe8265dc05853f660d7717ada4b/image.png)
+![搜索引擎展示了一个 postpunkprof.com 的页面，其中的 1980s, post-punk 等关键词分散地分布在网页中](https://p.sda1.dev/0/5502afe8265dc05853f660d7717ada4b/image.png)
 
 在文档中找到这样的片段的过程被称为高亮（highlight）。一般来说，高亮的过程还是非常直接的。常见的高亮算法主要分为三个阶段：
 
@@ -230,7 +230,7 @@ return score
 
 拼写纠错。例如当我搜索 “pank band” 的时候，duckduckgo 就会提示 `Including results for "punk band"? `，如下图所示。
 
-![](https://p.sda1.dev/0/414cad5176d70c729c303201bb622206/image.png)
+![当搜索 pank band 时，搜索引擎会提示「你是否要找的是 punk band」](https://p.sda1.dev/0/414cad5176d70c729c303201bb622206/image.png)
 
 在讨论这个功能是如何实现之前，我们需要一些预备知识：[Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) 是一个衡量两个字符串的距离的方式，如果一个字符串需要最少 k 次修改才能变成另一个，那么它们的 Levenshtein distance 即为 k。有一种高效的算法，即 [Levenshtein automaton](https://en.wikipedia.org/wiki/Levenshtein_automaton) 可以生成和识别与某个字符串之间的 Levenshtein distance 距离不大于 k 的所有字符串。有研究指出大部分的 typo 所造成的 Levenshtein distance 都不大于 2（ Ref: [F. J. Damerau. A technique for computer detection and correction of spelling errors. Communications of the ACM, 7(3):171–176, 1964.](https://dl.acm.org/doi/10.1145/363958.363994)）。
 

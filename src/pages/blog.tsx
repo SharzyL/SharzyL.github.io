@@ -2,6 +2,7 @@ import * as React from "react"
 import {graphql, Link} from "gatsby"
 
 import "../style/blog-index.sass"
+import SEO from "../components/seo"
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
 
@@ -28,12 +29,15 @@ export default ({data}) => {
             )
         }
         return (
-            <div key={node.id} className={"blog-index-item"}>
-                {title}
-                {subtitle}
-                {excerpt}
-                {date}
-            </div>
+            <>
+                <SEO title={"Sharzy's blog"}/>
+                <div key={node.id} className={"blog-index-item"}>
+                    {title}
+                    {subtitle}
+                    {excerpt}
+                    {date}
+                </div>
+            </>
         )
     }
     return (

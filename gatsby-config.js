@@ -3,7 +3,7 @@ module.exports = {
     title: `Sharzy`,
     description: `21st century schizoid man`,
     author: `Sharzy L`,
-    siteUrl: `https://sharzy.in`
+    siteUrl: `https://sharzy.in/`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -14,7 +14,6 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    `gatsby-plugin-emotion`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -102,10 +101,49 @@ module.exports = {
           },
           {
             resolve: `gatsby-remark-autolink-headers`,
-            options: {}
+            options: {
+              icon: `<span>#</span>`
+            }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            }
           }
         ]
       }
     },
+
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }`,
+        resolveSiteUrl: ({site, allSitePage}) => {
+          return site.siteMetadata.siteUrl
+        },
+        serialize: ({ site, allSitePage }) =>
+            allSitePage.nodes.map(node => {
+              return {
+                url: `${site.siteMetadata.siteUrl}${node.path}`,
+                changefreq: `weekly`,
+                priority: 0.7,
+              }
+            })
+      }
+    }
   ],
 }
