@@ -21,7 +21,7 @@ Though multi-layer neural network has been used in a wide range of areas, the ex
 - Conclusion
 
 ## Document
-[pdf file](/assets/doc/survey_midterm.pdf)
+[pdf file](/assets/doc/survey-midterm.pdf)
 
 ## References
 
