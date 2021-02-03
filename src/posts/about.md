@@ -14,11 +14,7 @@ permalink: /about/
 
 在  [Github](https://github.com/SharzyL)，[Bangumi](https://bgm.tv/user/sharzy)，[豆瓣](https://www.douban.com/people/sharzy/) 可以看到我的一些动态。平时会在我的 telegram channel [@sharzy_talk](https://t.me/sharzy_talk) 发送一些一些短篇的文字，或者进行一些社交网络式的分享和讨论。
 
-欢迎通过我的邮箱 [me [at] sharzy.in](mailto:me@sharzy.in) 
-
-[^]: avoid spammer
-
-或者 Telegram 账号 [@sharzyl](https://t.me/sharzyl) 与我联系。
+欢迎通过我的邮箱 [me [at] sharzy [dot] in](mailto:me@sharzy.in) 或者 Telegram 账号 [@SharzyL](https://t.me/sharzyl) 与我联系。
 
 ## About the site
 

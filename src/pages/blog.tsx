@@ -24,7 +24,7 @@ export default ({data}) => {
         if (node.fields.date) {
             date = (
                 <p id={"blog-index-item-info"} className={"h-centering inner-block"}>
-                    Posted on <span className={"blog-index-item-date"}>{(new Date(node.fields.date)).toLocaleDateString()}</span>
+                    Posted on <span className={"blog-index-item-date"}>{(new Date(node.fields.date)).toDateString()}</span>
                 </p>
             )
         }
@@ -53,6 +53,7 @@ export default ({data}) => {
         </>
     )
 }
+
 export const query = graphql`
 query {
   allMarkdownRemark (
