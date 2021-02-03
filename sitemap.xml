@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://sharzy.in/posts/2019-08-01-sensitivity/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sharzy.in/posts/2019-08-06-bx/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sharzy.in/posts/2019-08-04-uniform/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sharzy.in/posts/2019-10-24-latex-tool/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2019-08-01-sensitivity/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sharzy.in/posts/2019-08-08-pitfall/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sharzy.in/posts/2019-11-10-triangle-short-art/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sharzy.in/posts/2019-11-15-neural-network-theory/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sharzy.in/posts/2020-01-08-latex-flow/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sharzy.in/posts/2019-12-19-structured-light/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2019-08-06-bx/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2019-10-24-latex-tool/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2019-11-10-triangle-short-art/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2020-01-08-latex-flow/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2020-01-09-submodular/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sharzy.in/posts/2020-02-04-cjk-helper/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sharzy.in/posts/2020-06-21-computer-history/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2019-11-15-neural-network-theory/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2020-01-08-distributed-dl/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sharzy.in/posts/2020-07-11-search-algorithm/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sharzy.in/posts/2020-08-15-FELT/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sharzy.in/posts/2020-12-06-rock-live/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sharzy.in/posts/2020-01-08-distributed-dl/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sharzy.in/posts/2020-01-09-submodular/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sharzy.in/about/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharzy.in/posts/2020-12-06-rock-live/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sharzy.in/blog/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sharzy.in/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sharzy.in/musicbox/</loc> <changefreq>weekly</changefreq> <priority>0.7</priority> </url>
