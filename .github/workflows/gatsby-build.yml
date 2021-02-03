@@ -28,4 +28,4 @@ jobs:
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh
-
+          gatsby-args: --verbose
