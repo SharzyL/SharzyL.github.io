@@ -1,0 +1,16 @@
+{
+  "name": "gatsby-remark-img-process",
+  "version": "1.0.0",
+  "description": "Upload image to 3rd party service, and keep a preview locally",
+  "main": "index.js",
+  "repository": "https://github.com/sharzyl.github.io",
+  "author": "Sharzy L",
+  "license": "0BSD",
+  "dependencies": {
+    "mdast-util-to-string": "^2.0.0",
+    "unist-util-visit": "^2.0.3"
+  },
+  "devDependencies": {
+    "remark": "^13.0.0"
+  }
+}

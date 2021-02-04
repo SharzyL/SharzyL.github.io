@@ -15,7 +15,7 @@ module.exports = {
       },
     },
 
-    // `gatsby-plugin-offline`,
+    // `gatsby-plugins-offline`,
     `gatsby-plugin-sass`,
 
     {
@@ -91,6 +91,9 @@ module.exports = {
               icon: `<span>#</span>`
             }
           },
+          {
+            resolve: `gatsby-remark-img-process`
+          }
         ]
       }
     },
