@@ -146,7 +146,7 @@ $$
 
 关于更多的相关度计算技术，可以参考 [terrier 的文档](https://github.com/terrier-org/terrier-core/blob/5.x/doc/configure_retrieval.md)（预览如下）。
 
-![](https://p.sda1.dev/0/7cb206f7202eadec971d672f755e5951/image.png)
+![一列算法的清单，包括 BB2, BM25, DFR_BM25, DLH, DLH13 等](https://p.sda1.dev/0/7cb206f7202eadec971d672f755e5951/image.png)
 
 当然我们这里考虑的只是朴素的文本查询。对于搜索引擎来说，它还需要衡量不同网页的 “价值”，而这就是一个复杂得多的话题了。
 

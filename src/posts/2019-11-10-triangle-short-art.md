@@ -84,4 +84,4 @@ pp. 411–413.
 section，我画了两张三维图，一张立方体美术馆的图是用一个很简单方便的 3D 工具 MagicalVoxel 做的。另外一张是 Schönhardt polyhedron
 的三维渲染图（见下）是用一个全能的 3D 建模/动画软件 Blender 做的，本来是想放到文章里面去的，但是由于图片的背景怎么也调不成纯白的，遂作罢。
 
-![Schönhardt polyhedron 的三维渲染图，背景的颜色不太干净](https://i.loli.net/2019/11/17/XWqSrvPaziMeGuc.jpg)
+![Schönhardt polyhedron 的三维渲染图，背景的颜色不太干净](https://p.sda1.dev/1/00c19b27fab314df098e9ea36b2a38dd/image.png)
