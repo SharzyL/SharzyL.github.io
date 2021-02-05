@@ -24,7 +24,10 @@ module.exports = {
         background_color: `#11294d`,
         theme_color: `#74d7ff`,
         display: `standalone`,
-        icon: `static/favicon.svg`
+        icon: `static/maskable_icon.png`,
+        icon_options: {
+            purpose: `any maskable`,
+        }
       },
     },
     {
