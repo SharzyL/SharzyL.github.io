@@ -28,7 +28,7 @@ export default ({ data }) => {
     }
     return (
         <>
-            <SEO title={node.frontmatter.title}/>
+            <SEO title={node.frontmatter.title} description={node.excerpt}/>
             <NavBar/>
             <article id={"blog-post"} className={"para-block"}>
                 {title}
@@ -51,6 +51,7 @@ export const query = graphql`
       fields {
         date
       }
+      excerpt(truncate:true)
     }
   }
 `

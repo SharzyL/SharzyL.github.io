@@ -18,12 +18,8 @@ body
   > blockquote, >table, .gatsby-highlight
     max-width: var(--metric-stretchout-width)
 
-  //.img-para
-  //  max-width: var(--metric-stretchout-width)
-  //  @include h-centering
-  //
-  //  > img
-  //    max-width: inherit
+  .gatsby-resp-image-figure
+    max-width: var(--metric-stretchout-width)
 
   > p
     line-height: 1.5
@@ -89,3 +85,11 @@ body
   // When we set `overflow-x: auto`, a vertical scrollbar will appear on some formulas for unknown reasons
   // This is a bruteforce approach to prevent this scrollbar in most cases
   padding: 0.3em 0
+
+
+.gatsby-resp-image-figcaption
+  color: var(--color-secondary)
+  font-size: var(--fontsize-sub)
+  text-align: center
+  padding-top: 5px
+
