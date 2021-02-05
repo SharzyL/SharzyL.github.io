@@ -18,6 +18,8 @@ permalink: /about/
 
 ## About the site
 
+本站使用 Gatsby 构建，你可以在[这个 Github 仓库](https://github.com/SharzyL/SharzyL.github.io)找到本站的源码和所有的静态文件。源码使用 MIT 协议发布。
+
 如果需要订阅本站博客的消息，可以通过这个 [RSS 链接](/feed.xml)。
 
 本站的内容，如无特别说明，均使用 CC BY 4.0 协议发布，只要**注明来源和修改部分**，并且不施加额外的限制，可以将内容分享到任何地方，详情请见 [Creative Commons](https://creativecommons.org/licenses/by/4.0/) 网站的说明。
