@@ -62,7 +62,7 @@ module.exports = {
               ).map(node => {
                 return Object.assign({}, node.frontmatter, {
                   description: node.excerpt,
-                  date: node.frontmatter.date,
+                  date: node.fields.date,
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
                 })
@@ -71,13 +71,13 @@ module.exports = {
             query: `
               {
                 allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: {fields: {isBlogPost: {eq: true}}}, 
+                  sort: {order: DESC, fields: [fields___date]}
                 ) {
                   nodes {
                     excerpt
-                    html
-                    fields { slug }
-                    frontmatter { title date }
+                    fields { slug date }
+                    frontmatter { title }
                   }
                 }
               }
