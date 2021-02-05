@@ -6,13 +6,9 @@ This is the source code of [sharzy's personal site](https://sharzy.in).
 
 Here are some features to be implemented on `sharzy.in`: 
 
-1. PWA
-
 1. static blog search
 
 1. Latest modified date
-
-1. Make up an icon and configure manifest
 
 Here are some bigger goals to be achieved: 
 

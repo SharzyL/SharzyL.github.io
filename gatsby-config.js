@@ -15,7 +15,18 @@ module.exports = {
       },
     },
 
-    // `gatsby-plugins-offline`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `sharzy.in`,
+        short_name: `sharzy`,
+        start_url: `/`,
+        background_color: `#11294d`,
+        theme_color: `#74d7ff`,
+        display: `standalone`,
+        icon: `static/favicon.svg`
+      },
+    },
     {
       resolve: `gatsby-plugin-offline`,
       options: {
