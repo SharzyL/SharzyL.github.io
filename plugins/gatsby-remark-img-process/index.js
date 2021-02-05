@@ -5,7 +5,7 @@ const modifyImgNode = ({ markdownAST }, pluginOptions) => {
         const childNodes = node.children
         if (childNodes && childNodes.length === 1 && childNodes[0].type === "image"){
             const imageNode = childNodes[0]
-            const altText = (imageNode.alt || "").replaceAll('"', '&quot;')
+            const altText = (imageNode.alt || "").replace(/"/g, '&quot;')
             const imgUrl = imageNode.url
             node.type = "html"
             node.children = undefined
