@@ -70,3 +70,5 @@ package-lock.json
 .yarn-integrity
 
 .idea
+
+yarn.lock

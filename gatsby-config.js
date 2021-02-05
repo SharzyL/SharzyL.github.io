@@ -154,6 +154,29 @@ module.exports = {
               }
             })
       }
+    },
+
+    {
+      resolve: "gatsby-omni-font-loader",
+      options: {
+        mode: "async",
+        enableListener: true,
+        preconnect: ["https://fonts.gstatic.com"],
+        web: [
+          {
+            name: "Roboto",
+            file: "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap",
+          },
+          {
+            name: "Cascadia Code",
+            file: "https://cdn.jsdelivr.net/npm/@fontsource/cascadia-code@4.1.0/index.min.css"
+          },
+          {
+            name: "Inter",
+            file: "https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&display=swap"
+          }
+        ],
+      },
     }
   ],
 }
