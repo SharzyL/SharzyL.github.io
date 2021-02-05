@@ -23,6 +23,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sharp`,
 
     {
       resolve: `gatsby-plugin-feed`,
@@ -96,6 +97,12 @@ module.exports = {
             options: {
               icon: `<span>#</span>`
             }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 900
+            },
           },
           {
             resolve: `gatsby-remark-img-process`

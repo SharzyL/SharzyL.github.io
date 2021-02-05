@@ -18,7 +18,7 @@ tags: [latex]
 
 而关于如何管理 Items，Zotero 提供了两个主要层级：Library 和 Collection。Library 默认只有一个 My Library，这个是指本地的 library。可以将 Library 利用 Zotero 账号进行同步，或者在线协作。免费 Zotero 账号有 200 MB 的空间可以进行同步，可以通过付费解锁更多（不过是买断制的，比较良心）。Collection 是管理 Items 的主要层级，它支持无限层级细分（创建 Subcollection, Subsubcollection 等）。
 
-![Zotero 显示 collections 的界面，可以看到，它支持对文献多个层级的管理，同时也有 My publications, Duplicated Items, Unified Items 等特殊的 collections](https://p.sda1.dev/1/a541b7624d163278bdd24e0272989aeb/image.png)
+![Zotero 显示 collections 的界面，可以看到，它支持对文献多个层级的管理，同时也有 My publications, Duplicated Items, Unified Items 等特殊的 collections](../img/zotero-collections.png)
 
 
 
@@ -34,7 +34,7 @@ tags: [latex]
 
 但是如果要持续写作的话，这个显得还不够方便：每次添加一个新的 Item 的时候，都必须重新导出一次。这无疑是非常繁琐的。好在 Zotero 提供了丰富的插件功能，而 Better BibTeX 就是一个专门为 LaTeX 设计的插件，它的安装详见[官网](https://retorque.re/zotero-better-bibtex)。只需要在导出 Collection 的时候选择 “keep updated” 这个选项，就可以当每次对 Collection 进行修改时，自动更新对应的 .bib 文件。
 
-![Better BibTeX 提供了一个 keep updated 的选项](https://p.sda1.dev/1/06ea0f56f1c93d304c874c1ea0a1f1d5/image.png)
+![Better BibTeX 提供了一个 keep updated 的选项](../img/better-bibtex.png)
 
 当创建好 .bib 文件后，只需要在 .tex 文件中使用 \cite 或相关命令就可以进行引用了。参考文献的输出一般有很多种格式，无论是 bibtex 还是 biblatex 都提供了一些预设的格式，也可以使用对应的语法自己写新的格式，这些内容超出了本文的范畴，这里就不介绍了。
 
@@ -174,7 +174,7 @@ VSCode + LaTeX workshop 的安装过程就不赘述了。有一定门槛的是 L
 
 进行完上面的配置之后，打开 VSCode 侧边栏的 TeX 栏，就可以看到这样的一些选项了：
 
-![VSCode 的 LaTeX 菜单，包括编译、预览、日志、导航等选项](https://p.sda1.dev/1/3558b2fab275aa9ecde5f328e1df0df6/image.png)
+![VSCode 的 LaTeX 菜单，包括编译、预览、日志、导航等选项](../img/latex-workshop-menu.png)
 
 如果了解了上一篇文章中提到的 LaTeX 工具链的相关内容的话， 上面配置文件的 `"latex-workshop.latex.tools"`和`latex-workshop.latex.recipes`部分应该比较容易理解。这里解释几个命令行参数的含义，其它的命令行参数可以自行参看相关文档。
 
