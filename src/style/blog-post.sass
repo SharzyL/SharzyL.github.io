@@ -18,8 +18,12 @@ body
   > blockquote, >table, .gatsby-highlight
     max-width: var(--metric-stretchout-width)
 
-  > p > img
-    max-width: var(--metric-center-width)
+  .img-para
+    max-width: var(--metric-stretchout-width)
+    @include h-centering
+
+    > img
+      max-width: inherit
 
   > p
     line-height: 1.5
