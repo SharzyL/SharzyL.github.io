@@ -16,6 +16,12 @@ module.exports = {
     },
 
     // `gatsby-plugins-offline`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/about/`, `/posts/*`],
+      },
+    },
     `gatsby-plugin-sass`,
 
     {
