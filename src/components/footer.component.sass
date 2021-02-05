@@ -1,3 +1,5 @@
+@import "../style/global"
+
 footer
   width: 100%
   background-color: var(--color-bg-dark)
@@ -9,9 +11,7 @@ footer
     bottom: var(--metric-inner-spacing)
 
   p
-    margin:
-      top: var(--metric-inner-spacing)
-      bottom: var(--metric-inner-spacing)
+    @include inner-block
 
   a
     color: var(--color-alternative)

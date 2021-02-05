@@ -12,6 +12,16 @@
     left: auto
     right: auto
 
+@mixin para-block
+  margin:
+    top: var(--metric-unit-spacing)
+    bottom: var(--metric-unit-spacing)
+
+@mixin inner-block
+  margin:
+    top: var(--metric-inner-spacing)
+    bottom: var(--metric-inner-spacing)
+
 .h-centering
   @include h-centering
   text-align: center
@@ -57,14 +67,10 @@ a
   text-decoration: none
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, table, img, .para-block
-  margin:
-    top: var(--metric-unit-spacing)
-    bottom: var(--metric-unit-spacing)
+  @include para-block
 
 h5, .h5, h6, .h6, p, .inner-block
-  margin:
-    top: var(--metric-inner-spacing)
-    bottom: var(--metric-inner-spacing)
+  @include inner-block
 
 .live-link
   position: relative

@@ -44,10 +44,7 @@ export default ({data}) => {
         <>
             <NavBar/>
             <main id={"blog-index"}>
-                {data.allMarkdownRemark.nodes
-                    .filter( node => !node.frontmatter.permalink )
-                    .map(render_node)
-                }
+                {data.allMarkdownRemark.nodes.map(render_node)}
             </main>
             <Footer/>
         </>
@@ -58,6 +55,7 @@ export const query = graphql`
 query {
   allMarkdownRemark (
     sort: {fields: fields___date, order: DESC},
+    filter: {fields: {isBlogPost: {eq: true}}},
   ){
     nodes {
       id

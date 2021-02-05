@@ -25,6 +25,11 @@ exports.onCreateNode = ({node, getNode, actions}) => {
             name: `slug`,
             value: slug,
         })
+        createNodeField({
+            node,
+            name: `isBlogPost`,
+            value: node.frontmatter.permalink === undefined
+        })
     }
 }
 
