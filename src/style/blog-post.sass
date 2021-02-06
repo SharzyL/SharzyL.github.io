@@ -5,12 +5,7 @@
 body
   background-color: var(--color-bg)
 
-#blog-post
-  color: var(--color-base)
-
-  width: 100%
-
-#blog-post-main
+#blog-post-content
   > *
     max-width: var(--metric-center-width)
     @include h-centering
@@ -30,13 +25,24 @@ body
     border-radius: var(--metric-box-radius)
     padding: 0.001em var(--metric-unit-spacing)
 
-  a:not(.anchor )
+  a:not(.anchor ):not(.gatsby-resp-image-link)
+    position: relative
     color: var(--color-base)
     //background-color: #32220e
-    border-bottom: var(--color-alternative-dark) 2px solid
+    //border-bottom: var(--color-alternative-dark) 2px solid
 
-    &:hover
-      border-bottom-color: var(--color-alternative)
+    &::before
+      background-color: var(--color-alternative)
+      bottom: -1px
+      content: ''
+      height: 2px
+      left: 0
+      position: absolute
+      width: 100%
+      z-index: -1
+
+    &:hover::before
+      background-color: var(--color-alternative-light)
 
   table
     --table-rule: 1px solid var(--color-base)
@@ -65,19 +71,6 @@ body
       left: auto
       right: auto
 
-#blog-post-title
-  color: var(--color-brand)
-
-#blog-post-subtitle
-  color: var(--color-base)
-  font-size: var(--fontsize-h3)
-
-#blog-post-info
-  color: var(--color-base)
-
-#blog-post-date
-  color: var(--color-brand-dark)
-
 .katex-display
   max-width: 100%
   overflow-x: auto
@@ -87,10 +80,34 @@ body
   // This is a bruteforce approach to prevent this scrollbar in most cases
   padding: 0.3em 0
 
-
 .gatsby-resp-image-figcaption
   color: var(--color-secondary)
   font-size: var(--fontsize-sub)
   text-align: center
   padding-top: 5px
 
+.post-toc-item
+  line-height: 1.8
+  font-size: var(--fontsize-secondary)
+  transition: 0.2s transform
+
+  &:hover
+    cursor: pointer
+    transform: translateX(4px)
+
+.post-toc-item-h2
+  font-weight: var(--fontweight-emph)
+  color: var(--color-base)
+
+.post-toc-item-h3
+  text-indent: 0.5em
+  font-weight: var(--fontweight-emph)
+  color: var(--color-secondary)
+
+.post-toc-item-h4
+  text-indent: 1em
+  color: var(--color-secondary)
+
+@media only screen and (max-width: 1400px)
+  #blog-post-toc-container
+    display: none
