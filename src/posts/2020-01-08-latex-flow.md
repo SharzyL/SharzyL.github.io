@@ -6,7 +6,7 @@ tags: [latex]
 
 ## Bibliography
 
-参考文献是论文中重要的一环，但是如果手动输入参考文献的话，无论是编写的复杂度（手动输入非常麻烦，而且 Reference 的不同信息的字体可能不一样，需要不停切换），还是维护的复杂度（尤其是对于带序号的参考文献，加一个参考文献需要改一堆），都无疑是灾难性的。而在这一点上，LaTeX 做的比较到位，它将收集文献（创建 .bib 文件）、使用文献（`\cite`命令）、排版文献（`\bibliographystyle`命令，.bst 文件）的过程完全解耦，达到高度自动化的效果。
+参考文献是论文中重要的一环，但是如果手动输入参考文献的话，无论是编写的复杂度（手动输入非常麻烦，而且 Reference 的不同信息的字体可能不一样，需要不停切换），还是维护的复杂度（尤其是对于带序号的参考文献，加一个参考文献需要改一堆），都无疑是灾难性的。而在这一点上，LaTeX 做的比较到位，它将收集文献（创建 .bib 文件）、使用文献（`\cite` 命令）、排版文献（`\bibliographystyle` 命令，.bst 文件）的过程完全解耦，达到高度自动化的效果。
 
 基本的参考文献使用在之前的文章中已经介绍过了。当然这个过程还不够自动化，尤其是 .bib 文件的创建和维护上，手动填写表项显然时比较浪费时间的事情。此外，如何定制化参考文献的样式以及引用的格式也是一个重要的问题。由于目前主要使用的是 BibTeX 工具链，因此介绍的时候以 BibTeX 为主。BibLaTeX 是另一个给 LaTeX 提供的参考文献工具，它相比 BibTeX 而言更加现代化，如果以后有时间的话会写一下它。
 
@@ -170,13 +170,13 @@ VSCode + LaTeX workshop 的安装过程就不赘述了。有一定门槛的是 L
 "latex-workshop.view.pdf.internal.synctex.keybinding":"double-click",
 ```
 
-为了应用这些配置项，`ctrl + P` 输入 `settings.json` 进入设置界面，将上面的 json 代码复制进去。由于这是一部分的配置项，所以需要把它们放在一个大括号里面才能生效。此外，上述代码中的`"<your-path>/SumatraPDF.exe"`需要自行修改成 Sumatra 阅读器的路径。
+为了应用这些配置项，`ctrl + P` 输入 `settings.json` 进入设置界面，将上面的 json 代码复制进去。由于这是一部分的配置项，所以需要把它们放在一个大括号里面才能生效。此外，上述代码中的`"<your-path>/SumatraPDF.exe"` 需要自行修改成 Sumatra 阅读器的路径。
 
 进行完上面的配置之后，打开 VSCode 侧边栏的 TeX 栏，就可以看到这样的一些选项了：
 
 ![VSCode 的 LaTeX 菜单，包括编译、预览、日志、导航等选项](../img/latex-workshop-menu.png)
 
-如果了解了上一篇文章中提到的 LaTeX 工具链的相关内容的话， 上面配置文件的 `"latex-workshop.latex.tools"`和`latex-workshop.latex.recipes`部分应该比较容易理解。这里解释几个命令行参数的含义，其它的命令行参数可以自行参看相关文档。
+如果了解了上一篇文章中提到的 LaTeX 工具链的相关内容的话， 上面配置文件的 `"latex-workshop.latex.tools"` 和 `latex-workshop.latex.recipes` 部分应该比较容易理解。这里解释几个命令行参数的含义，其它的命令行参数可以自行参看相关文档。
 
 1. `-synctex=1`：这个命令表示生成 synctex 文件。这种文件的扩展名为 `.synctex.gz`，它的作用在于创建一个 pdf 文件和 tex 文件之间的对应关系。这样的话就可以在 pdf 文件和 tex 文件之间进行同步的穿梭了。使用方法下述。
 2. `-shell-escape`：表示处理转义字符的方式。这个命令行参数主要是在使用 minted 这个代码高亮宏包的时候用到，由于在处理其它语言代码的时候，会违背普通 tex 的转义规则，因此这个参数在使用 minted 宏包的时候是必须的。
@@ -190,5 +190,3 @@ LaTeX Workshop 的一个重要功能就是在 .pdf 文件和 .tex 文件之间�
 LaTeX Workshop 提供了许多其它的便捷功能和快捷键，这些可以在 [GitHub wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki) 中看到。这里就不重复了。
 
 为了使用 lint （语法检查）功能，需要先安装 chktex （大部分发行版应该都会提供，如果没有提供的话可以用对应的包管理器安装，在命令行输入 chktex 可以检查是否安装完成）。然后在 `settings.json` 中输入 `"latex-workshop.chktex.enabled": true,`即可启用。chktex 会给你的代码提供一些贴心的建议（笑）。
-
-> 未完待续，之后将会介绍一些宏包的使用，一些本地化的相关内容
