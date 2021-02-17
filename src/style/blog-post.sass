@@ -26,23 +26,12 @@ body
     padding: 0.001em var(--metric-unit-spacing)
 
   a:not(.anchor ):not(.gatsby-resp-image-link)
-    position: relative
-    color: var(--color-base)
-    //background-color: #32220e
-    //border-bottom: var(--color-alternative-dark) 2px solid
+    color: inherit
+    padding-bottom: 1px
+    border-bottom: var(--color-alternative-dark) 2px solid
 
-    &::before
-      background-color: var(--color-alternative)
-      bottom: -1px
-      content: ''
-      height: 2px
-      left: 0
-      position: absolute
-      width: 100%
-      z-index: -1
-
-    &:hover::before
-      background-color: var(--color-alternative-light)
+    &:hover
+      border-bottom-color: var(--color-alternative-light)
 
   table
     --table-rule: 1px solid var(--color-base)
@@ -111,3 +100,7 @@ body
 @media only screen and (max-width: 1400px)
   #blog-post-toc-container
     display: none
+
+@media only screen and (min-width: 1400px)
+  #blog-post
+    text-align: justify

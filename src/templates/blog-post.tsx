@@ -10,7 +10,9 @@ import SEO from "../components/seo"
 
 const makeToc = (headings) => {
     const makeOneToc = ({depth, value}) => {
-        const headerID = value.toLowerCase().split(' ').join('-')
+        const headerID = value.toLowerCase()
+            .split(' ').join('-')
+            .replace(/[!?.,]/g, '')
         const jumpToToc = () => {
             const jumpLen = document.getElementById(headerID).getBoundingClientRect().top
             window.scrollBy({
@@ -84,11 +86,13 @@ export default ({ data }) => {
             </div>
         )
     }
+
+    // When articles with alternative language is added, lang should be changed
     return (
         <>
             <SEO title={node.frontmatter.title} description={node.excerpt}/>
             <NavBar/>
-            <article id={"blog-post"} className={"para-block"}
+            <article id={"blog-post"} className={"para-block"} lang={"zh"}
                      style={{
                          color: "var(--color-base)",
                          position: "relative",
