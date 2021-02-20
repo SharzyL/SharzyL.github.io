@@ -12,7 +12,7 @@ permalink: /about/
 
 我是一名 CS 学生，中学时曾有过 MO 背景。虽然宅但也不抗拒运动，对许多 non-trivial 的话题感兴趣，只是常常感慨精力有限，往往只能浅尝辄止。除了（CS 意义上的）技术和数学以外，对音乐和动画也略知一二，并长期试图涉足各种各样的领域。
 
-在  [Github](https://github.com/SharzyL)，[Bangumi](https://bgm.tv/user/sharzy)，[豆瓣](https://www.douban.com/people/sharzy/) 可以看到我的一些动态。平时会在我的 telegram channel [@sharzy_talk](https://t.me/sharzy_talk) 发送一些一些短篇的文字，或者进行一些社交网络式的分享和讨论。
+在  [Github](https://github.com/SharzyL)，[Bangumi](https://bgm.tv/user/sharzy)，[豆瓣](https://www.douban.com/people/sharzy/) 可以看到我的一些动态。平时会在我的 telegram channel [@sharzy_talk](https://t.me/sharzy_talk) 发送一些短篇的文字，或者进行一些社交网络式的分享和讨论。
 
 欢迎通过我的邮箱 [me [at] sharzy [dot] in](mailto:me@sharzy.in) 或者 Telegram 账号 [@SharzyL](https://t.me/sharzyl) 与我联系。
 
