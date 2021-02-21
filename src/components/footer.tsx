@@ -7,7 +7,7 @@ const Footer = ({}) => (
         <p>
             Designed by <a href={"https://github.com/SharzyL"}>Sharzy</a>.
             Powered by <a href={"https://www.gatsbyjs.com/"}>Gatsby</a>.
-            Hosted on <a href={"https://github.io"}>Github Pages</a>.
+            Hosted on <a href={"https://pages.cloudflare.com"}>Cloudflare Pages</a>.
         </p>
         <p>
             Content on this site is licensed under <a href={"https://creativecommons.org/licenses/by/4.0/"}>CC BY 4.0</a> unless specified.
